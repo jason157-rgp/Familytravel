@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>仙台家庭旅遊企劃書 ①行程規劃</title>
+<style>
+:root{--ink:#22303c;--sub:#6b7c8c;--line:#e3e9ef;--bg:#f7f9fb;--ac:#b4472e;--ac2:#2f6b5f;--gold:#a8823a;--soft:#fdf6f2}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px 70px}
+header{background:linear-gradient(140deg,#2f4858,#7b3f2e);color:#fff;padding:56px 20px 48px;text-align:center}
+header h1{margin:0;font-size:2.2rem;letter-spacing:2px}
+header .meta{margin-top:14px;font-size:1rem;opacity:.94}
+header .ver{display:inline-block;margin-top:16px;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:5px 18px;font-size:.85rem}
+.nav{background:#fff;border-bottom:1px solid var(--line);padding:12px 20px;text-align:center;font-size:.9rem}
+.nav a{margin:0 10px;color:#1f5c8c;text-decoration:none}
+.nav a.cur{color:var(--ac);font-weight:700}
+h2{font-size:1.5rem;margin:54px 0 8px;padding-bottom:12px;border-bottom:3px solid var(--ac)}
+h2 .num{color:var(--ac);margin-right:10px}
+h3{font-size:1.14rem;margin:32px 0 12px;padding-left:12px;border-left:5px solid var(--ac2)}
+h4{font-size:1rem;margin:22px 0 8px;color:var(--ac2)}
+table{width:100%;border-collapse:collapse;margin:18px 0;background:#fff;font-size:.92rem;box-shadow:0 1px 4px rgba(0,0,0,.05);border-radius:6px;overflow:hidden}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#eef3f7;font-weight:700}
+td.n,th.n{text-align:right;white-space:nowrap}
+tbody tr:nth-child(even){background:#fafcfd}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin:20px 0;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.note{background:var(--soft);border-left:5px solid var(--ac);border-radius:0 8px 8px 0;padding:15px 20px;margin:18px 0;font-size:.93rem}
+.ok{background:#eff7f2;border-left-color:var(--ac2)}
+.warn{background:#fff8e8;border-left-color:var(--gold)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:20px 0}
+figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+figure img{width:100%;height:180px;object-fit:cover;display:block;background:#e9eef2}
+figure.tall img{height:auto;object-fit:contain}
+figcaption{font-size:.8rem;color:var(--sub);padding:8px 12px;text-align:center}
+.tl{list-style:none;padding:0;margin:14px 0}
+.tl li{display:flex;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.tl li:last-child{border-bottom:none}
+.tl .t{flex:0 0 92px;font-weight:700;color:var(--ac);font-size:.94rem}
+.tl .c{flex:1;font-size:.93rem}
+.tl .c small{color:var(--sub);display:block;font-size:.83rem}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.75rem;font-weight:700;margin-left:6px}
+.b-fix{background:#e3f0ea;color:#1f5c4d}.b-hold{background:#fdeee2;color:#9d4a1f}
+.b-opt{background:#eceff3;color:#55636f}.b-new{background:#fbe4e0;color:#a5301b}
+.day{background:#fff;border:1px solid var(--line);border-radius:12px;margin:24px 0;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.day>.hd{background:#2f4858;color:#fff;padding:14px 22px;font-size:1.06rem;font-weight:700}
+.day>.hd .sub{display:block;font-size:.82rem;font-weight:400;opacity:.85}
+.day>.bd{padding:6px 22px 18px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:4px 14px;font-size:.9rem;margin:12px 0}
+.kv dt{color:var(--sub)}.kv dd{margin:0}
+ul.tight{margin:10px 0;padding-left:22px}
+ul.tight li{margin:5px 0;font-size:.93rem}
+ul.vid{list-style:none;padding:0;margin:8px 0}
+ul.vid li{padding:6px 0;border-bottom:1px dotted var(--line);font-size:.92rem}
+ul.vid li:before{content:"\25B6";color:var(--ac);margin-right:8px;font-size:.8rem}
+.strike{color:var(--sub);text-decoration:line-through;font-size:.88em}
+.mapwrap{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;margin:18px 0;text-align:center}
+.mapwrap img{max-width:100%;height:auto;border-radius:6px}
+.mapwrap figcaption{margin-top:8px}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:.8rem;color:var(--sub)}
+a{color:#1f5c8c}
+@media(max-width:640px){header h1{font-size:1.5rem}.kv{grid-template-columns:1fr}table{font-size:.84rem}th,td{padding:8px}.tl li{flex-direction:column;gap:2px}.tl .t{flex:none}}
+
+.hd{scroll-margin-top:14px}
+</style>
+</head>
+<body>
+<header>
+<h1>🍁 仙台家庭旅遊企劃書</h1>
+<div class="meta">2026/10/30（五）－ 11/05（四）｜<strong>共 7 天 6 夜</strong><br>成員：桃園星野結衣 ＋ 龜山下智久 ＋ 煞氣E小魚乾E（旅行時約 1 歲 10 個月）<br>主軸：桃園星野結衣的律師公會研習營（11/1－11/2）</div>
+<div class="ver">第 ① 部：行程規劃 ｜ 更新 2026/07/30（v3.5）</div>
+</header>
+<div class="nav"><a href="index.html">🏠 首頁</a>｜<a class="cur" href="#">① 行程規劃</a>｜<a href="仙台家庭旅遊企劃書_附件資料.html">② 附件資料</a>｜<a href="仙台家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>｜<a href="仙台家庭旅遊企劃書%20④訂購成果.html">④ 訂購成果</a>｜<a href="仙台家庭旅遊企劃書%20⑤歷程沿革.html">⑤ 歷程沿革</a></div>
+<div class="wrap">
+<div class="note ok" style="margin-top:30px"><strong>✅ 全案已定案。</strong>機票、市區住宿、秋保住宿、租車四項全部訂妥，本頁所列時間與金額即為實際成交內容。訂單編號與明細見 <a href="仙台家庭旅遊企劃書%20④訂購成果.html">④ 訂購成果</a>。</div>
+
+<h2><span class="num">壹</span>行程核心與定位</h2>
+<div class="card">
+<p>桃園星野結衣的律師公會交流活動（11/1 平泉觀光、11/2 研討會）是本趟固定骨幹，其餘日期全部圍繞它安排。整體定位是「<strong>體驗當地氣氛與生活</strong>」，不趕點蓋章。</p>
+<h4>三條貫穿全程的設計原則</h4>
+<table>
+<tbody><tr><th style="width:140px">原則</th><th>具體落實</th></tr>
+<tr><td>孩子節奏優先</td><td>每天景點上限 1–2 處；下午約 13:00 午餐後保留午睡；就寢壓在 20:00–20:30。10/31 全日行程改以「兩段短睡」處理。</td></tr>
+<tr><td>不重複行程</td><td>同類型場所不安排兩次；名取 AEON 因與市區購物重疊，降級為「可省略」。</td></tr>
+<tr><td>不依賴日語會話</td><td>優先選擇售票機／自動結帳／圖示化流程的場所；需電話預約或全日語互動的活動一律排除。</td></tr>
+</tbody></table>
+<h4>交通模式：前段大眾運輸、後段租車</h4>
+<p>10/30–11/02 留在市區，全程地下鐵／JR，這本身就是體驗當地生活的一部分，也免掉市區停車費。11/03 上午才在仙台車站取車進入秋保，11/05 於仙台機場異地還車。</p>
+</div>
+
+<h2><span class="num">貳</span>四大骨幹（機票・住宿・租車）</h2>
+<h3>機票<span class="badge b-fix">已開票</span></h3>
+<table>
+<tbody><tr><th>航段</th><th>航班</th><th>日期</th><th>時刻</th><th>備註</th></tr>
+<tr><td>去程</td><td><b>BR118</b>（長榮航空）</td><td>10/30（五）</td><td>台北 10:15 → 仙台 14:25</td><td>直飛／3 小時 10 分／桃園第二航廈／艙等 M</td></tr>
+<tr><td>回程</td><td><b>BR117</b>（長榮航空）</td><td>11/05（四）</td><td>仙台 16:15 → 台北 19:30</td><td>直飛／4 小時 15 分／艙等 Q／擬用里程升等商務艙</td></tr>
+</tbody></table>
+<div class="note ok"><strong>✅ 已開票（2026/07/28）。</strong>2 大人＋1 嬰兒不佔位，訂位狀態 OK。大人票每人 <b>TWD 29,115</b>（票面 25,150＋稅金 3,965），行李額度 <b>每人 2 件</b>。訂位代號、票號等識別資料不列於本公開檔案。<br><small>回程將以無限萬哩遊里程升等商務艙（7/29 起辦理） → 見③待決定事項</small></div>
+
+<h3>住宿<span class="badge b-fix">已訂妥</span></h3>
+<table>
+<tbody><tr><th style="width:110px">期間</th><th>飯店</th><th class="n">費用</th><th>狀態</th></tr>
+<tr><td>10/30–11/03<br>（4 晚）</td><td><strong>仙台國際飯店</strong> デラックスツイン（豪華雙床房）<br><small>じゃらん（Jalan）訂房・<b>已於 7/28 線上刷卡付清</b>，已折抵優惠券 ¥22,500<br>鄰近仙台辯護士會館，公務動線最短；步行可達仙台車站</small></td><td class="n">¥88,200<br>（NT$19,139）</td><td><span class="badge b-fix">已付款</span></td></tr>
+<tr><td>11/03–11/05<br>（2 晚）</td><td><strong>伝承千年の宿 佐勘（傳承千年之宿 佐勘）・飛天館</strong> 和室<br><small>官網直訂・<b>現地決済（現場付款）</b>；已確認含<b>包廂晚餐</b>；幼兒改為不含餐・自備副食品</small></td><td class="n">¥159,000<br>（NT$34,503）</td><td><span class="badge b-fix">已定</span></td></tr>
+</tbody></table>
+<div class="note ok"><strong>✅ 伝承千年の宿 佐勘（傳承千年之宿 佐勘）・飛天館 和室（10 疊以上）。</strong>2 晚，<b>夕食個室確約</b><span class="jp">（晚餐包廂保證）</span>，帶幼兒最關鍵的一點已鎖定；幼兒改為 ¥4,400／晚（不含餐・自備副食品），晚餐現場可單點 おかゆ<span class="jp">（粥）</span>¥770／うどん<span class="jp">（烏龍麵）</span>¥550。11/03 入住、11/05 退房，現場付款。</div>
+
+<h3>租車<span class="badge b-fix">已訂妥</span></h3>
+<dl class="kv">
+<dt>供應商</dt><dd>じゃらんレンタカー（Jalan 租車）→ タイムズカーレンタル（Times 租車）；車輛クラス（車輛等級）O-2・禁煙車</dd><dt>取車</dt><dd>11/03（二）09:00 <b>タイムズカー仙台駅西口</b>（Times Car 仙台站西口）<br><small>仙台市青葉区五橋 1-3／TEL 022-267-0123</small></dd>
+<dt>還車</dt><dd>11/05（四）14:00 <b>タイムズカー仙台空港</b>（Times Car 仙台機場）<br><small>岩沼市空港南 6-3-4／TEL 0223-24-6933／異地還車（乗捨料（異地還車費））¥3,300</small></dd>
+<dt>費用</dt><dd><b>¥46,233</b> ≒ NT$10,033（<b>現地決済／現場付款</b>）<br><small>基本料金 34,243＋乗捨料（異地還車）3,300＋兒童安全座椅 1,100＋安心補償コースB（安心補償方案 B）7,590</small></dd>
+<dt>採用理由</dt><dd>帶嬰兒車＋幼兒，高底盤與後廂空間在實際使用上有感；往秋保為山路，離地高較安心。</dd>
+<dt>還車前加油</dt><dd><b>宇佐美（USAMI）仙台空港給油所</b>—距仙台機場約 2.8–3 km，<b>機場周邊加油站極少，這是最近的一間</b>。油種選 レギュラー（regular・普通汽油），加到 満タン（滿箱）。<br><small>自助加油操作教學（中文）：<a href="https://www.youtube.com/watch?v=tpIW4P26tDg" target="_blank" rel="noopener">① 日本加油站自助加油・完整實況（2:22，全程實拍每一個按鍵）</a>｜<a href="https://www.youtube.com/watch?v=DdqVZfVomQk" target="_blank" rel="noopener">② セルフ（self・自助）與 フルサービス（full service・有人服務）的差別與價差（4:59）</a>。若真的不放心，找 フルサービス（有人服務）的加油站，說「レギュラー、満タン、現金／カードで」即可</small></dd>
+</dl>
+<div class="note">兒童安全座椅須<strong>於訂車時一併指定</strong>，現場不保證庫存。日本法規未滿 6 歲一律強制使用。</div>
+
+
+<h2><span class="num">參</span>七日逐日行程</h2>
+<div class="grid">
+<figure><img src="https://tw.discoversendai.travel/wp-content/uploads/2021/09/93-3-Yagiyama_zoo7.jpg" alt="八木山動物公園的レッサーパンダ（小熊貓）"><figcaption>Day2 八木山動物公園フジサキの杜（八木山動物公園 藤崎之杜）</figcaption></figure>
+<figure><img src="https://www.uminomori.jp/image/umino_top_about.jpg" alt="仙台海洋森林水族館"><figcaption>Day4 仙台うみの杜水族館（仙台海之杜水族館）</figcaption></figure>
+<figure><img src="https://media.hoshinoresorts.com/image/authenticated/s--DQgNjMuA--/c_fill,g_auto,h_520,w_780/f_auto,q_auto/v1770792376/%E7%A3%8A%E3%80%85%E5%B3%A1_fie9qi.jpg" alt="磊々峡"><figcaption>Day5 磊々峡（秋保）</figcaption></figure>
+</div>
+
+<div class="day">
+<div class="hd" id="day1">Day 1｜10/30（五）抵達日<span class="sub">定調：不排景點，只求順利落地與孩子作息銜接　｜　已定案</span></div>
+<div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sendai_Airport_terminal_2017-08-29_%2836424770174%29.jpg/1280px-Sendai_Airport_terminal_2017-08-29_%2836424770174%29.jpg" alt="仙台空港 抵達大廳" loading="lazy"><figcaption>仙台空港 抵達大廳</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Cityscapes_of_Sendai_Station_west_exit_20220910a.jpg/1280px-Cityscapes_of_Sendai_Station_west_exit_20220910a.jpg" alt="仙台站西口（飯店所在的市中心）" loading="lazy"><figcaption>仙台站西口（飯店所在的市中心）</figcaption></figure></div>
+
+<div class="bd">
+<ul class="tl">
+<li><div class="t">10:15</div><div class="c"><b>台北桃園第二航廈 → BR118 起飛</b><small>建議 <b>07:45 前</b>抵達機場：嬰兒車託運至艙門、嬰兒票證件查驗都需時間</small></div></li>
+<li><div class="t">14:25</div><div class="c"><b>抵達仙台機場</b></div></li>
+<li><div class="t">14:25–15:25</div><div class="c">入境審查、提領行李與嬰兒車<small>抓滿一小時，帶幼兒不要壓縮</small></div></li>
+<li><div class="t">15:40</div><div class="c"><b>仙台空港アクセス線（仙台機場連絡線）</b>　仙台空港 → 仙台駅<small>26 分／大人 IC ¥672・紙票 ¥680／幼兒免費。班距約 20–30 分，提早到就搭下一班</small></div></li>
+<li><div class="t">16:10</div><div class="c">抵達仙台駅</div></li>
+<li><div class="t">16:30</div><div class="c"><b>入住仙台國際飯店</b>（已線上付款，櫃檯只需報訂房編號）<small>放行李、換裝、讓小魚乾在房間放電。這天下午<b>有充裕的空檔</b>，可在飯店慢慢休息再出門</small></div></li>
+<li><div class="t">17:45</div><div class="c">繞 <b>トモズ エスパル仙台店（Tomod's S-PAL 仙台店・S-PAL 東館 2F）</b>採買寶寶粥／市售副食品<small>營業 10:00–21:00。與 18:15 的伊達の牛たん本舗（伊達牛舌本舖・S-PAL B1F）<b>同一棟、零繞路</b>。備案：トモズ 仙台中央店（Tomod's 仙台中央店・青葉区中央 4-2-16，08:00–21:00），離飯店最近。此處只是自備存量的備援，不是主力</small></div></li>
+<li><div class="t">18:15</div><div class="c"><b>晚餐：伊達の牛たん本舗（伊達牛舌本舖，S-PAL 仙台 B1F）</b><small>週五 11:00–22:00、料理 L.O. 21:00。<b>不接受預約，早到才有位</b>。兒童餐照點＋自備寶寶粥雙軌 → 見附件第二章</small></div></li>
+<li><div class="t">20:00</div><div class="c">回房、洗澡</div></li>
+<li><div class="t">20:30</div><div class="c">就寢<small>第一晚務必壓早，時差雖只 1 小時，但飛行日消耗大</small></div></li>
+</ul>
+<div class="note ok"><strong>當日預估支出約 ¥7,600</strong>：交通 ¥1,344／藥妝 ¥1,000／晚餐 ¥5,200</div>
+</div>
+</div>
+
+<div class="day">
+<div class="hd" id="day2">Day 2｜10/31（六）八木山動物公園 全日型<span class="sub">定調：上午密集互動、中午一次睡飽、下午純觀賞　｜　已定案（全日型・v3.2 最優路線）</span></div><div class="grid"><figure><img src="https://tw.discoversendai.travel/wp-content/uploads/2021/09/93-1-Yagiyama_zoo3.jpg" alt="アフリカ園（非洲園）的アフリカゾウ・キリン・シマウマ" loading="lazy"><figcaption>アフリカ園（非洲園）：アフリカゾウ（非洲象）・キリン（長頸鹿）・シマウマ（斑馬）同一個畫面，是全園最有氣勢的一區</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/A_tiger_in_Yagiyama_zoo_-_panoramio.jpg" alt="猛獣舎（猛獸舍）的トラ（老虎）" loading="lazy"><figcaption>トラ（老虎）：猛獣舎（猛獸舍）的門面明星，趴在岩石上的距離很近，兒子一定看得懂</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Western_lowland_gorilla_in_Yagiyama_zoo_-_panoramio.jpg" alt="ニシローランドゴリラ（西部低地大猩猩）" loading="lazy"><figcaption>ニシローランドゴリラ（西部低地大猩猩）：類人猿館（大型猿類館）人氣王，動作大、表情多，幼兒最容易有反應</figcaption></figure></div>
+<div class="bd">
+<div class="note ok"><strong>v3.2 最優路線的三個決定：</strong>① <b>放棄天竺鼠</b>（觸摸與餵食）——它與 10:30 的兔子在同一棟 ふれあい館（互動館）、體驗高度重複，卻是整天所有時間衝突的源頭；砍掉它，就不必 11:45 派人回頭領下午整理券，也不必在 14:00 把睡著的孩子叫醒。② <b>午睡改成一次睡滿</b>（12:40–14:15，約 90 分），取代原本「園內＋回程」兩段短睡。③ <b>萬聖節提前到 17:00</b>——仙台駅（仙台站）2F 攤位的營業時間有 11:00–18:00 與 10:00–20:00 兩種說法，提前收就不會撲空。</div>
+<div class="note warn"><strong>三條鐵則：</strong>① 動物園<strong>一旦退園就不得再入園</strong>，午餐與午睡都必須在園內解決；② 整理券<strong>禁止代領</strong>，ヤギ・ヒツジ（山羊・綿羊）券是 1 人 1 枚，小魚乾本人必須站在發放現場；③ 餵食體驗<strong>只收 ¥100 硬幣、不找零</strong>。</div>
+<ul class="tl">
+<li><div class="t">07:00</div><div class="c">起床、飯店早餐<small>比原案提早 30 分，為了在 09:00 開園同時就站在領券隊伍裡</small></div></li><li><div class="t">08:20</div><div class="c">仙台駅（仙台站）售票機購<b>地下鐵一日乘車券【土・日・休日用（週六・週日・假日用）】大人 ¥620 × 2</b><small>單程 ¥310 × 2 趟即回本，且憑券入園可折價；幼兒免票。售票機請備現金</small></div></li><li><div class="t">08:35</div><div class="c">地下鐵東西線 → <b>08:47 八木山動物公園駅（八木山動物公園站）</b><small>約 12 分・¥310</small></div></li><li><div class="t">08:50</div><div class="c">中央 1 出口電梯下來即為西門，<b>排隊等開園</b><small>全程無台階，嬰兒車可直推</small></div></li><li><div class="t">09:00</div><div class="c">入園（西門）：出示一日券 → 一般 ¥480 折為 <b>¥380 × 2</b>，未就學兒免費<small>可刷卡與電子支付</small></div></li><li><div class="t">09:00</div><div class="c"><b>★ 三人一起</b>直奔 ふれあい館入口（互動館入口，ロバ展示場（驢子展示場）旁）領整理券：<b>ウサギ（兔子）券 1 枚 ＋ ヤギ・ヒツジ（山羊・綿羊）券 × 3（指定 10:00 梯）</b><small>ヤギ・ヒツジ（山羊・綿羊）是 1 人 1 枚、10 分入替制（分梯輪替），禁止代領；ウサギ（兔子）券 1 組 1 枚（最多 5 人）。兩種券在同一個隊伍一次領完，發完為止</small></div></li><li><div class="t">09:15</div><div class="c">ビジターセンター（遊客中心）：上廁所、換尿布，並先確認哺乳室位置<small>全園 2 處哺乳室之一，另一處在 ふれあい館內（互動館內）</small></div></li><li><div class="t">09:25</div><div class="c">さるやま売店（猴山賣店）投 ¥100 買飼料</div></li><li><div class="t">09:30</div><div class="c"><b>★ ニホンザル（日本獼猴）餵食</b><small>當天第一個互動，門檻最低，先讓孩子暖身</small></div></li><li><div class="t">09:50</div><div class="c">移動往 ふれあいの丘（互動之丘），沿途看 キリン（長頸鹿）・シマウマ（斑馬）</div></li><li><div class="t">10:00</div><div class="c"><b>★★ ヤギ・ヒツジ（山羊・綿羊）ふれあい（觸摸互動）</b>（ふれあいの丘（互動之丘），10 分入替制）<small>對快兩歲的孩子，這是全園最高價值的一段</small></div></li><li><div class="t">10:20</div><div class="c">ふれあいの丘（互動之丘）周邊隔柵觀察，讓孩子下車走路放電</div></li><li><div class="t">10:30</div><div class="c"><b>★★ ウサギ（兔子）ふれあい（觸摸互動）</b>（ふれあい館內（互動館內），10:30–11:00）</div></li><li><div class="t">11:00</div><div class="c">アフリカ園（非洲園）：アフリカゾウ（非洲象）・キリン（長頸鹿）・シマウマ（斑馬）同一畫面<small>趁孩子還有電，看全園最有氣勢的一區</small></div></li><li><div class="t">11:30</div><div class="c"><b>★ ヤギ（山羊）餵食</b>（ふれあいの丘（互動之丘），先到 15 組・¥100）<small><b>三人一起去，不必分頭</b>——因為不再需要 11:45 的下午整理券</small></div></li><li><div class="t">11:50</div><div class="c">午餐：<b>グーグーテラス（GooGoo 露台餐廳）</b>（就在 ふれあいの丘（互動之丘）原地，餐食 11:00–15:00）／或吃自備副食品<small>備案 森の食堂（森之食堂，有兒童菜單，L.O.16:00），但它在類人猿舎（大型猿類舍）附近坡道上，且 10/31 是它季節營業的最後一天。園內可自帶食物（限休憩所與廣場）</small></div></li><li><div class="t">12:40</div><div class="c"><b>午睡開始（目標一次睡滿 90 分）</b>：ペンギン休憩所（企鵝休憩所，有屋頂）或 芝生広場（草坪廣場）平躺<small>兩人輪流顧；醒著的一方可先去買紀念品或純休息</small></div></li><li><div class="t">13:15</div><div class="c"><b>★ アフリカゾウ（非洲象）餵食</b>（先到 20 組，1 組最多 3 份）—<b>全天唯一一次分頭</b><small>孩子還在睡 → 一人單獨去象舍排隊並錄影；孩子已自然醒 → 三人一起去，各餵一次</small></div></li><li><div class="t">13:45</div><div class="c">會合，繼續午睡至自然醒（約 14:15）</div></li><li><div class="t">14:30</div><div class="c"><b>★ 猛獣舎（猛獸舍）トラ（老虎） → 類人猿館（大型猿類館）ニシローランドゴリラ（西部低地大猩猩） → ペンギン（企鵝）</b><small>睡飽之後才是「看」動物的最佳時段。注意：獅子舍與犀牛、河馬、黑猩猩、馬達加斯加區都在再整備工程中看不到，<b>行前不要對小魚乾預告獅子</b></small></div></li><li><div class="t">15:30</div><div class="c">ゼブラショップ（斑馬紀念品店，西門）買紀念品</div></li><li><div class="t">15:50</div><div class="c">西門出園 → 車站 5F 屋上「八木山てっぺんひろば（八木山山頂廣場）」免費展望甲板<small>日本標高最高的地下鐵車站（軌道 136.4m），俯瞰仙台市街。閉園 16:45，時間充裕</small></div></li><li><div class="t">16:15</div><div class="c">地下鐵東西線回仙台駅（仙台站），16:30 抵達<small>車上不刻意誘睡，保住晚上 20:30 的就寢時間</small></div></li><li><div class="t">17:00</div><div class="c"><b>仙台駅（仙台站）2F 萬聖節裝置</b>（約 40 分）<small>10/31 正是萬聖節當天，且完全在回程動線上。提前到 17:00 是為了避開「18:00 可能收攤」的風險 → 見附件第三章</small></div></li><li><div class="t">18:00</div><div class="c">晚餐（駅內（站內）或飯店附近，選可久坐的店）</div></li><li><div class="t">19:30</div><div class="c">回房洗澡</div></li><li><div class="t">20:30</div><div class="c">就寢</div></li></ul>
+<div class="note"><strong>放棄的三項：</strong>モルモット（天竺鼠）ふれあい（觸摸互動）、モルモット（天竺鼠）餵食、13:30 フリーフライト（猛禽自由飛行）。若當天孩子 13:00 前就自然醒、狀況又特別好，猛禽飛行可作為加分項——但它在 ふれあいの丘（互動之丘）、象舍在反方向，實務上仍是二選一。</div>
+<div class="note warn"><strong>備案（週六人多）：</strong>若 09:00 到場時 ヤギ・ヒツジ（山羊・綿羊）的上午券已發完，改領<b>下午場</b>（11:45 開始發放，場次 14:00–15:30），並把午睡整體提前到 11:45–13:15。</div>
+<div class="note ok"><strong>當日預估支出約 ¥8,000</strong>：一日券 ¥1,240／入園 ¥760／餵食 ¥500／餐費 ¥5,500。<strong>¥100 硬幣最低需 5 枚</strong>（猴 1、羊 1、象 3），<b>建議備 8 枚（¥800）</b>——餵食體驗只收現金且不找零，園內不一定換得到。<br><small>完整攻略與園內地圖 → 見附件第一章</small></div>
+</div>
+</div>
+
+
+<div class="day">
+<div class="hd" id="day3">Day 3｜11/01（日）公會平泉觀光（岩手）<span class="sub">定調：全家隨公會行程走　｜　保留中，等公會正式公告</span></div>
+<div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chuson-ji_Konjiki-do_201806.jpg/1280px-Chuson-ji_Konjiki-do_201806.jpg" alt="中尊寺 金色堂（平泉）" loading="lazy"><figcaption>中尊寺 金色堂（平泉）</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/M%C5%8Dts%C5%AB-ji_Pure_Land_Garden_in_autumn_2019.jpg/1280px-M%C5%8Dts%C5%AB-ji_Pure_Land_Garden_in_autumn_2019.jpg" alt="毛越寺 淨土庭園的秋色" loading="lazy"><figcaption>毛越寺 淨土庭園的秋色</figcaption></figure></div>
+
+<div class="bd">
+<div class="note warn"><strong>目前狀態：</strong>桃園星野結衣尚未收到公會正式行程表，公會那邊沒有動作，因此本日保留，先備兩套版本。</div>
+<h4>版本一｜公會行程可行（預設）</h4>
+<ul class="tl">
+<li><div class="t">上午</div><div class="c"><b>中尊寺</b>（世界遺產・金色堂）<small>⚠️ 月見坂為長上坡且部分碎石／台階，嬰兒車吃力，背帶必備</small></div></li>
+<li><div class="t">下午</div><div class="c"><b>猊鼻溪 舟下り（遊船）</b><small>⚠️ 需上下平底船、約 90 分航程中途無法下船，是全程對幼兒風險最高的單一活動</small></div></li>
+<li><div class="t">晚間</div><div class="c">公會安排晚餐後解散，交通全程由公會負責</div></li>
+</ul>
+<h4>版本二｜公會行程對小魚乾不可行時的替代</h4>
+<ul class="tight">
+<li>桃園星野結衣單獨參加（這本來就是她的公務）。</li>
+<li>龜山下智久帶小魚乾留市區：仙台市博物館周邊／西公園／勾當台公園，全部平坦好推、可就近午睡。</li>
+<li>此版本也讓 11/02 不至於連兩天都由一人單獨帶小孩，體力分配更合理。</li>
+</ul>
+<div class="note">需向公會確認：①猊鼻溪舟下り（猊鼻溪遊船）是否接受未滿 2 歲幼兒同乘、是否另購票；②公會巴士能否安裝兒童座椅；③午餐是否統一安排（影響是否自備副食品）。</div>
+</div>
+</div>
+
+<div class="day">
+<div class="hd" id="day4">Day 4｜11/02（一）研討會日 → 水族館日<span class="sub">定調：桃園星野結衣整日研討會至 17:00；龜山下智久單獨帶小魚乾出遊　｜　已定案</span></div><div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sendai_Umino-Mori_Aquarium.JPG/1280px-Sendai_Umino-Mori_Aquarium.JPG" alt="仙台うみの杜水族館（仙台海之杜水族館）外觀" loading="lazy"><figcaption>仙台うみの杜水族館（仙台海之杜水族館）外觀</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%B0%D0%BA%D0%B2%D0%B0%D1%80%D0%B8%D1%83%D0%BC_%D0%BE%D0%BA%D0%B5%D0%B0%D0%BD%D0%B0%D1%80%D0%B8%D1%83%D0%BC%D0%B0_%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9_%D0%BB%D0%B5%D1%81.jpg/1280px-%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%B0%D0%BA%D0%B2%D0%B0%D1%80%D0%B8%D1%83%D0%BC_%D0%BE%D0%BA%D0%B5%D0%B0%D0%BD%D0%B0%D1%80%D0%B8%D1%83%D0%BC%D0%B0_%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9_%D0%BB%D0%B5%D1%81.jpg" alt="館內大水槽「日本のうみ（日本之海）」" loading="lazy"><figcaption>館內大水槽「日本のうみ（日本之海）」</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Uminomorisuizokukan.JPG/1280px-Uminomorisuizokukan.JPG" alt="うみの杜スタジアム（海之杜表演場）的海豚表演" loading="lazy"><figcaption>うみの杜スタジアム（海之杜表演場）的海豚表演</figcaption></figure></div>
+<div class="bd">
+<div class="note ok"><strong>為什麼最後選了水族館：</strong>先前把水族館排除的理由是「它和秋保方向相反，來回一整天太浪費」——但那是<strong>租車後（11/3–11/5）</strong>的判斷。11/02 我們還在市區、還沒取車，從仙台駅出發只要約 35 分，方向問題根本不存在。而名取 AEON 那類替代方案與市區購物重複，違反「不重複行程」原則，也沒有比水族館方便多少。</div>
+<h4>單人帶幼兒的可行性評估（本日關鍵）</h4>
+<table>
+<tbody><tr><th style="width:100px">關卡</th><th>實查結果</th><th style="width:60px">判定</th></tr>
+<tr><td>電車</td><td>JR 仙石線 仙台 → 中野栄 約 18 分、約 ¥240（IC）。仙台駅為地下月台，有電梯</td><td>✅</td></tr>
+<tr><td>車站→館</td><td>步行約 15 分（需橫越國道 45 號與縣道 10 號兩大路口）<b>／或</b>ミヤコーバス（宮交巴士）「仙台うみの杜水族館（仙台海之杜水族館）線」¥200，<b>全車為無台階低底盤，嬰兒車可直接推上車不必收折</b>，全日 8:45–16:00 共 26 班</td><td>✅ 搭巴士</td></tr>
+<tr><td>入館費</td><td>大人 ¥2,400／<b>未滿 4 歲免費</b>（小魚乾 ¥0）</td><td>✅</td></tr>
+<tr><td>午睡</td><td><b>當日可再入館</b>——於出口向工作人員辦手續即可重入。與動物園「退園後不得再入」完全相反，等於午睡有彈性</td><td>✅ 決定性</td></tr>
+<tr><td>語言</td><td>可事前於 asoview 線上購票直接入館、免排窗口；館內為圖示導覽</td><td>✅</td></tr>
+<tr><td>體力</td><td>全程平面室內，1F 日本／東北之海 → うみの杜ビーチ（海之杜海灘） → 2F 世界之海 → 海獸廣場，動線單向不繞路</td><td>✅</td></tr>
+</tbody></table>
+<ul class="tl">
+<li><div class="t">08:00</div><div class="c">三人一起早餐，送桃園星野結衣出門</div></li>
+<li><div class="t">09:30</div><div class="c">仙台駅 → JR 仙石線 → 中野栄駅（約 18 分）</div></li>
+<li><div class="t">10:00</div><div class="c">中野栄駅 → ミヤコーバス（宮交巴士） → <b>仙台うみの杜水族館（仙台海之杜水族館）</b></div></li>
+<li><div class="t">10:15</div><div class="c">1F「日本のうみ（日本之海） ― 東北のうみ（東北之海）」<small>三陸之海大水槽，全館最值得慢看的一區</small></div></li>
+<li><div class="t">11:00</div><div class="c">「うみの杜ビーチ（海之杜海灘） -PENGUIN LIFE-」環境一體型企鵝展示<small>孩子與企鵝距離最近的一區</small></div></li>
+<li><div class="t">11:40</div><div class="c">うみの杜スタジアム（海之杜表演場） 海豚・海獅表演<small>東北最大、約 1,000 席，水池無壓克力隔板</small></div></li>
+<li><div class="t">12:30</div><div class="c">1F フードコート（美食廣場） 午餐<small>自帶副食品；館內有嬰幼兒設施</small></div></li>
+<li><div class="t">13:15</div><div class="c"><b>午睡（嬰兒車；或辦再入館手續到館外安靜處）</b></div></li>
+<li><div class="t">14:30</div><div class="c">2F「世界のうみ（世界之海）」・海獸ひろば（海獸廣場）・ミュージアムショップ（館內紀念品店）</div></li>
+<li><div class="t">15:30</div><div class="c">巴士 → 中野栄駅 → 仙台駅</div></li>
+<li><div class="t">16:30</div><div class="c">回飯店休息，等桃園星野結衣 17:00 結束</div></li>
+<li><div class="t">18:00</div><div class="c">三人會合晚餐<small>本日是桃園星野結衣最累的一天，選離飯店近、可久坐的店</small></div></li>
+<li><div class="t">20:30</div><div class="c">就寢</div></li>
+</ul>
+<div class="note warn"><strong>提醒：</strong>①官網目前僅公告至 9/18 的營業時間，<b>11 月時段（一般為 9:00–17:00、最終入館 16:30）行前務必再確認</b>。②「UMINOMORI HALLOWEEN」2025 年僅辦到 10/31，11/02 到訪會錯過萬聖節版表演——這是選 11/02 的已知取捨。</div>
+<div class="note"><strong>彈性備案：</strong>若 17:00 後到 18:00 晚餐前還有餘裕，可加碼 <b>AER Observation Terrace</b>（仙台駅旁免費展望台，飯店步行可達），三人會合後順道看一下市街夜景，非必排行程，視當天疲勞狀況彈性決定（v3.2 新增，2026/07/29）。</div>
+<div class="note ok"><strong>當日預估支出約 ¥8,800</strong>：來回電車 ¥480／巴士 ¥400／入館 ¥2,400／午餐 ¥1,500／三人晚餐 ¥4,000</div>
+</div>
+</div>
+
+
+<div class="day">
+<div class="hd" id="day5">Day 5｜11/03（二）移動 × 溫泉日<span class="sub">定調：上午取車、慢慢往秋保移動，下午泡湯　｜　已定案</span></div><div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Front_view_of_Sakan_Hotel.jpg" alt="伝承千年の宿 佐勘（傳承千年之宿 佐勘）外觀" loading="lazy"><figcaption>伝承千年の宿 佐勘（傳承千年之宿 佐勘）外觀</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Sakan_Hotel_lobby.jpg" alt="佐勘 大廳" loading="lazy"><figcaption>佐勘 大廳</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/211029_Akiu_Onsen_Sendai_Miyagi_pref_Japan01s3.jpg/1280px-211029_Akiu_Onsen_Sendai_Miyagi_pref_Japan01s3.jpg" alt="秋保温泉（秋保溫泉）街景" loading="lazy"><figcaption>秋保温泉（秋保溫泉）街景</figcaption></figure></div>
+<div class="bd">
+<ul class="tl">
+<li><div class="t">08:00</div><div class="c">早餐、整理行李</div></li>
+<li><div class="t">08:40</div><div class="c"><b>仙台國際飯店退房</b><small>於櫃台繳宿泊税（住宿稅）¥300 × 2 大人 × 4 晚 ＝ <b>¥2,400</b>（幼兒不計）。若有使用點數／折價券，退房時一併確認結清</small></div></li>
+<li><div class="t">08:55</div><div class="c"><b>請櫃檯代叫計程車前往租車店</b><small>飯店（青葉区中央 4-6-1）→ タイムズカー仙台駅西口（Times Car 仙台站西口・青葉区五橋 1-3）約 1 公里。帶兩件大行李＋嬰兒車＋幼兒<b>不要走路</b>，計程車約 5 分、¥700–900</small></div></li>
+<li><div class="t">09:00</div><div class="c"><b>タイムズカー仙台駅西口（Times Car 仙台站西口）取車（MAZDA CX-30）</b><small>取車後在店門口先做完四件事：① <b>現場裝好兒童安全座椅</b>（不要邊開邊調）② 確認油種為 レギュラー（regular・普通汽油）與還車是否須加滿 ③ 用電話號碼 022-398-2233 直接設定佐勘導航 ④ <b>請店員在地圖上圈出 11/05 還車前建議的加油站</b>。出發前先在店內上廁所、換尿布</small></div></li>
+<li><div class="t">09:40</div><div class="c">出發，順道前往 <b>大崎八幡宮（国宝）</b>（車程約 15 分）</div></li>
+<li><div class="t">09:55</div><div class="c"><b>大崎八幡宮</b>参拝（伊達政宗興建・仙台唯一國寶建築）<small>開車請走<b>神社後方免費停車場</b>，可避開正面 100 階石梯直達本殿；境內仍有些許高低差，建議用背帶而非推車。純參拝拍照約 25–30 分（v3.2 新增，2026/07/29）</small></div></li>
+<li><div class="t">10:25</div><div class="c">出發往秋保（約 31 分）</div></li>
+<li><div class="t">10:55</div><div class="c"><b>磊々峡（磊磊峽）</b>散步<small>覗橋起約 20–30 分往返；步道有段差，嬰兒車可推到入口，深入建議背帶。11 月初正是紅葉期</small></div></li>
+<li><div class="t">12:05</div><div class="c">秋保・里センター（觀光案內所）補資訊、洗手間<small>アグリエの森（Agrie 之森）已查證<b>全年只有元日（1/1）休業</b>、營業 9:00–18:00，11/05 確定開門，不必再確認</small></div></li>
+<li><div class="t">12:50</div><div class="c">秋保區域午餐</div></li>
+<li><div class="t">13:50</div><div class="c"><b>車上午睡</b>（停車場靜置或緩行山路，孩子最好睡的時段）</div></li>
+<li><div class="t">15:05</div><div class="c"><b>抵館，直接辦理入住佐勘・飛天館</b><small><b>⚠️ 加入大崎八幡宮後全天順延約 40 分鐘</b>，抵達時間貼近訂房登錄的 <b>15:00</b> チェックイン予定時間（預定入住時間），不必再提早寄放行李。付款為 現地決済（現場付款），<b>可否刷卡尚待確認</b></small></div></li>
+<li><div class="t">15:30</div><div class="c"><b>泡湯（輪流制）</b><small><b>佐勘・飛天館沒有房內私湯</b>——一人留房陪小魚乾，另一人先去名取川河床邊的「河原の湯（河原之湯）」或伊達家的「名取の御湯（名取的御湯）」，約 40 分後換手</small></div></li>
+<li><div class="t">18:00</div><div class="c"><b>晚餐（幼兒不含餐・自備副食品）</b><small>佐勘已確認：<b>包廂（個室）用餐</b>；幼兒改為 ¥4,400（不含餐），現場可單點 おかゆ<span class="jp">（粥）</span>¥770／うどん<span class="jp">（烏龍麵）</span>¥550，早餐自助餐可自行分裝</small></div></li>
+<li><div class="t">20:30</div><div class="c">就寢</div></li>
+</ul>
+</div>
+</div>
+
+<div class="day">
+<div class="hd" id="day6">Day 6｜11/04（三）秋保放鬆日<span class="sub">定調：純秋保、不遠行，配合孩子節奏　｜　已定案（方案 A）</span></div>
+<div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/211028_Rairaikyo_Sendai_Miyagi_pref_Japan01s3.jpg/1280px-211028_Rairaikyo_Sendai_Miyagi_pref_Japan01s3.jpg" alt="磊々峡 覗橋" loading="lazy"><figcaption>磊々峡（磊磊峽） 覗橋</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Akiu_Otaki_201509b.jpg/1280px-Akiu_Otaki_201509b.jpg" alt="秋保大滝（日本三名瀑之一）" loading="lazy"><figcaption>秋保大滝（日本三名瀑之一）</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Akiu%27s_autumn_%2851962914707%29.jpg/1280px-Akiu%27s_autumn_%2851962914707%29.jpg" alt="秋保的秋色（11 月上旬正值紅葉）" loading="lazy"><figcaption>秋保的秋色（11 月上旬正值紅葉）</figcaption></figure></div>
+
+<div class="bd">
+<div class="note ok">這是整趟<b>唯一完全沒有交通壓力的一天</b>，刻意留白。不遠行、不排硬行程，讓大人小孩都補回體力。</div>
+<ul class="tl">
+<li><div class="t">07:30</div><div class="c">晨湯 → 早餐</div></li>
+<li><div class="t">09:30</div><div class="c">館內設施・日式庭園散步<small>佐勘：日式庭園、河原之湯周邊散步；館内廣間可讓孩子活動</small></div></li>
+<li><div class="t">10:00</div><div class="c">（彈性）順路繞去 <b>主婦の店 佐超市</b> 補貨<small>秋保温泉街內的在地超市，就在磊々峡附近；尿布、水果、零食臨時要補都方便，非必要行程，依當天狀況決定要不要停（v3.2 新增，2026/07/29）</small></div></li>
+<li><div class="t">10:30</div><div class="c"><b>秋保大滝</b>（車程約 20 分）<small>日本三名瀑之一，滝見台為平坦步道、嬰兒車可推；下到瀑布底部有陡階，帶孩子不建議下去</small></div></li>
+<li><div class="t">12:00</div><div class="c">午餐（秋保區域或返回旅館）</div></li>
+<li><div class="t">13:00–15:00</div><div class="c"><b>午睡（房間，全程最完整的一次午睡）</b><small>大人可趁此輪流去大浴場</small></div></li>
+<li><div class="t">15:30</div><div class="c"><b>第二次泡湯（同樣輪流制）／館內咖啡廳</b><small>改去另外 2 處大浴場或サウナ（三溫暖），把佐勘的「四湯巡禮」湊完。<b>房內無私湯</b>，仍須一人留守陪孩子</small></div></li>
+<li><div class="t">17:00</div><div class="c">整理行李、<b>預先騰出伴手禮空間</b><small>隔天要在アグリエの森（Agrie 之森）採購</small></div></li>
+<li><div class="t">18:00</div><div class="c">晚餐（第二晚菜色與首晚不同）</div></li>
+<li><div class="t">20:30</div><div class="c">就寢</div></li>
+</ul>
+</div>
+</div>
+
+<div class="day">
+<div class="hd" id="day7">Day 7｜11/05（四）返程日<span class="sub">定調：伴手禮 → 還車 → 展望台 → 登機　｜　已定案</span></div>
+<div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Sendai_gyutan.JPG/1280px-Sendai_gyutan.JPG" alt="仙台名物 牛たん（牛舌）" loading="lazy"><figcaption>仙台名物 牛たん（牛舌）</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Zunda-mochi.jpg/1280px-Zunda-mochi.jpg" alt="ずんだ餅（毛豆泥麻糬・經典伴手禮）" loading="lazy"><figcaption>ずんだ餅（毛豆泥麻糬・經典伴手禮）</figcaption></figure></div>
+
+<div class="bd">
+<ul class="tl">
+<li><div class="t">08:00</div><div class="c">早餐、最後一次泡湯</div></li>
+<li><div class="t">10:00</div><div class="c"><b>退房</b><small>佐勘 Check-out 11:00。本行程提早到 10:00 退房，因回程班機提前至 16:15</small></div></li>
+<li><div class="t">10:30</div><div class="c"><b>秋保ヴィレッジ アグリエの森（秋保村 Agrie 之森）</b>（主力伴手禮站）<small>當地農產直賣所＋市場＋餐廳。你的判斷正確：這裡的伴手禮在地感遠勝購物中心，而且順路不繞。<b>因新增下一站，購物時間壓縮為約 40 分鐘</b>（v3.2 新增，2026/07/29）</small></div></li>
+<li><div class="t">11:10</div><div class="c">出發往 <b>金蛇水神社</b>（車程約 33 分）</div></li>
+<li><div class="t">11:45</div><div class="c"><b>金蛇水神社</b>参拝（金運祈願・免費停車場 244 台）<small>境內平坦、嬰兒車可直接推行，純參拝約 30 分。<b>⚠️ 若小魚乾這時還在車上熟睡，建議不下車、直接開往午餐地點</b>，保住連續睡眠比拜神社重要（v3.2 新增，2026/07/29）</small></div></li>
+<li><div class="t">12:15</div><div class="c">午餐（名取／岩沼周邊，就在金蛇水神社附近，不繞路）</div></li>
+<li><div class="t">13:00</div><div class="c">出發往仙台空港加油站（車程約 16 分）</div></li>
+<li><div class="t">13:15</div><div class="c"><b>加滿油：宇佐美（USAMI）仙台空港給油所</b><small><b>機場周邊加油站極少</b>，最近的就是這間，距機場約 2.8–3 km。日本多為 セルフ（self・自助）加油，油種選 レギュラー（regular・普通汽油）。操作教學影片見上方「租車」欄位。<b>⚠️ 加入金蛇水神社後，原本「車上午睡」整段被拆開，若孩子沒睡飽，可直接放棄這一站，改回原本連續移動的節奏</b></small></div></li>
+<li><div class="t">14:00</div><div class="c"><b>仙台機場還車</b>（タイムズカー仙台空港（Times Car 仙台機場）／異地還車）<small><b>⚠️ 此店為場外店</b>（岩沼市空港南 6-3-4），還車後由店家<b>接送車</b>送回航廈約 10 分；官方明訂「請於班機起飛 1 小時前還車」。實際抵達航廈時間 ≒ 還車時間 ＋ 25～35 分（手續 10–15 分＋等車＋車程 10 分），還要把行李、嬰兒車、兒童座椅搬上接駁車</small></div></li>
+<li><div class="t">14:20</div><div class="c">辦理登機、託運行李與嬰兒車<small>長榮航空櫃檯；若哩程升等成功可改走商務艙櫃檯。<b>⚠️ 此時刻待修正</b>：還車 14:00 ＋ 接駁 25～35 分，實際抵達航廈約 14:40 以後，本日時刻將於下一輪行程調整時一併重排</small></div></li>
+<li><div class="t">15:20</div><div class="c"><b>仙台機場展望甲板</b><small>看飛機收尾，是給小魚乾的最後一個節目，免費且不佔行程</small></div></li>
+<li><div class="t">16:15</div><div class="c"><b>BR117 起飛</b></div></li>
+<li><div class="t">19:30</div><div class="c">抵達台北桃園第二航廈</div></li>
+</ul>
+<div class="note warn"><strong>本日唯一風險（回程改 BR117 16:15 起飛，全日提前約 1 小時）：</strong>還車 14:00 → 起飛 16:15 只有 2 小時 15 分。若 AEON 停留超時或塞車，<strong>先砍 AEON，不要砍還車緩衝</strong>。</div>
+</div>
+</div>
+
+
+<h2><span class="num">肆</span>費用概算</h2>
+<p>匯率以 ¥1 ≒ NT$0.217 估算。未含市區餐費、油費、過路費、伴手禮與雜支。</p>
+<h4>固定項目（全部已訂妥，下列為實際成交金額）</h4>
+<table>
+<tbody><tr><th>項目</th><th class="n">日圓</th><th class="n">約合台幣</th></tr>
+<tr><td><b>機票 BR118／BR117</b>（已開票：大人 29,115×2＋嬰兒 3,710）</td><td class="n">—</td><td class="n">61,940</td></tr>
+<tr><td><b>仙台國際飯店</b> 4 晚（已線上刷卡付清）</td><td class="n">¥88,200</td><td class="n">19,139</td></tr><tr><td><b>佐勘・飛天館</b> 2 晚（現場付款・幼兒不含餐）</td><td class="n">¥159,000</td><td class="n">34,503</td></tr>
+<tr><td><b>租車 MAZDA CX-30</b> 2 天（含兒童座椅・安心補償・異地還車）</td><td class="n">¥46,233</td><td class="n">10,033</td></tr>
+<tr style="background:#f4f7fa"><td><b>四大骨幹總計</b></td><td class="n">—</td><td class="n"><b>125,615</b></td></tr>
+</tbody></table>
+<div class="note ok"><b>四大骨幹實際成交 TWD 125,615。</b>其中三筆加價（改長榮、換大房型、加購免自負額保險）都花在「帶幼兒的安全與彈性」上。<small>各項單價與訂單編號 → <a href="仙台家庭旅遊企劃書%20④訂購成果.html">④ 訂購成果</a>；為什麼這樣選 → <a href="仙台家庭旅遊企劃書%20⑤歷程沿革.html">⑤ 歷程沿革</a></small></div>
+<h4>每日現金支出估算（餐費與雜支）</h4>
+<table>
+<tbody><tr><th>日期</th><th>項目</th><th class="n">預估</th></tr>
+<tr><td>10/30</td><td>機場線 ¥1,344／藥妝 ¥1,000／晚餐 ¥5,200</td><td class="n">約 ¥7,600</td></tr>
+<tr><td>10/31</td><td>一日券 ¥1,240／入園 ¥760／餵食 ¥500／餐費 ¥5,500</td><td class="n">約 ¥8,000</td></tr>
+<tr><td>11/01</td><td>公會行程（可能含自費午餐）</td><td class="n">待定</td></tr>
+<tr><td>11/02</td><td>電車 ¥480／巴士 ¥400／入館 ¥2,400／餐費 ¥5,500</td><td class="n">約 ¥8,800</td></tr>
+<tr><td>11/03</td><td>午餐、油費、停車</td><td class="n">約 ¥4,000</td></tr>
+<tr><td>11/04</td><td>午餐、秋保大滝（秋保大瀑布）停車</td><td class="n">約 ¥3,000</td></tr>
+<tr><td>11/05</td><td>午餐、加油、伴手禮（另計）</td><td class="n">約 ¥5,000＋</td></tr>
+<tr style="background:#f4f7fa"><td colspan="2"><b>建議另備現金／額度</b></td><td class="n"><b>約 ¥60,000</b></td></tr>
+</tbody></table>
+
+<h2><span class="num">伍</span>行前攜帶清單（帶幼兒專用）</h2>
+<table>
+<tbody><tr><th style="width:110px">類別</th><th>項目</th></tr>
+<tr><td>飲食</td><td>寶寶粥／副食品<b>從台灣帶足</b>（Tomod's 僅作備援）、食物剪、圍兜、可攜式椅帶、保溫瓶</td></tr>
+<tr><td>現金</td><td><b>大量 ¥100 硬幣</b>——動物園餵食體驗只收現金且不找零，這是最容易踩空的一項</td></tr>
+<tr><td>交通</td><td>Suica／PASMO（機場線、地下鐵、巴士皆可用，幼兒免費）</td></tr>
+<tr><td>裝備</td><td>嬰兒車（可託運至艙門）＋<b>背帶</b>（中尊寺月見坂、磊々峡（磊磊峽）步道推車困難）</td></tr>
+<tr><td>衣物</td><td>11 月初仙台日均高溫約 15–17℃、低溫 6–8℃，秋保山區更低；洋蔥式穿搭＋防風外套，動物園全程戶外</td></tr>
+<tr><td>證件</td><td>護照、日本駕照譯本＋台灣駕照（租車必備）、旅平險、健保卡</td></tr>
+<tr><td>電源</td><td>日本 100V／A 型插座，台灣電器可直接使用，不需變壓器</td></tr>
+</tbody></table>
+
+<footer>
+<p><a href="index.html">🏠 回首頁</a>　｜　<strong>本檔為第 ① 部（行程規劃）。</strong>動物園攻略、兒童餐評估、萬聖節活動等現場資料 → <a href="仙台家庭旅遊企劃書_附件資料.html">② 附件資料</a>；未定案項目與時效 → <a href="仙台家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>；訂單編號與付款明細 → <a href="仙台家庭旅遊企劃書%20④訂購成果.html">④ 訂購成果</a>；決策歷程與版本沿革 → <a href="仙台家庭旅遊企劃書%20⑤歷程沿革.html">⑤ 歷程沿革</a>。</p>
+<p><strong>圖片來源：</strong>Wikimedia Commons（自由授權）、仙台うみの杜水族館（仙台海之杜水族館）官方網站、星野集團官方網站。</p>
+<p>機票、住宿、租車金額為 <b>2026/07/28 實際訂購成交價</b>；其餘時刻與票價為當日查詢資料，請以官方最新公告為準。</p>
+</footer>
+</div>
+
+
+</body></html>
