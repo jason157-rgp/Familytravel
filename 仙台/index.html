@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>仙台家庭旅遊企劃書｜首頁</title>
+<style>
+:root{--ink:#22303c;--sub:#6b7c8c;--line:#e3e9ef;--bg:#f7f9fb;--ac:#b4472e;--ac2:#2f6b5f;--gold:#a8823a;--soft:#fdf6f2}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px}
+a{color:var(--ac2)}
+.hero{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Akiu%27s_autumn_%2851962914707%29.jpg/1280px-Akiu%27s_autumn_%2851962914707%29.jpg');background-size:cover;background-position:center 55%}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(30,48,60,.78),rgba(123,63,46,.72))}
+.hero .in{position:relative;padding:70px 22px 60px;max-width:820px}
+.hero .kick{margin:0;font-size:.86rem;letter-spacing:6px;opacity:.9}
+.hero h1{margin:12px 0 6px;font-size:2.6rem;letter-spacing:3px;font-weight:700;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.hero .sub{margin:8px 0 0;font-size:1.05rem;opacity:.96}
+.hero .who{margin:4px 0 0;font-size:.92rem;opacity:.88}
+.hero .tag{display:inline-block;margin-top:20px;border:1px solid rgba(255,255,255,.55);border-radius:99px;padding:6px 20px;font-size:.85rem;backdrop-filter:blur(2px)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px 80px}
+h2{font-size:1.42rem;margin:56px 0 6px;padding-bottom:11px;border-bottom:3px solid var(--ac)}
+h2 small{display:block;font-size:.78rem;font-weight:400;color:var(--sub);letter-spacing:1px;margin-top:4px}
+.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:-42px 0 0;position:relative;z-index:3}
+.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 6px 20px rgba(30,48,60,.10)}
+.stat .k{font-size:.78rem;color:var(--sub);letter-spacing:1px}
+.stat .v{font-size:1.22rem;font-weight:700;line-height:1.4;margin-top:2px}
+.stat .n{font-size:.8rem;color:var(--sub)}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:22px 0 0}
+.card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(30,48,60,.16)}
+.card .ph{position:relative;height:150px;background:#e9eef2}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.card .no{position:absolute;left:12px;top:12px;background:rgba(180,71,46,.94);color:#fff;font-size:.82rem;padding:3px 12px;border-radius:99px;letter-spacing:1px}
+.card .bd{padding:14px 18px 18px}
+.card .ti{font-size:1.08rem;font-weight:700;margin:0 0 4px}
+.card .ds{font-size:.87rem;color:var(--sub);margin:0}
+.card .go{font-size:.82rem;color:var(--ac);margin-top:10px;display:block}
+table{width:100%;border-collapse:collapse;margin:18px 0;background:#fff;font-size:.92rem;box-shadow:0 1px 4px rgba(0,0,0,.05);border-radius:8px;overflow:hidden}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#eef3f7;font-weight:700}
+td.n,th.n{text-align:right;white-space:nowrap}
+tbody tr:nth-child(even){background:#fafcfd}
+.days{margin:22px 0 0;display:grid;gap:14px}
+.day{display:grid;grid-template-columns:132px 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.day img{width:100%;height:100%;min-height:108px;object-fit:cover;display:block;background:#e9eef2}
+.day .tx{padding:12px 18px}
+.day .dt{font-size:.8rem;color:var(--ac);font-weight:700;letter-spacing:1px}
+.day .dn{font-size:1.02rem;font-weight:700;margin:1px 0 3px}
+.day .dd{font-size:.87rem;color:var(--sub);margin:0}
+.note{background:var(--soft);border-left:5px solid var(--ac);border-radius:0 8px 8px 0;padding:15px 20px;margin:18px 0;font-size:.92rem}
+.ok{background:#eff7f2;border-left-color:var(--ac2)}
+.warn{background:#fff8e8;border-left-color:var(--gold)}
+footer{background:#2f4858;color:#cfdbe4;font-size:.85rem;padding:30px 20px;text-align:center;line-height:1.9}
+footer a{color:#ffd9a8}
+@media(max-width:560px){.hero h1{font-size:1.9rem}.day{grid-template-columns:96px 1fr}.stats{margin-top:18px}}
+
+.pay{display:inline-block;font-size:.78rem;padding:2px 10px;border-radius:99px;margin-right:7px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
+.pay.p1{background:#e4f1ea;color:#25705f;border:1px solid #bcdccf}
+.pay.p2{background:#fdece4;color:#a8422a;border:1px solid #f2c9b8}
+a.day{text-decoration:none;color:inherit;transition:transform .16s,box-shadow .16s}
+a.day:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(30,48,60,.15)}
+a.day .dt .jump{float:right;color:var(--sub);font-weight:400;letter-spacing:0}
+</style>
+</head>
+<body>
+<div class="hero"><div class="bg"></div><div class="in">
+<p class="kick">2026 秋 ・ 宮城</p>
+<h1>仙台家庭旅遊企劃書</h1>
+<p class="sub">2026/10/30（五）－ 11/05（四）　7 天 6 夜</p>
+<p class="who">桃園星野結衣 ＋ 龜山下智久 ＋ 煞氣E小魚乾E（旅行時約 1 歲 10 個月）</p>
+<span class="tag">✅ 全案已定案　｜　更新 2026/07/30（v3.5）</span>
+</div></div>
+<div class="wrap">
+<div class="stats"><div class="stat"><div class="k">出發</div><div class="v">10/30（五）</div><div class="n">BR118　桃園 10:15 → 仙台 14:25</div></div><div class="stat"><div class="k">返抵</div><div class="v">11/05（四）</div><div class="n">BR117　仙台 16:15 → 桃園 19:30</div></div><div class="stat"><div class="k">住宿</div><div class="v">市區 4 晚 ＋ 秋保 2 晚</div><div class="n">仙台國際飯店・伝承千年の宿 佐勘（傳承千年之宿 佐勘）</div></div><div class="stat"><div class="k">款項狀態</div><div class="v" style="font-size:1.02rem;line-height:1.7"><span class="pay p1">已付清</span>機票・市區住宿<br><span class="pay p2">現場付</span>佐勘・租車</div><div class="n">現場請備 ¥208,833（佐勘現地決済已確認可刷卡）</div></div></div>
+<h2>五份文件<small>DOCUMENTS</small></h2>
+<div class="cards"><a class="card" href="仙台家庭旅遊企劃書_行程規劃.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Akiu%27s_autumn_%2851962914707%29.jpg/1280px-Akiu%27s_autumn_%2851962914707%29.jpg" alt="行程規劃"><span class="no">①</span></div><div class="bd"><p class="ti">行程規劃</p><p class="ds">七日逐日行程、四大骨幹、費用概算、行前攜帶清單。要知道「哪天去哪裡」看這份。</p><span class="go">開啟 →</span></div></a><a class="card" href="仙台家庭旅遊企劃書_附件資料.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yagiyama_Zoo_2.JPG/1280px-Yagiyama_Zoo_2.JPG" alt="附件資料"><span class="no">②</span></div><div class="bd"><p class="ti">附件資料</p><p class="ds">動物園完整攻略、餐飲與兒童餐評估、萬聖節活動、其他實查資料。</p><span class="go">開啟 →</span></div></a><a class="card" href="仙台家庭旅遊企劃書_待決定事項.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Fall_colors_at_Okama_crater_lake%2C_Mt._Zao%2C_Tohoku_region%2C_Japan%2C.jpg/1280px-Fall_colors_at_Okama_crater_lake%2C_Mt._Zao%2C_Tohoku_region%2C_Japan%2C.jpg" alt="待決定事項"><span class="no">③</span></div><div class="bd"><p class="ti">待決定事項</p><p class="ds">還沒定案的項目、優先順序與時效總表。想知道「還有什麼要處理」看這份。</p><span class="go">開啟 →</span></div></a><a class="card" href="仙台家庭旅遊企劃書%20④訂購成果.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/EVA_Air_Boeing_787-9_B-17887_at_Munich_May_2025.jpg/1280px-EVA_Air_Boeing_787-9_B-17887_at_Munich_May_2025.jpg" alt="訂購成果"><span class="no">④</span></div><div class="bd"><p class="ti">訂購成果</p><p class="ds">機票、兩段住宿、租車的訂單編號與金額總表。到了現場要報編號、要付錢，看這份。</p><span class="go">開啟 →</span></div></a><a class="card" href="仙台家庭旅遊企劃書%20⑤歷程沿革.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Matsushima_famous_island.jpg/1280px-Matsushima_famous_island.jpg" alt="歷程沿革"><span class="no">⑤</span></div><div class="bd"><p class="ti">歷程沿革</p><p class="ds">版本沿革、決策歷程、被排除的方案與比價全紀錄。想知道「為什麼這樣選」看這份。</p><span class="go">開啟 →</span></div></a></div>
+<div class="note warn"><b>訂位代號、訂房編號等識別資料不列於本公開網頁</b>，存於 Google Drive 私人文件「仙台旅遊 訂單敏感資料（私人）」。現場報編號請開那份文件。</div>
+<h2>訂單速查<small>BOOKING REFERENCES</small></h2>
+<table><thead><tr><th>項目</th><th>內容</th><th>訂位／預約編號</th><th class="n">金額</th><th>付款</th></tr></thead><tbody><tr><td><b>機票</b></td><td>長榮航空 BR118／BR117　台北 ⇄ 仙台 直飛</td><td><b><span class="jp">見私人記錄</span><br><span style="color:#6b7c8c;font-size:.85em"><span class="jp">見私人記錄</span>（嬰兒）</span></b></td><td class="n">TWD 61,940</td><td><span class="pay p1">已付清</span></td></tr><tr><td><b>住宿①</b></td><td>仙台國際飯店　豪華雙床房　10/30–11/03（4 晚）</td><td><b><span class="jp">見私人記錄</span></b></td><td class="n">¥88,200</td><td><span class="pay p1">已付清</span></td></tr><tr><td><b>住宿②</b></td><td>伝承千年の宿 佐勘（傳承千年之宿 佐勘）　飛天館和室　11/03–11/05（2 晚・含早晚餐，幼兒不含餐）</td><td><b><span class="jp">見私人記錄</span></b></td><td class="n">¥159,000</td><td><span class="pay p2">現場付</span></td></tr><tr><td><b>租車</b></td><td>MAZDA CX-30　11/03 仙台駅西口取車 → 11/05 仙台空港還車</td><td><b><span class="jp">見私人記錄</span></b></td><td class="n">¥46,233</td><td><span class="pay p2">現場付</span></td></tr></tbody></table>
+<div class="note ok">現場需要準備的日圓現金／刷卡額度約 <b>¥208,833</b>（佐勘 ¥159,000 ＋ 租車 ¥46,233 ＋ 住宿稅 ¥3,600），另有停車費 ¥1,500／晚與餐食購物未計入。</div>
+<h2>七日一覽<small>ITINERARY AT A GLANCE</small></h2>
+<div class="days"><a class="day" href="仙台家庭旅遊企劃書_行程規劃.html#day1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sendai_Airport_terminal_2017-08-29_%2836424770174%29.jpg/1280px-Sendai_Airport_terminal_2017-08-29_%2836424770174%29.jpg" alt="抵達日"><div class="tx"><div class="dt">Day 1　10/30（五）<span class="jump">看當日細節 →</span></div><div class="dn">抵達日</div><p class="dd">不排景點，只求順利落地、換好交通卡與網路，讓孩子的作息銜接上。</p></div></a><a class="day" href="仙台家庭旅遊企劃書_行程規劃.html#day2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yagiyama_Zoo_2.JPG/1280px-Yagiyama_Zoo_2.JPG" alt="八木山動物公園 全日"><div class="tx"><div class="dt">Day 2　10/31（六）<span class="jump">看當日細節 →</span></div><div class="dn">八木山動物公園 全日</div><p class="dd">全家一起把整天用滿；午睡切成園內＋回程兩段。</p></div></a><a class="day" href="仙台家庭旅遊企劃書_行程規劃.html#day3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chuson-ji_Konjiki-do_201806.jpg/1280px-Chuson-ji_Konjiki-do_201806.jpg" alt="公會平泉觀光（岩手）"><div class="tx"><div class="dt">Day 3　11/01（日）<span class="jump">看當日細節 →</span></div><div class="dn">公會平泉觀光（岩手）</div><p class="dd">全家隨律師公會行程走。保留中，等公會正式公告。</p></div></a><a class="day" href="仙台家庭旅遊企劃書_行程規劃.html#day4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Performing_dolphins_in_Sendai_Umino-Mori_Aquarium.jpg/1280px-Performing_dolphins_in_Sendai_Umino-Mori_Aquarium.jpg" alt="研討會日 → 水族館日"><div class="tx"><div class="dt">Day 4　11/02（一）<span class="jump">看當日細節 →</span></div><div class="dn">研討會日 → 水族館日</div><p class="dd">一人整日研討會至 17:00；另一人單獨帶小魚乾去うみの杜水族館（海之杜水族館）。</p></div></a><a class="day" href="仙台家庭旅遊企劃書_行程規劃.html#day5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/211029_Akiu_Onsen_Sendai_Miyagi_pref_Japan01s3.jpg/1280px-211029_Akiu_Onsen_Sendai_Miyagi_pref_Japan01s3.jpg" alt="移動 × 溫泉日"><div class="tx"><div class="dt">Day 5　11/03（二）<span class="jump">看當日細節 →</span></div><div class="dn">移動 × 溫泉日</div><p class="dd">上午取車、慢慢往秋保移動，下午泡湯，晚上佐勘包廂會席。</p></div></a><a class="day" href="仙台家庭旅遊企劃書_行程規劃.html#day6"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Akiu_Otaki_201509b.jpg/1280px-Akiu_Otaki_201509b.jpg" alt="秋保放鬆日"><div class="tx"><div class="dt">Day 6　11/04（三）<span class="jump">看當日細節 →</span></div><div class="dn">秋保放鬆日</div><p class="dd">純秋保、不遠行，配合孩子節奏：磊々峡（磊磊峽）、秋保大滝（秋保大瀑布）、工藝之里。</p></div></a><a class="day" href="仙台家庭旅遊企劃書_行程規劃.html#day7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Sendai_gyutan.JPG/1280px-Sendai_gyutan.JPG" alt="返程日"><div class="tx"><div class="dt">Day 7　11/05（四）<span class="jump">看當日細節 →</span></div><div class="dn">返程日</div><p class="dd">伴手禮 → 還車 → 機場展望台 → 登機。</p></div></a></div>
+<div class="note">每天的細部時刻、交通方式與備案 → <a href="仙台家庭旅遊企劃書_行程規劃.html">① 行程規劃</a>。</div>
+<h2>緊急聯絡<small>CONTACTS</small></h2>
+<table><thead><tr><th>對象</th><th>電話</th><th>備註</th></tr></thead><tbody><tr><td>長榮航空　台灣客服</td><td><b>02-2501-1999</b></td><td>改票、哩程升等、嬰兒同艙</td></tr><tr><td>仙台國際飯店（仙台国際ホテル（仙台國際飯店））</td><td><b>022-268-1111</b></td><td>宮城県仙台市青葉区中央 4-6-1</td></tr><tr><td>伝承千年の宿 佐勘（傳承千年之宿 佐勘）</td><td><b>022-398-2233</b></td><td>仙台市太白区秋保町湯元字薬師 28</td></tr><tr><td>Times 租車　仙台駅西口店</td><td><b>022-267-0123</b></td><td>仙台市青葉区五橋 1-3（11/03 09:00 取車）</td></tr><tr><td>Times 租車　仙台空港店</td><td><b>0223-24-6933</b></td><td>岩沼市空港南 6-3-4（11/05 14:00 還車）</td></tr><tr><td>日本　警察（緊急報案）</td><td><b>110</b></td><td>犯罪、車禍、走失、失竊。24 小時，可要求中文／英文口譯</td></tr><tr><td>日本　救護車・消防</td><td><b>119</b></td><td>24 小時。孩子發燒送醫也是打這支</td></tr><tr><td>仙台市夜間休日こども急病診療所（仙台市夜間假日兒童急病診療所）</td><td><b>022-247-7035</b></td><td>仙台市太白区あすと長町 1-1-1（仙台市立病院（仙台市立醫院）1F）｜地下鐵南北線「長町一丁目」駅步行 3 分｜平日 19:15–翌 07:00、週六 14:45–翌 07:00、週日假日全天。<b>小魚乾夜間發燒第一順位</b>；要不要送醫拿不定主意可先撥 #8000（こども医療電話相談（兒童醫療電話諮詢））</td></tr><tr><td>宮城県立こども病院（宮城縣立兒童醫院）</td><td><b>022-391-5111</b></td><td>仙台市青葉区落合 4-3-17｜小兒重症與各專科後送醫院，市區與秋保開車皆可達</td></tr><tr><td>東北大学病院（東北大學醫院）</td><td><b>022-717-7000</b></td><td>仙台市青葉区星陵町 1-1｜市中心規模最大、24 小時急診，成人與兒童皆收</td></tr><tr><td>仙台中央警察署（仙台中央警察署）</td><td><b>022-222-7171</b></td><td>仙台市青葉区五橋 1-3-19｜飯店所在市中心轄區，徒步約 5 分</td></tr><tr><td>仙台南警察署（仙台南警察署）</td><td><b>022-246-7171</b></td><td>仙台市太白区長町 6-2-7｜八木山動物公園、秋保温泉（秋保溫泉）轄區</td></tr><tr><td>岩沼警察署（岩沼警察署）</td><td><b>0223-22-4341</b></td><td>岩沼市末広 2-1-23｜仙台機場轄區（還車、機場遺失物）</td></tr><tr><td>宮城県警察本部（宮城縣警察總部）</td><td><b>022-221-7171</b></td><td>仙台市青葉区本町 3-8-1｜總機</td></tr><tr><td>台北駐日經濟文化代表處（東京）</td><td><b>03-3280-7811</b></td><td>東京都港区白金台 5-20-2｜<b>宮城縣屬東京本處轄區，日本東北無台灣辦事處</b></td></tr><tr><td>　└ 急難救助專線（僅限緊急）</td><td><b>080-1009-7179<br>080-1009-7436</b></td><td>護照遺失、遭逮捕拘禁、重大事故傷病。非緊急請勿撥</td></tr><tr><td>外交部　旅外國人急難救助專線</td><td><b>001-800-0885-0885</b></td><td>自日本市話撥打免付費（001 為國際冠碼）</td></tr></tbody></table>
+<div class="note warn"><b>出發前務必確認：</b>護照效期 6 個月以上、日本駕照譯本＋台灣駕照正本（缺一不得租車）、嬰兒搭機當天須未滿 2 歲、長榮線上報到自 2026/10/28 起開放。完整待辦 → <a href="仙台家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
+</div>
+<footer>
+<p><a href="仙台家庭旅遊企劃書_行程規劃.html">① 行程規劃</a>　｜　<a href="仙台家庭旅遊企劃書_附件資料.html">② 附件資料</a>　｜　<a href="仙台家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>　｜　<a href="仙台家庭旅遊企劃書%20④訂購成果.html">④ 訂購成果</a>　｜　<a href="仙台家庭旅遊企劃書%20⑤歷程沿革.html">⑤ 歷程沿革</a></p>
+<p>金額為 2026/07/28 實際成交價。照片來源：Wikimedia Commons（CC BY-SA／CC BY），僅作家庭旅遊規劃示意。</p>
+</footer>
+
+
+</body></html>
