@@ -6,31 +6,41 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>家庭旅遊企劃書｜總覽</title>
 <style>
-:root{--ink:#22303c;--sub:#6b7c8c;--line:#e0e8ee;--bg:#f6fafb;--teal:#0f7f8c;--red:#a8452f;--gold:#c08a2e}
+:root{--ink:#ffffff;--sub:rgba(255,255,255,.76);--line:rgba(255,255,255,.20);--glass:rgba(6,18,28,.52);--glass2:rgba(6,18,28,.68);--teal:#6fdcea;--red:#ffa184;--gold:#e8c169;--base:#04101a}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+html,body{min-height:100%}
+body{margin:0;background:var(--base);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+#bgv{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;pointer-events:none}
+#scrim{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(120% 80% at 50% 0%,rgba(4,16,26,.40),rgba(4,16,26,.80) 72%),linear-gradient(180deg,rgba(4,16,26,.70),rgba(4,16,26,.56) 38%,rgba(4,16,26,.88));-webkit-backdrop-filter:blur(3px) saturate(115%);backdrop-filter:blur(3px) saturate(115%)}
 header{padding:64px 20px 40px;text-align:center}
 .kick{letter-spacing:.4em;font-size:13px;color:var(--sub);margin:0 0 14px}
-h1{margin:0;font-size:34px;letter-spacing:.06em}
-header p.sub{margin:12px 0 0;color:var(--sub);font-size:15px}
-.wrap{max-width:900px;margin:0 auto;padding:0 20px 72px}
+h1{margin:0;font-size:34px;letter-spacing:.06em;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+header p.sub{margin:12px 0 0;color:var(--sub);font-size:15px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 96px}
 .cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
-.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;transition:transform .15s,box-shadow .15s}
-.card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(34,48,60,.10)}
+.card{display:block;text-decoration:none;color:inherit;background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:28px;transition:transform .15s,box-shadow .15s,background .15s;-webkit-backdrop-filter:blur(14px) saturate(120%);backdrop-filter:blur(14px) saturate(120%);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.card:hover{transform:translateY(-3px);background:var(--glass2);box-shadow:0 16px 42px rgba(0,0,0,.5)}
 .tag{display:inline-block;font-size:12px;letter-spacing:.14em;padding:4px 11px;border-radius:999px;color:#fff}
-.t-o{background:var(--teal)}
-.t-s{background:var(--red)}
+.t-o{background:#0b6f7a}
+.t-s{background:#9c3f2b}
 .card h2{margin:14px 0 8px;font-size:23px;letter-spacing:.04em}
-.card .when{color:var(--ink);font-size:14.5px;margin:0}
+.card .when{color:#fff;font-size:14.5px;margin:0}
 .card .who{color:var(--sub);font-size:13px;margin:10px 0 0}
 .go{margin:18px 0 0;font-size:14px;font-weight:600}
 .c-o .go{color:var(--teal)}
 .c-s .go{color:var(--red)}
-.note{margin:34px 0 0;padding:16px 18px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;font-size:13.5px;color:var(--sub)}
-footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 48px}
+.note{margin:34px 0 0;padding:16px 18px;background:var(--glass);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;font-size:13.5px;color:var(--sub);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 56px}
+#bgbtn{position:fixed;right:14px;bottom:14px;z-index:5;-webkit-appearance:none;appearance:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:.08em;color:var(--sub);background:rgba(6,18,28,.58);border:1px solid var(--line);border-radius:999px;padding:7px 14px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+#bgbtn:hover{color:#fff}
+.card:focus-visible,#bgbtn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (max-width:520px){header{padding:44px 18px 30px}h1{font-size:28px}.card{padding:22px}}
+@media (prefers-reduced-motion:reduce){#bgv{display:none}}
 </style>
 </head>
 <body>
+<video id="bgv" src="space%20fish.MP4" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" tabindex="-1"></video>
+<div id="scrim"></div>
 <header>
 <p class="kick">FAMILY TRAVEL</p>
 <h1>家庭旅遊企劃書</h1>
@@ -42,7 +52,7 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 48px}
 <span class="tag t-o">2026 秋 ・ 沖繩</span>
 <h2>沖繩</h2>
 <p class="when">2026/09/25（五）－09/28（一）　4 天 3 夜</p>
-<p class="who">讀谷村 3 晚・虹夕諾雅 沖繩・自驕<br>機票・住宿・租車已訂妥付清</p>
+<p class="who">讀谷村 3 晚・虹夕諾雅 沖繩・自駕<br>機票・住宿・租車已訂妥付清</p>
 <p class="go">看沖繩企劃書 →</p>
 </a>
 <a class="card c-s" href="仙台/index.html">
@@ -56,5 +66,20 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 48px}
 <div class="note">訂位代號、票號、哩程帳號、護照與信用卡等識別資料一律不列於本網頁，均以「見私人記錄」標示。</div>
 </div>
 <footer>更新 2026/07/30</footer>
+<button id="bgbtn" type="button">暫停背景</button>
+<script>
+(function(){
+var v=document.getElementById('bgv'),b=document.getElementById('bgbtn');
+if(!v||!b){return}
+function sync(){b.textContent=v.paused?'播放背景':'暫停背景'}
+v.addEventListener('play',sync);
+v.addEventListener('pause',sync);
+v.addEventListener('error',function(){v.style.display='none';b.style.display='none'});
+b.addEventListener('click',function(){if(v.paused){var p=v.play();if(p&&p.catch){p.catch(function(){})}}else{v.pause()}});
+var pl=v.play();if(pl&&pl.catch){pl.catch(function(){})}
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.pause()}
+sync();
+})();
+</script>
 </body>
 </html>
