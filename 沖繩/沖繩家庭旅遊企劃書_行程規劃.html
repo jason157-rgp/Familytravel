@@ -1,309 +1,717 @@
 <!DOCTYPE html>
-<html lang="zh-Hant"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>沖繩家庭旅遊企劃書 ①行程規劃</title>
-<style>
-:root{--ink:#22303c;--sub:#6b7c8c;--line:#e0e8ee;--bg:#f6fafb;--ac:#0f7f8c;--ac2:#1f6b5f;--gold:#c08a2e;--soft:#eff8f9}
-*{box-sizing:border-box}
-body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px}
-.wrap{max-width:1060px;margin:0 auto;padding:0 20px 70px}
-header{background:linear-gradient(140deg,#0b3d4d,#128a92);color:#fff;padding:56px 20px 48px;text-align:center}
-header h1{margin:0;font-size:2.2rem;letter-spacing:2px}
-header .meta{margin-top:14px;font-size:1rem;opacity:.94}
-header .ver{display:inline-block;margin-top:16px;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:5px 18px;font-size:.85rem}
-.nav{background:#fff;border-bottom:1px solid var(--line);padding:12px 20px;text-align:center;font-size:.9rem}
-.nav a{margin:0 6px;color:#1f6b8c;text-decoration:none}
-.nav a.cur{color:var(--ac);font-weight:700}
-h2{font-size:1.5rem;margin:54px 0 8px;padding-bottom:12px;border-bottom:3px solid var(--ac)}
-h2 .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:var(--ac);color:#fff;border-radius:50%;font-size:1rem;margin-right:10px;vertical-align:middle}
-h3{font-size:1.14rem;margin:32px 0 12px;padding-left:12px;border-left:5px solid var(--ac2)}
-h4{font-size:1rem;margin:22px 0 8px;color:var(--ac2)}
-table{width:100%;border-collapse:collapse;margin:18px 0;background:#fff;font-size:.92rem;box-shadow:0 1px 4px rgba(0,0,0,.05);border-radius:6px;overflow:hidden}
-th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-th{background:#eaf3f5;font-weight:700}
-td.n,th.n{text-align:right;white-space:nowrap}
-tbody tr:nth-child(even){background:#fafcfd}
-.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin:20px 0;box-shadow:0 1px 4px rgba(0,0,0,.05)}
-.note{background:var(--soft);border-left:5px solid var(--ac);border-radius:0 8px 8px 0;padding:15px 20px;margin:18px 0;font-size:.93rem}
-.ok{background:#eff7f2;border-left-color:var(--ac2)}
-.warn{background:#fff8e8;border-left-color:var(--gold)}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:20px 0}
-figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-figure img{width:100%;height:180px;object-fit:cover;display:block;background:#e9eef2}
-figcaption{font-size:.8rem;color:var(--sub);padding:8px 12px;text-align:center}
-.tl{list-style:none;padding:0;margin:14px 0}
-.tl li{display:flex;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line)}
-.tl li:last-child{border-bottom:none}
-.tl .t{flex:0 0 96px;font-weight:700;color:var(--ac);font-size:.94rem}
-.tl .c{flex:1;font-size:.93rem}
-.tl .c small{color:var(--sub);display:block;font-size:.83rem}
-.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.75rem;font-weight:700;margin-left:6px}
-.b-fix{background:#e3f0ea;color:#1f5c4d}.b-hold{background:#fdeee2;color:#9d4a1f}
-.b-opt{background:#eceff3;color:#55636f}.b-new{background:#e0f0f3;color:#0d6470}
-.day{background:#fff;border:1px solid var(--line);border-radius:12px;margin:24px 0;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.day>.hd{background:#123c48;color:#fff;padding:14px 22px;font-size:1.06rem;font-weight:700;scroll-margin-top:14px}
-.day>.hd .sub{display:block;font-size:.82rem;font-weight:400;opacity:.85}
-.day>.bd{padding:6px 22px 18px}
-.kv{display:grid;grid-template-columns:118px 1fr;gap:4px 14px;font-size:.9rem;margin:12px 0}
-.kv dt{color:var(--sub)}.kv dd{margin:0}
-ul.tight{margin:10px 0;padding-left:22px}
-ul.tight li{margin:5px 0;font-size:.93rem}
-.jp{color:var(--sub);font-size:.88em}
-footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:.82rem;color:var(--sub)}
-a{color:#1f6b8c}
-@media(max-width:640px){header h1{font-size:1.5rem}.kv{grid-template-columns:1fr}table{font-size:.84rem}th,td{padding:8px}.tl li{flex-direction:column;gap:2px}.tl .t{flex:none}}
-</style>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>① 行程規劃 ＋ 現場手冊｜沖繩家庭旅遊企劃書</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<header>
-<h1>🌺 沖繩家庭旅遊企劃書</h1>
-<div class="meta">2026/09/25（五）－ 09/28（一）｜<strong>共 4 天 3 夜</strong><br>成員：桃園星野結衣 ＋ 龜山下智久 ＋ 瑄瑄阿姨 ＋ 煞氣E小魚乾E（旅行時約 1 歲 9 個月）<br>主軸：以讀谷村一間飯店為單一據點的定點式家庭旅遊</div>
-<div class="ver">第 ① 部：行程規劃 ｜ 建立 2026/07/30・更新 2026/08/05（v2.1）</div>
-</header>
-<div class="nav"><a href="index.html">🏠 首頁</a>｜<a class="cur" href="#">① 行程規劃</a>｜<a href="沖繩家庭旅遊企劃書_附件資料.html">② 附件資料</a>｜<a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>｜<a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a>｜<a href="沖繩家庭旅遊企劃書_歷程沿革.html">⑤ 歷程沿革</a></div>
+<body id="top">
+
+<nav class="nav"><div class="in">
+  <a href="index.html">🏠 首頁</a>
+  <a href="沖繩家庭旅遊企劃書_行程規劃.html">① 行程</a>
+  <a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦</a>
+  <a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a>
+  <a href="沖繩家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>
+  <a href="#day1">D1</a><a href="#day2">D2</a><a href="#day3">D3</a><a href="#day4">D4</a>
+  <a href="#field">現場手冊</a>
+</div></nav>
+
+<header class="phead"><div class="in">
+  <p class="kick">第 ① 部</p>
+  <h1>行程規劃 ＋ 現場手冊</h1>
+  <p>2026/09/25（五）－ 09/28（一）｜4 天 3 夜｜桃園星野結衣 ＋ 龜山下智久 ＋ 瑄瑄阿姨 ＋ 煞氣E小魚乾E（約 1 歲 9 個月）<br>建立 2026/07/30・更新 2026/08/05（v2.0）</p>
+</div></header>
+
 <div class="wrap">
-<div class="note ok" style="margin-top:30px"><strong>✅ 三大骨幹已一次訂妥。</strong>機票、住宿、租車在同一張套裝訂單內完成並已刷卡付清，本頁所列的日期、時刻、地點即為實際成交內容。訂單條件與金額拆解見 <a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a>。</div>
 
-<h2><span class="num">壹</span>行程核心與定位</h2>
-<div class="card">
-<p>這趟沖繩和仙台那次最大的不同是：<strong>沒有公務骨幹、天數更短、而且住宿本身就是目的地</strong>。虹夕諾雅 沖繩位在讀谷村儀間、緊鄰殘波岬，離那霸機場約 1 小時；訂的又是連住 3 晚的不含餐專案，所以定位不是「四天環島把沖繩走完」，而是<strong>以一間飯店為單一據點、每天只往外跑一趟</strong>。</p>
-<h4>四條貫穿全程的設計原則</h4>
-<table><tbody>
-<tr><th style="width:150px">原則</th><th>具體落實</th></tr>
-<tr><td>單一據點、不換飯店</td><td>3 晚全部住讀谷，行李只搬進搬出各一次。省下的不只是體力，還有帶幼兒最貴的成本——收拾行李的時間。</td></tr>
-<tr><td>一天一個方向<span class="badge b-new">v2.0</span></td><td><b>Day 2 全部往北（名護・本部）、Day 3 全部往南（那霸・南城），每天只開一次長途、不南北來回跑。</b><br><small>v1.1–v1.8 的原則是「長程只排一次、其餘壓在飯店 15 分鐘內」。v2.0 為了容納家人指定的五個景點（DFS、Costco、水族館、鳳梨園、波上宮），改以<b>方向</b>而非<b>距離</b>來分天——代價是原本的讀谷慢活日消失，理由見 <a href="沖繩家庭旅遊企劃書_歷程沿革.html">⑤ 歷程沿革</a>。</small></td></tr>
-<tr><td>孩子節奏優先<br><small>（v2.0 有一處讓步）</small></td><td>午睡固定安排在最長的那段車程上（Day 2 為回程 70–85 分、Day 3 為 Costco → おもろまち 30–40 分）；就寢壓在 20:30；抵達日不排景點，返程日只排一站。<br><b>⚠️ 但「每天景點上限 1–2 處」這條 v2.0 破了一次：Day 3 有三站</b>（波上宮 30 分、Costco 95 分、DFS 120 分）。<b>可接受的理由是三站都在同一條南下動線上、都是室內平面、且沒有任何一站需要走遠路</b>；不可接受的話，先砍的是 Costco 的採購時間。<b>Day 3 的午睡品質也因此不如 Day 2</b>——這是這一版最該盯著的一件事。</td></tr>
-<tr><td>不依賴日語會話</td><td>優先選有售票機、線上購票、圖示導覽的場所；需要電話預約或全日語互動的活動一律排除，飯店餐廳則透過官網或 email 預約。</td></tr>
-</tbody></table>
-<h4>交通模式：全程自駕</h4>
-<p>沖繩的大眾運輸只有那霸市區的單軌電車（ゆいレール）堪用，讀谷村完全靠公車與計程車不現實，所以 9/25 落地當天就取車、9/28 還車前才交回，<strong>四天都有車</strong>。好處是幼兒的午睡可以直接在車上解決，壞處是每天都要處理停車與加油——但沖繩絕大多數景點的停車場免費，這點比本島輕鬆很多。</p>
-<div class="note warn"><strong>三位成人都可能要開車，就三份文件都要帶。</strong>日本租車現場核對「台灣駕照正本 ＋ 日本駕照譯本 ＋ 護照」三件一組，缺一不得上路；未登錄為駕駛人的成人開車，保險視同無效。追加駕駛人是否需另付費、要不要事先加登錄 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
+  <div class="ok">
+    <b>三大骨幹已一次訂妥。</b>機票、住宿、租車在同一張套裝訂單內完成並已刷卡付清，本頁所列的日期、時刻、地點即為實際成交內容。訂單條件與金額拆解見 <a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a>。
+  </div>
+
+  <div class="info">
+    <b>v2.0 這一版對行程做的兩件事：</b>① <b>Day 3 砍掉 Costco</b>，改為波上宮 ＋ DFS 兩站，午餐移到 DFS 隔壁的サンエー那覇メインプレイス——開車量從 4 小時 5 分降到約 2 小時 50 分，海灘時間從 90 分鐘變成 2 小時。② 原本標「此時刻待修正」的 Day 3 時間軸已依實測車程重排完成。決策理由與封存的 Costco 資料 → <a href="沖繩家庭旅遊企劃書_歷程沿革.html#v-decide">④ 紀錄</a>
+  </div>
+
+  <div class="toc" data-toc><b>本頁目錄</b></div>
+
+  <section class="sec" id="core">
+    <h2><span class="n">壹</span>行程核心與定位</h2>
+    <p>這趟沖繩和仙台那次最大的不同是：沒有公務骨幹、天數更短、而且住宿本身就是目的地。虹夕諾雅 沖繩位在讀谷村儀間、緊鄰殘波岬，離那霸機場約 1 小時；訂的又是連住 3 晚的不含餐專案，所以定位不是「四天環島把沖繩走完」，而是以一間飯店為單一據點、每天只往外跑一趟。</p>
+
+    <h3>四條貫穿全程的設計原則</h3>
+    <table>
+      <thead><tr><th>原則</th><th>具體落實</th></tr></thead>
+      <tbody>
+        <tr><td>單一據點、不換飯店</td><td>3 晚全部住讀谷，行李只搬進搬出各一次。省下的不只是體力，還有帶幼兒最貴的成本——收拾行李的時間。</td></tr>
+        <tr><td>一天一個方向</td><td>Day 2 全部往北（名護・本部）、Day 3 全部往南（那霸），每天只開一次長途、不南北來回跑。<br>這條原則從 v1.9 起取代了舊的「長程只排一次、其餘壓在飯店 15 分鐘內」，為的是容納家人指定的景點；代價是原本的讀谷慢活日消失 → <a href="沖繩家庭旅遊企劃書_歷程沿革.html#v-decide">④ 紀錄・決策理由</a></td></tr>
+        <tr><td>孩子節奏優先</td><td>午睡固定安排在最長的那段車程上（Day 2 為回程 1 小時 29 分、Day 3 為 DFS → 讀谷 1 小時 11 分）；就寢壓在 20:30；抵達日不排景點，返程日只排一站。<br><span class="tag t-ok">v2.0 已修復</span> 每天景點上限 1–2 處這條原則，在 v1.9 曾被 Day 3 的三站破過一次；砍掉 Costco 之後回到 2 站，午睡也回到完整的一整段。</td></tr>
+        <tr><td>不依賴日語會話</td><td>優先選有售票機、線上購票、圖示導覽的場所；需要電話預約或全日語互動的活動一律排除，飯店餐廳則透過官網或 email 預約。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>交通模式：全程自駕</h3>
+    <p>沖繩的大眾運輸只有那霸市區的單軌電車（ゆいレール）堪用，讀谷村完全靠公車與計程車不現實，所以 9/25 落地當天就取車、9/28 還車前才交回，四天都有車。好處是幼兒的午睡可以直接在車上解決，壞處是每天都要處理停車與加油——但沖繩絕大多數景點的停車場免費，這點比本島輕鬆很多。開車實務 → <a href="#field-drive">陸・現場手冊：沖繩開車實務</a></p>
+    <div class="must">
+      <span class="tag t-must">行前必辦</span> 三位成人都可能要開車，就三份文件都要帶。日本租車現場核對「台灣駕照正本 ＋ 日本駕照譯本 ＋ 護照」三件一組，缺一不得上路；未登錄為駕駛人的成人開車，保險視同無效。
+      <a class="lk" href="https://www.mvdis.gov.tw/" target="_blank" rel="noopener">監理服務網 線上申辦譯本</a> → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-license">② 待辦</a>
+    </div>
+  </section>
+
+  <section class="sec" id="trunk">
+    <h2><span class="n">貳</span>三大骨幹（機票・住宿・租車）</h2>
+
+    <h3>機票 <span class="tag t-ok">已付清</span></h3>
+    <div class="lkrow">
+      <a class="lk" href="https://th.vietjetair.com/" target="_blank" rel="noopener">Thai Vietjet 官網／管理訂位</a>
+      <a class="lk tel" href="tel:+886277260088">台灣客服</a>
+      <a class="lk tel" href="tel:+815054825538">日本客服</a>
+    </div>
+    <table>
+      <thead><tr><th>航段</th><th>航班</th><th>日期</th><th>時刻</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td>去程</td><td>VZ568（Thai Vietjet Air）</td><td>9/25（五）</td><td>台北桃園 14:55 → 沖繩那霸 17:20</td><td>直飛／1 小時 25 分／桃園第 1 航廈／艙等 R（經濟）</td></tr>
+        <tr><td>回程</td><td>VZ569（Thai Vietjet Air）</td><td>9/28（一）</td><td>沖繩那霸 18:20 → 台北桃園 18:55</td><td>直飛／1 小時 35 分／桃園第 1 航廈／艙等 T（經濟）</td></tr>
+      </tbody>
+    </table>
+    <div class="must">
+      <span class="tag t-must">行前必辦</span> 這是廉航票種，兩件事一定要先處理：
+      <ul>
+        <li>票價只含手提行李 7kg，<b>託運行李完全沒有</b>——四人份的行李、嬰兒用品、加上一定會買的伴手禮，託運額度必須事先線上加購（現場買最貴）→ <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-baggage">② 待辦・加購託運行李</a></li>
+        <li>座位要加購才能預選。3 位成人＋1 位抱在膝上的幼兒，如果不選位有可能被拆散，建議直接買連號 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-seat">② 待辦・加購預選座位</a></li>
+      </ul>
+    </div>
+    <div class="info">
+      <span class="tag t-info">說明</span> 回程 18:20 起飛、18:55 抵達桃園，看起來只飛 35 分鐘是時差造成的錯覺（日本比台灣快 1 小時），實際飛行 1 小時 35 分。嬰兒為未滿 2 歲、不佔位、抱在膝上；小魚乾在 2026/09/25 當天約 1 歲 9 個月，符合資格，報到時會查驗護照出生日期。
+    </div>
+
+    <h3>住宿 <span class="tag t-ok">已付清</span></h3>
+    <div class="lkrow">
+      <a class="lk" href="https://hoshinoresorts.com/ja/hotels/hoshinoyaokinawa/" target="_blank" rel="noopener">星のや沖縄 官網</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%98%9F%E3%81%AE%E3%82%84%E6%B2%96%E7%B8%84%20%E6%B2%96%E7%B8%84%E7%9C%8C%E4%B8%AD%E9%A0%AD%E9%83%A1%E8%AA%AD%E8%B0%B7%E6%9D%91%E5%84%80%E9%96%93474" target="_blank" rel="noopener">地圖</a>
+      <a class="lk tel" href="tel:+81989216800">夜間・緊急</a>
+      <a class="lk tel" href="tel:+815031348091">預約專線</a>
+      <a class="lk mail" href="mailto:info_okinawa@hoshinoya.com">飯店信箱</a>
+    </div>
+    <div class="kv">
+      <div><dt>期間</dt><dd>9/25–9/28（3 晚）</dd></div>
+      <div><dt>飯店</dt><dd>虹夕諾雅 沖繩（星野集團）｜沖縄県中頭郡読谷村儀間 474｜距那霸市區約 1 小時，緊鄰殘波岬與座喜味城跡<br>Mapcode 1005 626 090*38（車機導航用，比輸入日文地址可靠）</dd></div>
+      <div><dt>房型・專案</dt><dd>Fushi（海景豪華套房）1 室・93–94㎡・四張 200×100cm 單人床・禁煙<br>【連住優惠 3 晚以上】不含早餐、不含晚餐</dd></div>
+      <div><dt>入住／退房</dt><dd>15:00／12:00｜停車免費・室外・不需預約</dd></div>
+    </div>
+    <div class="must">
+      <span class="tag t-must">行前必辦</span> <b>「不含早晚餐」是本趟最需要主動處理的一件事。</b>飯店位在讀谷村的海邊聚落，走出去不是便利商店林立的市區；三天九餐如果不預先安排，很容易變成天天開車出去找吃的。實務作法是三軌並行：① 想在館內吃的那幾餐，行前就線上／email 預約餐廳；② 抵達當晚與早餐，靠 Day 1 路上採買的熟食與食材；③ 其餘外食排進白天行程的動線裡。
+    </div>
+    <details data-auto>
+      <summary>館內餐食的實際價格與幼兒資源（官網＋飯店回覆，查證 2026/07/31–08/03）</summary>
+      <div class="body">
+        <table>
+          <thead><tr><th>餐</th><th>價格／人</th><th>時間與預約方式</th></tr></thead>
+          <tbody>
+            <tr><td>晚餐 琉球ガストロノミア〜Bellezza〜（餐廳）</td><td>¥24,200<br>7–11 歲 ¥7,865／4–6 歲 ¥4,235</td><td>17:00 起・餐廳。須訂位，當日取消收 100%</td></tr>
+            <tr><td>晚餐 ギャザリングサービス（主廚料理送到房內）</td><td>¥10,890<br>2 名 ¥21,780／3 名 ¥32,670</td><td>16:00–19:00 送到房間，當天 17:00 前預約。帶幼兒最好用的形式</td></tr>
+            <tr><td>ナイトインルームダイニング（房內宵夜輕食）</td><td>官網未標價</td><td>21:00–23:59・不需預約。9/25 20:30 抵達那晚的晚餐有解</td></tr>
+            <tr><td>早餐 餐廳</td><td>¥5,300<br>4–6 歲 ¥2,650／3 歲以下免費</td><td>07:00–09:30（L.O.）。須前一日以前預約。主菜為 ゆし豆腐／フレンチトースト／ソーセージのトマト煮込み 三選一＋沙拉吧</td></tr>
+            <tr><td>早餐 房內</td><td>¥4,235<br>4–6 歲 ¥1,936</td><td>07:00–10:00。須前一日以前預約。附免費兒童餐盤，還送白飯與味噌湯——對小魚乾明顯有利</td></tr>
+          </tbody>
+        </table>
+        <p><b>價格的意義：</b>Bellezza 一頓晚餐三位成人就是 ¥72,600，比整段四天外食預算還高。ギャザリング 整組 ¥32,670 不到一半，而且不必抱著孩子上餐廳——這就是 Day 2 晚餐選它的原因。每人單價其實完全一樣（¥10,890），2 名與 3 名的差別只是份量，不是等級。</p>
+        <p><b>館內幼兒資源（飯店 2026/08/01 回覆）：</b>キッズルーム 0–12 歲、免費、不必預約，07:00–10:30／17:00–22:00，家長須全程陪同；泳池 24 小時開放、無年齡與身高限制、還沒戒尿布也能下水，戲水尿布 M／L 在集いの館免費提供，直徑 70cm 泳圈與兒童臂圈免費出借，但<b>自備浮具不能帶進去</b>；全部客房都有微波爐可自己加熱副食品（飯店不代為加熱）；餐廳備有 7／9／12 個月三種市售離乳食 ¥605／品。</p>
+        <div class="field">
+          <span class="tag t-field">現場注意</span> 睡覺這題不能全靠飯店：<b>床護欄只確保 9/26 一台</b>，9/25 與 9/27 要看當天庫存；<b>嬰兒被褥飯店完全沒有</b>。兩張床會在入住前先併好。所以行前要先講好大人怎麼排位置擋外側，並自己帶一條小被子。抵達當天第一件事就是到櫃檯問 9/25 這晚有沒有床護欄 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-hotel">② 待辦・飯店</a>
+        </div>
+      </div>
+    </details>
+
+    <h3>租車 <span class="tag t-ok">已付清</span></h3>
+    <div class="lkrow">
+      <a class="lk" href="https://car.orix.co.jp/" target="_blank" rel="noopener">ORIX レンタカー</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%AB%E3%83%BC%20%E6%B2%96%E7%B8%84%E8%B1%8A%E5%B4%8E%E5%BA%97%20%E6%B2%96%E7%B8%84%E7%9C%8C%E8%B1%8A%E8%A6%8B%E5%9F%8E%E5%B8%82%E8%B1%8A%E5%B4%8E1-1174" target="_blank" rel="noopener">豐崎營業所地圖</a>
+      <a class="lk tel" href="tel:+81988510543">098-851-0543</a>
+    </div>
+    <div class="kv">
+      <div><dt>供應商・車輛</dt><dd>ORIX Rent-A-Car（オリックスレンタカー）｜RA Class・禁煙車（車型示例：Daihatsu Rocky 或同級小型 SUV）</dd></div>
+      <div><dt>取車</dt><dd>9/25（五）Naha Airport Rental Site（那霸機場站）＝ ORIX 沖繩豐崎營業所・沖縄県豊見城市豊崎 1-1174<br>機場沒有店面，要搭 ORIX 免費接駁車到豐崎，車程約 15–20 分</dd></div>
+      <div><dt>還車</dt><dd>9/28（一）同一站，還車後再搭接駁車回機場</dd></div>
+      <div><dt>兒童座椅</dt><dd>已訂 1 張（適用 6 個月～4 歲／18kg 以內／100cm 以內）——小魚乾完全符合</dd></div>
+      <div><dt>費用</dt><dd>基本料金 TWD 5,320 ＋ 幼兒座椅 TWD 320 ＝ TWD 5,640（已付清）。汽油、通行費、停車費、現場加購的免責補償／NOC 另計</dd></div>
+    </div>
+    <div class="field">
+      <span class="tag t-field">現場注意</span> <b>車子大小是本趟唯一的實體風險。</b>RA Class 是小型 SUV，要裝 3 位成人＋1 張兒童座椅＋嬰兒車＋四人份行李，後廂會非常吃緊。行前值得先評估：是否加價升等、或把大件行李改用宅配寄到飯店 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-car">② 待辦・租車</a><br>
+      還車採滿箱歸還（満タン返し），加油請選 レギュラー（regular・普通汽油）。取車時就請店員在地圖上圈出還車前建議加的那一間，最省事。
+    </div>
+    <div class="field">
+      <span class="tag t-field">還沒確認</span> 已訂的那張兒童座椅是<b>前向式還是後向式尚未確認</b>——台灣端接送已確認為後向式，同一個孩子在沖繩開車的四天卻還不確定。依指示不單獨聯絡 ORIX，併入 ORIX 待問清單之後一次問 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-ask-orix">② 待辦・向 ORIX 問的問題</a>
+    </div>
+  </section>
+
+  <section class="sec" id="days">
+    <h2><span class="n">參</span>四日逐日行程</h2>
+    <p class="lead">每一天的景點細節都折疊在當天下方，要看再點開，不必再跳到別頁。</p>
+    <div class="lkrow">
+      <a class="lk" href="#day1" style="border-color:var(--ac)">Day 1 抵達</a>
+      <a class="lk" href="#day2" style="border-color:var(--ac)">Day 2 北部</a>
+      <a class="lk" href="#day3" style="border-color:var(--ac)">Day 3 南部</a>
+      <a class="lk" href="#day4" style="border-color:var(--ac)">Day 4 返程</a>
+    </div>
+  </section>
+
+  <section class="sec" id="day1">
+    <h2><span class="n">D1</span>9/25（五）抵達日</h2>
+    <p class="lead"><b>定調：</b>不排景點，只求順利落地、順利取車、順利把晚餐解決　<span class="tag t-ok">已定案</span></p>
+    <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG/1280px-Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG" alt="那霸機場" loading="lazy"><figcaption>那霸空港（OKA）——17:20 落地，接駁到豐崎取車<span class="cr">照片：Wikimedia Commons</span></figcaption></figure>
+
+    <ol class="tl">
+      <li><span class="t">09:45</span><div class="c"><span class="h">全員與行李到門口待命</span><div class="d">和運專車接送預約 10:00 出發（台北市中山區住家 → 桃園機場、廂型車）。<b>送機的免費等候只有 20 分鐘</b>，第 21 分鐘起每 20 分鐘加收 TWD 200，所以行李、嬰兒車、孩子都要在 09:45 前就位 → <a href="沖繩家庭旅遊企劃書_訂購成果.html#o-transfer">③ 訂單・機場接送</a></div></div></li>
+      <li><span class="t">10:00</span><div class="c"><span class="h">和運專車接送出發（已付清 TWD 650）</span><div class="d">台北市中山區 → 桃園機場，車程約 50–60 分。省掉停車與轉乘，帶幼兒與四人份行李時差別最大。後向式安全座椅已確認配置（1 張，已含在車資內）。<b>上車前確認是「後向」安裝，並別忘了護照。</b>臨時要延長等候打 <a href="tel:+886255890800">(02) 5589-0800</a></div></div></li>
+      <li><span class="t">11:00</span><div class="c"><span class="h">抵達桃園機場第 1 航廈（起飛前約 4 小時）</span><div class="d">廉航櫃檯通常起飛前 60 分關閉，而櫃檯開放是起飛前 3 小時（約 11:55）——先在航廈吃午餐、換尿布、分裝手提行李。4 人同行＋嬰兒證件查驗＋嬰兒車託運至艙門都要時間；<b>手提行李 7kg 會現場秤</b>。</div></div></li>
+      <li><span class="t">14:55</span><div class="c"><span class="h">VZ568 起飛</span><div class="d">短程 1 小時 25 分，飛機上不供餐（餐點需另購）。起降時給小魚乾水或奶嘴，減少耳壓不適。</div></div></li>
+      <li><span class="t">17:20</span><div class="c"><span class="h">抵達那霸機場</span><div class="d">沖繩比台灣快 1 小時，以下皆為當地時間。</div></div></li>
+      <li><span class="t">17:20<br>–18:15</span><div class="c"><span class="h">入境審查、提領行李與嬰兒車</span><div class="d">抓滿 55 分鐘，帶幼兒不要壓縮。<b>Visit Japan Web 的入境／海關 QR Code 建議在台灣就先辦好並截圖離線保存</b> <a class="lk" href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Visit Japan Web</a></div></div></li>
+      <li><span class="t">18:20</span><div class="c"><span class="h">搭 ORIX 免費接駁車 → 豐崎營業所</span><div class="d">機場沒有 ORIX 櫃檯門市，需到指定接駁站候車，車程約 15–20 分。找不到候車處就直接打 <a href="tel:+81988510543">+81-98-851-0543</a></div></div></li>
+      <li><span class="t">18:45</span><div class="c"><span class="h">取車手續（ORIX 沖繩豐崎營業所）</span><div class="d">出發前在店門口一次做完五件事：① 現場裝好兒童安全座椅（不要邊開邊調）② 確認油種 レギュラー 與是否須加滿歸還 ③ 用 <b>Mapcode 1005 626 090*38</b> 直接設定飯店導航 ④ 決定要不要加保免責補償／NOC ⑤ 請店員圈出還車前建議的加油站。順便讓大家上廁所、換尿布。<a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%AB%E3%83%BC%20%E6%B2%96%E7%B8%84%E8%B1%8A%E5%B4%8E%E5%BA%97" target="_blank" rel="noopener">豐崎地圖</a></div></div></li>
+      <li><span class="t">19:15</span><div class="c"><span class="h">出發北上讀谷</span><div class="d">兩條路線二選一：国道 58 号沿西海岸北上（免通行費、約 65–75 分，傍晚會有車流）；或走沖繩自動車道（那霸 IC → 沖繩南 IC 一帶，約 55 分＋通行費約 ¥700–900）。第一天天黑又累，<b>建議走高速</b>，路線單純、指標清楚。</div></div></li>
+      <li><span class="t">19:50</span><div class="c"><span class="h">沿途採買（重要）：北谷或讀谷一帶的 サンエー／イオン／便利商店</span><div class="d">買今晚的熟食便當、明天的早餐與飲用水、寶寶粥與市售副食品、尿布補給。<b>因為住的是不含早晚餐的專案，這一站不是加分，是必要行程。</b>採買清單與店家型態 → <a href="#field-food">陸・現場手冊：餐飲與採買</a></div></div></li>
+      <li><span class="t">20:30</span><div class="c"><span class="h">抵達虹夕諾雅 沖繩・辦理入住</span><div class="d">訂單登錄的入住時間是 15:00，實際會晚 5 個多小時，<b>務必行前先用 email 告知晚到</b>（18:00 之後櫃檯改由夜間專線受理）。停車已確認：免費、室外、不需預約。<a class="lk tel" href="tel:+81989216800">夜間專線</a><a class="lk mail" href="mailto:info_okinawa@hoshinoya.com">告知晚到</a></div></div></li>
+      <li><span class="t">21:00</span><div class="c"><span class="h">房內晚餐、洗澡、鋪床</span><div class="d">吃 19:50 採買的熟食；也可以改用館內的 ナイトインルームダイニング（房內宵夜輕食・21:00–23:59・不需預約）。先把行李攤開定位，之後三天都不用再搬。<b>抵達當天要在櫃檯當面確認：</b>今晚有沒有床護欄、尿布垃圾桶當天庫存、嬰兒沐浴乳是否已放房內、微波爐位置。</div></div></li>
+      <li><span class="t">21:30</span><div class="c"><span class="h">就寢</span><div class="d">第一晚一定會晚，所以 Day 2 的出發時間刻意不排太早。</div></div></li>
+    </ol>
+
+    <div class="info"><span class="tag t-info">當日支出</span> 預估 <b>¥7,000–9,000</b>：高速通行費 ¥900／超市採買 ¥5,000–7,000（今晚熟食＋三天早餐＋副食品＋尿布）／飲料雜支 ¥1,000。取車時如加保免責補償，會另加約 ¥1,000–2,000／日。</div>
+    <div class="field"><span class="tag t-field">現場注意</span> 沖繩右駕與台灣相反，第一段夜路就上手不容易。建議由最有右駕經驗的人開這一段；出停車場前先繞一圈確認雨刷／方向燈位置（日規車與台灣習慣相反的機率很高）→ <a href="#field-drive">陸・開車實務</a></div>
+    <div class="jump"><a href="#days">↑ 回四日一覽</a><a href="#day2">Day 2 →</a></div>
+  </section>
+
+  <section class="sec" id="day2">
+    <h2><span class="n">D2</span>9/26（六）北部一日：名護鳳梨園 ＋ 美麗海水族館</h2>
+    <p class="lead"><b>定調：</b>全趟最遠的一趟，兩站串在同一條北上路線，回程車上一次睡滿　<span class="tag t-ok">已定案</span></p>
+    <div class="gal two">
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nago_Pineapple_Park_%2832183097142%29.jpg/1280px-Nago_Pineapple_Park_%2832183097142%29.jpg" alt="名護鳳梨園 鳳梨號" loading="lazy"><figcaption>名護パイナップルパーク的パイナップル号（鳳梨號）——自動行駛的園內遊園車<span class="cr">照片：Laika ac／CC BY-SA 2.0</span></figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg/1280px-Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg" alt="美麗海水族館 鯨鯊" loading="lazy"><figcaption>沖繩美麗海水族館「黑潮之海」的鯨鯊<span class="cr">照片：Wikimedia Commons</span></figcaption></figure>
+    </div>
+
+    <div class="ok">
+      <b>為什麼兩站併成一天：</b>鳳梨園不是繞路，它就在北上的路上。Google Maps 實測（2026/08/05）：讀谷 → 名護鳳梨園 59 分／51.7 km（沖繩自動車道），鳳梨園 → 海洋博公園 26 分／15.6 km（県道 84 号）。兩個景點的總車程，只比單獨去水族館多約 10–15 分鐘。而且這是全程唯一一天孩子睡飽、行李已定位、卻還沒開始累的日子。
+    </div>
+
+    <ol class="tl">
+      <li><span class="t">07:30</span><div class="c"><span class="h">起床、房內早餐（Day 1 採買的食材）</span><div class="d">今天 08:45 就要出發，吃採買的最省事。加訂飯店早餐須前一日以前預約。</div></div></li>
+      <li><span class="t">08:45</span><div class="c"><span class="h">出發北上名護</span><div class="d">讀谷 → 名護鳳梨園 <b>實測 59 分／51.7 km</b>。走沖繩自動車道 石川 IC → 許田 IC 最快（含通行費）；走 国道 58 号沿西海岸北上風景最好但較慢（1 小時 6 分／45.5 km）。這段孩子多半會補一段小睡，正好銜接 10:00 開園。</div></div></li>
+      <li><span class="t">09:50</span><div class="c"><span class="h">抵達 名護パイナップルパーク（名護鳳梨園）</span><div class="d">沖縄県名護市為又 1195。10:00 開園，提早 10 分鐘到剛好可以停車、換尿布。免費停車 200 台。<br><a class="lk" href="https://www.nagopine.com/" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8A%E3%82%B4%E3%83%91%E3%82%A4%E3%83%8A%E3%83%83%E3%83%97%E3%83%AB%E3%83%91%E3%83%BC%E3%82%AF%20%E6%B2%96%E7%B8%84%E7%9C%8C%E5%90%8D%E8%AD%B7%E5%B8%82%E7%82%BA%E5%8F%881195" target="_blank" rel="noopener">地圖</a><a class="lk tel" href="tel:+81980533659">0980-53-3659</a></div></div></li>
+      <li><span class="t">10:00</span><div class="c"><span class="h">自動運転パイナップル号 → 亞熱帶植物園 → 試吃與賣場</span><div class="d">無人駕駛小車繞園、有中文語音導覽，全程不需日語——對 1 歲 9 個月剛好，坐著看就有東西可看。後段的鳳梨試吃、鳳梨酒試飲與伴手禮賣場都在室內、有冷氣、平面好推。停留 75 分鐘就夠，它是順路的加分題、不是主秀，逛過頭會壓到水族館。</div></div></li>
+      <li><span class="t">11:20</span><div class="c"><span class="h">出發前往本部町</span><div class="d">鳳梨園 → 海洋博公園 <b>實測 26 分／15.6 km</b>。這段太短，孩子不容易睡熟，不要指望這裡當午睡。</div></div></li>
+      <li><span class="t">11:50</span><div class="c"><span class="h">抵達海洋博公園，停車</span><div class="d">公園停車場免費；水族館位於園區北側，<b>停最靠近水族館的那個停車場</b>可以少走一大段坡。園區內有免費電動遊園車。<a class="lk" href="https://oki-park.jp/kaiyohaku/" target="_blank" rel="noopener">海洋博公園官網</a></div></div></li>
+      <li><span class="t">12:00</span><div class="c"><span class="h">午餐：園區餐廳</span><div class="d">面向大水槽的咖啡座人氣高、要排；帶幼兒可改公園內餐廳或吃自備副食品。先吃飽再入館，館內動線一走就是 2 小時。</div></div></li>
+      <li><span class="t">12:45</span><div class="c"><span class="h">入館（大人 ¥2,180、未滿 6 歲免費）</span><div class="d">9 月為通常期，開館 08:30–18:30、入館締切 17:30。<b>建議行前線上購票免排隊</b>（9/26 是週六）。當日可再入館（出示入館券）、嬰兒車免費出借、授乳室在 3F 入口與 2F 附熱水器。<br><a class="lk" href="https://www.asoview.com/channel/tickets/IjvonBes9q/" target="_blank" rel="noopener">線上購票</a><a class="lk" href="https://churaumi.okinawa/guide/hour/" target="_blank" rel="noopener">開館時間</a><a class="lk" href="https://churaumi.okinawa/guide/baby/" target="_blank" rel="noopener">嬰幼兒設備</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B2%96%E7%B8%84%E7%BE%8E%E3%82%89%E6%B5%B7%E6%B0%B4%E6%97%8F%E9%A4%A8" target="_blank" rel="noopener">地圖</a></div></div></li>
+      <li><span class="t">13:00</span><div class="c"><span class="h">館內動線：珊瑚之海 → 熱帶魚之海 → 黑潮之海 → 深海之旅</span><div class="d">單向不繞路、全程平面。大水槽前有階梯狀觀覽席，是小魚乾最可能坐得住的地方。下午場的優點是館內冷氣正涼、外面最曬的時段剛好在室內度過。詳細分區與停留時間見下方折疊。</div></div></li>
+      <li><span class="t">15:00</span><div class="c"><span class="h">館外免費區：オキちゃん劇場 海豚表演、海龜館・海牛館</span><div class="d">全部免費、不需再入館。海豚表演時刻 10:30／11:30／13:00／15:00／17:00 共 5 場；劇場離水族館出口步行約 5 分，<b>要趕 15:00 那場，最晚 14:45 就要離館</b>。館外免費區 9 月開放到 17:30。表演為戶外場地，帽子、水、扇子必備，坐後排有遮蔭。</div></div></li>
+      <li><span class="t">15:45</span><div class="c"><span class="h">上車回讀谷 → 車上一次睡滿</span><div class="d">水族館 → 讀谷 <b>實測 1 小時 29 分／67.9 km</b>（国道 449 号＋沖繩自動車道；走国道 58 号為 1 小時 37 分／63.4 km）。這是四天裡最完整的一次午睡，孩子睡著就不要中途停。</div></div></li>
+      <li><span class="t">17:15</span><div class="c"><span class="h">抵達飯店，沖澡、換衣服</span><div class="d">離 18:00 送餐只剩 45 分鐘，先把汗擦乾淨就好。今天沒時間玩水，海灘與泳池排在 Day 3 下午與 Day 4 上午。</div></div></li>
+      <li><span class="t">18:00</span><div class="c"><span class="h">晚餐：ギャザリングサービス 洋食 3 名セット（送到房內）</span><div class="d"><b>¥32,670</b>（3 人份，每人 ¥10,890，已含稅與 10% 服務費）。<br>選洋食是為了瑄瑄阿姨：飯店明確回覆 ギャザリング 完全不接受更換或去除食材，且所有套組都含海藻類；但洋食含量最少，8 道菜裡只有 2 道用到昆布——▲旬魚のブイヤベース 與 ▲彩り野菜の煮込みハンバーグ。因為是 3 人共享的套組而非一人一份，她跳過那 2 道即可，照樣吃到 6 道。訂 18:00 是為了配合 20:00–20:30 就寢。<br><span class="tag t-must">行前必辦</span> 訂位<b>尚未確認成立</b>，要回信確定改洋食並請對方回覆 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-hotel">② 待辦・飯店</a></div></div></li>
+      <li><span class="t">20:30</span><div class="c"><span class="h">就寢</span><div class="d"></div></div></li>
+    </ol>
+
+    <div class="info"><span class="tag t-info">當日支出</span> 預估 <b>¥51,000–55,000</b>（全趟單日最高，而且已確定要花）：鳳梨園 ¥1,500 × 3 ＝ ¥4,500（未滿 4 歲免費）／水族館 ¥2,180 × 3 ＝ ¥6,540（未滿 6 歲免費）／油費 ¥2,000／通行費 0–¥1,600／午餐 ¥5,000–7,500／晚餐 ギャザリング ¥32,670。</div>
+
+    <details data-auto>
+      <summary>景點實查：沖縄美ら海水族館（美麗海水族館）</summary>
+      <div class="body">
+        <div class="lkrow"><a class="lk" href="https://churaumi.okinawa/" target="_blank" rel="noopener">官網</a><a class="lk" href="https://churaumi.okinawa/guide/hour/" target="_blank" rel="noopener">開館時間・票價</a><a class="lk" href="https://churaumi.okinawa/guide/baby/" target="_blank" rel="noopener">嬰幼兒設備</a><a class="lk" href="https://www.asoview.com/channel/tickets/IjvonBes9q/" target="_blank" rel="noopener">線上購票</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B2%96%E7%B8%84%E7%BE%8E%E3%82%89%E6%B5%B7%E6%B0%B4%E6%97%8F%E9%A4%A8" target="_blank" rel="noopener">地圖</a></div>
+        <div class="kv">
+          <div><dt>地址</dt><dd>沖縄県国頭郡本部町石川 424（国営沖縄記念公園・海洋博公園内）</dd></div>
+          <div><dt>從飯店</dt><dd>讀谷村儀間 → 約 60 km、實測回程 1 小時 29 分。本次走法為鳳梨園中繼</dd></div>
+          <div><dt>開館時間</dt><dd>9 月屬通常期 08:30–18:30、入館締切 17:30（官網查證 2026/08/05；8/31 以前的延長開館至 20:00 已結束）。館外免費設施 9 月為 08:30–17:30</dd></div>
+          <div><dt>休館日</dt><dd>12 月上旬有數日休館，9 月不休</dd></div>
+          <div><dt>門票</dt><dd>大人 ¥2,180／高中生 ¥1,440／中小學生 ¥710／未滿 6 歲免費（小魚乾 ¥0）</dd></div>
+          <div><dt>停車</dt><dd>免費。園區有多處停車場，務必停最靠近水族館的那一區</dd></div>
+        </div>
+        <table>
+          <thead><tr><th>區域</th><th>內容</th><th>建議停留</th></tr></thead>
+          <tbody>
+            <tr><td>1F 珊瑚之海</td><td>入口第一區，自然光照的活體珊瑚大水槽。人潮最擠，但小魚乾對顏色最有反應</td><td>15 分</td></tr>
+            <tr><td>1F 熱帶魚之海</td><td>色彩最鮮豔的一區，適合拍照</td><td>15 分</td></tr>
+            <tr><td>1F 黑潮之海</td><td>全館主秀。鯨鯊與鬼蝠魟。有階梯狀觀覽席可坐著看，是幼兒最可能安靜下來的地方</td><td>40–60 分</td></tr>
+            <tr><td>B1 深海之旅</td><td>發光生物與深海魚，光線暗、涼爽，午後躲熱的好去處</td><td>20 分</td></tr>
+            <tr><td>免費區（館外）</td><td>オキちゃん劇場（海豚表演）、海豚潟湖、海龜館、海牛館——全部免費、不需再入館</td><td>50 分</td></tr>
+          </tbody>
+        </table>
+        <p><b>帶幼兒的實務：</b>全程平面、單向動線，嬰兒車可以一路推到底。授乳室在 3F 入口與 2F、附熱水器；尿布台 4F／3F／2F／1F 都有；嬰兒車免費出借（不需預約、先到先借）；館內商店「ブルーマンタ」只賣 L 尺寸尿布（9–14kg）——小魚乾 12kg 剛好適用。離開水族館後再去免費區，順序反了會多走一趟。</p>
+        <p><b>海洋博公園的其他設施</b>（同一張停車場、免費或低價）：エメラルドビーチ 免費海灘、水淺有救生員；熱帯ドリームセンター 蘭花溫室（另收費、室內平坦、雨天備案）；海洋文化館・星象儀（另收費、冷氣充足）；園內遊園車連接南口・中央口・北口，帶幼兒與嬰兒車時很實用。</p>
+      </div>
+    </details>
+
+    <details data-auto>
+      <summary>景點實查：名護パイナップルパーク（名護鳳梨園）</summary>
+      <div class="body">
+        <div class="lkrow"><a class="lk" href="https://www.nagopine.com/" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8A%E3%82%B4%E3%83%91%E3%82%A4%E3%83%8A%E3%83%83%E3%83%97%E3%83%AB%E3%83%91%E3%83%BC%E3%82%AF%20%E6%B2%96%E7%B8%84%E7%9C%8C%E5%90%8D%E8%AD%B7%E5%B8%82%E7%82%BA%E5%8F%881195" target="_blank" rel="noopener">地圖</a><a class="lk tel" href="tel:+81980533659">0980-53-3659</a></div>
+        <div class="kv">
+          <div><dt>地址</dt><dd>沖縄県名護市為又 1195</dd></div>
+          <div><dt>從飯店／到水族館</dt><dd>讀谷 → 鳳梨園 實測 59 分／51.7 km；鳳梨園 → 海洋博公園 實測 26 分／15.6 km</dd></div>
+          <div><dt>營業時間</dt><dd>10:00–18:00（最終入園 17:30）、週六無特別營業時間（官網查證 2026/08/05）</dd></div>
+          <div><dt>門票</dt><dd>大人（16 歲以上）¥1,500／小人（4–15 歲）¥800／未滿 4 歲免費 → 3 位成人 ¥4,500</dd></div>
+          <div><dt>線上票</dt><dd>官方有線上購票，但純入園券同樣 ¥1,500（沒有折扣）且須到櫃檯換票，實益低；沖繩縣民優惠只限當地居民</dd></div>
+          <div><dt>停車與餐飲</dt><dd>免費停車 200 台；アナナスキッチン 11:00–15:00、レストラン「パームツリー」11:00–17:00</dd></div>
+          <div><dt>建議停留</dt><dd>官方建議「自搭乘遊園車起算 45 分鐘以上」；本行程排 75 分鐘（09:50–11:20）</dd></div>
+        </div>
+        <p><b>園內與帶幼兒的實務：</b>自動運転パイナップル号 無人駕駛小車自動繞行亞熱帶植物園、有中文語音導覽，全程坐著、不需日語、不需排隊互動——對 1 歲 9 個月最有效。亞熱帶植物園與鳳梨田是戶外步道區，9 月下旬中午很曬，坐完鳳梨號可以直接跳過這段走進室內。試吃區與賣場在室內、有冷氣、平面好推，是這一站最適合待久一點的地方；<b>鳳梨製品是本趟少數「不易碎、可託運」的伴手禮</b>，比陶器與玻璃安全。</p>
+        <div class="field"><span class="tag t-field">還沒確認</span> 園內坡道與推車可行性仍未查證，這是這一站唯一還開著的問題 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-week">② 待辦・出發前一週</a></div>
+      </div>
+    </details>
+
+    <div class="info">
+      <b>備案：</b>① 颱風或大雨 → 水族館與海洋博公園室內設施本身就能撐一整天；鳳梨園的賣場與試吃區也在室內，只有鳳梨號那段會濕。② 孩子狀況不佳或起得晚 → <b>直接砍掉鳳梨園</b>，10:45 出發、12:15 到水族館（車上剛好一次睡滿 90 分），全日照樣成立——這是最容易執行的減法。③ 時間有餘、孩子還醒著 → 備瀨のフクギ並木（備瀨福木林道）就在水族館旁約 10 分，平坦好推、全程樹蔭 → <a href="#field-alt">陸・候補景點</a>
+    </div>
+    <div class="jump"><a href="#day1">← Day 1</a><a href="#day3">Day 3 →</a></div>
+  </section>
+
+  <section class="sec" id="day3">
+    <h2><span class="n">D3</span>9/27（日）南部一日：波上宮 ＋ DFS</h2>
+    <p class="lead"><b>定調：</b>一趟南下把參拜與免稅購物解決，中午回程睡滿，下午回飯店玩沙　<span class="tag t-ok">v2.0 已重排</span></p>
+    <div class="gal two">
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg/1280px-2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg" alt="波上宮 空拍" loading="lazy"><figcaption>波上宮（なみのうえぐう）建在斷崖上，下方就是波之上海灘<span class="cr">照片：松岡明芳／CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Naha_Naminoue-gu_1.jpg/1280px-Naha_Naminoue-gu_1.jpg" alt="波上宮 參道" loading="lazy"><figcaption>參道這一段平坦好推嬰兒車，石階要到本殿前才出現<span class="cr">照片：Zairon／CC BY 4.0</span></figcaption></figure>
+    </div>
+
+    <div class="ok">
+      <b>v2.0 砍掉了 Costco，這一天因此整個鬆開。</b>v1.9 的排法是波上宮 → Costco 南城 → DFS 三站，實測光開車就 4 小時 5 分——因為 Costco 在東南邊的南城，根本不在那霸這條軸線上，來回要多付出 80 分鐘純繞路。改成兩站之後：開車總量降到約 <b>2 小時 50 分</b>，出發時間從 07:40 放寬到 08:00，海灘時間從 90 分鐘變成 2 小時，午睡也回到完整的一整段（DFS → 讀谷 1 小時 11 分）。<br>同時消掉三個現場風險：會員卡忘了帶就整站報銷、日本 Costco 只收現金與 Mastercard、冷藏品要在 9 月的車裡放過兩小時。代價是少了最便宜的那一餐與大量採買——午餐改到 DFS 隔壁的サンエー那覇メインプレイス，尿布副食品飲用水一樣補得到。完整理由與封存的 Costco 實查 → <a href="沖繩家庭旅遊企劃書_歷程沿革.html#v-archive">④ 紀錄・封存區</a>
+    </div>
+
+    <ol class="tl">
+      <li><span class="t">07:30</span><div class="c"><span class="h">房內早餐（Day 1 採買的食材，或加訂飯店早餐）</span><div class="d">加訂需前一日以前預約：房內版 ¥4,235／人、餐廳版 ¥5,300／人，3 歲以下免費。入住後再決定也來得及。</div></div></li>
+      <li><span class="t">08:00</span><div class="c"><span class="h">出發南下那霸</span><div class="d">讀谷 → 波上宮 <b>實測 1 小時 19 分／33.8 km</b>（国道 58 号）或 1 小時 17–18 分／52.4 km（沖繩自動車道 石川 IC → 那霸 IC）。08:00 出發是為了 09:20 到、搶得到那 20 個免費車位。</div></div></li>
+      <li><span class="t">09:20</span><div class="c"><span class="h">波上宮（なみのうえぐう・琉球八社之首）</span><div class="d">沖縄県那覇市若狭 1-25-11。建在斷崖上、下方就是波之上海灘。授与所 09:00 開，09:20 到剛好人最少。參拜不需要日語：投錢 → 二拜二拍手一拜；御守在授與所用指的就能買。<br><a class="lk" href="https://naminouegu.jp/" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B3%A2%E4%B8%8A%E5%AE%AE%20%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-25-11" target="_blank" rel="noopener">地圖</a><a class="lk tel" href="tel:+81988683697">098-868-3697</a><br><span class="tag t-field">現場注意</span> 無料駐車場只有 20 台，9/27 是週日，先標好 2 個備用付費停車場；本殿前有一段石階，嬰兒車要抱著上去——這是四天裡少數需要背帶的地方。</div></div></li>
+      <li><span class="t">10:00</span><div class="c"><span class="h">出發前往おもろまち（新都心）</span><div class="d">波上宮 → T ギャラリア沖縄 約 15 分／約 4.5 km（市區道路，尚未實測）。這段太短，不要指望當午睡。</div></div></li>
+      <li><span class="t">10:15</span><div class="c"><span class="h">抵達 Tギャラリア沖縄 by DFS</span><div class="d">沖縄県那覇市おもろまち 4-1。營業 10:00–20:00（每日相同，週日也是），10:15 到剛好開門不久、人最少。全日本唯一「不出國也能免稅」的店——是真正的 duty free（免關稅），不只是退 10% 消費稅。<br><a class="lk" href="https://www.dfs.com/jp/t-galleria-okinawa" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=T%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%82%A2%E6%B2%96%E7%B8%84%20by%20DFS%20%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E3%81%8A%E3%82%82%E3%82%8D%E3%81%BE%E3%81%A14-1" target="_blank" rel="noopener">地圖</a><a class="lk tel" href="tel:+81120782460">0120-782-460</a><a class="lk tel" href="tel:+81989511398">CHANEL 門市</a></div></div></li>
+      <li><span class="t">10:15<br>–12:15</span><div class="c"><span class="h">DFS 購物（2 小時，主要目標：Chanel）</span><div class="d">2 小時是家人指定的上限，時間到就走。CHANEL FASHION 在 2F 時裝與配件區、櫃位 43。全館室內、平面、有電梯與冷氣，推車好推；三位成人分頭逛、一人顧孩子最有效率。<br><span class="tag t-must">行前必辦</span> <b>買了當場帶不走</b>——商品一律送到那霸機場、出境後才領，所以百分之百只能手提。Chanel 包款體積大，回程手提務必先加購 Extra Carry-On → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-carryon">② 待辦・手提行李策略</a>；提貨規則與 Chanel 現貨要打 0120-782-460 問清楚 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-dfs">② 待辦・DFS</a></div></div></li>
+      <li><span class="t">12:15</span><div class="c"><span class="h">午餐＋採買：サンエー那覇メインプレイス</span><div class="d">就在 DFS 對街，走路或開 3 分鐘就到。有美食街與嬰幼兒設施，全平面、推車好推，不需會員卡、也沒有卡別限制。順便把尿布、濕紙巾、副食品、飲用水補齊——這一站接手了原本 Costco 的採買功能。3 位成人＋幼兒約 ¥3,000–4,000。<br><a class="lk" href="https://www.san-a.co.jp/nahamainplace/" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B5%E3%83%B3%E3%82%A8%E3%83%BC%E9%82%A3%E8%A6%87%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9" target="_blank" rel="noopener">地圖</a><br><span class="tag t-field">還沒確認</span> 營業時間、停車收費與哺乳室位置尚未實查 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-week">② 待辦・出發前一週</a></div></div></li>
+      <li><span class="t">13:30</span><div class="c"><span class="h">上車回讀谷 → 車上午睡</span><div class="d">おもろまち → 讀谷 <b>實測 1 小時 11 分／37.7 km</b>（沖繩自動車道 那霸 IC → 石川 IC）。13:30–14:45 正好落在一般午睡時段，是今天唯一也是完整的一段睡眠。<span class="tag t-field">現場注意</span> 抵達時孩子多半還睡著，先讓開車的人把車停好，再由另一位抱下車，不要在停車場叫醒他。</div></div></li>
+      <li><span class="t">14:45</span><div class="c"><span class="h">抵達飯店、換泳裝</span><div class="d">比 v1.9 的 16:15 早了 1.5 小時，這就是砍掉 Costco 換回來的東西。</div></div></li>
+      <li><span class="t">15:00<br>–17:00</span><div class="c"><span class="h">飯店私人海灘：玩水玩沙（2 小時）</span><div class="d">9 月下旬沖繩海水約 28°C，還完全是玩水的季節。9/27 日落約 18:24，這個時段紫外線已開始減弱。幼兒防曬要選物理性配方，加浮力衣與遮陽帽。泳圈（直徑 70cm）與兒童臂圈飯店免費出借、<b>自備浮具不能帶進泳池</b>；戲水尿布 M／L 在集いの館免費提供。泳池 24 小時開放、無年齡與身高限制。</div></div></li>
+      <li><span class="t">17:00</span><div class="c"><span class="h">回房沖澡、換裝</span><div class="d">多出來的時間可以拿來用 キッズルーム（17:00–22:00、免費、須家長陪同）。</div></div></li>
+      <li><span class="t">18:00</span><div class="c"><span class="h">晚餐（飯店餐廳或讀谷區域，尚未預訂）</span><div class="d"><span class="tag t-field">現場注意</span> 沖縄そば 的湯頭幾乎都用鰹節＋昆布，瑄瑄阿姨這一份不能直接點。外食點餐前先確認湯頭，或改點 タコライス、ステーキ 這類不靠日式高湯的品項。日文備用句與替代品項 → <a href="#field-food">陸・餐飲與幼兒餵食</a></div></div></li>
+      <li><span class="t">20:30</span><div class="c"><span class="h">就寢</span><div class="d"></div></div></li>
+    </ol>
+
+    <div class="info"><span class="tag t-info">當日支出</span> 預估 <b>¥15,500–27,000</b>：御守 ¥2,000–4,000（4 種、視數量）／サンエー 午餐＋採買 ¥3,000–4,000／DFS 停車 ¥0–1,000（待確認）／油費 ¥1,500／通行費 0–¥1,600／晚餐 ¥9,000–15,000。DFS 採購另計，上限取決於回程<b>手提</b>額度。</div>
+
+    <details data-auto>
+      <summary>景點實查：波上宮與四種御守</summary>
+      <div class="body">
+        <div class="lkrow"><a class="lk" href="https://naminouegu.jp/" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B3%A2%E4%B8%8A%E5%AE%AE%20%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-25-11" target="_blank" rel="noopener">地圖</a><a class="lk tel" href="tel:+81988683697">098-868-3697</a></div>
+        <div class="kv">
+          <div><dt>地位</dt><dd>琉球八社之首，沖繩規模最大、參拜人數最多的神社。建在面海的斷崖上，下方就是波の上ビーチ</dd></div>
+          <div><dt>授与所</dt><dd>09:00–16:30（官網另一頁寫 16:45，一律取較早者）；御祈祷受付 10:00–15:30（官網查證 2026/08/05）</dd></div>
+          <div><dt>費用</dt><dd>參拜免費。御守一般 ¥500–1,000 一個</dd></div>
+          <div><dt>停車</dt><dd>無料駐車場只有 20 台，官網明寫滿了請利用周邊付費停車場</dd></div>
+          <div><dt>建議停留</dt><dd>40 分鐘（09:20–10:00）。參拜 10 分鐘、挑御守 20 分鐘、緩衝 10 分鐘</dd></div>
+        </div>
+        <table>
+          <thead><tr><th>御守</th><th>對應家人的願望</th></tr></thead>
+          <tbody>
+            <tr><td>子供守／安產守（こどもまもり）</td><td>保佑小孩平安長大</td></tr>
+            <tr><td>家内安全（かないあんぜん）</td><td>全家平安</td></tr>
+            <tr><td>交通安全（こうつうあんぜん）</td><td>波上宮這一支在當地最有名，不少沖繩人專程來求</td></tr>
+            <tr><td>商売繁盛・仕事守</td><td>事業</td></tr>
+          </tbody>
+        </table>
+        <p><b>參拜完全不需要日語。</b>作法是：鳥居前輕輕一鞠躬 → 手水舍洗手漱口 → 到拜殿投賽錢 → 二拜二拍手一拜。御守在授與所是陳列式的，用指的就能買。</p>
+        <div class="field"><span class="tag t-field">還沒確認</span> 御守品項官網未公布，四種是否都有常設仍須打 <a href="tel:+81988683697">098-868-3697</a> 確認 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-week">② 待辦</a></div>
+        <p class="lead">為什麼選波上宮而不是沖宮或泡瀨神社 → <a href="沖繩家庭旅遊企劃書_歷程沿革.html#v-decide">④ 紀錄・決策理由</a></p>
+      </div>
+    </details>
+
+    <details data-auto>
+      <summary>景點實查：Tギャラリア沖縄 by DFS</summary>
+      <div class="body">
+        <div class="lkrow"><a class="lk" href="https://www.dfs.com/jp/t-galleria-okinawa" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=T%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%82%A2%E6%B2%96%E7%B8%84%20by%20DFS%20%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E3%81%8A%E3%82%82%E3%82%8D%E3%81%BE%E3%81%A14-1" target="_blank" rel="noopener">地圖</a><a class="lk tel" href="tel:+81120782460">0120-782-460</a><a class="lk tel" href="tel:+81989511398">CHANEL 門市</a></div>
+        <div class="kv">
+          <div><dt>地址</dt><dd>沖縄県那覇市おもろまち 4-1（那霸市新都心）。ゆいレール おもろまち駅 1 號口直結</dd></div>
+          <div><dt>營業時間</dt><dd>每日 10:00–20:00（週日與週一都相同，官網查證 2026/08/05）</dd></div>
+          <div><dt>Chanel</dt><dd>CHANEL FASHION 在館內 2F ファッション＆アクセサリー 區、櫃位 43</dd></div>
+          <div><dt>入店資格</dt><dd>不需要會員卡。但結帳時幾乎可以確定要出示護照與回程航班資訊</dd></div>
+          <div><dt>幼兒友善度</dt><dd>高。全館室內、平面、有電梯與冷氣，孩子可以在推車上接著睡。但走道不像量販店那樣寬，推車要留意</dd></div>
+          <div><dt>用餐</dt><dd>館內餐飲選擇不多。對街的サンエー那覇メインプレイス有美食街與嬰幼兒設施——本行程午餐就排在那裡</dd></div>
+        </div>
+        <div class="must">
+          <span class="tag t-must">行前必辦</span> <b>提貨規則決定這一站成不成立。</b>DFS 的商品出境後才在那霸機場提貨櫃檯（過海關後左側、42 號登機門對面）領得到，<b>完全沒有改放託運的機會，只能手提</b>。前置時間官方說 2 小時、部落格說 3 小時、另一說要前一天晚上——本行程 9/27 買、9/28 領，中間隔 27 小時，三種說法全部涵蓋得住，風險基本消失。但那通電話仍要打：能不能指定隔日航班、有沒有保管期限、結帳要出示什麼、哪些品牌可現場帶走、停車收不收費 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-dfs">② 待辦・第 5 項</a>
+        </div>
+        <div class="field">
+          <span class="tag t-field">先有心理準備</span> 目標是 Chanel 包款的話，沖繩的品項深度遠不如東京大阪。DFS 免關稅的優勢在高單價、體積小、重量輕的品項（手錶、保養品）上最明顯；包款則相反——單價高、體積大，正好卡在回程只能手提的限制上。家人的原話是「有機會看到喜歡的包包的話」，所以只給 2 小時，看不到就當逛過，不為它加時間。
+        </div>
+      </div>
+    </details>
+
+    <div class="info">
+      <b>備案：</b>① 雨天 → 兩站都是室內或短時間停留，行程照走；下午的海灘改成飯店室內設施（キッズルーム 17:00–22:00、泳池 24 小時）。② 時間不夠 → 可壓縮的只有サンエー的採買（波上宮 40 分已是下限、DFS 的 2 小時是指定的）。③ DFS 電話問下來提貨規則有問題 → 改去 沖縄アウトレットモールあしびなー，同樣是精品但買了當場帶走、可放託運，且離隔天的還車處只要 5 分 → <a href="#field-alt">陸・候補景點</a>
+    </div>
+    <div class="jump"><a href="#day2">← Day 2</a><a href="#day4">Day 4 →</a></div>
+  </section>
+
+  <section class="sec" id="day4">
+    <h2><span class="n">D4</span>9/28（一）返程日</h2>
+    <p class="lead"><b>定調：</b>上午留在飯店玩水、12:00 正常退房，回程只排瀨長島一站　<span class="tag t-ok">已定案</span></p>
+    <div class="gal two">
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg/1280px-Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg" alt="沖繩海灘" loading="lazy"><figcaption>上午 2 小時私人海灘與泳池，是四天裡最從容的一段飯店時間<span class="cr">照片：Wikimedia Commons</span></figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg/1280px-Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg" alt="Thai Vietjet A320" loading="lazy"><figcaption>VZ569 那霸 18:20 → 桃園 18:55（實際飛行 1 小時 35 分）<span class="cr">照片：Wikimedia Commons</span></figcaption></figure>
+    </div>
+
+    <div class="ok"><b>返程日是時間風險最低的一天。</b>DFS 已經在 Day 3 買完，今天只要「領貨」不要「購物」，所以舊版那個 14:30 離場死線不存在了，退房也不必提早。回程只排瀨長島一站，它就在還車處旁邊約 10 分。</div>
+
+    <ol class="tl">
+      <li><span class="t">07:30</span><div class="c"><span class="h">早餐、完成收行李</span><div class="d">大件行李前一晚就要收好。把要託運的、要手提的、上飛機要用的（尿布、副食品、水）分成三袋。<b>在市區買的保養品若單瓶超過 100ml，要放進託運那一袋。</b><br>早餐最值得加訂的就是今天——09:00 才要下水，最從容。房內版 ¥4,235／人，附免費兒童餐盤。</div></div></li>
+      <li><span class="t">09:00<br>–11:00</span><div class="c"><span class="h">飯店私人海灘＋泳池（第二次玩水，約 2 小時）</span><div class="d">泳池 24 小時開放、無年齡與身高限制；上午 11 點前紫外線相對緩和，和 Day 3 的午後場正好把最曬的時段避開。玩完直接洗澡換裝，不要拖到退房前才手忙腳亂。</div></div></li>
+      <li><span class="t">11:00</span><div class="c"><span class="h">回房沖澡、換裝、行李下樓裝車</span><div class="d">離開房間前把每個抽屜與插座都檢查一次，充電器最常掉。</div></div></li>
+      <li><span class="t">12:00</span><div class="c"><span class="h">退房（正常退房時間）</span><div class="d">前一晚就把館內消費結清，早上才不會卡在櫃檯。宿泊稅本趟不課徵（施行日為 2027/02/01），現場不必為此準備現金。</div></div></li>
+      <li><span class="t">12:30</span><div class="c"><span class="h">出發南下瀨長島</span><div class="d">讀谷 → 瀨長島約 60–70 分（估，走沖繩自動車道南下轉那霸機場自動車道）。孩子這段大概會睡，今天沒有別的午睡機會，讓他睡滿。</div></div></li>
+      <li><span class="t">13:30</span><div class="c"><span class="h">瀨長島 ウミカジテラス（Umikaji Terrace）：午餐＋看飛機</span><div class="d">豐見城市瀨長。面海的白色階梯式店家群，就在那霸機場降落航道正下方，可以邊吃邊看飛機起降——對這個年紀的孩子，這比任何景點都有效。設施營業 10:00–21:00、年中無休，各店家時間不同、多從 11:00 營業。距 ORIX 豐崎營業所僅約 10 分。<br><a class="lk" href="https://www.umikajiterrace.com/" target="_blank" rel="noopener">官網</a><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%80%AC%E9%95%B7%E5%B3%B6%E3%82%A6%E3%83%9F%E3%82%AB%E3%82%B8%E3%83%86%E3%83%A9%E3%82%B9" target="_blank" rel="noopener">地圖</a><a class="lk tel" href="tel:+81988517446">098-851-7446</a><br><span class="tag t-field">現場注意</span> 階梯式地形，推車不好推，建議用背帶。停車場規模與收費官網未公布。</div></div></li>
+      <li><span class="t">14:50</span><div class="c"><span class="h">出發前往豐崎</span><div class="d">約 10 分。就算在瀨長島多留 20 分鐘也還來得及，這是今天唯一有彈性的一段。</div></div></li>
+      <li><span class="t">15:00</span><div class="c"><span class="h">加油（レギュラー・満タン）</span><div class="d">用取車時店員圈的那間；自助加油站有機會只收現金，身上留 ¥5,000 現金。<b>務必在豐崎附近加</b>，不要在市區加完再開一段——抵達時已不是滿箱，等於還得再補一次。</div></div></li>
+      <li><span class="t">15:30</span><div class="c"><span class="h">ORIX 豐崎營業所還車</span><div class="d">驗車、確認油量、結清。還車前把車內每個座位、後廂、置物箱都翻一次——<b>兒童座椅底下最常留東西</b>。<a class="lk tel" href="tel:+81988510543">098-851-0543</a></div></div></li>
+      <li><span class="t">15:50</span><div class="c"><span class="h">ORIX 免費接駁車 → 那霸機場國際線航廈（約 15–20 分）</span><div class="d"></div></div></li>
+      <li><span class="t">16:10</span><div class="c"><span class="h">抵達機場、辦理報到與行李託運</span><div class="d">國際線廉航建議起飛前 2 小時到（18:20 起飛 → 16:20 前完成報到最安全）。那霸出發的關櫃比桃園早——起飛前 1 小時（約 17:20）。<b>在市區買的保養品若單瓶超過 100ml，只能放進這裡託運</b>，不能留到手提。手提行李會現場秤一次。</div></div></li>
+      <li><span class="t">17:00</span><div class="c"><span class="h">出境 → 到 DFS 提貨櫃檯領 9/27 買的貨</span><div class="d">位置：過海關後左側、42 號登機門對面的 PICK-UP 櫃檯。領到的東西全部只能手提，這時已經沒有改放託運的機會，而<b>手提在登機門會再秤一次</b>——出發時手提就要留白（每人壓 5kg）→ <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-carryon">② 待辦・手提行李策略</a></div></div></li>
+      <li><span class="t">17:30</span><div class="c"><span class="h">機場免稅店補買伴手禮（彈性）</span><div class="d">這時候買的東西和 DFS 領到的加在一起算進同一個額度。17:50 前後開始登機，不要逛過頭。</div></div></li>
+      <li><span class="t">18:20</span><div class="c"><span class="h">VZ569 起飛</span><div class="d"></div></div></li>
+      <li><span class="t">18:55</span><div class="c"><span class="h">抵達桃園機場第 1 航廈</span><div class="d">實際飛行 1 小時 35 分（時差 −1 小時）。</div></div></li>
+      <li><span class="t">19:00<br>–19:55</span><div class="c"><span class="h">入境、提領行李與嬰兒車 → 和運專車接機（已付清 TWD 650）</span><div class="d">預約登記 18:45，但確認信註明「依航班抵達時間接送」，班機延誤時系統會自行調整，不必改預約。免費等候自班機實際抵達時間起算 60 分鐘（18:55 落地 → 約 19:55），第 61 分鐘起每 30 分鐘加收 TWD 200。帶幼兒＋託運行李＋嬰兒車，實際出關約 19:35–19:55，在免費範圍內但很貼線——<b>一落地先傳訊給司機</b>，若確定會超過就立刻打 <a href="tel:+886255890800">(02) 5589-0800</a></div></div></li>
+      <li><span class="t">20:50</span><div class="c"><span class="h">回到台北市中山區住家</span><div class="d">桃園機場 → 台北約 50–60 分。當天回家後還要上班／上學的話，隔天請預留緩衝。</div></div></li>
+    </ol>
+
+    <div class="info"><span class="tag t-info">當日支出</span> 預估 <b>¥11,000–14,000</b>：加油 ¥3,000–4,000／瀨長島午餐 ¥3,000–5,000（3 位成人）／機場伴手禮 ¥5,000（彈性）。今天沒有購物行程——DFS 已在 Day 3 買完，這一天只有領貨。</div>
+
+    <div class="must">
+      <span class="tag t-must">返程日最不能出錯的三個時間點</span> <b>12:00 退房、15:30 還車、16:20 報到。</b>任一環節延誤 30 分鐘就會開始壓縮下一段。瀨長島是唯一可以整段刪掉的一站，刪掉後直接多出 80 分鐘緩衝。
+    </div>
+    <div class="field">
+      <span class="tag t-field">液體規則</span> 買日系保養品要先分清楚「在哪裡買」。<b>在市區藥妝店或サンエー買的</b>，只要單瓶超過 100ml，就必須放進託運，不能留在手提。<b>只有出境後才領到的 DFS 商品與機場免稅店商品</b>不受這條限制（直飛、中途沒有第二道安檢）。所以想買大瓶裝的，要在 16:10 報到前就分好袋 → <a href="#field-duty">陸・免稅與精品購物</a>
+    </div>
+
+    <div class="info">
+      <b>備案：</b>① 孩子狀況不佳或早上玩過頭 → 直接跳過瀨長島，12:30 出發、13:40 到豐崎，在 沖縄アウトレットモールあしびなー（10:00–20:00）吃飯吹冷氣即可——就在 ORIX 營業所旁約 5 分，全程有遮蔭、有嬰兒設施，也可以在這裡補伴手禮（買了當場帶走、可放託運）。② 雨天 → 瀨長島是戶外階梯地形，同樣改去あしびなー。③ 班機延誤或提前 → 瀨長島是唯一可以整段刪掉的一站。
+    </div>
+    <div class="jump"><a href="#day3">← Day 3</a><a href="#cost">費用概算 →</a></div>
+  </section>
+
+  <section class="sec" id="cost">
+    <h2><span class="n">肆</span>費用概算</h2>
+
+    <h3>已付清的部分</h3>
+    <table>
+      <thead><tr><th>項目</th><th>金額</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>機票＋住宿（動態套裝）</td><td class="money">TWD 151,700</td><td>3 大人各 TWD 49,540 ＋ 嬰兒 TWD 3,080</td></tr>
+        <tr><td>租車（含幼兒座椅）</td><td class="money">TWD 5,640</td><td>基本料金 5,320 ＋ 座椅 320</td></tr>
+        <tr><td>機票附加稅・燃油附加費</td><td class="money">TWD 120</td><td>成人 ×3（嬰兒 ¥0）</td></tr>
+        <tr><td>台灣端機場接送（和運租車）</td><td class="money">TWD 1,300</td><td>台北 ⇄ 桃園機場各 1 趟，TWD 650 × 2，2026/08/05 線上付清</td></tr>
+        <tr class="tot"><td>合計（已刷卡）</td><td class="money">TWD 158,760</td><td>拆解見 <a href="沖繩家庭旅遊企劃書_訂購成果.html#o-cost">③ 訂單・費用結算</a></td></tr>
+      </tbody>
+    </table>
+
+    <h3>還沒付、到現場才會發生的部分（估）</h3>
+    <table>
+      <thead><tr><th>項目</th><th>預估</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td>託運行李加購 <span class="tag t-must">行前必辦</span></td><td class="money">約 TWD 2,600<br>（THB 2,890）</td><td>票種只含手提 7kg、託運額度 0。官網實價：去程 20kg THB 1,190 ＋ 回程 30kg THB 1,700，每人每航段各自計算、不可共用。最晚起飛前 3 小時<br><span class="tag t-info">v2.0 說明</span> 砍掉 Costco 後託運的用量下降，但回程 30kg 維持不變——四人份行李、嬰兒用品、加上市區買的大瓶保養品仍然吃得掉 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-baggage">② 待辦</a></td></tr>
+        <tr><td>Extra Carry-On（手提加購）<span class="tag t-must">建議購買</span></td><td class="money">THB 250／人<br>3 人共 THB 750<br>（約 TWD 690）</td><td>DFS 的商品只能手提，且採購目標為 Chanel 包款、體積大。手提 7kg → 2 件、共 10kg，並解除小件 30×20×10cm 的尺寸限制。VZ569 為未滿 2 小時航班，適用最低價；只買回程 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-carryon">② 待辦</a></td></tr>
+        <tr><td>預選座位 <span class="tag t-must">行前必辦</span></td><td class="money">約 TWD 650<br>（THB 720）</td><td>普通座位 THB 120 × 3 位成人 × 2 航段。本行程不能線上報到，沒有免費選位可用，要連號就得買</td></tr>
+        <tr><td>汽油（満タン返し）</td><td class="money">約 ¥3,000–4,500</td><td>四天約 230–320 km（砍掉 Costco 後比原估少約 30 km）</td></tr>
+        <tr><td>高速公路通行費</td><td class="money">¥0–2,500</td><td>全走国道 58 号可以是 ¥0</td></tr>
+        <tr><td>租車免責補償／NOC（現場加保）</td><td class="money">¥0–6,000</td><td>取車時決定，約 ¥1,000–2,000／日。建議加保：右駕不熟、雨天路滑、停車格窄、車上有幼兒</td></tr>
+        <tr><td>水族館門票</td><td class="money">約 ¥6,540</td><td>大人 ¥2,180 × 3，未滿 6 歲免費</td></tr>
+        <tr><td>名護鳳梨園門票</td><td class="money">約 ¥4,500</td><td>大人（16 歲以上）¥1,500 × 3；未滿 4 歲免費（官網查證 2026/08/05）</td></tr>
+        <tr><td>波上宮 御守</td><td class="money">約 ¥2,000–4,000</td><td>四種（子供守／家内安全／交通安全／商売繁盛），一般 ¥500–1,000 一個。參拜本身免費</td></tr>
+        <tr><td>DFS 停車費</td><td class="money">¥0–1,000</td><td>全趟唯一可能要付停車費的一站，收費規則待電話確認</td></tr>
+        <tr><td>外食（午餐與晚餐）<br>3 大人＋幼兒</td><td class="money">約 ¥23,000–36,500</td><td>不含 Day 2 晚餐（館內 ギャザリング，另列）與超市採買（另列，避免重複計算）。內含：Day2 午餐 ¥5,000–7,500（海洋博園區）／<b>Day3 午餐＋採買 ¥3,000–4,000（サンエー那覇メインプレイス，v2.0 由 Costco フードコート 改列）</b>／Day3 晚餐 ¥9,000–15,000／Day4 午餐 ¥3,000–5,000（瀨長島）／四天飲料雜支 ¥3,000–5,000</td></tr>
+        <tr><td>館內餐食 <span class="tag t-ok">已定案</span></td><td class="money">¥32,670<br>早餐若加訂另 ¥12,705–15,900／餐</td><td>9/26 晚餐：ギャザリングサービス 洋食 3 名セット（每人 ¥10,890，含稅與服務費，送到房內）。同樣三位成人吃 Bellezza 是 ¥72,600。早餐仍待決定：房內版 ¥4,235／餐廳版 ¥5,300 每人，3 歲以下免費——最值得加訂的是 9/28 那天早上</td></tr>
+        <tr><td>超市採買・嬰幼兒用品</td><td class="money">約 ¥8,000</td><td>Day 1 晚上一次補齊最省事；Day 3 中午在サンエー再補一次</td></tr>
+        <tr><td>DFS 採購（Chanel 等精品）</td><td class="money">彈性</td><td>上限取決於回程<b>手提</b>額度，不是預算、也不是託運。DFS 商品出境後才領、只能手提 → 需先加購 Extra Carry-On</td></tr>
+        <tr><td>伴手禮</td><td class="money">彈性</td><td>主要來源為 Day 3 的 DFS 與サンエー、Day 4 的機場免稅店，以及 Day 2 鳳梨園的鳳梨製品（不易碎、可託運）。陶器（やちむんの里）與琉球玻璃仍為備案——兩者皆易碎又有重量，沒有安全的帶法</td></tr>
+        <tr class="tot"><td>現場日圓合計（估）</td><td class="money">約 ¥84,500–105,000</td><td>另加行前線上加購約 TWD 3,940（託運 2,600 ＋ 選位 650 ＋ Extra Carry-On 690）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info">
+      <span class="tag t-info">對帳</span> 逐日估算加總：Day1 ¥7,000–9,000／Day2 ¥51,000–55,000／Day3 ¥15,500–27,000／Day4 ¥11,000–14,000 ＝ <b>¥84,500–105,000</b>，與上表相符。<br>
+      v2.0 的變化：砍掉 Costco，Day 3 午餐由 フードコート ¥2,000–3,000 改為サンエー ¥3,000–4,000（＋¥1,000）、油費因少繞 80 分鐘車程下修約 ¥500，兩相抵銷後總額幾乎不變。原本列在這裡的「Costco 採購（彈性）」一列已移除 → <a href="沖繩家庭旅遊企劃書_歷程沿革.html#v-archive">④ 紀錄・封存區</a>
+    </div>
+    <div class="field">
+      <span class="tag t-field">現金與刷卡</span> 沖繩的大型設施、超市、加油站多可刷卡，但小型食堂、部分工房、自助加油機仍可能只收現金。建議帶 <b>¥60,000</b> 上下的日圓現金，其餘刷卡，並確認至少兩張卡可用（一張卡被鎖時不至於全滅）。另留颱風預備金的刷卡額度，建議 TWD 30,000 以上空間。<br>
+      <span class="tag t-ok">已結案</span> 宿泊税（住宿稅）本趟<b>不課徵</b>：沖縄県宿泊税施行日為 2027/02/01，讀谷村也沒有自己的市町村宿泊税。
+    </div>
+  </section>
+
+  <section class="sec" id="pack">
+    <h2><span class="n">伍</span>行前攜帶清單</h2>
+
+    <h3>文件（缺一就出不了門）</h3>
+    <table>
+      <thead><tr><th>項目</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>護照 ×4 <span class="tag t-ok">已確認</span></td><td>效期 6 個月以上（四本皆逾 2028 年）。幼兒護照也要，且搭機當天須未滿 2 歲</td></tr>
+        <tr><td>台灣駕照正本 <span class="tag t-must">必帶</span></td><td>每一位可能開車的成人都要帶</td></tr>
+        <tr><td>日本駕照譯本 <span class="tag t-must">未辦</span></td><td>已可線上申辦——監理服務網以自然人憑證或健保卡登入，「駕駛人 → 駕照 → 申辦日文譯本」，NT$100、郵寄到自填地址；臨櫃仍可當日領件。與正本必須成對，缺一不得租車<br><a class="lk" href="https://www.mvdis.gov.tw/" target="_blank" rel="noopener">監理服務網</a></td></tr>
+        <tr><td>訂單確認資料</td><td>套裝確認信、租車預約、飯店預約。列印一份＋手機離線截圖一份。識別資料見私人文件</td></tr>
+        <tr><td>Visit Japan Web <span class="tag t-must">未辦</span></td><td>入境審查與海關申報 QR Code，四個人都要各自建立（幼兒由家長代辦），行前辦好並截圖離線保存<br><a class="lk" href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Visit Japan Web</a></td></tr>
+        <tr><td>旅遊保險 <span class="tag t-must">未辦</span></td><td>含醫療與旅遊不便險（颱風季的班機延誤／取消最需要這個）</td></tr>
+      </tbody>
+    </table>
+
+    <h3>幼兒專用</h3>
+    <ul>
+      <li><b>嬰兒車（可託運至艙門）＋背帶</b>——背帶在兩個地方是必需的：波上宮本殿前有石階、瀨長島是階梯式地形；其餘（水族館、鳳梨園、DFS、サンエー）全都平面好推</li>
+      <li>尿布、濕紙巾（沖繩買得到，但第一晚要夠用）</li>
+      <li>寶寶粥／市售副食品、餐具、圍兜、矽膠吸盤碗——房內有微波爐可自己加熱</li>
+      <li>常備藥：退燒、止瀉、電解質粉、外傷藥膏。健保卡與過往用藥紀錄拍照存手機</li>
+      <li>物理性防曬（幼兒專用）、遮陽帽、薄長袖（防曬也防冷氣）</li>
+      <li>泳裝、快乾大浴巾、海灘拖鞋。<b>泳圈與兒童臂圈飯店免費出借，而且自備的浮具不能帶進泳池</b>；戲水尿布 M／L 免費提供，這兩樣不必從台灣帶</li>
+      <li><b>孩子的小被子或睡袋</b>——飯店沒有嬰兒被褥出借，床護欄也只保證 9/26 一台</li>
+      <li>嬰兒沐浴乳（備用）——已請飯店在入住前先放進房內</li>
+      <li>防蚊液（讀谷海邊傍晚有蚊，Day 3 下午的海灘時段用得到）</li>
+      <li>安撫物（睡前用）、幾樣車上玩具與有聲書——四天裡有不少車程</li>
+    </ul>
+
+    <h3>大人與裝備</h3>
+    <ul>
+      <li><b>插座不必轉接</b>：日本 A 型 100V，與台灣相同。但插孔數量少，帶一個小型延長線很好用</li>
+      <li>車用手機架 ＋ 充電線（租車不一定有支架）</li>
+      <li>eSIM 或 WiFi 分享器（導航全程要吃網路）</li>
+      <li>行動電源（只能隨身、每人最多 2 個、100Wh 以內，不可託運）、快乾衣物、雨具——9 月下旬是沖繩颱風季，帶輕便雨衣比雨傘實用</li>
+      <li>薄外套：室內與車內冷氣通常很強</li>
+      <li>日圓現金約 ¥60,000 ＋ 兩張以上信用卡</li>
+    </ul>
+
+    <div class="field">
+      <span class="tag t-field">9 月下旬的沖繩天氣</span> 白天高溫約 30–31°C、夜間約 26–27°C、海水約 28°C、紫外線極強，且正處颱風季後段的活躍期。行前一週開始盯氣象，並先弄清楚 Thai Vietjet 的班機異動處理方式與旅行社的緊急聯絡窗口 → <a href="#field-typhoon">陸・颱風與天氣應變</a>
+    </div>
+  </section>
+
+  <section class="sec" id="field">
+    <h2><span class="n">陸</span>現場手冊</h2>
+    <p class="lead">原本放在「② 附件資料」的通用實務全部移到這裡，因為這些是<b>到了現場才需要翻</b>的東西，和逐日行程放同一頁最順手。</p>
+    <div class="lkrow">
+      <a class="lk" href="#field-drive">開車實務</a>
+      <a class="lk" href="#field-typhoon">颱風與天氣</a>
+      <a class="lk" href="#field-medical">醫療與育兒</a>
+      <a class="lk" href="#field-food">餐飲與餵食</a>
+      <a class="lk" href="#field-duty">免稅與購物</a>
+      <a class="lk" href="#field-alt">候補景點</a>
+    </div>
+  </section>
+
+  <section class="sec" id="field-drive">
+    <h2><span class="n">6-1</span>沖繩開車實務</h2>
+    <table>
+      <thead><tr><th>項目</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>右駕・靠左行駛</td><td>與台灣相反。最容易出錯的是<b>雨刷與方向燈桿左右相反</b>，以及右轉時忘記自己在內側。上路前在停車場繞一圈熟悉</td></tr>
+        <tr><td>那霸市區的巴士專用道</td><td>国道 58 号等主要幹道在平日早晚尖峰設有バス専用レーン，一般車輛駛入會被取締。9/27 是週日、9/28 中午南下都不在管制時段內，但仍要看路面標示</td></tr>
+        <tr><td>路面很滑</td><td>沖繩的柏油含琉球石灰岩成分，一下雨就明顯變滑，加上颱風季陣雨頻繁，車速要比台灣更保守</td></tr>
+        <tr><td>沖繩自動車道</td><td>本島唯一的高速公路（許田 ~ 那霸）。租車可借 ETC 卡，也可走人工道現金付。時間差通常 15–25 分，通行費約 ¥700–1,200／段，帶幼兒時買時間很值得</td></tr>
+        <tr><td>停車</td><td>本行程的景點幾乎全部免費停車（海洋博公園、名護鳳梨園、瀨長島，以及備案的座喜味城跡、殘波岬、あしびなー）。<b>兩個例外：</b>Day 3 的 T ギャラリア沖縄 停車是否免費尚未查證（全趟唯一可能要付停車費的一站）；同日的波上宮無料駐車場只有 20 台，官網明寫滿了請利用周邊付費停車場</td></tr>
+      </tbody>
+    </table>
+    <div class="field">
+      <span class="tag t-field">加油</span> 油種選 <b>レギュラー</b>（regular・普通汽油），還車前<b>満タン</b>（加滿）。セルフ（自助）加油機的操作介面多為日文，部分機台只收現金；不放心就找 フルサービス（有人服務）的加油站，說「レギュラー、満タン」即可。取車時就請店員在地圖上圈出還車前建議的那一間。
+    </div>
+    <div class="info">
+      <span class="tag t-info">導航技巧</span> 日本的車機導航可以直接輸入電話號碼定位。飯店也可以用 <b>Mapcode 1005 626 090*38</b>，比電話號碼更不會出錯。行前把這幾支存好：飯店預約 <a href="tel:+815031348091">050-3134-8091</a>、飯店夜間・緊急 <a href="tel:+81989216800">098-921-6800</a>（9/25 晚到要打這支）、ORIX 豐崎 <a href="tel:+81988510543">098-851-0543</a>。全部景點的地圖連結集中在 <a href="index.html#links">首頁・常用查詢連結</a>。
+    </div>
+  </section>
+
+  <section class="sec" id="field-typhoon">
+    <h2><span class="n">6-2</span>颱風與天氣應變</h2>
+    <div class="must">
+      <span class="tag t-must">最大單一風險</span> 9 月下旬是沖繩颱風季仍然活躍的時期，而且我們搭的是廉航，改期彈性與處理速度都不如傳統航空。<b>這一節請務必在出發前一週實際演練一次。</b>
+    </div>
+    <div class="lkrow">
+      <a class="lk" href="https://www.jma.go.jp/bosai/map.html#contents=typhoon" target="_blank" rel="noopener">日本氣象廳 颱風情報</a>
+      <a class="lk" href="https://www.cwa.gov.tw/" target="_blank" rel="noopener">中央氣象署</a>
+      <a class="lk" href="https://th.vietjetair.com/" target="_blank" rel="noopener">Thai Vietjet 班機狀態</a>
+      <a class="lk mail" href="mailto:reservations@tour-list.com">Time Design</a>
+    </div>
+
+    <h3>行前一週的動作</h3>
+    <ul>
+      <li><b>開始盯氣象</b>：日本氣象廳的颱風情報與沖繩地區預報，加上台灣中央氣象署的路徑預測，兩邊對照。</li>
+      <li><b>班機異動政策</b>：Time Design 已書面說明——想改搭同航空公司其他班機<b>直接找航空公司</b>（台灣 <a href="tel:+886277260088">+886-2-7726-0088</a>、日本 <a href="tel:+815054825538">+81-50-5482-5538</a>）；想整案取消<b>才找旅行社</b>。</li>
+      <li><b>住宿與租車</b>：住宿日期不能變更、只能縮短，縮短後由 Time Design 代向飯店確認可退金額；租車變更直接找 ORIX，延長費用現場自付。</li>
+      <li><b>旅遊不便險</b>：確認保單涵蓋班機延誤／取消、行李延誤、以及因天候產生的額外住宿與交通費用。困在沖繩多住兩晚的錢，這是唯一能拿回來的方式。</li>
+    </ul>
+    <div class="field">
+      <span class="tag t-field">飯店的颱風保障用不到</span> 星野リゾート官網有「台風安心特約」，但條文明文寫<b>含機票的訂單不適用</b>——我們這張機＋酒＋車套裝正好被排除。所以住宿部分的天候取消規則只能向 Time Design 要，不是向飯店要。飯店僅承諾：班機因天災獲免收取消費時，飯店同步免收取消費。
+    </div>
+
+    <h3>如果颱風真的來了</h3>
+    <table>
+      <thead><tr><th>情境</th><th>對策</th></tr></thead>
+      <tbody>
+        <tr><td>出發前颱風接近沖繩</td><td>先與旅行社確認能否整案延期。<b>不要自己單獨改機票</b>——套裝訂單拆開後住宿與租車可能一起失效</td></tr>
+        <tr><td>已在沖繩，颱風登陸</td><td>留在飯店，不要開車。沖繩的颱風強度常遠超台灣北部的體感，且飛沙與斷樹很危險。飯店通常會提前公告與備餐，先向櫃檯確認</td></tr>
+        <tr><td>回程班機取消</td><td>立刻同步做三件事：① 聯絡航空公司安排後續班次 ② 延長飯店住宿或另訂住宿（機場過夜帶幼兒不現實）③ 通知 ORIX 延長租車</td></tr>
+        <tr><td>只是大雨、沒有颱風</td><td>行程照走：水族館與海洋博公園室內設施、DFS 與サンエー、ユンタンザミュージアム、体験王国むら咲むら、飯店室內設施，四天的雨天備案是夠的</td></tr>
+      </tbody>
+    </table>
+    <div class="must"><span class="tag t-must">預備金</span> 多住兩晚＋改票＋多天租車，現實金額可能在 <b>TWD 30,000</b> 上下。刷卡額度先留出這個空間，比事後借錢輕鬆很多。</div>
+
+    <h3>一般天氣（非颱風）</h3>
+    <table>
+      <thead><tr><th>項目</th><th>9 月下旬的沖繩</th></tr></thead>
+      <tbody>
+        <tr><td>氣溫</td><td>白天約 30–31°C、夜間約 26–27°C。台灣的夏天再熱一點、濕度更高</td></tr>
+        <tr><td>海水溫</td><td>約 28°C，完全是玩水的季節（這也是排了兩次泳池／海邊的原因）</td></tr>
+        <tr><td>紫外線</td><td>極強。幼兒用物理性防曬、遮陽帽、薄長袖；上午 11 點前與下午 4 點後最安全</td></tr>
+        <tr><td>降雨</td><td>午後陣雨頻繁但通常短。輕便雨衣比雨傘實用（沖繩風大，傘常開花）</td></tr>
+        <tr><td>日落</td><td>9/27 約 18:24（以當日實際為準）</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="sec" id="field-medical">
+    <h2><span class="n">6-3</span>醫療與育兒設施</h2>
+    <p class="lead">完整電話表與一鍵撥號按鈕在 <a href="index.html#calls">首頁・緊急聯絡</a>。這裡只放就醫的實務準備。</p>
+    <div class="calls">
+      <a class="call urgent" href="tel:119"><span class="ic">🚑</span><span><span class="who">救護車・消防</span><span class="num">119</span><span class="nb">高燒、抽搐、外傷送醫</span></span></a>
+      <a class="call" href="tel:%238000"><span class="ic">👶</span><span><span class="who">兒童醫療電話諮詢</span><span class="num">#8000</span><span class="nb">拿不定主意時先撥這支</span></span></a>
+      <a class="call" href="tel:+81989734111"><span class="ic">🏥</span><span><span class="who">沖縄県立中部病院</span><span class="num">098-973-4111</span><span class="nb">從讀谷最快到的三次急救醫院</span></span></a>
+      <a class="call" href="tel:+81988880123"><span class="ic">🏥</span><span><span class="who">県立南部医療センター・こども医療センター</span><span class="num">098-888-0123</span><span class="nb">小兒重症最高後送，機場／那霸方向</span></span></a>
+    </div>
+    <ol>
+      <li>幼兒的健保卡與過往用藥／過敏紀錄<b>拍照存手機</b>。</li>
+      <li>常備藥（退燒、止瀉、電解質粉）帶足——日本的兒童用藥劑型與台灣不同、成藥不一定買得到對應品。</li>
+      <li>旅遊醫療險的理賠需要<b>日本醫院的診斷書與收據正本</b>，就醫時記得索取。</li>
+      <li>藥妝店的藥劑師可以處理輕症諮詢，但<b>幼兒發燒建議直接就醫</b>。</li>
+      <li>把整張聯絡表<b>截圖存在手機離線相簿</b>——沖繩的山區與海岸線訊號並不穩定。</li>
+    </ol>
+  </section>
+
+  <section class="sec" id="field-food">
+    <h2><span class="n">6-4</span>餐飲、採買與幼兒餵食</h2>
+    <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Okinawa_soba_in_Yamabare_2.jpg/1280px-Okinawa_soba_in_Yamabare_2.jpg" alt="沖繩麵" loading="lazy"><figcaption>沖縄そば：這趟最容易餵幼兒的一道，但湯頭含昆布，瑄瑄阿姨不能喝<span class="cr">照片：Wikimedia Commons</span></figcaption></figure>
+
+    <h3>採買點</h3>
+    <table>
+      <thead><tr><th>類型</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>サンエー（San-A）</td><td>沖繩最大的本地連鎖超市，熟食便當、生鮮、寶寶粥、飲料一次買齊。讀谷與周邊多有分店，是本趟最主要的補給站；Day 3 中午的<a href="https://www.san-a.co.jp/nahamainplace/" target="_blank" rel="noopener">那覇メインプレイス</a>是同一個系統的大型店</td></tr>
+        <tr><td>イオン（AEON）</td><td>大型店有嬰幼兒專區與尿布。北中城的イオンモール沖縄ライカム 規模最大，但不在動線上，不建議專程繞</td></tr>
+        <tr><td>ドラッグストア（藥妝店）</td><td>尿布、濕紙巾、防曬、退燒貼。国道 58 号沿線密集</td></tr>
+        <tr><td>西松屋</td><td>日本平價嬰幼兒用品連鎖。臨時缺泳裝、浮力衣、涼感衣時最快的解法</td></tr>
+        <tr><td>便利商店</td><td>ローソン／ファミリーマート／セブン。沖繩限定商品與 ATM 提現都靠這裡</td></tr>
+      </tbody>
+    </table>
+    <div class="info"><b>Day 1 晚上的採買清單建議：</b>今晚的熟食便當 ×3、明早的麵包與牛奶、2L 水 ×2、寶寶粥或市售副食品 ×6 包、優格與香蕉、幼兒零食、尿布一包、濕紙巾，以及大人的飲料。金額大約 ¥4,000–5,000，一次搞定可以省下之後兩天的零碎採買。</div>
+
+    <h3>沖繩的幾種主食，以「能不能餵幼兒」排序</h3>
+    <table>
+      <thead><tr><th>料理</th><th>說明</th><th>幼兒可行性</th></tr></thead>
+      <tbody>
+        <tr><td>沖縄そば</td><td>粗軟麵體＋清爽豬骨柴魚湯。把麵剪短、湯稍微放涼就能直接餵。<b>但湯頭幾乎都含鰹節＋昆布</b></td><td>◎ 最佳（小魚乾可、瑄瑄阿姨不可）</td></tr>
+        <tr><td>ちゃんぷるー（什錦炒）</td><td>豆腐、苦瓜、蛋、午餐肉的家常炒物。苦瓜幼兒多半不吃，但豆腐與蛋可以挑出來</td><td>○</td></tr>
+        <tr><td>タコライス</td><td>絞肉、生菜、番茄、起司蓋飯。把絞肉與白飯分出來給幼兒最快，辣醬另放。<b>不靠日式高湯</b></td><td>○ 兩人都可</td></tr>
+        <tr><td>ステーキ</td><td>沖繩的深夜牛排文化，價格意外親民。<b>不靠日式高湯</b></td><td>△ 幼兒只分得到配菜與白飯</td></tr>
+        <tr><td>A&amp;W（沖繩限定的美式速食）</td><td>招牌是麥根沙士。薯條與雞塊是幼兒的保命餐，有兒童座椅</td><td>○ 保底</td></tr>
+        <tr><td>ブルーシール（Blue Seal 冰淇淋）</td><td>沖繩代表性冰品。紅芋口味最有地方感；幼兒一小口就好</td><td>○ 甜點</td></tr>
+      </tbody>
+    </table>
+
+    <h3>幼兒餵食策略（1 歲 9 個月）</h3>
+    <ul>
+      <li><b>雙軌制：</b>每一餐都同時帶自備副食品。大人點的食物能分就分，不能分就開寶寶粥，不要在店裡臨時焦慮。</li>
+      <li>矽膠吸盤碗＋自備餐具＋圍兜是必備品；沖繩的食堂不一定有兒童餐具。</li>
+      <li><b>加熱：</b>房內有微波爐可自己加熱（飯店不代為加熱）；便利商店也可以幫忙。</li>
+      <li>兒童椅：連鎖店與大型設施多有，小型食堂多半沒有——幼兒坐推車直接推到桌邊是最穩的作法。</li>
+      <li><b>鹽分：</b>沖繩料理普遍偏鹹（湯與加工肉尤其），給幼兒前先過水或稀釋。</li>
+    </ul>
+
+    <div class="must">
+      <span class="tag t-must">瑄瑄阿姨的飲食限制</span> 必須避開海藻類（昆布、海帶芽、海苔），而且<b>連高湯用的昆布（昆布だし）也要避開</b>——看得見的海藻只是一部分，高湯是看不見的。
+      <ul>
+        <li><b>館內餐已有解：</b>9/26 的 ギャザリング 訂洋食 3 名セット，8 道菜裡只有 2 道用到昆布，因為是 3 人共享而非一人一份，她跳過那 2 道即可，照樣吃到 6 道。</li>
+        <li><b>外食仍要處理：</b>Day 3 晚餐（讀谷或飯店餐廳）與 Day 4 午餐（瀨長島）都還沒訂，屆時都要問。味噌湯、そば湯、おでん、多數定食的附湯都可能含昆布，點套餐時要特別問附湯。</li>
+        <li><b>不靠日式高湯的替代品項：</b>タコライス、ステーキ、ハンバーガー。Day 4 的瀨長島以西式與咖啡館為主，可選的空間大。</li>
+        <li><b>日文備用句（存成手機截圖，直接給店家看最快）：</b>「昆布と海藻は食べられません」（不能吃昆布與海藻）、「この出汁に昆布は入っていますか」（這個高湯裡有昆布嗎）</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="field-duty">
+    <h2><span class="n">6-5</span>免稅與精品購物</h2>
+    <table>
+      <thead><tr><th>地點</th><th>實查內容</th><th>與本行程的關係</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.dfs.com/jp/t-galleria-okinawa" target="_blank" rel="noopener">Tギャラリア 沖縄 by DFS</a><br>那霸新都心・おもろまち</td><td>全日本唯一「不出國也能免稅」的店——真正的 duty free（免關稅），不只退 10% 消費稅。150 家以上國際品牌、10,000 ㎡。營業 10:00–20:00（每日相同）。CHANEL FASHION 在 2F、櫃位 43。<b>買了不能當場帶走</b>（LV 有旅客記錄可現場帶走），須到機場領取</td><td><span class="tag t-ok">Day 3 主行程</span> 10:15–12:15</td></tr>
+        <tr><td><a href="https://www.ashibinaa.com/" target="_blank" rel="noopener">沖縄アウトレットモールあしびなー</a></td><td>約 100 家店、正價的 30–80% off。營業 10:00–20:00（餐廳 L.O. 19:30）。主力是過季款與 outlet 專屬線，Coach、Michael Kors 這個級距為主，不太會有 Chanel。全程有遮蔭、有嬰兒設施</td><td>DFS 的第一備案，也是 Day 4 的備案。就在 ORIX 豐崎旁約 5 分</td></tr>
+        <tr><td>那霸機場國際線免稅店</td><td>已在 Day 4 行程內（17:00 出境後）。零額外時間成本，但品牌選擇最少。領 DFS 貨的同一段時間就在這裡，可以順手補</td><td>行程內，不需調整</td></tr>
+      </tbody>
+    </table>
+
+    <div class="must">
+      <span class="tag t-must">這一節最重要的一句話</span> <b>DFS 的採購上限卡在「手提」，不是「託運」。</b>商品出境後才在提貨櫃檯領得到（過海關後左側、42 號登機門對面），領到手上時行李早就託運掉了，所以百分之百只能手提。而手提<b>會被秤兩次</b>——報到櫃檯一次、登機門再一次，後者最常被忽略。
+      <br>正確順序：行前先加購 Extra Carry-On（THB 250／人，2 件手提共 10kg，同時解除小件 30×20×10cm 的尺寸限制）→ 出發時每人手提壓在 5kg → 到現場才知道還能買多少。<b>絕不要留到登機門才處理</b>：現場超重費約每公斤 NT$550，而且會被要求當場託運，剛買的東西直接進貨艙，運送條款對貴重與易碎物品不負賠償責任 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-carryon">② 待辦・手提行李策略</a>
+    </div>
+    <div class="ok">
+      <b>提前一天買，就繞過了最大的風險。</b>DFS 的提貨前置時間有三個互相矛盾的說法（官方 2 小時／部落格 3 小時／另一說要前一天晚上）。本行程 9/27 15:00 前買完、9/28 18:20 起飛，中間 27 小時，三種說法全部滿足。剩下要問的只是作業細節 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-dfs">② 待辦・打給 DFS 的五個問題</a>
+    </div>
+    <div class="field">
+      <span class="tag t-field">易碎品</span> 陶器（やちむんの里）與琉球玻璃（Gala青い海）<b>沒有安全的帶回方式</b>：航空公司條款明訂易碎物品不得作為託運行李、破損不負賠償責任，而手提只有 7kg。想買請直接請店家寄回台灣。這也是這兩站一直排不進主行程的真正原因。
+    </div>
+  </section>
+
+  <section class="sec" id="field-alt">
+    <h2><span class="n">6-6</span>候補景點與讀谷周邊</h2>
+    <p class="lead">以下都評估過、查過車程，但沒有排進主行程。臨時要換行程時不用重新查資料。被排除的完整理由 → <a href="沖繩家庭旅遊企劃書_歷程沿革.html#v-excluded">④ 紀錄・被排除的方案</a></p>
+
+    <h3>讀谷周邊（距飯店 15 分鐘以內，隨時可以塞進任何空檔）</h3>
+    <div class="gal two">
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Zakimigusuku.jpg" alt="座喜味城跡" loading="lazy"><figcaption>座喜味城跡的拱門與曲線石牆<span class="cr">照片：Wikimedia Commons</span></figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Zanpa-Misaki_Cape_Lighthouse.jpg/1280px-Zanpa-Misaki_Cape_Lighthouse.jpg" alt="殘波岬燈塔" loading="lazy"><figcaption>殘波岬燈塔：いこいの広場 就在旁邊，走路可到<span class="cr">照片：Wikimedia Commons</span></figcaption></figure>
+    </div>
+    <table>
+      <thead><tr><th>地點</th><th>實查內容</th><th>車程／費用</th></tr></thead>
+      <tbody>
+        <tr><td>座喜味城跡（世界遺產）</td><td>15 世紀琉球按司護佐丸所築，以曲線城牆與現存最古老的石造拱門著名。免門票、停車免費、無閉園時間。城牆上方可走，<b>沒有欄杆</b>，孩子要牽緊；推車勉強可行但背帶更實際。旁邊的ユンタンザミュージアム 大人約 ¥500，冷氣充足，是雨天的第一備案</td><td>約 10 分／免費</td></tr>
+        <tr><td>残波岬いこいの広場</td><td>読谷村宇座 1861／<a href="tel:+81989580038">098-958-0038</a>／定休週三。ふれあい動物広場 可近距離接觸山羊、烏龜等小動物；園區另有餐廳、売店、BBQ。地面平坦、推車可行。<b>優點是位置</b>：就在殘波岬燈塔旁，停一次車就能走完「動物 → 燈塔 → 夕陽」<br><span class="tag t-field">還沒確認</span> 動物區的時間與收費沒有官方來源，要換回來的話那通電話仍然要打</td><td>約 10 分／費用待確認</td></tr>
+        <tr><td>殘波岬</td><td>高約 30 公尺、綿延約 2 公里的琉球石灰岩斷崖，白色燈塔可登（大人約 ¥300，樓梯狹窄陡峭，不建議抱幼兒上去）。正對西方海面，是讀谷最好的落日點，9/27 日落約 18:24——好看的是日落前那 20 分鐘。<b>草原邊緣沒有護欄、風大，全程必須牽住或抱著孩子</b></td><td>約 5–10 分／燈塔 ¥300</td></tr>
+        <tr><td>やちむんの里（陶器之里）</td><td>十餘間工房與共同登り窯散布在林間。免費參觀，各工房休日不一。路面為碎石與土路，推車很吃力，建議背帶。<b>陶器沒有安全的帶回方式</b>，想買請店家直接寄回台灣</td><td>約 10 分／免費</td></tr>
+        <tr><td>Gala青い海</td><td>入場免費、有停車場、年中無休；商店 10:00–20:00、體驗 10:00–18:00、餐廳 11:00–20:00。有琉球玻璃工房與製鹽工房，可看職人吹玻璃（高溫區要抱好孩子）。玻璃體驗有年齡限制，1 歲 9 個月做不了</td><td>約 10 分／免費入場</td></tr>
+        <tr><td>体験王国むら咲むら</td><td>數十種手作體驗（陶藝、玻璃、染織、三線等），入場約 ¥600、體驗另計。<b>大量項目在室內，是颱風或大雨天最好用的備案</b></td><td>約 5 分／約 ¥600</td></tr>
+      </tbody>
+    </table>
+
+    <h3>其他候補</h3>
+    <table>
+      <thead><tr><th>候補</th><th>內容與距飯店車程</th><th>為什麼沒排進去</th></tr></thead>
+      <tbody>
+        <tr><td>備瀨のフクギ並木</td><td>本部町，距海洋博公園約 10 分，免費</td><td><b>Day 2 的最佳替補</b>。參天福木夾成的綠色隧道、平坦好推、全程樹蔭。若砍掉鳳梨園，這裡最適合補上</td></tr>
+        <tr><td>沖縄こどもの国（沖繩兒童王國）</td><td>沖繩市，約 35 分。動物園＋兒童博物館，有可近距離接觸的區域</td><td>對 1 歲 9 個月的互動性甚至勝過水族館，但與水族館性質重疊，家人已明確捨棄。Day 2 若不想開長途，仍可直接替換（車程只要一半）</td></tr>
+        <tr><td>コストコ沖縄南城倉庫店</td><td>南城市，距飯店約 75–85 分。10:00–20:00，免費停車</td><td><span class="tag t-info">v2.0 已移出</span> 曾是 Day 3 主行程。位在東南邊的南城，不在那霸軸線上，來回多 80 分鐘純繞路；又有會員卡、只收現金與 Mastercard、冷藏品保存三個現場風險。實查資料封存於 <a href="沖繩家庭旅遊企劃書_歷程沿革.html#v-archive">④ 紀錄</a></td></tr>
+        <tr><td>万座毛</td><td>恩納村，約 30 分</td><td>景觀好但 30 分就看完，且與殘波岬同類型</td></tr>
+        <tr><td>琉球村</td><td>恩納村，約 25 分</td><td>內容豐富但需要走與聽，這個年齡吸收有限；同類型的むら咲むら 就在讀谷</td></tr>
+        <tr><td>今帰仁城跡</td><td>今歸仁村，約 90 分。世界遺產</td><td>台階與坡道極多，推車完全不可行、背帶也很累。且與座喜味城跡同類型，而座喜味只要 10 分</td></tr>
+        <tr><td>中村家住宅</td><td>北中城村，約 30 分</td><td>是「看建築」的地方，幼兒零參與度</td></tr>
+        <tr><td>國際通・第一牧志公設市場</td><td>那霸市，約 60 分</td><td>人潮擠、推車難行、停車貴。<b>注意：</b>Day 3 會進那霸的おもろまち（新都心百貨區，有停車場、有電梯、推車走得動），但「進了那霸就順道去國際通」是錯的想法，時間也不允許</td></tr>
+        <tr><td>首里城</td><td>那霸市，約 60 分</td><td>正殿復原工程尚未完成、坡道台階多，帶幼兒的性價比低</td></tr>
+        <tr><td>古宇利島・古宇利大橋</td><td>今歸仁村，約 95 分</td><td>景色是沖繩前段班，但單程 95 分，若與水族館同日會變成 6 小時車程的一天</td></tr>
+        <tr><td>ビオスの丘</td><td>うるま市，約 30 分</td><td>合適度不低，但以戶外為主。9 月下旬的中午在那裡走會很吃力。列為涼爽日備案</td></tr>
+      </tbody>
+    </table>
+    <div class="info">四天的沖繩就是要放棄很多東西。這張表的意義不是「還有這些沒去」，而是臨時要換行程時不用重新查資料——每一項都已經標好車程與適不適合小魚乾。</div>
+  </section>
+
 </div>
 
-<h2><span class="num">貳</span>三大骨幹（機票・住宿・租車）</h2>
-
-<h3>機票<span class="badge b-fix">已付清</span></h3>
-<table><tbody>
-<tr><th>航段</th><th>航班</th><th>日期</th><th>時刻</th><th>備註</th></tr>
-<tr><td>去程</td><td><b>VZ568</b>（Thai Vietjet Air）</td><td>9/25（五）</td><td>台北桃園 14:55 → 沖繩那霸 17:20</td><td>直飛／1 小時 25 分／桃園<b>第 1 航廈</b>／艙等 R（經濟）</td></tr>
-<tr><td>回程</td><td><b>VZ569</b>（Thai Vietjet Air）</td><td>9/28（一）</td><td>沖繩那霸 18:20 → 台北桃園 18:55</td><td>直飛／1 小時 35 分／桃園<b>第 1 航廈</b>／艙等 T（經濟）</td></tr>
-</tbody></table>
-<div class="note warn"><strong>⚠️ 這是廉航票種，兩件事一定要先處理：</strong>
-<ul class="tight">
-<li><b>票價只含手提行李 7kg，託運行李完全沒有</b>——四人份的行李、嬰兒用品、加上一定會買的伴手禮，託運額度必須事先線上加購（現場買最貴）。</li>
-<li><b>座位要加購才能預選</b>。3 位成人＋1 位抱在膝上的幼兒，如果不選位有可能被拆散，建議直接買連號。</li>
-</ul>
-回程 18:20 起飛、18:55 抵達桃園，看起來只飛 35 分鐘是<b>時差造成的錯覺</b>（日本比台灣快 1 小時），實際飛行 1 小時 35 分。</div>
-<div class="note">嬰兒為<strong>未滿 2 歲、不佔位、抱在膝上</strong>。小魚乾在 2026/09/25 當天約 1 歲 9 個月，符合資格；報到時會查驗護照出生日期。</div>
-
-<h3>住宿<span class="badge b-fix">已付清</span></h3>
-<table><tbody>
-<tr><th style="width:110px">期間</th><th>飯店</th><th>房型・專案</th><th>狀態</th></tr>
-<tr><td>9/25–9/28<br>（3 晚）</td><td><strong>虹夕諾雅 沖繩</strong><span class="jp">（星野集團）</span><br><small>沖縄県中頭郡読谷村儀間 474<br>TEL 預約 <b>+81-50-3134-8091</b>（9:30–18:00）／夜間・緊急 <b>+81-98-921-6800</b>（18:00–翌 9:30）<br>距那霸市區約 1 小時；緊鄰殘波岬與座喜味城跡</small></td><td><b>Fushi（海景豪華套房）</b>1 室・四張床・禁煙<br><small>【連住優惠 3 晚以上】<b>不含早餐、不含晚餐</b></small></td><td><span class="badge b-fix">已付清</span></td></tr>
-</tbody></table>
-<div class="note warn"><strong>「不含早晚餐」是本趟最需要主動處理的一件事。</strong>飯店位在讀谷村的海邊聚落，走出去不是便利商店林立的市區；三天九餐如果不預先安排，很容易變成天天開車出去找吃的。實務作法是三軌並行：① 想在館內吃的那幾餐，<b>行前就線上／email 預約餐廳</b>（熱門時段會滿）；② 抵達當晚與早餐，靠 Day 1 路上採買的熟食與食材；③ 其餘外食排進白天行程的動線裡。幼兒的副食品加熱、餐具、圍兜、床護欄等需求，已於 <b>2026/07/31</b> 用 email 一併提出，等飯店回覆 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
-<div class="note"><b>館內餐食的實際價格（官網，查證日 2026/07/31・含稅與 10% 服務費）：</b>晚餐「琉球ガストロノミア〜Bellezza〜」<b>¥24,200／人</b>（17:00 起）──<b>三位成人一頓就是 ¥72,600</b>，這是全程最貴的單筆現場支出，要不要訂請先想清楚。早餐餐廳版 <b>¥5,300／人</b>（07:00–09:30 L.O.）、房內版 <b>¥4,235／人</b>（07:00–10:00），<b>3 歲以下免費</b>，兩者都要<b>前一日以前</b>預約。<br><b>館內幼兒資源（官網 2026/07/31）：</b>キッズルーム 開放 <b>07:00–10:30／17:00–22:00</b>（須家長全程陪同），排在不出門的那一天最好用；泳池 <b>24 小時全年可用</b>，但官網沒有任何尿布或年齡規定，已列入詢問。另有主廚料理送到房內的「ギャザリングサービス」（16:00–19:00 送達、當天 17:00 前預約），帶幼兒最好用，但官網未標價。<br><b>抵達當晚有解：</b>館內「ナイトインルームダイニング」<b>21:00–23:59、不需預約</b>，9/25 20:30 抵達接得上。<br><b>副食品：</b>官網明寫自備可帶入但<b>飯店不代為加熱</b>；餐廳有依月齡販售的市售離乳食 <b>¥605／個</b>。</div>
-
-<h3>租車<span class="badge b-fix">已付清</span></h3>
-<dl class="kv">
-<dt>供應商</dt><dd>ORIX Rent-A-Car（オリックスレンタカー）</dd>
-<dt>車輛等級</dt><dd><b>RA Class・禁煙車</b>（車型示例：Daihatsu Rocky 或同級小型 SUV）</dd>
-<dt>取車</dt><dd>9/25（五）<b>Naha Airport Rental Site（那霸機場站）</b><br><small>ORIX 沖繩豐崎營業所・沖縄県豊見城市豊崎 1-1174／TEL +81-98-851-0543<br>機場沒有店面，要搭 ORIX 免費接駁車到豐崎，車程約 15–20 分</small></dd>
-<dt>還車</dt><dd>9/28（一）<b>同一站（那霸機場站）</b>，還車後再搭接駁車回機場</dd>
-<dt>兒童座椅</dt><dd><b>已訂 1 張</b>（適用 6 個月～4 歲／18kg 以內／100cm 以內）——小魚乾完全符合</dd>
-<dt>費用</dt><dd>基本料金 TWD 5,320 ＋ 幼兒座椅 TWD 320 ＝ <b>TWD 5,640（已付清）</b><br><small>汽油、高速公路通行費、停車費、以及現場才決定要不要加購的免責補償／NOC 補償，都是另計</small></dd>
-<dt>採用理由</dt><dd>沖繩景點停車場多為免費但格位不大，小型 SUV 好停；同時要塞嬰兒車與四人行李，掀背小車不夠用。</dd>
-</dl>
-<div class="note warn"><strong>⚠️ 車子大小是本趟唯一的實體風險。</strong>RA Class 是<b>小型</b> SUV，要裝 3 位成人＋1 張兒童座椅＋嬰兒車＋四人份行李，後廂會非常吃緊。行前值得先評估：是否加價升等到中型／廂型車、或把大件行李改用宅配寄到飯店 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
-<div class="note">還車採<strong>滿箱歸還（満タン返し）</strong>為常態，加油請選 <b>レギュラー</b><span class="jp">（regular・普通汽油）</span>。豐崎營業所周邊有加油站，但取車時就<b>請店員在地圖上圈出還車前建議加的那一間</b>，最省事。</div>
-
-<h2><span class="num">參</span>四日逐日行程</h2>
-<div class="grid">
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg/1280px-Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg" alt="沖繩美麗海水族館 黑潮之海的鯨鯊" loading="lazy"><figcaption>Day 2 沖繩美麗海水族館「黑潮之海」的鯨鯊</figcaption></figure>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg/1280px-Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg" alt="沖繩的海灘" loading="lazy"><figcaption>Day 3 傍晚與 Day 4 上午都排了飯店私人海灘（圖為海洋博公園的翡翠海灘）</figcaption></figure>
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG/1280px-Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG" alt="那霸機場" loading="lazy"><figcaption>Day 4 那霸空港<span class="jp">（那霸機場）</span>：DFS 的提貨櫃檯在國際線出境後、42 號登機門對面</figcaption></figure>
-</div>
-
-<div class="day">
-<div class="hd" id="day1">Day 1｜9/25（五）抵達日<span class="sub">定調：不排景點，只求順利落地、順利取車、順利把晚餐解決 ｜ 已定案</span></div>
-<div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg/1280px-Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg" alt="Thai Vietjet Air A320" loading="lazy"><figcaption>Thai Vietjet Air A320（VZ568／VZ569 使用機型示意）</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG/1280px-Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG" alt="那霸機場" loading="lazy"><figcaption>那霸空港（OKA）</figcaption></figure></div>
-<div class="bd">
-<ul class="tl">
-<li><div class="t">09:45</div><div class="c"><b>全員與行李到門口待命</b><span class="badge b-new">v2.1</span><small>和運專車接送預約 10:00 出發（台北市中山區住家 → 桃園機場、廂型車）。<b>送機的免費等候只有 20 分鐘，第 21 分鐘起每 20 分鐘加收 TWD 200</b>，所以行李、嬰兒車、孩子都要在 09:45 前就位 → <a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a>第伍節</small></div></li><li><div class="t">10:00</div><div class="c"><b>和運專車接送出發（已付清 TWD 650）</b><span class="badge b-new">v2.1</span><small>台北市中山區 → 桃園機場，車程約 50–60 分。<b>省掉停車與轉乘</b>，帶幼兒與四人份行李時差別最大。✅ <b>後向式安全座椅已確認配置</b>（1 張、TWD 300／趟，已含在 TWD 650 之內；訂單明細 2026/08/05）。<b>上車前確認是「後向」安裝，並別忘了護照</b></small></div></li><li><div class="t">11:00</div><div class="c"><b>抵達桃園機場第 1 航廈</b>（起飛前約 4 小時）<span class="badge b-new">v2.1 提早</span><small>比原訂的 11:55 更早，這是接送帶來的緩衝。<b>廉航櫃檯通常起飛前 60 分關閉，而櫃檯開放是起飛前 3 小時（約 11:55）</b>——先在航廈吃午餐、換尿布、分裝手提行李。 4 人同行＋嬰兒證件查驗＋嬰兒車託運至艙門都要時間；手提行李 7kg 會現場秤</small></div></li>
-<li><div class="t">14:55</div><div class="c"><b>VZ568 起飛</b><small>短程 1 小時 25 分，飛機上不供餐（餐點需另購）。起降時給小魚乾水或奶嘴，減少耳壓不適</small></div></li>
-<li><div class="t">17:20</div><div class="c"><b>抵達那霸機場</b>（沖繩比台灣快 1 小時，當地時間）</div></li>
-<li><div class="t">17:20–18:15</div><div class="c">入境審查、提領行李與嬰兒車<small>抓滿 55 分鐘，帶幼兒不要壓縮。<b>Visit Japan Web 的入境／海關 QR Code 建議在台灣就先辦好並截圖離線保存</b></small></div></li>
-<li><div class="t">18:20</div><div class="c"><b>搭 ORIX 免費接駁車 → 豐崎營業所</b><small>機場沒有 ORIX 櫃檯門市，需到指定接駁站候車，車程約 15–20 分。找不到候車處就直接打 +81-98-851-0543</small></div></li>
-<li><div class="t">18:45</div><div class="c"><b>取車手續</b>（ORIX 沖繩豐崎營業所）<small>出發前在店門口一次做完五件事：① <b>現場裝好兒童安全座椅</b>（不要邊開邊調）② 確認油種 レギュラー 與是否須加滿歸還 ③ 用 <b>Mapcode 1005 626 090*38</b> 直接設定飯店導航（比輸入電話或日文地址可靠） ④ 決定要不要加保免責補償／NOC ⑤ 請店員圈出還車前建議的加油站。順便讓大家上廁所、換尿布</small></div></li>
-<li><div class="t">19:15</div><div class="c"><b>出發北上讀谷</b><small>兩條路線二選一：<b>国道 58 号</b>沿西海岸北上（免通行費、約 65–75 分，傍晚會有車流）；或走<b>沖繩自動車道</b>（那霸 IC → 沖繩南 IC 一帶，約 55 分＋通行費約 ¥700–900）。第一天天黑又累，<b>建議走高速</b>，路線單純、指標清楚</small></div></li>
-<li><div class="t">19:50</div><div class="c"><b>沿途採買（重要）</b>：北谷或讀谷一帶的 サンエー<span class="jp">（San-A 超市）</span>／イオン<span class="jp">（AEON）</span>／便利商店<small>買今晚的熟食便當、明天的早餐與飲用水、寶寶粥與市售副食品、尿布補給。<b>因為住的是不含早晚餐的專案，這一站不是加分，是必要行程</b></small></div></li>
-<li><div class="t">20:30</div><div class="c"><b>抵達虹夕諾雅 沖繩・辦理入住</b><small>訂單登錄的入住時間是 15:00，實際會晚 5 個多小時，<b>務必行前先用 email 告知晚到</b>（18:00 之後櫃檯改由夜間專線 <b>+81-98-921-6800</b> 受理）。<b>停車已確認：免費、室外、不需預約</b></small></div></li>
-<li><div class="t">21:00</div><div class="c">房內晚餐、洗澡、鋪床<small>吃 19:50 採買的熟食；也可以改用館內的 <b>ナイトインルームダイニング</b><span class="jp">（房內宵夜輕食・21:00–23:59・不需預約）</span>。先把行李攤開定位，之後三天都不用再搬</small></div></li>
-<li><div class="t">21:30</div><div class="c">就寢<small>第一晚一定會晚，所以 Day 2 的出發時間刻意不排太早</small></div></li>
-</ul>
-<div class="note ok"><strong>當日現場預估支出約 ¥7,000–9,000</strong>：高速通行費 ¥900／超市採買 ¥5,000–7,000（今晚熟食＋三天早餐＋副食品＋尿布）／飲料雜支 ¥1,000。<b>取車時如加保免責補償，會另加約 ¥1,000–2,000／日</b>。</div>
-<div class="note warn"><strong>沖繩右駕與台灣相反，第一段夜路就上手不容易。</strong>建議由最有右駕經驗的人開這一段；出停車場前先繞一圈確認雨刷／方向燈位置（日規車與台灣習慣相反的機率很高）。</div>
-</div></div>
-
-<div class="day">
-<div class="hd" id="day2">Day 2｜9/26（六）北部一日：名護鳳梨園 ＋ 美麗海水族館<span class="sub">定調：全趟最遠的一趟，兩站串在同一條北上路線，回程車上一次睡滿 ｜ 已定案（v2.0）</span></div>
-<div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nago_Pineapple_Park_%2832183097142%29.jpg/1280px-Nago_Pineapple_Park_%2832183097142%29.jpg" alt="名護鳳梨園 園內鳳梨號" loading="lazy"><figcaption>名護パイナップルパーク<span class="jp">（名護鳳梨園）</span>的パイナップル号<span class="jp">（鳳梨號）</span>——自動行駛的園內遊園車<br><small>照片：Laika ac／CC BY-SA 2.0</small></figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Pineapple_Winery_%40_Nago_Pineapple_Park%2C_Okinawa_no.2.jpg/1280px-Pineapple_Winery_%40_Nago_Pineapple_Park%2C_Okinawa_no.2.jpg" alt="名護鳳梨園 室內賣場" loading="lazy"><figcaption>園內賣場與試吃區都在室內，下雨這一站照樣成立<br><small>照片：Bernie Ongewe／CC BY-SA 4.0</small></figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Okinawa_Aquarium.jpg/1280px-Okinawa_Aquarium.jpg" alt="沖繩美麗海水族館" loading="lazy"><figcaption>沖縄美ら海水族館<span class="jp">（沖繩美麗海水族館）</span></figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Main_tank_of_the_Kuroshio_Sea_in_Okinawa_Churaumi_Aquarium.JPG/1280px-Main_tank_of_the_Kuroshio_Sea_in_Okinawa_Churaumi_Aquarium.JPG" alt="黑潮之海大水槽" loading="lazy"><figcaption>「黑潮之海」大水槽，全館停留最久的一區</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg/1280px-Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg" alt="海洋博公園 翡翠海灘" loading="lazy"><figcaption>海洋博公園・エメラルドビーチ<span class="jp">（翡翠海灘）</span></figcaption></figure></div>
-<div class="bd">
-<div class="note ok"><strong>為什麼兩站併成一天：鳳梨園不是繞路，它就在北上的路上。</strong><b>✅ v2.1 已用 Google Maps 實測（2026/08/05）：讀谷 → 名護鳳梨園 59 分／51.7 km</b>（沖繩自動車道，含通行費；改走国道 58 号為 1 小時 6 分／45.5 km），<b>鳳梨園 → 海洋博公園 26 分／15.6 km</b>（県道 84 号）。<b>原估 55–65 分與 30 分都命中，這條北上動線確定成立</b>，等於把原本「讀谷 → 本部 70–85 分」的直達路程，中途拆成一站。<b>兩個景點的總車程，只比單獨去水族館多約 10–15 分鐘。</b><br>而且這是全程<b>唯一一天孩子睡飽、行李已定位、卻還沒開始累</b>的日子，所以最遠的一趟排在今天；<b>回程車上正好給孩子一次睡滿的午睡</b>，這是四天裡睡眠品質最好的一段。<b>⚠️ v2.1 實測：水族館 → 讀谷 1 小時 29 分／67.9 km</b>（国道 449 号＋沖繩自動車道；走国道 58 号為 1 小時 37 分／63.4 km），<b>比原估 70–85 分多約 15–20 分</b>——午睡時間更充足，但<b>回到飯店的時刻要往後推，此時刻待修正</b>。</div>
-<ul class="tl">
-<li><div class="t">07:30</div><div class="c">起床、房內早餐（Day 1 採買的食材）</div></li>
-<li><div class="t">08:45</div><div class="c"><b>出發北上名護</b><small>讀谷 → 名護鳳梨園 <b>✅ v2.1 實測 59 分／51.7 km</b>（2026/08/05）。走沖繩自動車道 石川 IC → 許田 IC 最快（含通行費）；走 <b>国道 58 号</b>沿西海岸北上風景最好但較慢。<b>這段孩子多半會補一段小睡，正好銜接 10:00 開園</b></small></div></li>
-<li><div class="t">09:50</div><div class="c"><b>抵達 名護パイナップルパーク</b><span class="jp">（名護鳳梨園）</span><span class="badge b-new">v2.0</span><small>沖縄県名護市為又 1195。<b>10:00 開園</b>，提早 10 分鐘到剛好可以停車、換尿布。✅ <b>已查證（官網 2026/08/05）：10:00–18:00（最終入園 17:30）、週六無特別營業時間；門票大人（16 歲以上）¥1,500／小人（4–15 歲）¥800／未滿 4 歲免費</b>。⚠️ <b>園內坡道與推車可行性仍未查證</b> → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a></small></div></li>
-<li><div class="t">10:00</div><div class="c"><b>自動運転パイナップル号</b><span class="jp">（自動駕駛鳳梨號）</span>→ 亞熱帶植物園 → 試吃與賣場<small><b>無人駕駛小車繞園、有中文語音導覽，全程不需日語</b>——對 1 歲 9 個月剛好，坐著看就有東西可看。後段的鳳梨試吃、鳳梨酒試飲與伴手禮賣場<b>都在室內、有冷氣、平面好推</b>。<b>停留 75 分鐘就夠，它是順路的加分題、不是主秀</b>，逛過頭會壓到水族館</small></div></li>
-<li><div class="t">11:20</div><div class="c">出發前往本部町<small>鳳梨園 → 海洋博公園約 <b>30 分</b>（估）。這段太短，孩子不容易睡熟，<b>不要指望這裡當午睡</b></small></div></li>
-<li><div class="t">11:50</div><div class="c"><b>抵達海洋博公園</b>，停車<small>公園停車場<b>免費</b>；水族館位於園區北側，<b>停最靠近水族館的那個停車場</b>可以少走一大段坡。園區內有免費電動遊園車</small></div></li>
-<li><div class="t">12:00</div><div class="c">午餐：園區餐廳<small>面向大水槽的咖啡座人氣高、要排；帶幼兒可改公園內餐廳或吃自備副食品。<b>先吃飽再入館</b>，館內動線一走就是 2 小時</small></div></li>
-<li><div class="t">12:45</div><div class="c"><b>入館</b>（大人 ¥2,180、<b>未滿 6 歲免費</b>；<b>9 月為通常期，開館 08:30–18:30、入館締切 17:30</b>，官網查證 2026/08/05）<span class="badge b-new">v2.1</span>｜<b>✅ 當日可再入館</b>（出示入館券）、<b>嬰兒車免費出借</b>（不需預約、先到先借）、<b>授乳室</b><span class="jp">（哺乳室）</span><b>在 3F 入口與 2F、附熱水器</b>、<b>館內商店只賣 L 尺寸尿布（9–14kg）</b><small>建議<b>行前線上購票</b>免排隊；沖繩當地的「道の駅 許田」常有折扣票，但為此繞路對帶幼兒不划算</small></div></li>
-<li><div class="t">13:00</div><div class="c">館內動線：珊瑚之海 → 熱帶魚之海 → <b>黑潮之海（鯨鯊・鬼蝠魟）</b> → 深海之旅<small>單向不繞路、全程平面。大水槽前有階梯狀觀覽席，是小魚乾最可能坐得住的地方。<b>下午場的優點是館內冷氣正涼、外面最曬的時段剛好在室內度過</b></small></div></li>
-<li><div class="t">15:00</div><div class="c">館外免費區：<b>オキちゃん劇場 海豚表演</b>、海龜館・海牛館<small>全部免費、不需再入館。表演為戶外場地，<b>帽子、水、扇子必備</b>，坐後排有遮蔭。<b>✅ v2.1 時刻已查證（官網 2026/08/05）：10:30／11:30／13:00／15:00／17:00，共 5 場。</b>劇場離水族館出口步行約 5 分，<b>要趕 15:00 那場，最晚 14:45 就要離館</b>；<b>館外免費區 9 月開放到 17:30</b></small></div></li>
-<li><div class="t">15:45</div><div class="c"><b>上車回讀谷 → 車上一次睡滿</b><span class="badge b-new">v2.0</span><small>回程 <b>70–85 分</b>，是四天裡最完整的一次午睡。<b>孩子睡著就不要中途停</b>——v1.x 排在這裡的備瀨福木林道已移為備案，理由見下方</small></div></li>
-<li><div class="t">17:15</div><div class="c">抵達飯店，沖澡、換衣服<small>離 18:00 送餐只剩 45 分鐘，先把汗擦乾淨就好。<b>泳池 24 小時開放、無年齡與身高限制</b>（飯店回覆 2026/08/01），今天沒時間玩水，海灘與泳池排在 Day 3 傍晚與 Day 4 上午</small></div></li>
-<li><div class="t">18:00</div><div class="c"><b>晚餐：ギャザリングサービス 洋食 3 名セット</b><span class="jp">（主廚料理送到房內・西式套組・3 人份）</span><span class="badge b-new">v2.0</span><small><b>¥32,670（3 人份，每人換算 ¥10,890，已含稅與 10% 服務費）——與原本的和食セット同價，換套組不影響金額。</b><br><b>v2.0 由「和食」改為「洋食」，是為了瑄瑄阿姨。</b>飯店明確回覆：ギャザリング <b>完全不接受更換或去除食材</b>，且<b>所有套組都含海藻類</b>；但洋食套組含量最少，8 道菜裡只有 2 道用到昆布——<b>▲旬魚のブイヤベース</b><span class="jp">（當季鮮魚馬賽魚湯）</span>與 <b>▲彩り野菜の煮込みハンバーグ</b><span class="jp">（燉蔬菜漢堡排・配菜的肋排用昆布高湯）</span>。<b>因為這是 3 人共享的套組而非一人一份，她跳過那 2 道、另外兩位吃掉即可，等於照樣吃到 6 道、沒有任何一道被浪費。</b>送到房間吃，不必抱著孩子上餐廳；訂 18:00 是為了配合 20:00–20:30 就寢，官方送餐時段 16:00–19:00、當日 17:00 前須完成預約 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a></small></div></li>
-<li><div class="t">20:30</div><div class="c">就寢</div></li>
-</ul>
-<div class="note ok"><strong>當日預估支出約 ¥51,000–55,000</strong>：<b>鳳梨園 ¥1,500 × 3 ＝ ¥4,500</b>（未滿 4 歲免費・<b>官網查證 2026/08/05，原記 ¥1,200 已作廢</b>）／水族館 ¥2,180 × 3 ＝ ¥6,540（未滿 6 歲免費）／油費 ¥2,000／通行費 0–¥1,600／午餐 ¥5,000–7,500（3 位成人，園區餐廳）／<b>晚餐 ギャザリング 洋食 3 名セット ¥32,670</b>（本趟單日支出最高的一天，而且已確定要花）</div>
-<div class="note warn"><strong>備案：</strong>① <b>颱風或大雨</b> → 水族館與海洋博公園室內設施本身就能撐一整天；鳳梨園的賣場與試吃區也在室內，只有鳳梨號那段會濕；② <b>孩子狀況不佳或起得晚</b> → <b>直接砍掉鳳梨園</b>，10:45 出發、12:15 到水族館（車上剛好一次睡滿 90 分），全日照樣成立——這是最容易執行的減法；③ <b>時間有餘、孩子還醒著</b> → <b>備瀨のフクギ並木</b><span class="jp">（備瀨福木林道）</span>就在水族館旁約 10 分，平坦好推、全程樹蔭，v2.0 把它降為備案只是因為時間被鳳梨園佔走 → <a href="沖繩家庭旅遊企劃書_附件資料.html">② 附件資料</a>。</div>
-</div></div>
-
-<div class="day">
-<div class="hd" id="day3">Day 3｜9/27（日）南部一日：波上宮 ＋ Costco ＋ DFS<span class="sub">定調：一趟南下把參拜、採買、免稅購物一次解決，傍晚回飯店玩沙 ｜ 已定案（v2.0）｜ ⚠️ v2.1 車程實測後時刻待重新裁切</span></div><div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg/1280px-2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg" alt="波上宮 空拍" loading="lazy"><figcaption>波上宮<span class="jp">（なみのうえぐう）</span>建在斷崖上，下方就是波之上海灘<br><small>照片：松岡明芳／CC BY-SA 4.0</small></figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Naha_Naminoue-gu_1.jpg/1280px-Naha_Naminoue-gu_1.jpg" alt="波上宮 參道" loading="lazy"><figcaption>參道這一段平坦好推嬰兒車，石階要到本殿前才出現<br><small>照片：Zairon／CC BY 4.0</small></figcaption></figure></div>
-<div class="bd">
-<div class="note ok"><strong>這一天的三站排在同一條南下動線上，順序是刻意的。</strong>波上宮在那霸市西側、Costco 在南城、DFS 在那霸新都心——<b>先最遠的參拜、再最南的採買、最後折回市區購物</b>。<b>⚠️ v2.1 實測（2026/08/05）推翻了原本的估算：讀谷 → 波上宮 1 小時 19 分、波上宮 → Costco 南城 45 分、Costco → DFS 50 分、DFS → 讀谷 1 小時 11 分，光開車就約 4 小時 5 分</b>，沒有哪一段是原本說的「30–40 分」。<b>孩子才 1 歲 9 個月，這一天的站數與時刻需要重新裁切</b> → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。<b>DFS 只排 2 小時</b>（家人指定的上限），因此 16:15 就回得到飯店，傍晚還有 90 分鐘玩沙。</div>
-<div class="note warn"><strong>v2.0 說明：原本的「讀谷慢活日」在這一版整個消失。</strong>座喜味城跡、残波岬いこいの広場 的互動動物區、殘波岬燈塔與夕陽，都被這一天取代。<b>這是把五個指定景點（DFS、Costco、水族館、鳳梨園、波上宮）壓進兩天的直接代價</b>，不是判斷改變——那四站的完整資料已移入 <a href="沖繩家庭旅遊企劃書_歷程沿革.html">⑤ 歷程沿革</a> 封存區，想換回來隨時可以。</div>
-<ul class="tl">
-<li><div class="t">07:30</div><div class="c">房內早餐（Day 1 採買的食材，或加訂飯店早餐）<small>加訂需<b>前一日以前</b>預約：房內版 ¥4,235／人、餐廳版 ¥5,300／人，<b>3 歲以下免費</b>。入住後再決定也來得及 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a></small></div></li>
-<li><div class="t">08:30</div><div class="c"><b>出發南下那霸</b><small>⚠️ <b>此時刻待修正。</b>v2.1 實測：<b>讀谷 → 波上宮 1 小時 19 分／33.8 km</b>（国道 58 号）或 <b>1 小時 17–18 分／52.4 km</b>（沖繩自動車道 石川 IC → 那霸 IC），<b>比原估 55–65 分多 15–25 分</b>。<b>想在 09:00 前到（搶那 20 個免費車位）要 07:40 出發；維持 08:30 出發則約 09:50 才會到</b></small></div></li>
-<li><div class="t">09:30<br><small>⚠️ 待修正</small></div><div class="c"><b>波上宮</b><span class="jp">（なみのうえぐう・琉球八社之首）</span><span class="badge b-new">v2.0</span><small>沖縄県那覇市若狭 1-25-11。建在斷崖上、下方就是波之上海灘。<b>參拜不需要日語</b>：投錢 → 二拜二拍手一拜即可；御守在授與所<b>用指的就能買</b>，一般 ¥500–1,000 一個。<b>要買的四種：子供守／安產守（保佑小孩）、家内安全（家庭）、交通安全、商売繁盛・仕事守（事業）。</b><br>⚠️ <b>本殿前有一段石階，嬰兒車可能要抱著上去</b>；停車場不大，<b>9/27 是週日會比較滿</b>。<b>✅ v2.1 已查證（官網 2026/08/05）：授与所</b><span class="jp">（授與所）</span><b>09:00–16:30</b>、御祈祷受付 10:00–15:30、TEL <b>098-868-3697</b>。<b>⚠️ 無料駐車場只有 20 台</b>，官網要求滿了改停周邊付費停車場，<b>9/27 是週日，建議提早到 09:00 並先標好 2 個備用停車場</b>。<b>御守品項官網未公布，仍待電話確認</b> → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a></small></div></li>
-<li><div class="t">10:00</div><div class="c">出發前往南城<small>波上宮 → Costco 南城約 <b>35–45 分</b>（估）。這段太短、時間也太早，孩子不容易睡</small></div></li>
-<li><div class="t">10:40</div><div class="c"><b>コストコホールセール沖縄南城倉庫店</b><span class="jp">（Costco 沖繩南城倉庫店）</span><span class="badge b-new">v2.0</span><small>營業 10:00–20:00、<b>停車免費</b>、格位大好停（查證日 2026/07/31）。<b>⚠️ 需會員卡、入口核對照片本人</b>；台灣好市多卡通用，會員可免費帶 2 位成人，未滿 18 歲不計入——<b>本行 3 大人＋1 幼兒剛好在額度內</b>。幼兒友善度是本趟最高：全平面、無台階、冷氣強、走道寬、推車超大。<b>⚠️ v2.1 付款：日本 Costco 只收現金、Costco ショップカード</b><span class="jp">（購物卡）</span><b>、コストコ・グローバル・カード</b><span class="jp">（聯名信用卡）</span><b>與所有 Mastercard 信用卡，Visa／JCB／AMEX 都不能用</b>；<b>且約款明訂購買商品僅限會員本人結帳</b>（官方約款查證 2026/08/05）。完整實查表 → <a href="沖繩家庭旅遊企劃書_附件資料.html">② 附件資料</a></small></div></li>
-<li><div class="t">11:30</div><div class="c">午餐：<b>フードコート</b><span class="jp">（美食廣場）</span><small>ホットドッグ<span class="jp">（熱狗）</span>、ピザ<span class="jp">（披薩）</span>、ソフトクリーム<span class="jp">（霜淇淋）</span>。<b>觸控點餐機、圖示化流程、不需日語</b>；3 大人＋幼兒約 ¥2,000 可解決，是四天裡最便宜的一餐</small></div></li>
-<li><div class="t">12:15</div><div class="c"><b>上車、車上午睡</b>，同時北上おもろまち<small>Costco → おもろまち約 <b>30–40 分</b>（估）。<b>這是今天唯一的整段睡眠，比 Day 2 的 70–85 分短</b>——若沒睡飽，接下來在 DFS 可以繼續讓他睡在推車上（館內平面、有冷氣）</small></div></li>
-<li><div class="t">13:00</div><div class="c"><b>抵達 Tギャラリア沖縄 by DFS</b><span class="jp">（T Galleria 沖繩 by DFS）</span><small>沖縄県那覇市おもろまち 4-1／營業 <b>10:00–20:00（每日相同，週日也是）</b><span class="badge b-new">v2.1 更正</span>（官網查證 2026/08/05；原記「11:00–20:00、週末至 22:00」已作廢）。<b>✅ CHANEL FASHION</b><span class="jp">（香奈兒時裝）</span><b>確認在館內：2F 時裝與配件區、櫃位 43</b>；門市直撥 <b>+81-98-951-1398</b>。<b>全日本唯一「不出國也能免稅」的店</b>——是真正的 duty free<span class="jp">（免關稅）</span>，不只是退 10% 消費稅。<b>⚠️ 停車是否免費、免費時數多久尚未查證</b>，這是全趟唯一可能要付停車費的一站 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>第⑫項</small></div></li>
-<li><div class="t">13:00–15:00</div><div class="c"><b>DFS 購物（2 小時，主要目標：Chanel）</b><span class="badge b-new">v2.0</span><small><b>2 小時是家人指定的上限</b>，時間到就走。全館室內、平面、有電梯與冷氣，<b>推車好推、孩子可以在推車上接著睡</b>；<b>三位成人分頭逛、一人顧孩子</b>最有效率。<br>⚠️ <b>買了當場帶不走</b>——商品一律送到那霸機場、出境後才領，所以<b>百分之百只能手提</b>。Chanel 包款體積大，回程手提務必先加購 <b>Extra Carry-On</b>。<b>沖繩 DFS 的包款現貨與品項深度尚未查證</b>（歐系精品的深度沖繩遠不如東京大阪），連同提貨規則一起打 <b>0120-782-460</b> 問清楚 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>第⑫項</small></div></li>
-<li><div class="t">15:10</div><div class="c">出發回讀谷<small>おもろまち → 讀谷約 <b>55–70 分</b>（估）</small></div></li>
-<li><div class="t">16:15</div><div class="c">抵達飯店、換泳裝</div></li>
-<li><div class="t">16:30</div><div class="c"><b>飯店私人海灘：玩水玩沙</b><span class="badge b-new">v2.0</span><small>9 月下旬沖繩海水約 <b>28°C</b>，還完全是玩水的季節。<b>排在傍晚是刻意的</b>——9/27 日落約 18:24，這個時段紫外線已明顯減弱、光線也最好看。<b>幼兒防曬仍要選物理性配方，加浮力衣與遮陽帽</b>。<b>泳圈（直徑 70cm）與兒童臂圈飯店免費出借、自備浮具不能帶進泳池；戲水尿布 M／L 在集いの館免費提供</b>（飯店回覆 2026/08/01）</small></div></li>
-<li><div class="t">18:00</div><div class="c">回房沖澡、換裝</div></li>
-<li><div class="t">18:30</div><div class="c">晚餐（飯店餐廳或讀谷區域，<b>尚未預訂</b>）<small>⚠️ <b>沖縄そば 的湯頭幾乎都用鰹節＋昆布，瑄瑄阿姨這一份不能直接點。</b>外食點餐前先確認湯頭，或改點 タコライス<span class="jp">（塔可飯）</span>、ステーキ<span class="jp">（牛排）</span>這類不靠日式高湯的品項。館內若要用 ギャザリング 或餐廳，<b>要另外預約</b></small></div></li>
-<li><div class="t">20:30</div><div class="c">就寢</div></li>
-</ul>
-<div class="note ok"><strong>當日預估支出約 ¥15,000–27,000</strong>：御守 ¥2,000–4,000（4 種、視數量）／Costco フードコート 午餐 ¥2,000–3,000／DFS 停車 ¥0–1,000（<b>待確認</b>）／油費 ¥2,000／通行費 0–¥1,600／晚餐 ¥9,000–15,000。<br><b>Costco 採購與 DFS 採購都另計</b>——前者上限取決於回程<b>託運</b>額度，後者取決於<b>手提</b>額度，兩邊正好相反。</div>
-<div class="note warn"><strong>備案：</strong>① <b>雨天</b> → 三站全部是室內或短時間停留，行程照走；傍晚的海灘改成飯店室內設施（<b>キッズルーム 17:00–22:00、泳池 24 小時</b>）；② <b>時間不夠</b> → 先砍 Costco 的停留時間（採購 50 分鐘其實很緊，但 DFS 的 2 小時是指定的、波上宮的 30 分鐘已是下限）；③ <b>DFS 電話問下來提貨規則有問題</b> → 改去 <b>沖縄アウトレットモールあしびなー</b>（豐見城市豐崎），同樣是精品但<b>買了當場帶走、可放託運</b>，且離隔天的還車處只要 5 分 → <a href="沖繩家庭旅遊企劃書_附件資料.html">② 附件資料</a>。</div>
-</div></div>
-
-<div class="day">
-<div class="hd" id="day4">Day 4｜9/28（一）返程日<span class="sub">定調：上午留在飯店玩水、12:00 正常退房，回程只排瀨長島一站 ｜ 已定案（v2.0）</span></div>
-<div class="grid"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG/1280px-Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG" alt="那霸機場" loading="lazy"><figcaption>那霸空港<span class="jp">（那霸機場）</span>國際線：DFS 的 PICK-UP 櫃檯在出境後、42 號登機門對面</figcaption></figure><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg/1280px-Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg" alt="Thai Vietjet Air A320" loading="lazy"><figcaption>VZ569 那霸 18:20 → 桃園 18:55（實際飛行 1 小時 35 分）</figcaption></figure></div>
-<div class="bd">
-<div class="note ok"><strong>v2.0 起，返程日回到時間風險最低的版本。</strong>DFS 已經在 Day 3 買完，<b>今天只要「領貨」不要「購物」</b>，所以 v1.8 那個 14:30 離場死線消失了，退房也不必提早——<b>12:00 正常退房，上午整整 2 小時留在飯店玩水，是四天裡最從容的一段飯店時間</b>。回程只排瀨長島一站，它就在還車處旁邊約 10 分，時間風險最低。</div>
-<div class="note ok"><strong>提早一天買 DFS，才是真正解決問題的作法。</strong>DFS 的提貨前置時間原本有三個互相矛盾的說法（官方說起飛前 2 小時／部落格說要 3 小時／另一說要前一天晚上）。<b>把購物移到 9/27、提貨留在 9/28，中間隔了一整天，三種說法都涵蓋得住</b>——這條風險等於被繞過去了。但那通電話仍然要打（<b>0120-782-460</b>），要問的是<b>「前一天買、隔天班機領」的實際作業方式</b>與 Chanel 現貨 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>第⑫項。</div>
-<ul class="tl">
-<li><div class="t">07:30</div><div class="c">早餐、<b>完成</b>收行李<small><b>大件行李前一晚就要收好。</b>把要託運的、要手提的、上飛機要用的（尿布、副食品、水）<b>分成三袋</b>。⚠️ <b>在市區買的保養品若單瓶超過 100ml，要放進託運那一袋</b></small></div></li>
-<li><div class="t">09:00</div><div class="c"><b>飯店私人海灘＋泳池（第二次玩水，約 2 小時）</b><span class="badge b-new">v2.0</span><small>四天裡最從容的一段飯店時間。<b>泳池 24 小時開放、無年齡與身高限制</b>；<b>上午 11 點前紫外線相對緩和</b>，和 Day 3 的傍晚場正好把最曬的時段避開。玩完直接洗澡換裝，不要拖到退房前才手忙腳亂</small></div></li>
-<li><div class="t">11:00</div><div class="c">回房沖澡、換裝、行李下樓裝車</div></li>
-<li><div class="t">12:00</div><div class="c"><b>退房（正常退房時間）</b><span class="badge b-new">v2.0</span><small><b>前一晚就把館內消費（餐飲、飲料等；<b>v2.1：宿泊稅已確認本趟不課徵</b>）結清</b>，早上才不會卡在櫃檯。<b>離開房間前把每個抽屜與插座都檢查一次</b>，充電器最常掉</small></div></li>
-<li><div class="t">12:30</div><div class="c"><b>出發南下瀨長島</b><small>讀谷 → 瀨長島約 <b>60–70 分</b>（估，走沖繩自動車道南下轉那霸機場自動車道）。<b>孩子這段大概會睡</b>，今天沒有別的午睡機會，讓他睡滿</small></div></li>
-<li><div class="t">13:30</div><div class="c"><b>瀨長島 ウミカジテラス</b><span class="jp">（Umikaji Terrace）</span>：午餐＋看飛機<span class="badge b-new">v2.0</span><small>豐見城市瀨長。面海的白色階梯式店家群，<b>就在那霸機場降落航道正下方，可以邊吃邊看飛機起降</b>——對這個年紀的孩子，這比任何景點都有效。<b>免費停車、距 ORIX 豐崎營業所僅約 10 分</b>，是所有 Day 4 選項裡時間風險最低的一站。<b>✅ v2.1：設施營業 10:00–21:00、年中無休、TEL 098-851-7446</b>（官網查證 2026/08/05），各店家時間不同、多從 11:00 營業；<b>停車場規模與收費官網未公布</b>。<b>⚠️ 階梯式地形，推車不好推，建議用背帶</b></small></div></li>
-<li><div class="t">14:50</div><div class="c">出發前往豐崎<small>約 10 分。<b>就算在瀨長島多留 20 分鐘也還來得及</b>，這是今天唯一有彈性的一段</small></div></li>
-<li><div class="t">15:00</div><div class="c"><b>加油（レギュラー・満タン）</b><small>用取車時店員圈的那間；自助加油站有機會只收現金，<b>身上留 ¥5,000 現金</b>。<b>務必在豐崎附近加</b>，不要在市區加完再開一段——抵達時已不是滿箱，等於還得再補一次</small></div></li>
-<li><div class="t">15:30</div><div class="c"><b>ORIX 豐崎營業所還車</b><small>驗車、確認油量、結清（若有加購項目）。<b>還車前把車內每個座位、後廂、置物箱都翻一次</b>——兒童座椅底下最常留東西</small></div></li>
-<li><div class="t">15:50</div><div class="c">ORIX 免費接駁車 → <b>那霸機場國際線航廈</b>（約 15–20 分）</div></li>
-<li><div class="t">16:10</div><div class="c"><b>抵達機場、辦理報到與行李託運</b><small>國際線廉航建議<b>起飛前 2 小時到</b>（18:20 起飛 → 16:20 前完成報到最安全）。<b>⚠️ 在市區買的保養品若單瓶超過 100ml，只能放進這裡託運，不能留到手提</b>。手提行李會現場秤一次</small></div></li>
-<li><div class="t">17:00</div><div class="c"><b>出境 → 到 DFS 提貨櫃檯領 9/27 買的貨</b><span class="badge b-new">v2.0</span><small>位置：<b>過海關後左側、42 號登機門對面的 PICK-UP 櫃檯</b>（日文資料稱「保安検査を終えてすぐ」）。<b>領到的東西全部只能手提，這時已經沒有改放託運的機會</b>，而<b>手提在登機門會再秤一次</b>——出發時手提就要留白（每人壓 5kg）。規則與加購方式 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>第①-2 項；三家免稅店比較 → <a href="沖繩家庭旅遊企劃書_附件資料.html">② 附件資料</a>第柒節</small></div></li>
-<li><div class="t">17:30</div><div class="c">機場免稅店補買伴手禮（彈性）<small>這時候買的東西<b>和 DFS 領到的加在一起算進同一個 7kg</b>。17:50 前後開始登機，不要逛過頭</small></div></li>
-<li><div class="t">18:20</div><div class="c"><b>VZ569 起飛</b></div></li>
-<li><div class="t">18:55</div><div class="c"><b>抵達桃園機場第 1 航廈</b><small>實際飛行 1 小時 35 分（時差 −1 小時）</small></div></li><li><div class="t">19:00–19:55</div><div class="c"><b>入境、提領行李與嬰兒車 → 和運專車接機（已付清 TWD 650）</b><span class="badge b-new">v2.1</span><small>預約登記 18:45，但確認信註明<b>「依航班抵達時間接送」</b>，班機延誤時系統會自行調整，<b>不必改預約</b>。<b>免費等候自班機實際抵達時間起算 60 分鐘</b>（18:55 落地 → 約 19:55），<b>第 61 分鐘起每 30 分鐘加收 TWD 200</b>。帶幼兒＋託運行李＋嬰兒車，實際出關約 19:35–19:55，<b>在免費範圍內但很貼線</b>——一落地先傳訊給司機，若確定會超過就立刻打 <b>(02) 5589-0800</b> 說明 → <a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a>第伍節</small></div></li><li><div class="t">20:50</div><div class="c"><b>回到台北市中山區住家</b><span class="badge b-new">v2.1</span><small>桃園機場 → 台北約 50–60 分。<b>當天回家後還要上班／上學的話，隔天請預留緩衝</b></small></div></li>
-</ul>
-<div class="note ok"><strong>當日預估支出約 ¥11,000–14,000</strong>：加油 ¥3,000–4,000／瀨長島午餐 ¥3,000–5,000（3 位成人）／機場伴手禮 ¥5,000（彈性）。<b>今天沒有購物行程</b>——DFS 已在 Day 3 買完，這一天只有領貨。</div>
-<div class="note warn"><strong>⚠️ DFS 的採購上限卡在「手提」，不是「託運」——這一點和 Costco 完全相反。</strong>DFS 的商品<b>出境後才領得到</b>，領到手上時行李早就託運掉了，<b>所以百分之百只能手提</b>。回程 VZ569 的標準手提是 <b>1 主件（56×36×23cm）＋1 小件，合計 7kg</b>，而<b>免稅店購物袋被歸類為「小件」、尺寸上限 30×20×10cm</b>——保養品的組合盒與錶盒很可能塞不進去。<br><b>正確順序：行前先加購 Extra Carry-On（THB 250／人，2 件手提共 10kg，同時解除小件尺寸限制）→ 出發時每人手提壓在 5kg → 到現場才知道還能買多少。</b>絕不要留到登機門才處理：現場超重費約每公斤 NT$550，而且會被要求<b>當場託運，剛買的手錶直接進貨艙</b>，運送條款對貴重與易碎物品不負賠償責任。加購方式與時效 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>第①-2 項。</div>
-<div class="note warn"><strong>⚠️ 買日系保養品要先分清楚「在哪裡買」，液體規則不一樣。</strong>在<b>市區藥妝店或 サンエー</b>買的保養品、化妝水，只要單瓶超過 <b>100ml</b>，就<b>必須放進託運</b>（回程 30kg 已加購足夠），不能留在手提。<b>只有出境後才領到的 DFS 商品與機場免稅店商品不受這條限制</b>——本行程為直飛、中途沒有第二道安檢。所以想買大瓶裝的，要在 <b>16:10 報到前</b>就分好袋。</div>
-<div class="note warn"><strong>備案：</strong>
-<ul class="tight">
-<li><b>孩子狀況不佳或早上玩過頭</b> → <b>直接跳過瀨長島</b>，12:30 出發、13:40 到豐崎，在 <b>沖縄アウトレットモールあしびなー</b><span class="jp">（豐見城市豐崎，10:00–20:00）</span>吃飯吹冷氣即可——就在 ORIX 營業所旁約 5 分，全程有遮蔭、有嬰兒設施，也可以在這裡補伴手禮（<b>買了當場帶走、可放託運</b>）。</li>
-<li><b>雨天</b> → 瀨長島是戶外階梯地形，下雨很難帶幼兒走，同樣改去あしびなー。</li>
-<li><b>班機延誤或提前</b> → 這一天的順序是「瀨長島 → 加油 → 還車 → 報到」，<b>瀨長島是唯一可以整段刪掉的</b>，刪掉後直接多出 80 分鐘緩衝。</li>
-</ul>
-決策理由 → <a href="沖繩家庭旅遊企劃書_歷程沿革.html">⑤ 歷程沿革</a>。</div>
-<div class="note warn"><strong>⚠️ 返程日最不能出錯的三個時間點：</strong>12:00 退房、15:30 還車、16:20 報到。任一環節延誤 30 分鐘就會開始壓縮下一段。<br><b>v1.8 那個「14:30 離開 DFS」的死線，v2.0 已經不存在</b>——購物移到 Day 3 之後，今天只剩領貨，而領貨是出境後才發生的事，不受路上任何延誤影響。<b>返程日只排一站的原則不變。</b></div>
-</div></div>
-
-<h2><span class="num">肆</span>費用概算</h2>
-<h3>已付清的部分</h3>
-<table><tbody>
-<tr><th>項目</th><th class="n">金額</th><th>說明</th></tr>
-<tr><td>機票＋住宿（動態套裝）</td><td class="n">TWD 151,700</td><td>3 大人各 TWD 49,540 ＋ 嬰兒 TWD 3,080</td></tr>
-<tr><td>租車（含幼兒座椅）</td><td class="n">TWD 5,640</td><td>基本料金 5,320 ＋ 座椅 320</td></tr>
-<tr><td>機票附加稅・燃油附加費</td><td class="n">TWD 120</td><td>成人 ×3（嬰兒 ¥0）</td></tr>
-<tr><td>台灣端機場接送（和運租車）<span class="badge b-new">v2.1</span></td><td class="n">TWD 1,300</td><td>台北 ⇄ 桃園機場各 1 趟，TWD 650 × 2，2026/08/05 線上付清</td></tr><tr><th>合計（已刷卡）</th><th class="n">TWD 158,760</th><th></th></tr>
-</tbody></table>
-
-<h3>還沒付、到現場才會發生的部分（估）</h3>
-<table><tbody>
-<tr><th>項目</th><th class="n">預估</th><th>備註</th></tr>
-<tr><td>託運行李加購<span class="badge b-new">行前線上</span></td><td class="n">約 TWD 2,600<br>（THB 2,890）</td><td><b>票種只含手提 7kg、託運額度 0</b>。官網實價：去程 20kg THB 1,190 ＋ 回程 30kg THB 1,700，<b>每人每航段各自計算、不可共用</b>。最晚起飛前 3 小時 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a></td></tr>
-<tr><td>Extra Carry-On（手提加購）<span class="badge b-new">建議購買</span></td><td class="n">THB 250／人<br>（約 TWD 230）<br>3 人共 THB 750</td><td><b>v1.7 列為選擇性，v1.8 起改為建議購買</b>——因為 DFS 已進入主行程（<b>v2.0 為 Day 3</b>），而 DFS 的商品只能手提，且 v2.0 的採購目標從保養品與手錶改為 <b>Chanel 包款，體積更大</b>。手提 7kg → <b>2 件、共 10kg</b>，並解除小件 30×20×10cm 的尺寸限制（錶盒與保養品組合盒正好卡在這裡）。VZ569 為未滿 2 小時航班，適用最低價；<b>只買回程</b> → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>第①-2 項</td></tr>
-<tr><td>預選座位<span class="badge b-new">行前線上</span></td><td class="n">約 TWD 650<br>（THB 720）</td><td>普通座位 THB 120 × 3 位成人 × 2 航段。<b>本行程不能線上報到，沒有免費選位可用</b>，要連號就得買</td></tr>
-<tr><td>汽油（満タン返し）</td><td class="n">約 ¥3,000–4,500</td><td>四天約 250–350 km</td></tr>
-<tr><td>高速公路通行費</td><td class="n">¥0–2,500</td><td>全走国道 58 号可以是 ¥0</td></tr>
-<tr><td>租車免責補償／NOC（現場加保）</td><td class="n">¥0–6,000</td><td>取車時決定，約 ¥1,000–2,000／日</td></tr>
-<tr><td>水族館門票</td><td class="n">約 ¥6,540</td><td>大人 ¥2,180 × 3，未滿 6 歲免費</td></tr>
-<tr><td>名護鳳梨園門票<span class="badge b-new">v2.1 更正</span></td><td class="n">約 ¥4,500</td><td>大人（16 歲以上）<b>¥1,500</b> × 3；小人（4–15 歲）¥800、<b>未滿 4 歲免費</b>。<b>官網查證 2026/08/05，原記 ¥1,200 已作廢</b> → ⑤ 歷程沿革</td></tr>
-<tr><td>波上宮 御守<span class="badge b-new">v2.0</span></td><td class="n">約 ¥2,000–4,000</td><td>四種（子供守／家内安全／交通安全／商売繁盛），一般 ¥500–1,000 一個，視實際數量。<b>參拜本身免費</b></td></tr>
-<tr><td>DFS 停車費<span class="badge b-new">v2.0</span></td><td class="n">¥0–1,000</td><td><b>全趟唯一可能要付停車費的一站</b>，收費規則待電話確認 → ③ 待決定事項第⑫項</td></tr>
-<tr><td>外食（午餐與晚餐）<br><small>3 大人＋幼兒</small></td><td class="n">約 ¥22,000–35,500</td><td><b>已扣掉 Day 2 晚餐</b>（改為館內 ギャザリング，另列一行）<b>，也不含超市採買</b>（另列一行，避免重複計算）。內含：Day2 午餐 ¥5,000–7,500（海洋博園區）／<b>Day3 午餐 ¥2,000–3,000（Costco フードコート，v2.0 由 ¥5,000–7,500 下調）</b>／Day3 晚餐 ¥9,000–15,000／<b>Day4 午餐 ¥3,000–5,000（瀨長島）</b>／四天飲料雜支 ¥3,000–5,000<br><small><b>v1.6 修正：</b>原列 ¥40,000–52,000 且口徑含超市採買，與逐日估算（合計僅約 ¥20,000）差距超過一倍。當時改為「只算外食」並逐餐列出。<b>v2.0 再調整：</b>Day 3 午餐由讀谷外食改為 Costco フードコート，是四天裡最便宜的一餐。</small></td></tr>
-<tr><td>館內餐食<span class="badge b-new">部分已定案</span></td><td class="n"><b>¥32,670</b><br><small>早餐若加訂<br>另 ¥12,705–15,900／餐</small></td><td><b>9/26 晚餐已決定：ギャザリングサービス 洋食 3 名セット ¥32,670</b>（每人 ¥10,890，含稅與服務費，送到房內）。<b>v2.0 由和食改為洋食，為的是瑄瑄阿姨的海藻與昆布，兩者同價、金額不變。</b>同樣三位成人吃 Bellezza 是 <b>¥72,600</b>，這個選擇省下一半以上，而且不必抱幼兒上餐廳。早餐仍待決定：房內版 ¥4,235／餐廳版 ¥5,300 每人（3 大人計，幼兒 3 歲以下免費）→ <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a></td></tr>
-<tr><td>超市採買・嬰幼兒用品</td><td class="n">約 ¥8,000</td><td>Day 1 一次補齊最省事</td></tr>
-<tr><td>伴手禮</td><td class="n">彈性</td><td><b>v2.0 起主要來源為 Day 3 的 Costco 與 DFS、以及 Day 4 的機場免稅店。</b>陶器（やちむんの里）與琉球玻璃（Gala青い海）仍為備案——兩者皆易碎又有重量，沒有安全的帶法</td></tr>
-<tr><td>Costco 採購<span class="badge b-new">v2.0</span></td><td class="n">彈性</td><td><b>上限取決於回程「託運」額度（已加購 30kg）。</b>賣場位於 Day 3 上午，買完直接進車、回飯店冰箱——這是它排在 Day 3 而不是返程日的好處之一</td></tr>
-<tr><td>DFS 採購（Chanel 等精品）<span class="badge b-new">v2.0</span></td><td class="n">彈性</td><td><b>上限取決於回程「手提」額度，不是預算，也不是託運——和 Costco 正好相反。</b>DFS 商品出境後才領、只能手提 → 需先加購 Extra Carry-On，見上方該列與 ③ 待決定事項第①-2 項</td></tr>
-<tr style="background:#fff8e8"><th>現場日圓合計（估）</th><th class="n">約 ¥84,000–105,000</th><th>另加行前線上加購約 <b>TWD 3,250</b>（實際報價，見 ③）<br><small><b>v2.0 對帳：</b>逐日估算加總為 <b>¥84,000–105,000</b>（Day1 7,000–9,000／<b>Day2 51,000–55,000</b>／<b>Day3 15,000–27,000</b>／<b>Day4 11,000–14,000</b>）。<b>v2.1：鳳梨園門票由 ¥3,600 更正為 ¥4,500（¥1,500×3），Day 2 與總額同步上調 ¥900。</b><br>與 v1.8 的 ¥76,000–100,000 相比上調約 ¥5,000：<b>新增</b>鳳梨園門票 ¥3,600 與御守 ¥2,000–4,000，<b>刪除</b>殘波岬燈塔與資料館門票約 ¥2,000，<b>Day 3 午餐</b>改 Costco フードコート 省下約 ¥3,000–4,500。差額中的 NOC（¥0–6,000）與嬰幼兒用品仍為彈性項目。</small></th></tr>
-</tbody></table>
-<div class="note warn"><b>現金與刷卡的分工：</b>沖繩的大型設施、超市、加油站多可刷卡，但<b>小型食堂、部分陶窯工房、自助加油機仍可能只收現金</b>。建議帶 <b>¥60,000 上下的日圓現金</b>，其餘刷卡，並確認至少兩張卡可用（一張卡被鎖時不至於全滅）。日圓兌台幣以實際換匯當天為準，本頁不代入固定匯率。</div>
-<div class="note ok"><b>✅ 宿泊税</b><span class="jp">（住宿稅）</span><b>確認不課徵。</b><span class="badge b-new">v2.1</span>沖縄県宿泊税的施行日為 <b>2027/02/01</b>（房價 2%、每人每晚上限 ¥2,000），本趟 2026/09 不在課徵期間；<b>読谷村</b><span class="jp">（讀谷村）</span>也沒有自己的市町村宿泊税（沖繩縣公告查證 2026/08/05）→ <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
-
-<h2><span class="num">伍</span>行前攜帶清單</h2>
-<h3>文件（缺一就出不了門）</h3>
-<table><tbody>
-<tr><th style="width:180px">項目</th><th>說明</th></tr>
-<tr><td><b>護照 ×4</b></td><td>效期 6 個月以上。<b>幼兒護照也要，且搭機當天須未滿 2 歲</b></td></tr>
-<tr><td><b>台灣駕照正本</b></td><td><b>每一位可能開車的成人都要帶</b></td></tr>
-<tr><td><b>日本駕照譯本</b></td><td><b>v2.1：已可線上申辦</b>——監理服務網（MVDIS）以自然人憑證或健保卡登入，「駕駛人 → 駕照 → 申辦日文譯本」，<b>NT$100</b>、郵寄到自填地址；臨櫃仍可當日領件。<b>與正本必須成對，缺一不得租車</b></td></tr>
-<tr><td>訂單確認資料</td><td>套裝確認信、租車預約、飯店預約。<b>列印一份＋手機離線截圖一份</b></td></tr>
-<tr><td>Visit Japan Web</td><td>入境審查與海關申報 QR Code，行前辦好並截圖</td></tr>
-<tr><td>旅遊保險</td><td>含醫療與<b>旅遊不便險</b>（颱風季的班機延誤／取消最需要這個）</td></tr>
-</tbody></table>
-<h3>幼兒專用</h3>
-<ul class="tight">
-<li>嬰兒車（可託運至艙門）＋<b>背帶</b>——<b>v2.0：背帶在兩個地方是必需的</b>，波上宮本殿前有石階、瀨長島是階梯式地形；其餘（水族館、鳳梨園、Costco、DFS）全都平面好推</li>
-<li>尿布、濕紙巾（沖繩買得到，但第一晚要夠用）</li>
-<li>寶寶粥／市售副食品、餐具、圍兜、<b>矽膠吸盤碗</b></li>
-<li>常備藥：退燒、止瀉、電解質粉、外傷藥膏。<b>健保卡與過往用藥紀錄拍照存手機</b></li>
-<li>物理性防曬（幼兒專用）、遮陽帽、薄長袖（防曬也防冷氣）</li>
-<li><b>泳裝、快乾大浴巾、海灘拖鞋</b>——飯店有私人海灘與泳池。<b>泳圈（直徑 70cm）與兒童臂圈飯店免費出借，而且自備的浮具不能帶進泳池</b>；<b>戲水尿布 M／L 在集いの館免費提供</b>，這兩樣不必從台灣帶（飯店回覆 2026/08/01）</li><li><b>孩子的小被子或睡袋</b>——<b>飯店沒有嬰兒被褥（ベビー布団）出借</b>，床護欄也只保證 9/26 一台</li><li><b>嬰兒沐浴乳（備用）</b>——已請飯店在入住前先放進房內，若回覆做不到就得自己帶</li>
-<li>防蚊液（讀谷海邊傍晚有蚊，Day 3 的海灘時段用得到）</li>
-<li>安撫物（睡前用）、幾樣車上玩具與有聲書——四天裡有不少車程</li>
-</ul>
-<h3>大人與裝備</h3>
-<ul class="tight">
-<li><b>插座不必轉接</b>：日本 A 型 100V，與台灣相同。但插孔數量少，帶一個小型延長線很好用</li>
-<li><b>車用手機架 ＋ 充電線</b>（租車不一定有支架）</li>
-<li>eSIM 或 WiFi 分享器（導航全程要吃網路）</li>
-<li>行動電源、快乾衣物、雨具（<b>9 月下旬是沖繩颱風季，帶輕便雨衣比雨傘實用</b>）</li>
-<li>薄外套：室內與車內冷氣通常很強</li>
-<li>日圓現金約 ¥60,000 ＋ 兩張以上信用卡</li>
-</ul>
-<div class="note warn"><b>9 月下旬的沖繩天氣：</b>白天高溫約 30–31°C、夜間約 26–27°C、海水約 28°C、紫外線極強，且<b>正處颱風季後段的活躍期</b>。行前一週開始盯氣象，並先弄清楚 Thai Vietjet 的班機異動處理方式與旅行社的緊急聯絡窗口 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
-
-<footer>
-<p>← 回 <a href="index.html">🏠 首頁</a> ｜ <a href="沖繩家庭旅遊企劃書_附件資料.html">② 附件資料</a> ｜ <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a> ｜ <a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a> ｜ <a href="沖繩家庭旅遊企劃書_歷程沿革.html">⑤ 歷程沿革</a></p>
-<p>行程時刻為規劃值，門票與營業時間請於行前以官方網站再確認一次。照片來源：Wikimedia Commons（CC BY-SA／CC BY），僅作家庭旅遊規劃示意。</p>
+<footer class="foot">
+  <nav>
+    <a href="index.html">🏠 首頁</a>｜
+    <a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦清單</a>｜
+    <a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a>｜
+    <a href="沖繩家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>
+  </nav>
+  <p>行程時刻為規劃值，門票與營業時間請於行前以官方網站再確認一次（每個景點旁邊都放了官網連結）。<br>照片來源：Wikimedia Commons（CC BY-SA／CC BY），僅作家庭旅遊規劃示意。建立 2026/07/30・更新 2026/08/05（v2.0）</p>
 </footer>
-</div>
+
+<script src="assets/app.js" defer></script>
 </body>
 </html>
