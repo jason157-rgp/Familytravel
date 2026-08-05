@@ -1,124 +1,326 @@
 <!DOCTYPE html>
-<html lang="zh-Hant"><head>
+<html lang="zh-Hant">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>沖繩家庭旅遊企劃書｜首頁</title>
-<style>
-:root{--ink:#22303c;--sub:#6b7c8c;--line:#e0e8ee;--bg:#f6fafb;--ac:#0f7f8c;--ac2:#1f6b5f;--gold:#c08a2e;--soft:#eff8f9}
-*{box-sizing:border-box}
-body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px}
-a{color:var(--ac2)}
-.hero{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Cliff_at_Cape_Zanpa_from_Zanpa_Misaki_Lighthouse_201905.JPG/1280px-Cliff_at_Cape_Zanpa_from_Zanpa_Misaki_Lighthouse_201905.JPG');background-size:cover;background-position:center 55%}
-.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(11,61,77,.78),rgba(18,138,146,.68))}
-.hero .in{position:relative;padding:70px 22px 60px;max-width:820px}
-.hero .kick{margin:0;font-size:.86rem;letter-spacing:6px;opacity:.9}
-.hero h1{margin:12px 0 6px;font-size:2.6rem;letter-spacing:3px;font-weight:700;text-shadow:0 2px 18px rgba(0,0,0,.35)}
-.hero .sub{margin:8px 0 0;font-size:1.05rem;opacity:.96}
-.hero .who{margin:4px 0 0;font-size:.92rem;opacity:.88}
-.hero .tag{display:inline-block;margin-top:20px;border:1px solid rgba(255,255,255,.55);border-radius:99px;padding:6px 20px;font-size:.85rem;backdrop-filter:blur(2px)}
-.wrap{max-width:1060px;margin:0 auto;padding:0 20px 80px}
-h2{font-size:1.42rem;margin:56px 0 6px;padding-bottom:11px;border-bottom:3px solid var(--ac)}
-h2 small{display:block;font-size:.78rem;font-weight:400;color:var(--sub);letter-spacing:1px;margin-top:4px}
-.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:-42px 0 0;position:relative;z-index:3}
-.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 6px 20px rgba(30,48,60,.10)}
-.stat .k{font-size:.78rem;color:var(--sub);letter-spacing:1px}
-.stat .v{font-size:1.22rem;font-weight:700;line-height:1.4;margin-top:2px}
-.stat .n{font-size:.8rem;color:var(--sub)}
-.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:22px 0 0}
-.card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:transform .18s,box-shadow .18s}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(30,48,60,.16)}
-.card .ph{position:relative;height:150px;background:#e9eef2}
-.card .ph img{width:100%;height:100%;object-fit:cover;display:block}
-.card .no{position:absolute;left:12px;top:12px;background:rgba(15,127,140,.94);color:#fff;font-size:.82rem;padding:3px 12px;border-radius:99px;letter-spacing:1px}
-.card .bd{padding:14px 18px 18px}
-.card .ti{font-size:1.08rem;font-weight:700;margin:0 0 4px}
-.card .ds{font-size:.87rem;color:var(--sub);margin:0}
-.card .go{font-size:.82rem;color:var(--ac);margin-top:10px;display:block}
-table{width:100%;border-collapse:collapse;margin:18px 0;background:#fff;font-size:.92rem;box-shadow:0 1px 4px rgba(0,0,0,.05);border-radius:8px;overflow:hidden}
-th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-th{background:#eaf3f5;font-weight:700}
-td.n,th.n{text-align:right;white-space:nowrap}
-tbody tr:nth-child(even){background:#fafcfd}
-.days{margin:22px 0 0;display:grid;gap:14px}
-.day{display:grid;grid-template-columns:132px 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05)}
-.day img{width:100%;height:100%;min-height:108px;object-fit:cover;display:block;background:#e9eef2}
-.day .tx{padding:12px 18px}
-.day .dt{font-size:.8rem;color:var(--ac);font-weight:700;letter-spacing:1px}
-.day .dn{font-size:1.02rem;font-weight:700;margin:1px 0 3px}
-.day .dd{font-size:.87rem;color:var(--sub);margin:0}
-.note{background:var(--soft);border-left:5px solid var(--ac);border-radius:0 8px 8px 0;padding:15px 20px;margin:18px 0;font-size:.92rem}
-.ok{background:#eff7f2;border-left-color:var(--ac2)}
-.warn{background:#fff8e8;border-left-color:var(--gold)}
-footer{background:#123c48;color:#cfdbe4;font-size:.85rem;padding:30px 20px;text-align:center;line-height:1.9}
-footer a{color:#ffd9a8}
-@media(max-width:560px){.hero h1{font-size:1.9rem}.day{grid-template-columns:96px 1fr}.stats{margin-top:18px}}
-.pay{display:inline-block;font-size:.78rem;padding:2px 10px;border-radius:99px;margin-right:7px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
-.pay.p1{background:#e4f1ea;color:#25705f;border:1px solid #bcdccf}
-.pay.p2{background:#fdece4;color:#a8422a;border:1px solid #f2c9b8}
-a.day{text-decoration:none;color:inherit;transition:transform .16s,box-shadow .16s}
-a.day:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(30,48,60,.15)}
-a.day .dt .jump{float:right;color:var(--sub);font-weight:400;letter-spacing:0}
-.jp{color:var(--sub);font-size:.88em}
-</style>
+<meta name="description" content="2026/09/25–09/28 沖繩 4 天 3 夜家庭旅遊企劃書：四日一覽、訂單速查、待辦、緊急聯絡與常用查詢連結。">
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<div class="hero"><div class="bg"></div><div class="in">
-<p class="kick">2026 秋 ・ 沖繩</p>
-<h1>沖繩家庭旅遊企劃書</h1>
-<p class="sub">2026/09/25（五）－ 09/28（一） 4 天 3 夜</p>
-<p class="who">桃園星野結衣 ＋ 龜山下智久 ＋ 瑄瑄阿姨 ＋ 煞氣E小魚乾E（旅行時約 1 歲 9 個月）</p>
-<span class="tag">✅ 機票・住宿・租車一次訂妥付清，台灣端機場接送亦已付清 ｜ 建立 2026/07/30・更新 2026/08/05（v2.1）</span>
-</div></div>
+<body id="top">
+
+<nav class="nav"><div class="in">
+  <a href="index.html">🏠 首頁</a>
+  <a href="沖繩家庭旅遊企劃書_行程規劃.html">① 行程</a>
+  <a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦</a>
+  <a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a>
+  <a href="沖繩家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>
+  <a href="#calls">☎ 緊急電話</a>
+  <a href="#links">🔍 常用查詢</a>
+</div></nav>
+
+<header class="hero">
+  <div class="bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Cliff_at_Cape_Zanpa_from_Zanpa_Misaki_Lighthouse_201905.JPG/1280px-Cliff_at_Cape_Zanpa_from_Zanpa_Misaki_Lighthouse_201905.JPG')"></div>
+  <div class="in">
+    <p class="kick">2026 秋 ・ 沖繩</p>
+    <h1>沖繩家庭旅遊企劃書</h1>
+    <p class="sub">2026/09/25（五）－ 09/28（一）　4 天 3 夜</p>
+    <p class="who">桃園星野結衣 ＋ 龜山下智久 ＋ 瑄瑄阿姨 ＋ 煞氣E小魚乾E（旅行時約 1 歲 9 個月）<br>以讀谷村一間飯店為單一據點的定點式家庭旅遊</p>
+    <span class="ver">機票・住宿・租車・台灣端接送已付清　｜　建立 2026/07/30・更新 2026/08/05（v2.0）</span>
+  </div>
+</header>
+
 <div class="wrap">
-<div class="stats"><div class="stat"><div class="k">出發</div><div class="v">9/25（五）</div><div class="n">VZ568 桃園 14:55 → 那霸 17:20</div></div><div class="stat"><div class="k">返抵</div><div class="v">9/28（一）</div><div class="n">VZ569 那霸 18:20 → 桃園 18:55</div></div><div class="stat"><div class="k">住宿</div><div class="v">讀谷村 3 晚</div><div class="n">虹夕諾雅 沖繩（Fushi 海景豪華套房・不含早晚餐）</div></div><div class="stat"><div class="k">款項狀態</div><div class="v" style="font-size:1.02rem;line-height:1.7"><span class="pay p1">已付清</span>機票・住宿・租車・台灣端機場接送<br><span class="pay p2">現場付</span>油費・門票・餐食</div><div class="n">已刷卡 <b>TWD 158,760</b>（含台灣端機場接送 TWD 1,300）；現場另備日圓現金與刷卡額度</div></div></div>
 
-<h2>五份文件<small>DOCUMENTS</small></h2>
-<div class="cards"><a class="card" href="沖繩家庭旅遊企劃書_行程規劃.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Zanpa-Misaki_Cape_Lighthouse.jpg/1280px-Zanpa-Misaki_Cape_Lighthouse.jpg" alt="行程規劃"><span class="no">①</span></div><div class="bd"><p class="ti">行程規劃</p><p class="ds">四日逐日行程、三大骨幹、費用概算、行前攜帶清單。要知道「哪天去哪裡」看這份。</p><span class="go">開啟 →</span></div></a><a class="card" href="沖繩家庭旅遊企劃書_附件資料.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Main_tank_of_the_Kuroshio_Sea_in_Okinawa_Churaumi_Aquarium.JPG/1280px-Main_tank_of_the_Kuroshio_Sea_in_Okinawa_Churaumi_Aquarium.JPG" alt="附件資料"><span class="no">②</span></div><div class="bd"><p class="ti">附件資料</p><p class="ds">美麗海水族館完整攻略、讀谷周邊實查、幼兒餐與採買點、開車與颱風應變。</p><span class="go">開啟 →</span></div></a><a class="card" href="沖繩家庭旅遊企劃書_待決定事項.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Onna_Okinawa_Japan_Cape-Manzamo-01.jpg/1280px-Onna_Okinawa_Japan_Cape-Manzamo-01.jpg" alt="待決定事項"><span class="no">③</span></div><div class="bd"><p class="ti">待決定事項</p><p class="ds">還沒定案的項目、優先順序與時效總表。想知道「還有什麼要處理」看這份。</p><span class="go">開啟 →</span></div></a><a class="card" href="沖繩家庭旅遊企劃書_訂購成果.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg/1280px-Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg" alt="訂購成果"><span class="no">④</span></div><div class="bd"><p class="ti">訂購成果</p><p class="ds">套裝訂單的內容與金額總表、租車與住宿條件。到了現場要報編號、要付錢，看這份。</p><span class="go">開啟 →</span></div></a><a class="card" href="沖繩家庭旅遊企劃書_歷程沿革.html"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg/1280px-Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_04.jpg" alt="歷程沿革"><span class="no">⑤</span></div><div class="bd"><p class="ti">歷程沿革</p><p class="ds">版本沿革、決策歷程、被排除的方案與理由。想知道「為什麼這樣選」看這份。</p><span class="go">開啟 →</span></div></a></div>
+  <div class="ok">
+    <b>這一版做了什麼：</b>版面全面重整。四日一覽移到最前面、每張日卡直接點進當天行程；所有要查的東西都做成可點的連結（官網、地圖、一鍵撥號）；警示語改為三級標示；已結案與已作廢的內容全部移進 <a href="沖繩家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>，不再夾在正文裡；手機與電腦各自排版。版本號同時重編：舊 v2.0 → v1.9、舊 v2.1 → v1.10，本版為 v2.0。
+  </div>
 
-<div class="note warn"><b>確認編號、航空公司訂位代號、護照號碼、生日、手機與 email 等識別資料不列於本公開網頁</b>，請存於私人文件「沖繩旅遊 訂單敏感資料（私人）」。現場報編號、線上報到請開那份文件。</div>
+  <section class="sec" id="glance">
+    <h2><span class="n">壹</span>四日一覽</h2>
+    <p class="lead">點任一張卡片，直接跳到當天的完整時間軸。</p>
+    <div class="days">
 
-<h2>訂單速查<small>BOOKING REFERENCES</small></h2>
-<table><thead><tr><th>項目</th><th>內容</th><th>確認／預約編號</th><th class="n">金額</th><th>付款</th></tr></thead><tbody>
-<tr><td><b>機票＋住宿<br>（套裝）</b></td><td>Thai Vietjet Air VZ568／VZ569 台北 ⇄ 沖繩 直飛 ＋ 虹夕諾雅 沖繩 3 晚<br><small>3 大人＋1 嬰兒（未滿 2 歲・不佔位）</small></td><td><b><span class="jp">見私人記錄</span></b></td><td class="n">TWD 151,700</td><td><span class="pay p1">已付清</span></td></tr>
-<tr><td><b>租車</b></td><td>ORIX Rent-A-Car RA Class（Rocky 等）9/25 → 9/28 那霸機場站取還 ＋ 兒童座椅 ×1<br><small>⚠️ 前向／後向尚未確認，已併入 ORIX 待問清單</small></td><td><b><span class="jp">見私人記錄</span></b></td><td class="n">TWD 5,640</td><td><span class="pay p1">已付清</span></td></tr>
-<tr><td><b>稅金・燃油</b></td><td>機票附加稅・燃油附加費（成人 ×3，嬰兒 ¥0）</td><td>—</td><td class="n">TWD 120</td><td><span class="pay p1">已付清</span></td></tr>
-<tr><td><b>台灣端機場接送</b></td><td>和運租車・專車接送（和雲行動服務提供）｜去程 9/25 10:00 台北市中山區 → 桃園機場；回程 9/28 桃園機場 → 台北市中山區（依航班抵達時間接送）<br><small>廂型車 ×2 趟｜<b>後向式安全座椅 ×1／趟（已確認）</b>｜當日須帶護照｜客服 (02) 5589-0800</small></td><td><b><span class="jp">見私人記錄</span></b></td><td class="n">TWD 1,300</td><td><span class="pay p1">已付清</span></td></tr><tr><th colspan="3">合計（信用卡付清）</th><th class="n">TWD 158,760</th><th><span class="pay p1">已付清</span></th></tr>
-</tbody></table>
-<div class="note ok"><b>這是一張「機＋酒＋車」動態套裝訂單</b>，訂單本身沒有拆分機票與住宿的單價，因此上表以套裝總額列示；金額拆解與逐項條件見 <a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a>。</div>
-<div class="note warn"><b>現場才會發生的支出（尚未付）：</b>汽油（還車前満タン返し）、高速公路通行費、各景點門票與停車費、三餐與飯店餐廳、嬰幼兒用品採買、以及<b>託運行李加購</b>（本票種僅含手提 7kg，託運須另購）。<b>v2.0：Day 3 排入 Tギャラリア沖縄 by DFS（採購目標為 Chanel），因商品只能手提，回程另建議加購 Extra Carry-On THB 250／人 ×3；同日的 Costco 採購則走託運。</b><b>v2.1：沖繩縣宿泊稅已確認本趟不課徵</b>（施行日為 2027/02/01，讀谷村也沒有市町村宿泊稅）→ <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
+      <a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day1">
+        <span class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG/1280px-Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG')"></span>
+        <span class="bd">
+          <span class="n">DAY 1 ・ 9/25（五）</span>
+          <span class="ti">抵達日：落地 → 取車 → 北上讀谷</span>
+          <span class="tx">10:00 和運專車從台北出發、11:00 到桃園第 1 航廈；17:20 落地、接駁取車，開約 1 小時到讀谷。不排景點，晚餐靠路上採買。</span>
+          <span class="go">看當日細節 →</span>
+        </span>
+      </a>
 
-<h2>四日一覽<small>ITINERARY AT A GLANCE</small></h2>
-<div class="days">
-<a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG/1280px-Naha_Airport_Domestic_Passenger_Terminal_Building_20150318-1.JPG" alt="抵達日"><div class="tx"><div class="dt">Day 1 9/25（五）<span class="jump">看當日細節 →</span></div><div class="dn">抵達日：落地 → 取車 → 北上讀谷</div><p class="dd">10:00 和運專車接送從台北出發、11:00 到桃園第 1 航廈；17:20 落地、接駁取車、開約 1 小時到讀谷。不排景點，晚餐靠事先安排。</p></div></a>
-<a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg/1280px-Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg" alt="美麗海水族館"><div class="tx"><div class="dt">Day 2 9/26（六）<span class="jump">看當日細節 →</span></div><div class="dn">北部一日：名護鳳梨園 ＋ 美麗海水族館</div><p class="dd">全趟最遠的一趟，兩站串在同一條北上路線。水族館室內平面可推嬰兒車，回程約 1 小時 29 分（v2.1 實測）車上一次睡滿。晚上 18:00 房內洋食套組。</p></div></a>
-<a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg/1280px-2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg" alt="波上宮"><div class="tx"><div class="dt">Day 3 9/27（日）<span class="jump">看當日細節 →</span></div><div class="dn">南部一日：波上宮 ＋ Costco ＋ DFS</div><p class="dd">一趟南下解決參拜、採買與免稅購物：波上宮求御守、Costco、DFS，傍晚回飯店私人海灘玩沙。<b>⚠️ v2.1 車程實測後當日時刻待重新裁切</b>（光開車約 4 小時 5 分）。</p></div></a>
-<a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg/1280px-Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg" alt="返程日"><div class="tx"><div class="dt">Day 4 9/28（一）<span class="jump">看當日細節 →</span></div><div class="dn">返程日：飯店玩水 → 瀨長島 → 還車 → 班機</div><p class="dd">上午 2 小時私人海灘與泳池，12:00 正常退房，13:30 瀨長島 ウミカジテラス（Umikaji Terrace）午餐看飛機，15:30 還車，出境後領 DFS 的貨，18:20 起飛；18:55 落地桃園後接和運專車接機回台北（依航班實際抵達時間，免費等候 60 分鐘）。</p></div></a>
+      <a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day2">
+        <span class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg/1280px-Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg')"></span>
+        <span class="bd">
+          <span class="n">DAY 2 ・ 9/26（六）</span>
+          <span class="ti">北部一日：名護鳳梨園 ＋ 美麗海水族館</span>
+          <span class="tx">全趟最遠的一趟，兩站串在同一條北上路線。館內平面可推嬰兒車，回程 1 小時 29 分車上一次睡滿。晚上 18:00 房內洋食套組。</span>
+          <span class="go">看當日細節 →</span>
+        </span>
+      </a>
+
+      <a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day3">
+        <span class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg/1280px-2021-04-08_Naminouegu%2CNaha%2COkinawa%28%E6%B3%A2%E4%B8%8A%E5%AE%AE%29_DJI_Mini2-0003.jpg')"></span>
+        <span class="bd">
+          <span class="n">DAY 3 ・ 9/27（日）</span>
+          <span class="ti">南部一日：波上宮 ＋ DFS</span>
+          <span class="tx">一趟南下解決參拜與免稅購物：波上宮求御守、DFS 看 Chanel，午餐在隔壁的サンエー。14:45 就回得到飯店，下午有 2 小時海灘。</span>
+          <span class="go">看當日細節 →</span>
+        </span>
+      </a>
+
+      <a class="day" href="沖繩家庭旅遊企劃書_行程規劃.html#day4">
+        <span class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg/1280px-Thai_VietJet_Air_Airbus_A320_HS-VKT_Bangkok_Suvarnabhumi_2024_%2801%29.jpg')"></span>
+        <span class="bd">
+          <span class="n">DAY 4 ・ 9/28（一）</span>
+          <span class="ti">返程日：飯店玩水 → 瀨長島 → 還車</span>
+          <span class="tx">上午 2 小時私人海灘與泳池，12:00 正常退房，13:30 瀨長島午餐看飛機，15:30 還車，出境後領 DFS 的貨，18:20 起飛。</span>
+          <span class="go">看當日細節 →</span>
+        </span>
+      </a>
+
+    </div>
+    <div class="info" style="margin-top:14px">
+      <b>三大骨幹：</b>一天一個方向（Day 2 全部往北、Day 3 全部往南，絕不南北來回）／單一據點不換飯店／午睡固定安排在最長的那段車程上。
+      每天的備案與減法寫在當天行程下方 → <a href="沖繩家庭旅遊企劃書_行程規劃.html#core">① 行程核心與定位</a>
+    </div>
+  </section>
+
+  <section class="sec" id="booking">
+    <h2><span class="n">貳</span>訂單速查</h2>
+    <p class="lead">現場要報編號、要付錢看這裡。每一列可點進 <a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a> 的完整條件。</p>
+    <table>
+      <thead><tr><th>項目</th><th>內容</th><th>編號</th><th>金額</th><th>付款</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="沖繩家庭旅遊企劃書_訂購成果.html#o-air">機票＋住宿（套裝）</a></td>
+          <td>Thai Vietjet Air VZ568／VZ569 台北 ⇄ 沖繩 直飛 ＋ 虹夕諾雅 沖繩 3 晚<br>3 大人＋1 嬰兒（未滿 2 歲・不佔位）</td>
+          <td>見私人記錄</td><td class="money">TWD 151,700</td><td><span class="tag t-ok">已付清</span></td>
+        </tr>
+        <tr>
+          <td><a href="沖繩家庭旅遊企劃書_訂購成果.html#o-car">租車</a></td>
+          <td>ORIX Rent-A-Car RA Class（Rocky 等）9/25 → 9/28 那霸機場站取還 ＋ 兒童座椅 ×1<br><span class="tag t-field">現場注意</span> 前向／後向尚未確認，已併入 ORIX 待問清單</td>
+          <td>見私人記錄</td><td class="money">TWD 5,640</td><td><span class="tag t-ok">已付清</span></td>
+        </tr>
+        <tr>
+          <td>稅金・燃油</td>
+          <td>機票附加稅・燃油附加費（成人 ×3，嬰兒 ¥0）</td>
+          <td>—</td><td class="money">TWD 120</td><td><span class="tag t-ok">已付清</span></td>
+        </tr>
+        <tr>
+          <td><a href="沖繩家庭旅遊企劃書_訂購成果.html#o-transfer">台灣端機場接送</a></td>
+          <td>和運租車・專車接送（和雲行動服務提供）｜去程 9/25 10:00 台北市中山區 → 桃園機場；回程 9/28 桃園機場 → 台北市中山區（依航班抵達時間）<br>廂型車 ×2 趟｜後向式安全座椅 ×1／趟（已確認）｜當日須帶護照｜客服 <a href="tel:+886255890800">(02) 5589-0800</a></td>
+          <td>見私人記錄</td><td class="money">TWD 1,300</td><td><span class="tag t-ok">已付清</span></td>
+        </tr>
+        <tr class="tot">
+          <td colspan="3">合計（信用卡付清）</td><td class="money">TWD 158,760</td><td><span class="tag t-ok">已付清</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="must">
+      <span class="tag t-must">行前必辦</span> <b>現場才會發生的支出（尚未付）：</b>汽油（還車前満タン返し）、高速公路通行費、門票與停車費、三餐與飯店餐廳、嬰幼兒用品採買，以及<b>託運行李加購</b>——本票種只含手提 7kg，託運要另買 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-baggage">② 待辦・加購託運行李</a>
+    </div>
+    <div class="info">
+      <span class="tag t-info">說明</span> 這是一張「機＋酒＋車」動態套裝訂單，訂單本身沒有拆分機票與住宿的單價，因此上表以套裝總額列示；金額拆解與逐項條件見 <a href="沖繩家庭旅遊企劃書_訂購成果.html#o-cost">③ 訂單・費用結算</a>。
+    </div>
+    <div class="field">
+      <span class="tag t-field">隱私</span> 確認編號、航空公司訂位代號、護照號碼、生日、手機與 email 等識別資料不列於本公開網頁，請存於私人文件「沖繩旅遊 訂單敏感資料（私人）」。現場報編號、線上報到請開那份文件。
+    </div>
+  </section>
+
+  <section class="sec" id="docs">
+    <h2><span class="n">參</span>四份文件</h2>
+    <p class="lead">原本的五份合併為四份：② 附件資料的景點細節已就地併進 ① 行程的每一天（折疊起來，要看再點開），通用實務（開車、颱風、醫療、餵食、免稅）移到 ① 的「現場手冊」。</p>
+    <div class="docs">
+      <a class="doc" href="沖繩家庭旅遊企劃書_行程規劃.html">
+        <div class="n">①</div><div class="ti">行程規劃 ＋ 現場手冊</div>
+        <div class="tx">四日逐日時間軸、每個景點的完整實查（折疊）、費用概算、攜帶清單，以及開車／颱風／醫療／餵食／免稅五章現場實務。要知道「哪天去哪裡、到了怎麼辦」看這份。</div>
+      </a>
+      <a class="doc" href="沖繩家庭旅遊企劃書_待決定事項.html">
+        <div class="n">②</div><div class="ti">待辦清單</div>
+        <div class="tx">還沒完成的每一件事，依時效排序，每項都附上直接可以辦的連結。想知道「今天要處理什麼」看這份。已結案的都移走了。</div>
+      </a>
+      <a class="doc" href="沖繩家庭旅遊企劃書_訂購成果.html">
+        <div class="n">③</div><div class="ti">訂單</div>
+        <div class="tx">機票、住宿、租車、機場接送的完整條件與金額，以及旅行社與各方聯絡窗口。要報編號、要吵事情看這份。</div>
+      </a>
+      <a class="doc" href="沖繩家庭旅遊企劃書_歷程沿革.html">
+        <div class="n">④</div><div class="ti">紀錄</div>
+        <div class="tx">版本沿革、決策理由、被排除的方案、已結案事項與已作廢的舊資料。想知道「為什麼這樣選、當初寫錯了什麼」看這份。</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec" id="todo">
+    <h2><span class="n">肆</span>出發前最急的六件事</h2>
+    <p class="lead">完整清單與時效 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦清單</a>。下面六件是現在就該動手的。</p>
+    <table>
+      <thead><tr><th>待辦</th><th>時效</th><th>直接去辦</th></tr></thead>
+      <tbody>
+        <tr><td><a href="沖繩家庭旅遊企劃書_待決定事項.html#t-baggage">加購託運行李</a>（去程 20kg／回程 30kg）</td><td>最晚起飛前 3 小時，機場買最貴</td><td><a class="lk" href="https://th.vietjetair.com/" target="_blank" rel="noopener">Thai Vietjet 管理訂位</a></td></tr>
+        <tr><td><a href="沖繩家庭旅遊企劃書_待決定事項.html#t-seat">加購預選座位</a>（3 位成人連號）</td><td>最晚起飛前 4 小時，本行程不能線上報到</td><td><a class="lk" href="https://th.vietjetair.com/" target="_blank" rel="noopener">Thai Vietjet 管理訂位</a></td></tr>
+        <tr><td><a href="沖繩家庭旅遊企劃書_待決定事項.html#t-license">日本駕照譯本 ×3</a></td><td>出發前，線上要留郵寄天數</td><td><a class="lk" href="https://www.mvdis.gov.tw/" target="_blank" rel="noopener">監理服務網 MVDIS</a></td></tr>
+        <tr><td><a href="沖繩家庭旅遊企劃書_待決定事項.html#t-hotel">回信給飯店確定改洋食套組</a>，並請對方回覆訂位成立</td><td>現在就辦，目前只是「已收到申請」</td><td><a class="lk mail" href="mailto:info_okinawa@hoshinoya.com">info_okinawa@hoshinoya.com</a></td></tr>
+        <tr><td><a href="沖繩家庭旅遊企劃書_待決定事項.html#t-dfs">打電話問 DFS</a>（前一天買隔天領、Chanel 現貨、停車）</td><td>現在就辦，Day 3 下午押在這</td><td><a class="lk tel" href="tel:+81120782460">0120-782-460</a> <a class="lk" href="https://www.dfs.com/jp/t-galleria-okinawa" target="_blank" rel="noopener">DFS 官網</a></td></tr>
+        <tr><td><a href="沖繩家庭旅遊企劃書_待決定事項.html#t-insurance">旅遊保險（含旅遊不便險）</a></td><td>出發前，颱風季必備</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="sec" id="links">
+    <h2><span class="n">伍</span>常用查詢連結</h2>
+    <p class="lead">以前每次要查都得重新 Google，現在全部集中在這裡。行程頁的每個景點旁邊也各自放了同樣的連結。</p>
+
+    <h3>住宿</h3>
+    <div class="lkrow">
+      <a class="lk" href="https://hoshinoresorts.com/ja/hotels/hoshinoyaokinawa/" target="_blank" rel="noopener">星のや沖縄 官網</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%98%9F%E3%81%AE%E3%82%84%E6%B2%96%E7%B8%84%20%E6%B2%96%E7%B8%84%E7%9C%8C%E4%B8%AD%E9%A0%AD%E9%83%A1%E8%AA%AD%E8%B0%B7%E6%9D%91%E5%84%80%E9%96%93474" target="_blank" rel="noopener">地圖</a>
+      <a class="lk tel" href="tel:+81989216800">夜間・緊急</a>
+      <a class="lk tel" href="tel:+815031348091">預約專線</a>
+      <a class="lk mail" href="mailto:info_okinawa@hoshinoya.com">飯店信箱</a>
+    </div>
+
+    <h3>景點（依行程順序）</h3>
+    <div class="lkrow">
+      <a class="lk" href="https://www.nagopine.com/" target="_blank" rel="noopener">名護鳳梨園 官網</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8A%E3%82%B4%E3%83%91%E3%82%A4%E3%83%8A%E3%83%83%E3%83%97%E3%83%AB%E3%83%91%E3%83%BC%E3%82%AF%20%E6%B2%96%E7%B8%84%E7%9C%8C%E5%90%8D%E8%AD%B7%E5%B8%82%E7%82%BA%E5%8F%881195" target="_blank" rel="noopener">地圖</a>
+      <a class="lk tel" href="tel:+81980533659">0980-53-3659</a>
+    </div>
+    <div class="lkrow">
+      <a class="lk" href="https://churaumi.okinawa/" target="_blank" rel="noopener">美麗海水族館 官網</a>
+      <a class="lk" href="https://churaumi.okinawa/guide/hour/" target="_blank" rel="noopener">開館時間・票價</a>
+      <a class="lk" href="https://churaumi.okinawa/guide/baby/" target="_blank" rel="noopener">嬰幼兒設備</a>
+      <a class="lk" href="https://www.asoview.com/channel/tickets/IjvonBes9q/" target="_blank" rel="noopener">線上購票</a>
+      <a class="lk" href="https://oki-park.jp/kaiyohaku/" target="_blank" rel="noopener">海洋博公園</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B2%96%E7%B8%84%E7%BE%8E%E3%82%89%E6%B5%B7%E6%B0%B4%E6%97%8F%E9%A4%A8" target="_blank" rel="noopener">地圖</a>
+    </div>
+    <div class="lkrow">
+      <a class="lk" href="https://naminouegu.jp/" target="_blank" rel="noopener">波上宮 官網</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B3%A2%E4%B8%8A%E5%AE%AE%20%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-25-11" target="_blank" rel="noopener">地圖</a>
+      <a class="lk tel" href="tel:+81988683697">098-868-3697</a>
+    </div>
+    <div class="lkrow">
+      <a class="lk" href="https://www.umikajiterrace.com/" target="_blank" rel="noopener">瀨長島 ウミカジテラス</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%80%AC%E9%95%B7%E5%B3%B6%E3%82%A6%E3%83%9F%E3%82%AB%E3%82%B8%E3%83%86%E3%83%A9%E3%82%B9" target="_blank" rel="noopener">地圖</a>
+      <a class="lk tel" href="tel:+81988517446">098-851-7446</a>
+    </div>
+
+    <h3>購物</h3>
+    <div class="lkrow">
+      <a class="lk" href="https://www.dfs.com/jp/t-galleria-okinawa" target="_blank" rel="noopener">T ギャラリア沖縄 by DFS</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=T%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%82%A2%E6%B2%96%E7%B8%84%20by%20DFS%20%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E3%81%8A%E3%82%82%E3%82%8D%E3%81%BE%E3%81%A14-1" target="_blank" rel="noopener">地圖</a>
+      <a class="lk tel" href="tel:+81120782460">0120-782-460</a>
+      <a class="lk tel" href="tel:+81989511398">CHANEL 門市</a>
+    </div>
+    <div class="lkrow">
+      <a class="lk" href="https://www.san-a.co.jp/nahamainplace/" target="_blank" rel="noopener">サンエー那覇メインプレイス</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B5%E3%83%B3%E3%82%A8%E3%83%BC%E9%82%A3%E8%A6%87%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9" target="_blank" rel="noopener">地圖</a>
+      <a class="lk" href="https://www.ashibinaa.com/" target="_blank" rel="noopener">あしびなー（備案）</a>
+    </div>
+
+    <h3>交通與租車</h3>
+    <div class="lkrow">
+      <a class="lk" href="https://car.orix.co.jp/" target="_blank" rel="noopener">ORIX レンタカー</a>
+      <a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%AB%E3%83%BC%20%E6%B2%96%E7%B8%84%E8%B1%8A%E5%B4%8E%E5%BA%97%20%E6%B2%96%E7%B8%84%E7%9C%8C%E8%B1%8A%E8%A6%8B%E5%9F%8E%E5%B8%82%E8%B1%8A%E5%B4%8E1-1174" target="_blank" rel="noopener">豐崎營業所地圖</a>
+      <a class="lk tel" href="tel:+81988510543">098-851-0543</a>
+    </div>
+    <div class="lkrow">
+      <a class="lk" href="https://www.easyrent.com.tw/" target="_blank" rel="noopener">和雲行動服務（接送）</a>
+      <a class="lk" href="https://esun.irentcar.com.tw/ESUN/queryorders.html" target="_blank" rel="noopener">接送訂單查詢</a>
+      <a class="lk tel" href="tel:+886255890800">(02) 5589-0800</a>
+    </div>
+
+    <h3>航空與行李</h3>
+    <div class="lkrow">
+      <a class="lk" href="https://th.vietjetair.com/" target="_blank" rel="noopener">Thai Vietjet 官網</a>
+      <a class="lk tel" href="tel:+886277260088">台灣客服</a>
+      <a class="lk tel" href="tel:+815054825538">日本客服</a>
+      <a class="lk mail" href="mailto:reservations@tour-list.com">Time Design 旅行社</a>
+      <a class="lk tel" href="tel:+6565506327">+65-6550-6327</a>
+    </div>
+    <div class="field">
+      <span class="tag t-field">先看清楚</span> 泰越捷（VZ）和越捷（VJ）是兩家不同的公司，行李規則不一樣。網路上大量中文攻略講的是 VJ，直接套用會出錯 → <a href="沖繩家庭旅遊企劃書_待決定事項.html#t-vzvj">② 待辦・VZ 與 VJ 的分辨</a>
+    </div>
+
+    <h3>行前文件與天氣</h3>
+    <div class="lkrow">
+      <a class="lk" href="https://www.mvdis.gov.tw/" target="_blank" rel="noopener">監理服務網（駕照譯本）</a>
+      <a class="lk" href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Visit Japan Web</a>
+      <a class="lk" href="https://www.jma.go.jp/bosai/map.html#contents=typhoon" target="_blank" rel="noopener">日本氣象廳 颱風</a>
+      <a class="lk" href="https://www.cwa.gov.tw/" target="_blank" rel="noopener">中央氣象署</a>
+    </div>
+  </section>
+
+  <section class="sec" id="calls">
+    <h2><span class="n">陸</span>緊急聯絡</h2>
+    <p class="lead">手機上直接點就能撥號。建議出發前把這一段截圖存進相簿——沖繩山區與海邊訊號不一定穩。</p>
+
+    <h3>最常用的六支</h3>
+    <div class="calls">
+      <a class="call urgent" href="tel:119"><span class="ic">🚑</span><span><span class="who">日本 救護車・消防</span><span class="num">119</span><span class="nb">孩子高燒、抽搐、外傷送醫</span></span></a>
+      <a class="call urgent" href="tel:110"><span class="ic">🚓</span><span><span class="who">日本 警察</span><span class="num">110</span><span class="nb">車禍、走失、失竊。可要求中文口譯</span></span></a>
+      <a class="call" href="tel:%238000"><span class="ic">👶</span><span><span class="who">兒童醫療電話諮詢</span><span class="num">#8000</span><span class="nb">要不要送醫拿不定主意時先撥</span></span></a>
+      <a class="call" href="tel:+81989216800"><span class="ic">🏨</span><span><span class="who">虹夕諾雅 沖繩・夜間緊急</span><span class="num">+81-98-921-6800</span><span class="nb">18:00–翌 9:30。9/25 晚到打這支</span></span></a>
+      <a class="call" href="tel:+81988510543"><span class="ic">🚗</span><span><span class="who">ORIX 那霸機場站</span><span class="num">+81-98-851-0543</span><span class="nb">取車、還車、接駁車找不到</span></span></a>
+      <a class="call" href="tel:+886255890800"><span class="ic">🛫</span><span><span class="who">和運接送 客服</span><span class="num">(02) 5589-0800</span><span class="nb">需要延長等候一定要提前打</span></span></a>
+    </div>
+
+    <h3>完整聯絡表</h3>
+    <table>
+      <thead><tr><th>對象</th><th>電話</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td>虹夕諾雅 沖繩</td>
+          <td><a href="tel:+81989216800">+81-98-921-6800</a>（夜間・緊急 18:00–翌 9:30）<br><a href="tel:+815031348091">+81-50-3134-8091</a>（預約 9:30–18:00）<br><a href="tel:+815031348096">+81-50-3134-8096</a>（英文）</td>
+          <td>沖縄県中頭郡読谷村儀間 474｜入住 15:00／退房 12:00｜停車免費・室外・不需預約<br>Mapcode 1005 626 090*38（車機導航用）<br><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%98%9F%E3%81%AE%E3%82%84%E6%B2%96%E7%B8%84%20%E6%B2%96%E7%B8%84%E7%9C%8C%E4%B8%AD%E9%A0%AD%E9%83%A1%E8%AA%AD%E8%B0%B7%E6%9D%91%E5%84%80%E9%96%93474" target="_blank" rel="noopener">地圖</a><a class="lk" href="https://hoshinoresorts.com/ja/hotels/hoshinoyaokinawa/" target="_blank" rel="noopener">官網</a><br><span class="tag t-must">行前必辦</span> 9/25 預計 20:30 才到，務必先用 email 告知晚到；當晚要打的是夜間那一支</td></tr>
+        <tr><td>ORIX 租車 那霸機場站</td><td><a href="tel:+81988510543">+81-98-851-0543</a></td>
+          <td>沖縄県豊見城市豊崎 1-1174｜9/25 取車、9/28 還車（同店）｜機場沒有店面，要搭免費接駁車，車程約 15–20 分<br><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%AB%E3%83%BC%20%E6%B2%96%E7%B8%84%E8%B1%8A%E5%B4%8E%E5%BA%97%20%E6%B2%96%E7%B8%84%E7%9C%8C%E8%B1%8A%E8%A6%8B%E5%9F%8E%E5%B8%82%E8%B1%8A%E5%B4%8E1-1174" target="_blank" rel="noopener">地圖</a></td></tr>
+        <tr><td>Time Design（訂單旅行社）</td><td><a href="tel:+6565506327">+65-6550-6327</a><br><a href="mailto:reservations@tour-list.com">reservations@tour-list.com</a><br><a href="tel:+81570039866">0570-039866</a>（日本窗口）</td>
+          <td>新加坡總線 24 小時語音；人工客服平日 10:00–17:00（日本時間）。班機異動、訂單變更、整案取消找這裡</td></tr>
+        <tr><td>Thai Vietjet Air（泰越捷航空）</td><td>台灣 <a href="tel:+886277260088">+886-2-7726-0088</a><br>日本 <a href="tel:+815054825538">+81-50-5482-5538</a></td>
+          <td>行李加購與選位可自行在官網辦（不影響套裝）；班機取消想改搭其他班機也是找航空公司<br><a class="lk" href="https://th.vietjetair.com/" target="_blank" rel="noopener">官網</a></td></tr>
+        <tr><td>和運租車・專車接送（台灣端）</td><td><a href="tel:+886255890800">(02) 5589-0800</a></td>
+          <td>9/25 10:00 送機、9/28 接機（依航班抵達時間）。送機免費等候只有 20 分鐘，接機自班機實際抵達起 60 分鐘；需延長等候要提前打這支 → <a href="沖繩家庭旅遊企劃書_訂購成果.html#o-transfer">③ 訂單・機場接送</a></td></tr>
+        <tr><td>沖縄県立中部病院（沖繩縣立中部醫院）</td><td><a href="tel:+81989734111">098-973-4111</a></td>
+          <td>うるま市字宮里 281｜24 小時急診，從讀谷開車最快到得了的三次急救醫院<br><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B2%96%E7%B8%84%E7%9C%8C%E7%AB%8B%E4%B8%AD%E9%83%A8%E7%97%85%E9%99%A2" target="_blank" rel="noopener">地圖</a></td></tr>
+        <tr><td>沖縄県立南部医療センター・こども医療センター</td><td><a href="tel:+81988880123">098-888-0123</a></td>
+          <td>島尻郡南風原町新川 118-1｜沖繩小兒重症的最高後送醫院，機場・那霸方向<br><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B2%96%E7%B8%84%E7%9C%8C%E7%AB%8B%E5%8D%97%E9%83%A8%E5%8C%BB%E7%99%82%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%BB%E3%81%93%E3%81%A9%E3%82%82%E5%8C%BB%E7%99%82%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC" target="_blank" rel="noopener">地圖</a></td></tr>
+        <tr><td>那覇市立病院（那霸市立醫院）</td><td><a href="tel:+81988845111">098-884-5111</a></td>
+          <td>那覇市古島 2-31-1｜返程日在那霸一帶時的就近選項<br><a class="lk map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%82%A3%E8%A6%87%E5%B8%82%E7%AB%8B%E7%97%85%E9%99%A2" target="_blank" rel="noopener">地圖</a></td></tr>
+        <tr><td>沖縄県警察本部（沖繩縣警察總部）</td><td><a href="tel:+81988620110">098-862-0110</a></td><td>那覇市泉崎 1-2-2｜總機；各警察署電話請當地查詢</td></tr>
+        <tr><td>台北駐日經濟文化代表處 那霸分處</td><td><a href="tel:+81988627008">098-862-7008</a></td>
+          <td>那覇市久茂地 3-15-9 アルテビル那覇 6F｜沖繩有台灣辦事處，不必找東京。護照遺失、重大事故先打這支<br><a class="lk" href="https://www.roc-taiwan.org/jpnaha/" target="_blank" rel="noopener">官網</a></td></tr>
+        <tr><td>外交部 旅外國人急難救助專線</td><td><a href="tel:+80108850885">001-800-0885-0885</a></td><td>自日本市話撥打免付費（001 為國際冠碼）</td></tr>
+      </tbody>
+    </table>
+    <div class="field">
+      <span class="tag t-field">現場注意</span> 醫院與辦事處電話請於出發前再核對一次官網（機構搬遷、號碼變更時有發生）。就醫的實務準備（健保卡拍照、診斷書與收據正本、常備藥）→ <a href="沖繩家庭旅遊企劃書_行程規劃.html#field-medical">① 現場手冊・醫療與育兒設施</a>
+    </div>
+  </section>
+
+  <section class="sec" id="mustdo">
+    <h2><span class="n">柒</span>出發前務必確認</h2>
+    <div class="must">
+      <span class="tag t-must">行前必辦</span>
+      護照效期 6 個月以上（四本皆已確認）／<a href="沖繩家庭旅遊企劃書_待決定事項.html#t-license">日本駕照譯本＋台灣駕照正本</a>（缺一不得租車，且每位要開車的成人都要備齊）／嬰兒搭機當天須未滿 2 歲（已確認）／<a href="沖繩家庭旅遊企劃書_待決定事項.html#t-baggage">託運行李已加購</a>／<a href="沖繩家庭旅遊企劃書_待決定事項.html#t-insurance">旅遊不便險與改期方案</a>——9 月下旬仍是沖繩颱風季。
+      <br>完整清單 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦清單</a>　攜帶清單 → <a href="沖繩家庭旅遊企劃書_行程規劃.html#pack">① 行前攜帶清單</a>　颱風應變 → <a href="沖繩家庭旅遊企劃書_行程規劃.html#field-typhoon">① 現場手冊・颱風與天氣</a>
+    </div>
+  </section>
+
 </div>
-<div class="note">每天的細部時刻、車程、備案 → <a href="沖繩家庭旅遊企劃書_行程規劃.html">① 行程規劃</a>。</div>
 
-<h2>緊急聯絡<small>CONTACTS</small></h2>
-<table><thead><tr><th>對象</th><th>電話</th><th>備註</th></tr></thead><tbody>
-<tr><td>虹夕諾雅 沖繩</td><td><b>+81-98-921-6800</b><br><small>夜間・緊急 18:00–翌 9:30</small><br>預約 +81-50-3134-8091<br><small>9:30–18:00</small></td><td>沖縄県中頭郡読谷村儀間 474｜入住 15:00／退房 12:00｜停車免費・室外・不需預約<br><b>9/25 預計 20:30 才到，務必先用 email 告知晚到；當晚要打的是夜間那一支</b></td></tr>
-<tr><td>ORIX 租車 那霸機場站</td><td><b>+81-98-851-0543</b></td><td>沖縄県豊見城市豊崎 1-1174｜9/25 取車、9/28 還車（同店）</td></tr>
-<tr><td>Time Design（訂單旅行社）</td><td><b>+65-6550-6327</b><br><small>reservations@tour-list.com</small></td><td>新加坡總線 24 小時語音；人工客服平日 10:00–17:00（日本時間）。<b>班機異動、訂單變更找這裡</b></td></tr>
-<tr><td>Thai Vietjet Air<span class="jp">（泰越捷航空）</span></td><td><b>台灣 +886-2-7726-0088</b><br><b>日本 +81-50-5482-5538</b></td><td><b>v2.1：電話由 Time Design 2026/08/03 來信提供。</b>行李加購與選位可自行在官網辦（不影響套裝）；班機取消想改搭其他班機也是找航空公司 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a></td></tr><tr><td>和運租車・專車接送<span class="jp">（台灣端機場接送）</span></td><td><b>(02) 5589-0800</b></td><td><b>v2.1</b>｜9/25 10:00 送機、9/28 接機（依航班抵達時間）。<b>送機免費等候只有 20 分鐘，接機自班機實際抵達起 60 分鐘</b>；需延長等候要提前打這支 → <a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a>第伍節</td></tr>
-<tr><td>日本 警察（緊急報案）</td><td><b>110</b></td><td>犯罪、車禍、走失、失竊。24 小時，可要求中文／英文口譯</td></tr>
-<tr><td>日本 救護車・消防</td><td><b>119</b></td><td>24 小時。孩子發燒送醫也是打這支</td></tr>
-<tr><td>こども医療電話相談（兒童醫療電話諮詢）</td><td><b>#8000</b></td><td>全日本共通。要不要送醫拿不定主意時先撥這支</td></tr>
-<tr><td>沖縄県立南部医療センター・こども医療センター（沖繩縣立南部醫療中心・兒童醫療中心）</td><td><b>098-888-0123</b></td><td>島尻郡南風原町新川 118-1｜<b>沖繩小兒重症的最高後送醫院</b>，機場・那霸方向</td></tr>
-<tr><td>沖縄県立中部病院（沖繩縣立中部醫院）</td><td><b>098-973-4111</b></td><td>うるま市字宮里 281｜24 小時急診，<b>從讀谷開車最快到得了的三次急救醫院</b></td></tr>
-<tr><td>那覇市立病院（那霸市立醫院）</td><td><b>098-884-5111</b></td><td>那覇市古島 2-31-1｜返程日在那霸一帶時的就近選項</td></tr>
-<tr><td>沖縄県警察本部（沖繩縣警察總部）</td><td><b>098-862-0110</b></td><td>那覇市泉崎 1-2-2｜總機；各警察署電話請當地查詢</td></tr>
-<tr><td>台北駐日經濟文化代表處 那霸分處</td><td><b>098-862-7008</b></td><td>那覇市久茂地 3-15-9 アルテビル那覇 6F｜<b>沖繩有台灣辦事處，不必找東京</b>。護照遺失、重大事故先打這支</td></tr>
-<tr><td>外交部 旅外國人急難救助專線</td><td><b>001-800-0885-0885</b></td><td>自日本市話撥打免付費（001 為國際冠碼）</td></tr>
-</tbody></table>
-<div class="note warn"><b>醫院與辦事處電話請於出發前再核對一次官網</b>（機構搬遷、號碼變更時有發生）。另建議把上表存成手機離線截圖，沖繩山區與海邊訊號不一定穩。</div>
-
-<div class="note warn"><b>出發前務必確認：</b>護照效期 6 個月以上、<b>日本駕照譯本＋台灣駕照正本</b>（缺一不得租車，且每位要開車的成人都要備齊；<b>v2.1：譯本已可線上申辦，監理服務網 NT$100 郵寄，要留郵寄天數</b>）、嬰兒搭機當天須未滿 2 歲、<b>託運行李已加購</b>、9 月下旬仍是沖繩颱風季，需備旅遊不便險與改期方案。完整待辦 → <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a>。</div>
-</div>
-<footer>
-<p><a href="沖繩家庭旅遊企劃書_行程規劃.html">① 行程規劃</a> ｜ <a href="沖繩家庭旅遊企劃書_附件資料.html">② 附件資料</a> ｜ <a href="沖繩家庭旅遊企劃書_待決定事項.html">③ 待決定事項</a> ｜ <a href="沖繩家庭旅遊企劃書_訂購成果.html">④ 訂購成果</a> ｜ <a href="沖繩家庭旅遊企劃書_歷程沿革.html">⑤ 歷程沿革</a></p>
-<p>金額為訂購單所載實際成交價（TWD）。照片來源：Wikimedia Commons（CC BY-SA／CC BY），僅作家庭旅遊規劃示意。</p>
+<footer class="foot">
+  <nav>
+    <a href="沖繩家庭旅遊企劃書_行程規劃.html">① 行程規劃</a>｜
+    <a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦清單</a>｜
+    <a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a>｜
+    <a href="沖繩家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>
+  </nav>
+  <p>金額為訂購單所載實際成交價（TWD）。照片來源：Wikimedia Commons（CC BY-SA／CC BY），僅作家庭旅遊規劃示意。<br>建立 2026/07/30・更新 2026/08/05（v2.0）</p>
 </footer>
-</body></html>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
