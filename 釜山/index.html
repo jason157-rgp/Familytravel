@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!-- 編輯前請先讀根目錄的 CLAUDE.md -->
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>釜山四日｜回憶錄</title>
+<meta name="description" content="2025/05/03–05/06 釜山四天三夜的旅行回憶錄：47 張照片配上時間軸與行程細節。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F2F5F4; --paper:#FBFCFC; --ink:#1B2430; --ink-2:#4A5661; --muted:#7A8790;
+  --line:#D5DDDC; --tint:#DDEAE8; --sea:#1F6F80; --hanbok:#D98894; --hanbok-soft:#F6E1E4;
+  --lantern:#D9A33A; --night:#0E1A26; --night-ink:#EAF0F2;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F171E; --paper:#16212A; --ink:#E7EDEF; --ink-2:#B7C2C8; --muted:#8593A0;
+    --line:#2A3841; --tint:#1D3038; --sea:#5FB4C4; --hanbok:#E9A5AE; --hanbok-soft:#3A2A2F;
+    --lantern:#E6B857; --night:#0A121A; --night-ink:#EAF0F2;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F171E; --paper:#16212A; --ink:#E7EDEF; --ink-2:#B7C2C8; --muted:#8593A0;
+  --line:#2A3841; --tint:#1D3038; --sea:#5FB4C4; --hanbok:#E9A5AE; --hanbok-soft:#3A2A2F;
+  --lantern:#E6B857; --night:#0A121A; --night-ink:#EAF0F2;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.narrow{max-width:720px;margin-left:auto;margin-right:auto}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
+
+/* ---- hero ---- */
+.hero{position:relative;background:var(--night);color:var(--night-ink);overflow:hidden}
+.hero img{width:100%;height:min(78vh,640px);object-fit:cover;object-position:center 55%;opacity:.92}
+.hero .over{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,26,.05) 30%,rgba(10,18,26,.82) 100%)}
+.hero .text{position:absolute;left:0;right:0;bottom:0;padding:0 24px 40px}
+.hero .text>div{max-width:1040px;margin:0 auto}
+.hero .eyebrow{color:#9ED5DF}
+.hero h1{font-size:clamp(52px,9vw,108px);font-weight:900;line-height:1;letter-spacing:.04em;margin-top:10px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero .sub{margin-top:14px;font-family:var(--serif);font-size:clamp(16px,2vw,20px);color:#D9E4E8;max-width:36em}
+.hero .dates{font-family:var(--mono);font-size:13px;color:#A9BAC2;margin-top:10px;letter-spacing:.06em}
+
+/* ---- boarding strip ---- */
+.strip{margin:-28px auto 0;position:relative;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));overflow:hidden;box-shadow:0 12px 40px -20px rgba(0,0,0,.35)}
+.strip>div{padding:16px 18px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+.strip .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.strip .v{font-family:var(--serif);font-size:17px;font-weight:700;margin-top:4px;line-height:1.4}
+.strip .n{font-size:13px;color:var(--ink-2);line-height:1.6;margin-top:2px}
+.strip .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---- prose ---- */
+.lede{max-width:34em;margin:56px auto 0;font-family:var(--serif);font-size:20px;line-height:1.95;color:var(--ink)}
+.lede em{font-style:normal;color:var(--sea)}
+
+/* ---- day chapters ---- */
+.day{margin-top:88px}
+.day-head{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:baseline;padding-top:28px;border-top:1px solid var(--line);margin-bottom:22px}
+.day-num{font-family:var(--serif);font-size:64px;font-weight:900;line-height:1;color:var(--sea);letter-spacing:.02em}
+.day-head h2{font-size:clamp(24px,3.4vw,32px);font-weight:700;line-height:1.3}
+.day-head .meta{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em;margin-top:8px}
+.day.pink .day-num,.day.pink .t,.day.pink .eyebrow{color:var(--hanbok)}
+.day.pink .tl li::before{background:var(--hanbok)}
+.day.pink .note{background:var(--hanbok-soft)}
+
+/* photo layouts */
+figure{margin:0}
+figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:8px;line-height:1.6}
+figcaption b{color:var(--ink-2);font-weight:500;font-family:var(--sans);font-size:12.5px;letter-spacing:0}
+.ph{width:100%;height:100%;object-fit:cover;border-radius:3px;background:var(--tint)}
+.lead{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:stretch;margin-bottom:34px}
+.lead figure:first-child .ph{aspect-ratio:3/2}
+.lead figure:last-child .ph{aspect-ratio:4/5}
+.row{display:grid;gap:18px;margin:22px 0 30px}
+.row.c2{grid-template-columns:1fr 1fr}
+.row.c3{grid-template-columns:1fr 1fr 1fr}
+.row.c2 .ph{aspect-ratio:4/5}
+.row.c3 .ph{aspect-ratio:1/1}
+.row.land .ph{aspect-ratio:3/2}
+.row.mix{grid-template-columns:1fr 1fr 1fr}
+.row.mix figure:nth-child(1){grid-column:span 2}
+.row.mix figure:nth-child(1) .ph{aspect-ratio:2/1.02}
+.row.mix figure:nth-child(2) .ph{aspect-ratio:1/1.02}
+.wide{margin:22px 0 30px}
+.wide .ph{aspect-ratio:21/8}
+@media (max-width:640px){.lead,.row.c2,.row.c3,.row.mix{grid-template-columns:1fr}.row.mix figure:nth-child(1){grid-column:auto}.lead figure:last-child .ph{aspect-ratio:3/2}.row.c3 .ph{aspect-ratio:3/2}.wide .ph{aspect-ratio:16/9}}
+
+/* timeline */
+.body{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;align-items:start}
+@media (max-width:820px){.body{grid-template-columns:1fr}}
+.tl{list-style:none;margin:0;padding:0;border-left:1px solid var(--line);margin-left:60px}
+.tl li{position:relative;padding:0 0 20px 24px}
+.tl li::before{content:"";position:absolute;left:-4.5px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--sea)}
+.tl .t{position:absolute;left:-60px;top:2px;width:48px;text-align:right;font-family:var(--mono);font-size:12px;color:var(--sea);font-variant-numeric:tabular-nums}
+.tl h3{font-family:var(--serif);font-size:18px;font-weight:700;line-height:1.5}
+.tl p{color:var(--ink-2);font-size:15px;line-height:1.8}
+.tl .ko{color:var(--muted);font-size:13px;margin-left:6px;font-weight:400;font-family:var(--sans)}
+@media (max-width:640px){.tl{margin-left:0;border-left:0}.tl li{padding-left:0}.tl li::before{display:none}.tl .t{position:static;display:block;text-align:left;width:auto;margin-bottom:-2px}}
+.note{margin:6px 0 0;padding:14px 18px;background:var(--tint);border-radius:4px;font-size:14px;color:var(--ink-2);line-height:1.75}
+.note b{color:var(--ink);font-weight:700}
+
+/* pull quote */
+.pull{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:36px 0 10px;padding:28px;background:var(--paper);border:1px solid var(--line);border-radius:6px}
+.pull .ph{aspect-ratio:1/1}
+.pull blockquote{margin:0;font-family:var(--serif);font-size:22px;line-height:1.8;color:var(--ink)}
+.pull blockquote small{display:block;margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+@media (max-width:640px){.pull{grid-template-columns:1fr}}
+
+/* closing */
+.close{position:relative;margin-top:88px;background:var(--night);color:var(--night-ink)}
+.close img{width:100%;height:min(70vh,560px);object-fit:cover;object-position:center 40%;opacity:.85}
+.close .text{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:linear-gradient(180deg,rgba(10,18,26,.2),rgba(10,18,26,.55))}
+.close h2{font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:.06em;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+.close p{font-family:var(--serif);color:#D9E4E8;margin-top:12px;max-width:30em;font-size:17px}
+
+/* ledger */
+.ledger{padding:56px 0 0}
+.ledger h2{font-size:26px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.grid>div{background:var(--paper);padding:16px 18px}
+.grid .big{font-family:var(--serif);font-size:30px;font-weight:900;line-height:1.1;color:var(--ink);font-variant-numeric:tabular-nums}
+.grid .big span{font-size:15px;font-weight:500}
+.grid .lab{font-size:13px;color:var(--muted);margin-top:4px}
+.lantern{color:var(--lantern)}
+.foot{margin:40px auto 0;font-family:var(--serif);font-size:15px;color:var(--ink-2);max-width:60ch;line-height:1.9}
+.sources{margin:36px 0 80px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.8;max-width:80ch}
+.sources b{color:var(--ink-2);font-weight:500}
+.topnav{background:var(--night);color:#C9D6DC;font-size:13px;letter-spacing:.06em}
+.topnav .in{max-width:1040px;margin:0 auto;padding:10px 24px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.topnav a{color:#9ED5DF;text-decoration:none}.topnav a:hover{text-decoration:underline}.topnav span{color:#8593A0;margin-left:auto}
+</style>
+</head>
+<body>
+
+<nav class="topnav"><div class="in"><a href="../index.html">🏠 總覽</a><span>釜山四日 · 回憶錄</span><a href="https://drive.google.com/drive/folders/1bL25Pou93pHxXO7COYspegycHhuLXkLe" target="_blank" rel="noopener">📁 訂單文件（私人）</a></div></nav>
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <img src="photos/IMG_2633.jpg" alt="鑽石灣帆船上看廣安大橋的日落">
+  <div class="over"></div>
+  <div class="text"><div>
+    <div class="eyebrow">Travel memoir · Busan, Korea · 2025</div>
+    <h1>釜山四日</h1>
+    <p class="sub">龜山下智久與桃園星野結衣的四天三夜——從凌晨的紅眼班機、水營灣的帆船日落，到佛誕日的韓服與滿寺燈籠。</p>
+    <p class="dates">2025.05.03 SAT — 05.06 TUE · TPE ⇄ PUS · 7C6154 / 7C6153</p>
+  </div></div>
+</header>
+
+<div class="wrap">
+  <section class="strip" aria-label="行程基本資料">
+    <div><div class="k">去程</div><div class="v mono">7C6154</div><div class="n">濟州航空 · 5/3 02:50 桃園 → 金海</div></div>
+    <div><div class="k">回程</div><div class="v mono">7C6153</div><div class="n">濟州航空 · 5/6 22:00 金海 → 桃園</div></div>
+    <div><div class="k">第一晚 · 海雲台</div><div class="v">UH Continental Centre Point</div><div class="n">달맞이길 · 標準雙人房（SPA）33㎡ · 含早餐</div></div>
+    <div><div class="k">第二、三晚 · 西面</div><div class="v">Urbanstay Seomyeon</div><div class="n">中央大路 752 · 無櫃台，門鎖密碼由 email 送達</div></div>
+    <div><div class="k">通行證</div><div class="v">Visit Busan Pass</div><div class="n">兌換了 5/3 的鑽石灣夜遊帆船</div></div>
+    <div><div class="k">網路 / 保險</div><div class="v">LG U+ eSIM · 5 日</div><div class="n">富邦旅平險 5/3 生效</div></div>
+  </section>
+
+  <p class="lede">這趟旅行是在一個週末裡訂完的。4 月 26 日深夜先訂了海雲台的第一晚，隔天下午一口氣把機票、西面的兩晚、eSIM 和額外行李全部搞定；4 月 29 日再用 Visit Busan Pass 預約了鑽石灣的帆船。5 月 2 日晚上，手機裡已經存好一張<em>排到分鐘的行程表</em>——上面寫著 Skyline Luge、海東龍宮寺、X the SKY、SPA LAND、Shake Shack。</p>
+
+  <!-- ================= DAY 0 ================= -->
+  <section class="day">
+    <div class="day-head">
+      <div class="day-num">0</div>
+      <div><h2>出發前夜</h2><div class="meta">2025.05.02 FRI → 05.03 SAT · 台北 → 桃園 → 金海</div></div>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">23:5x</span><h3>把車停進平安停車場</h3><p>晚上開車到桃園，車停在機場旁的平安停車場，凌晨 00:02 走進第一航廈。這是一班真正的紅眼班機——濟州航空 7C6154，02:50 起飛。</p></li>
+        <li><span class="t">04:24</span><h3>機翼外的日出</h3><p>飛到一半，雲層邊緣開始泛橘，整個日出是貼著機翼看完的。</p></li>
+        <li><span class="t">06:57</span><h3>降落金海國際機場</h3><p>落地時天已經全亮。往海雲台的路上經過跨海大橋，Marine City 的高樓一根根從海裡長出來——這是第一眼的釜山。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" src="photos/IMG_2482.jpg" alt="機翼外的日出"><figcaption><b>04:24</b> · 機翼外的日出</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_2491.jpg" alt="清晨過橋看見 Marine City"><figcaption><b>07:39</b> · 過橋，第一眼的 Marine City</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DAY 1 ================= -->
+  <section class="day">
+    <div class="day-head">
+      <div class="day-num">1</div>
+      <div><h2>河豚湯、活章魚，和一艘帆船</h2><div class="meta">2025.05.03 SAT · 廣安里 → 札嘎其 → 影島 → 龍頭山 → 水營灣 → 海雲台</div></div>
+    </div>
+    <div class="lead">
+      <figure><img class="ph" src="photos/IMG_2513.jpg" alt="影島大橋開橋" style="object-position:center 30%"><figcaption><b>14:09 · 影島大橋</b> · 每天下午兩點唯一一次的開橋，整段橋面豎起來，人群仰頭看</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2498.jpg" alt="河豚湯早餐"><figcaption><b>08:40 · 복국</b> · 釜山人的早餐：清澈的河豚湯和一桌小菜</figcaption></figure>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">08:07</span><h3>河豚湯當早餐 <span class="ko">복국</span></h3><p>門口有一缸游來游去的河豚，桌上是一鍋清澈的복국、涼拌小菜和辣魚。這是旅程的第一餐。</p></li>
+        <li><span class="t">10:26</span><h3>廣安里海灘</h3><p>買了張 1,700 韓元的地鐵單程票，出站就是廣安里。天空是一整片厚厚的雲，廣安大橋橫在海上，沙灘上幾乎沒有人。接著在海邊的星巴克坐了一會兒。</p></li>
+        <li><span class="t">12:55</span><h3>札嘎其市場 <span class="ko">자갈치시장</span></h3><p>一整排的水族箱和價目表，最後點了活章魚——上桌時還在盤子裡動——配一杯啤酒和辣醬。桃園星野結衣先幫食物拍照才動筷。</p></li>
+        <li><span class="t">14:00</span><h3>影島大橋開橋</h3><p>剛好趕上每天下午兩點唯一一次的開橋。這是釜山唯一還在運作的開合橋。</p></li>
+        <li><span class="t">15:54</span><h3>釜山塔 · 龍頭山公園</h3><p>樂天百貨光復店後面就是龍頭山。塔裡的螢光塗鴉隧道很適合拍照；一樓的復古布景裡，龜山下智久坐進「용두조개구이」的紅色帳篷，跟一隻大熊一起烤蛤蜊。</p></li>
+        <li><span class="t">18:30</span><h3>鑽石灣夜遊帆船 <span class="ko">다이아몬드베이</span></h3><p>用 Visit Busan Pass 換的兩張票。帆船從水營灣出發，繞過 Marine City 的高樓群往廣安大橋開。日落把天空從橘紅燒成深藍，橋上的燈一盞一盞亮起來。桃園星野結衣在船艙裡靠著背包睡著了。</p></li>
+        <li><span class="t">夜</span><h3>UH Continental Centre Point</h3><p>回到海雲台달맞이길（Dalmaji-gil）的飯店。這一晚訂的是有 SPA 的雙人房，33 平方米，附早餐，訂單裡還附了一份「威士忌時光」。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" src="photos/IMG_2509.jpg" alt="札嘎其市場的活章魚"><figcaption><b>13:11 · 札嘎其</b> · 活章魚、啤酒，和先拍照的桃園星野結衣</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_2624.jpg" alt="桃園星野結衣在帆船上睡著"><figcaption><b>18:50 · 帆船</b> · 靠著背包睡著了</figcaption></figure>
+        </div>
+        <div class="row c2">
+          <figure><img class="ph" src="photos/IMG_2534.jpg" alt="釜山塔的螢光塗鴉隧道" style="aspect-ratio:3/2"><figcaption><b>15:58 · 釜山塔</b> · 螢光塗鴉隧道</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_4155.jpg" alt="復古帳篷布景裡烤蛤蜊" style="aspect-ratio:3/2"><figcaption><b>16:25</b> · 용두조개구이的紅帳篷，和一隻熊</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <figure class="wide"><img class="ph" src="photos/IMG_2503.jpg" alt="廣安里海灘全景" style="object-position:center 60%"><figcaption><b>10:27 · 廣安里海水浴場</b> · 厚雲下的廣安大橋，全景</figcaption></figure>
+    <div class="row mix">
+      <figure><img class="ph" src="photos/IMG_2604.jpg" alt="從帆船上看廣安大橋"><figcaption><b>18:36 · 水營灣</b> · 帆船駛向廣安大橋</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2617.jpg" alt="帆船上的合照"><figcaption><b>18:41</b> · 船艙裡</figcaption></figure>
+    </div>
+    <div class="row c2">
+      <figure><img class="ph" src="photos/IMG_2641.jpg" alt="從船上仰望廣安大橋"><figcaption><b>19:04</b> · 從橋下穿過</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2633.jpg" alt="水營灣的日落" style="aspect-ratio:4/5;object-position:center 45%"><figcaption><b>19:00</b> · 天空從橘紅燒成深藍</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ================= DAY 2 ================= -->
+  <section class="day">
+    <div class="day-head">
+      <div class="day-num">2</div>
+      <div><h2>從山頂滑下來，再上到一百層樓</h2><div class="meta">2025.05.04 SUN · 尾浦 → 機張 → 海東龍宮寺 → 松亭 → X the SKY → 西面</div></div>
+    </div>
+    <div class="lead">
+      <figure><img class="ph" src="photos/IMG_2691.jpg" alt="海東龍宮寺的桃園星野結衣"><figcaption><b>13:04 · 海東龍宮寺</b> · 屋簷、海、和一整排燈籠</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2695.jpg" alt="龍宮寺的燈籠"><figcaption><b>13:21</b> · 佛誕前一天，整座寺掛滿燈籠</figcaption></figure>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">10:15</span><h3>달맞이 步道</h3><p>吃完飯店早餐，沿海雲台藍線公園的尾浦站走了一段，穿過掛滿星星月亮的拱門，海就在鐵軌旁邊。</p></li>
+        <li><span class="t">10:51</span><h3>Skyline Luge Busan</h3><p>先搭纜椅上山——左邊是樂天世界的粉紅城堡——再戴上安全帽一路滑下來。時間軸顯示滑了兩趟：10:51 一趟，12:18 又回去一趟。</p></li>
+        <li><span class="t">13:02</span><h3>海東龍宮寺 <span class="ko">해동용궁사</span></h3><p>隔天就是佛誕日，整座寺廟掛滿紅、藍、黃、粉的燈籠。走過十二生肖石像，在金色菩提葉上寫下願望，桃園星野結衣在石窟裡的佛前投了硬幣。</p></li>
+        <li><span class="t">15:07</span><h3>藍線公園松亭站</h3><p>在紅色的「해운대 블루라인파크」立牌前拍照，走到街口就看得見海。</p></li>
+        <li><span class="t">15:32</span><h3>釜山 X the SKY · 100F</h3><p>海雲台 LCT 頂樓。電梯裡是熱氣球的沉浸式投影，出來就是「2025 100F」燈牌。在 Shocking Bridge 的玻璃地板上自拍，腳下是一百層樓的空氣；窗邊那張側臉照，是這趟旅程被標成「喜好項目」的第一張。</p></li>
+        <li><span class="t">18:10</span><h3>尾浦家韓牛燒肉 <span class="ko">미포집</span></h3><p>炭火上的韓牛、一碗生拌牛肉配梨絲和蛋黃，和整桌小菜。</p></li>
+        <li><span class="t">20:32</span><h3>過廣安大橋到西面</h3><p>計程車開上廣安大橋，擋風玻璃裡是整座橋的燈光。20:52 抵達 Urbanstay Seomyeon。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" src="photos/IMG_2659.jpg" alt="달맞이步道的拱門"><figcaption><b>10:15 · 尾浦</b> · 星星與月亮的拱門</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_2728.jpg" alt="藍線公園松亭站"><figcaption><b>15:07 · 松亭站</b></figcaption></figure>
+        </div>
+        <div class="row c2">
+          <figure><img class="ph" src="photos/IMG_2660.jpg" alt="Skyline Luge 入口" style="aspect-ratio:3/2"><figcaption><b>11:31 · 부산루지</b> · 安全帽戴好</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_2676.jpg" alt="龍宮寺的十二生肖石像" style="aspect-ratio:3/2"><figcaption><b>12:57</b> · 十二生肖石像</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="pull">
+      <figure><img class="ph" src="photos/IMG_2694.jpg" alt="寫著願望的金色菩提葉"></figure>
+      <blockquote>무사무탈 · 재수대통 · 사업번창 · 건강발원 · 만사형통<br>平安無事、財運亨通、事業興隆、身體健康、萬事如意。<small>2025.5.4 · 海東龍宮寺 · 兩個人的名字寫在同一片金葉上</small></blockquote>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" src="photos/IMG_2716.jpg" alt="龍宮寺海邊合照"><figcaption><b>13:37</b> · 岩岸邊</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2730.jpg" alt="松亭街口的海"><figcaption><b>15:29 · 松亭</b> · 街口就是海</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2740.jpg" alt="X the SKY 100F 燈牌"><figcaption><b>16:15 · 100F</b></figcaption></figure>
+    </div>
+    <div class="row mix">
+      <figure><img class="ph" src="photos/IMG_2807.jpg" alt="從一百層樓俯瞰海雲台"><figcaption><b>16:33 · X the SKY</b> · 從一百層樓往下看海雲台</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2763.jpg" alt="窗邊的側臉" style="object-position:center 20%"><figcaption><b>16:22</b> · 喜好項目 ♥</figcaption></figure>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" src="photos/IMG_2786.jpg" alt="玻璃地板上的自拍"><figcaption><b>16:30</b> · Shocking Bridge 玻璃地板</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2810.jpg" alt="X the SKY Garden Beach"><figcaption><b>16:36</b> · Garden Beach</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2817.jpg" alt="尾浦家韓牛"><figcaption><b>18:10 · 미포집</b> · 炭火韓牛</figcaption></figure>
+    </div>
+    <div class="note"><b>飯店的小插曲。</b>西面這兩晚是分開訂的兩張訂單。5/4 早上飯店主動傳訊息：「我看到您有兩筆預訂，需要幫您延長到同一間房嗎？」——晚上回覆已經併成同一間，隔天早上九點後會再寄新的入住指南和門鎖密碼。整間旅館沒有櫃台，一切靠 email 和門鎖密碼完成。</div>
+  </section>
+
+  <!-- ================= DAY 3 ================= -->
+  <section class="day pink">
+    <div class="day-head">
+      <div class="day-num">3</div>
+      <div><h2>穿著韓服站在甘川的屋頂上</h2><div class="meta">2025.05.05 MON · 佛誕日 · 甘川文化村 → 松島 → Centum City → 西面</div></div>
+    </div>
+    <div class="lead">
+      <figure><img class="ph" src="photos/IMG_2857.jpg" alt="甘川文化村屋頂上的韓服背影"><figcaption><b>09:46 · 甘川文化村</b> · 觀景台上的背影——這一張也被標成喜好項目</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2916.jpg" alt="韓服人像"><figcaption><b>10:08</b> · 喜好項目 ♥</figcaption></figure>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">09:00</span><h3>韓服租借 <span class="ko">한복대여</span></h3><p>一整面牆的裙子裡挑了粉色繡花的一套；龜山下智久是粉色背心加黑紗帽。換好衣服先在鏡子前自拍一張，才走出去。</p></li>
+        <li><span class="t">09:46</span><h3>甘川文化村的屋頂觀景台</h3><p>整座山坡是藍色、綠色、粉色的房子一路疊到港口。背影照、揮手照、額頭貼額頭的照片都在這裡拍的。</p></li>
+        <li><span class="t">09:56</span><h3>甘川洞小王子</h3><p>排隊跟小王子和沙漠狐狸合照，鑽進韓屋窗景的攝影布景，再到階梯巷弄裡晃了快兩個小時。</p></li>
+        <li><span class="t">12:01</span><h3>松島海上纜車 <span class="ko">송도해상케이블카</span></h3><p>天色轉陰。搭透明地板的水晶車廂，桃園星野結衣含著棒棒糖看窗外；對面就是松島天空步道。</p></li>
+        <li><span class="t">12:39</span><h3>松島天空步道 · 龍宮雲橋</h3><p>白色鋼構的吊橋伸進海裡，風很大，穿米色大衣走在橋上的照片幾乎每一張都在抓帽子。</p></li>
+        <li><span class="t">14:15</span><h3>SPA LAND Centum City</h3><p>開了 42 分鐘的車到新世界百貨的汗蒸幕，三個小時：泡湯、烤房、休息——還有兩顆汗蒸幕標配的羊角毛巾。</p></li>
+        <li><span class="t">17:48</span><h3>橋村炸雞 西面店</h3><p>晚餐第一輪：炸雞。</p></li>
+        <li><span class="t">19:11</span><h3>釜山樂天飯店 · 무궁화</h3><p>晚餐第二輪：飯店高樓層的韓式餐廳「無窮花」，入口是一整面銅製的木槿花屏風。龍蝦、黃銅火鍋、窗外是西面的夜景。21:46 走回 Urbanstay。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" src="photos/IMG_2845.jpg" alt="韓服租借店裡試穿"><figcaption><b>09:26 · 한복대여</b> · 一整面牆的裙子</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_2851.jpg" alt="鏡子前的合照"><figcaption><b>09:41</b> · 出門前先自拍一張</figcaption></figure>
+        </div>
+        <div class="row c2">
+          <figure><img class="ph" src="photos/IMG_2866.jpg" alt="觀景台上額頭相貼" style="aspect-ratio:3/2"><figcaption><b>09:48</b> · 觀景台</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_2868.jpg" alt="指向遠方的兩人" style="aspect-ratio:3/2"><figcaption><b>09:49</b> · 指著港口</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" src="photos/IMG_2883.jpg" alt="戴著黑紗帽的自拍" style="object-position:center 30%"><figcaption><b>09:52</b> · 갓 戴好了</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_2967.jpg" alt="階梯巷弄裡的韓服"><figcaption><b>10:22</b> · 階梯巷弄</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_3019.jpg" alt="和小王子合照"><figcaption><b>10:44 · 甘川洞小王子</b></figcaption></figure>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" src="photos/IMG_3065.jpg" alt="松島纜車裡"><figcaption><b>12:34 · 松島纜車</b> · 棒棒糖</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_3100.jpg" alt="松島龍宮雲橋"><figcaption><b>13:02 · 龍宮雲橋</b> · 風很大</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_3152.jpg" alt="纜車裡的合照"><figcaption><b>13:33 · 岩南公園</b> · 纜車回程</figcaption></figure>
+    </div>
+    <div class="row mix">
+      <figure><img class="ph" src="photos/IMG_3166.jpg" alt="Spa Land 的羊角毛巾"><figcaption><b>16:08 · SPA LAND</b> · 汗蒸幕標配的羊角毛巾</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_3178.jpg" alt="無窮花餐廳的銅製屏風"><figcaption><b>20:04 · 무궁화</b> · 木槿花屏風</figcaption></figure>
+    </div>
+    <div class="row c2 land">
+      <figure><img class="ph" src="photos/IMG_3179.jpg" alt="黃銅火鍋與夜景"><figcaption><b>20:13</b> · 黃銅火鍋，窗外是西面</figcaption></figure>
+      <figure><img class="ph" src="photos/IMG_3182.jpg" alt="餐廳窗邊的合照"><figcaption><b>21:05</b> · 樂天飯店窗邊</figcaption></figure>
+    </div>
+    <div class="note"><b>剛好是佛誕日。</b>2025 年的釋迦誕辰是 5 月 5 日，也是韓國的國定假日——這解釋了前一天龍宮寺為什麼掛滿燈籠，也解釋了這天甘川文化村的人潮。</div>
+  </section>
+
+  <!-- ================= DAY 4 ================= -->
+  <section class="day">
+    <div class="day-head">
+      <div class="day-num">4</div>
+      <div><h2>最後一天，把西面走成自己的街</h2><div class="meta">2025.05.06 TUE · 西面 → 田浦咖啡街 → 金海機場 → 桃園</div></div>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">09:30</span><h3>退房，走進西面地下街</h3><p>行李寄放後，先在西面地下街逛了 50 分鐘。手機裡存好了兩張 Busan → Taipei 的電子登機證。</p></li>
+        <li><span class="t">11:08</span><h3>三寶遊戲場 <span class="ko">삼보게임랜드</span></h3><p>時間軸最誠實：這家遊戲場去了兩次，上午 11:08 一次，下午 15:16 又回去待了一個半小時。</p></li>
+        <li><span class="t">11:58</span><h3>田浦咖啡街</h3><p>在咖啡街泡了三個多小時。白磚牆的烘焙坊、一盤烤得金黃的可頌，坐在落地窗邊看西面的十字路口。</p></li>
+        <li><span class="t">17:10</span><h3>橋村炸雞，再一次</h3><p>連續兩天的晚餐都是橋村西面店。18:29 上公車，25 分鐘到金海機場。</p></li>
+        <li><span class="t">22:00</span><h3>7C6153 起飛回台北</h3><p>最後一張照片是機窗外的夜景——釜山的燈火像散開的金色網子，然後是黑色的海。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" src="photos/IMG_3190.jpg" alt="烘焙坊的可頌"><figcaption><b>12:02 · 田浦咖啡街</b> · 烤得金黃</figcaption></figure>
+          <figure><img class="ph" src="photos/IMG_3193.jpg" alt="咖啡店落地窗外的西面街口" style="aspect-ratio:4/5"><figcaption><b>14:16</b> · 落地窗外的十字路口</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CLOSING ================= -->
+<section class="close">
+  <img src="photos/IMG_3201.jpg" alt="機窗外的釜山夜景">
+  <div class="text"><div>
+    <div class="eyebrow" style="color:#9ED5DF">2025.05.06 · 22:24 · 7C6153</div>
+    <h2>釜山的燈火像散開的金色網子</h2>
+    <p>然後是黑色的海，然後是家。</p>
+  </div></div>
+</section>
+
+<div class="wrap">
+  <section class="ledger">
+    <h2>帳本</h2>
+    <div class="grid">
+      <div><div class="big">4<span> 天</span></div><div class="lab">3 晚，2 間旅館</div></div>
+      <div><div class="big">2</div><div class="lab">座觀景台：釜山塔、X the SKY 100F</div></div>
+      <div><div class="big">1</div><div class="lab">艘帆船，1 段海上纜車</div></div>
+      <div><div class="big">1</div><div class="lab">套韓服，拍了一整個上午</div></div>
+      <div><div class="big">2×</div><div class="lab">橋村炸雞西面店、三寶遊戲場</div></div>
+      <div><div class="big lantern">5/5</div><div class="lab">佛誕日，燈籠掛滿海東龍宮寺</div></div>
+      <div><div class="big">6.6<span> 小時</span></div><div class="lab">5/4–5/6 時間軸記錄的步行時間</div></div>
+      <div><div class="big">47</div><div class="lab">張照片收在這本回憶錄裡</div></div>
+    </div>
+  </section>
+
+  <p class="foot">這份回憶錄是把三種紀錄疊在一起拼出來的：Google 地圖時間軸給了每個地點進出的分鐘、Gmail 裡的 Trip.com 訂單和飯店訊息給了骨架、iCloud 照片給了畫面。凡是照片和時間軸對不上的地方，以照片的時間為準。</p>
+
+  <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin:24px 0 0;letter-spacing:.06em">釜山回憶錄 v1.0 ・ 建立 2026/09/03</p>
+  <div class="sources" id="ver">
+    <b>資料來源</b>（訂位代號、確認編號與旅客資料一律見私人記錄）<br>
+    Google 地圖時間軸截圖（5/3–5/6）· Gmail：Trip.com 機票／住宿／eSIM 訂單確認信、Urbanstay Seomyeon 飯店訊息、富邦產險電子保單通知 · Downloads／旅遊／釜山：5:3住宿.pdf、5:4-6住宿.pdf、西面入住須知.pdf、鑽石遊艇預約.pdf、韓國esim.pdf · iCloud 照片：2025/5/2–5/6 圖庫
+  </div>
+</div>
+
+</body>
+</html>
