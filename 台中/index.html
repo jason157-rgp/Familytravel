@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>台中婚宴小旅行｜10/17–10/18</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F3F1EC; --paper:#FFFFFF; --ink:#1B2420; --ink2:#4A5650; --muted:#7A847F; --line:#DEDAD1;
+  --dusk:#1E3F37; --dusk2:#2C5A4E; --lamp:#D9A441; --lamp-soft:#F7EBD0;
+  --morn:#EAF2F1; --river:#3E8A8A; --river-soft:#D7EBE9; --papaya:#E88A4E; --dot:#C8372D;
+  --serif:"Noto Serif TC","Songti TC",serif; --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121614; --paper:#1A201D; --ink:#E7ECE9; --ink2:#B7C1BC; --muted:#8A948F; --line:#2D3632;
+  --lamp-soft:#3A2F1A; --morn:#18211F; --river:#7CC3C1; --river-soft:#1E2E2D;
+}}
+:root[data-theme="dark"]{
+  --bg:#121614; --paper:#1A201D; --ink:#E7ECE9; --ink2:#B7C1BC; --muted:#8A948F; --line:#2D3632;
+  --lamp-soft:#3A2F1A; --morn:#18211F; --river:#7CC3C1; --river-soft:#1E2E2D;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.3}
+p{margin:0}
+.wrap{max-width:820px;margin:0 auto;padding:0 18px}
+svg{display:block;max-width:100%;height:auto}
+
+/* cover */
+.cover{background:var(--dusk);color:#F3F1EC;border-radius:0 0 22px 22px;overflow:hidden}
+.cover .wrap{padding-top:34px;padding-bottom:0}
+.kicker{font-size:13px;letter-spacing:.18em;color:var(--lamp)}
+.cover h1{font-size:clamp(32px,7vw,50px);font-weight:900;margin-top:6px;letter-spacing:.02em}
+.cover .who{margin-top:10px;font-size:14.5px;color:rgba(243,241,236,.8)}
+.cover .who b{color:#fff;font-weight:500}
+.cover svg{margin-top:18px}
+
+/* stay card */
+.stay{margin-top:-6px;position:relative;z-index:2}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px}
+.stay .card{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.stay h2{font-size:21px}
+.stay .room{color:var(--ink2);font-size:14.5px;margin-top:2px}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.facts span{font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--ink2)}
+.facts span.ok{background:var(--river-soft);border-color:transparent;color:var(--river)}
+.stay .meta{margin-top:10px;font-size:13.5px;color:var(--muted)}
+@media (max-width:560px){.stay .card{grid-template-columns:1fr}.stay .card>svg{max-width:220px;margin:0 auto}}
+
+/* days */
+.day{margin-top:44px}
+.dayhead{display:flex;align-items:flex-end;gap:14px;margin-bottom:16px}
+.daynum{font-family:var(--serif);font-weight:900;font-size:56px;line-height:.85}
+.day1 .daynum{color:var(--lamp)}
+.day2 .daynum{color:var(--river)}
+.dayhead h2{font-size:23px}
+.dayhead p{font-size:14px;color:var(--muted)}
+
+.tl{position:relative;margin:0;padding:0;list-style:none}
+.tl::before{content:"";position:absolute;left:62px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:52px 22px 1fr;gap:0 10px;padding:9px 0;align-items:start}
+.tl .t{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;text-align:right;padding-top:1px}
+.tl .dot{width:14px;height:14px;border-radius:50%;margin:5px 0 0 3px;background:var(--paper);border:3px solid var(--line);position:relative;z-index:1}
+.day1 .tl .dot{border-color:var(--lamp)}
+.day2 .tl .dot{border-color:var(--river)}
+.tl li.key .dot{background:var(--lamp);border-color:var(--lamp)}
+.day2 .tl li.key .dot{background:var(--river);border-color:var(--river)}
+.tl .w b{display:block;font-size:16px}
+.tl .w span{display:block;font-size:14px;color:var(--ink2)}
+.tl li.sub .w b{font-weight:500;font-size:15px;color:var(--ink2)}
+
+.illo{margin:18px 0 6px;border-radius:14px;overflow:hidden}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 6px}
+.pair .illo{margin:0}
+.cap{font-size:12.5px;color:var(--muted);margin-top:6px;text-align:center}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+
+.tip{margin-top:14px;background:var(--lamp-soft);border-radius:12px;padding:12px 16px;font-size:14.5px}
+.day2 .tip{background:var(--river-soft)}
+
+/* bring */
+.bring{margin-top:44px}
+.bring h2{font-size:21px;margin-bottom:12px}
+.items{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.items div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:14px;text-align:center}
+.items svg{width:44px;height:44px;margin:0 auto 6px}
+
+
+.mapsec{margin-top:28px}
+.mapsec h2{font-size:21px}
+.mapsec .lead{font-size:14px;color:var(--muted);margin-top:4px}
+.mapframe{margin-top:12px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:10px;overflow:hidden}
+.mapframe img{width:100%;height:auto;display:block;border-radius:10px}
+.pins{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pins span{font-size:12.5px;border-radius:999px;padding:2px 10px;color:#fff}
+.credit{font-size:12px;color:var(--muted);margin-top:8px}
+footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
+a{color:inherit}
+</style>
+</head>
+<body>
+
+<nav style="background:#16302A;font-size:13.5px"><div class="wrap" style="display:flex;justify-content:space-between;padding-top:10px;padding-bottom:10px"><a href="../index.html" style="color:#F3F1EC;text-decoration:none">🏠 總覽</a><span style="color:rgba(243,241,236,.7)">台中婚宴小旅行</span></div></nav>
+<header class="cover">
+  <div class="wrap">
+    <div class="kicker">TAICHUNG ・ 2026.10.17 – 10.18</div>
+    <h1>台中婚宴小旅行</h1>
+    <p class="who"><b>龜山下智久</b>（開車）・<b>桃園星野結衣</b>・<b>煞氣E小魚乾E</b>（1 歲 10 個月）</p>
+    <!-- cover illustration: road from city to mountain manor at dusk -->
+    <svg viewBox="0 0 800 220" role="img" aria-label="傍晚從城市開往山間莊園的插圖">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E3F37"/><stop offset="1" stop-color="#3C6B5C"/></linearGradient>
+      </defs>
+      <rect width="800" height="220" fill="url(#sky)"/>
+      <circle cx="660" cy="60" r="26" fill="#F2D38A" opacity=".9"/>
+      <g fill="#F3F1EC" opacity=".7"><circle cx="120" cy="40" r="1.6"/><circle cx="260" cy="28" r="1.2"/><circle cx="420" cy="50" r="1.4"/><circle cx="540" cy="24" r="1.2"/><circle cx="740" cy="34" r="1.5"/></g>
+      <path d="M380 220 L520 92 L600 150 L690 70 L800 140 L800 220Z" fill="#244B41"/>
+      <path d="M440 220 L560 130 L640 175 L720 120 L800 170 L800 220Z" fill="#1A3A32"/>
+      <!-- manor with string lights -->
+      <g transform="translate(600 118)">
+        <rect x="0" y="18" width="70" height="34" fill="#F3F1EC"/>
+        <path d="M-6 20 L35 -4 L76 20Z" fill="#C9B79A"/>
+        <rect x="28" y="32" width="14" height="20" fill="#D9A441"/>
+        <rect x="8" y="28" width="12" height="10" fill="#F2D38A"/><rect x="50" y="28" width="12" height="10" fill="#F2D38A"/>
+        <path d="M-30 14 Q-15 26 0 18 M70 18 Q90 28 108 14" stroke="#F2D38A" stroke-width="1" fill="none"/>
+        <g fill="#FFE4A0"><circle cx="-24" cy="19" r="2"/><circle cx="-14" cy="23" r="2"/><circle cx="-6" cy="22" r="2"/><circle cx="80" cy="23" r="2"/><circle cx="90" cy="24" r="2"/><circle cx="100" cy="20" r="2"/></g>
+      </g>
+      <!-- city skyline left -->
+      <g fill="#2C5A4E"><rect x="20" y="120" width="34" height="100"/><rect x="60" y="96" width="28" height="124"/><rect x="94" y="132" width="40" height="88"/><rect x="140" y="110" width="22" height="110"/><rect x="168" y="140" width="36" height="80"/></g>
+      <g fill="#D9A441" opacity=".8"><rect x="28" y="132" width="6" height="6"/><rect x="40" y="150" width="6" height="6"/><rect x="68" y="110" width="5" height="6"/><rect x="76" y="130" width="5" height="6"/><rect x="104" y="146" width="6" height="6"/><rect x="176" y="154" width="6" height="6"/></g>
+      <!-- road -->
+      <path d="M0 205 C200 200 320 190 430 178 S580 170 610 172" stroke="#0F2621" stroke-width="16" fill="none" stroke-linecap="round"/>
+      <path d="M0 205 C200 200 320 190 430 178 S580 170 610 172" stroke="#D9A441" stroke-width="2" stroke-dasharray="10 12" fill="none"/>
+      <!-- car -->
+      <g transform="translate(300 172)">
+        <path d="M0 14 L6 2 Q8 -2 14 -2 L38 -2 Q44 -2 47 3 L52 10 L60 12 Q64 13 64 18 L64 22 L0 22Z" fill="#F3F1EC"/>
+        <path d="M10 3 L14 -0 L26 -0 L26 9 L8 9Z M30 -0 L40 -0 L45 9 L30 9Z" fill="#9CC3B6"/>
+        <circle cx="14" cy="22" r="6" fill="#0F2621"/><circle cx="50" cy="22" r="6" fill="#0F2621"/>
+        <circle cx="14" cy="22" r="2.4" fill="#C9B79A"/><circle cx="50" cy="22" r="2.4" fill="#C9B79A"/>
+        <circle cx="64" cy="16" r="2.5" fill="#FFE4A0"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="stay">
+  <div class="card">
+    <!-- hotel illustration: red-dot facade with silver slide -->
+    <svg viewBox="0 0 160 150" role="img" aria-label="紅點文旅插圖：紅點外牆與大廳銀色溜滑梯">
+      <rect x="10" y="20" width="140" height="122" rx="6" fill="#F3F1EC" stroke="#DEDAD1"/>
+      <rect x="10" y="20" width="140" height="22" rx="6" fill="#C8372D"/>
+      <g fill="#F3F1EC"><circle cx="24" cy="31" r="3"/><circle cx="40" cy="31" r="3"/><circle cx="56" cy="31" r="3"/><circle cx="72" cy="31" r="3"/><circle cx="88" cy="31" r="3"/><circle cx="104" cy="31" r="3"/><circle cx="120" cy="31" r="3"/><circle cx="136" cy="31" r="3"/></g>
+      <g fill="#B9D6D3"><rect x="22" y="52" width="24" height="18" rx="2"/><rect x="56" y="52" width="24" height="18" rx="2"/><rect x="90" y="52" width="24" height="18" rx="2"/></g>
+      <rect x="120" y="50" width="22" height="92" fill="#E9E4DA"/>
+      <path d="M126 58 C126 90 70 92 54 128 L54 134 L62 134 C74 102 132 104 134 60Z" fill="#C8CDD0" stroke="#9AA2A6"/>
+      <circle cx="40" cy="128" r="9" fill="#C8372D"/><circle cx="40" cy="128" r="3" fill="#F3F1EC"/>
+      <rect x="10" y="138" width="140" height="4" fill="#DEDAD1"/>
+    </svg>
+    <div>
+      <h2>紅點文旅</h2>
+      <p class="room">冉冉客房（附浴缸）・1 張特大雙人床・28 ㎡</p>
+      <div class="facts">
+        <span class="ok">嬰兒床・澡盆・消毒鍋已備</span>
+        <span class="ok">櫃台 24 小時</span>
+        <span class="ok">10/18 早餐兩客</span>
+        <span>已預付</span>
+        <span>10/13 23:59 前可免費取消</span>
+      </div>
+      <p class="meta">台中市中區民族路 206 號・04-2229-9333・入住 15:00／退房 11:00・停車：特約停車場（步行 3–5 分）・訂單資料見私人記錄</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="mapsec">
+  <h2>紅點周邊散步地圖</h2>
+  <p class="lead">第二天的散步與木瓜牛奶都在這張圖上，走路就到</p>
+  <div class="mapframe"><img src="https://admin.hotelnews.tw/FileUploads/hotel-1205/ckupload/%E5%9C%B0%E5%9C%96_%E5%85%A8ok_0-XXL.jpg" referrerpolicy="no-referrer" onerror="this.closest('.mapframe').innerHTML='<p style=&quot;padding:16px;font-size:14px&quot;>地圖暫時無法顯示，<a href=&quot;https://admin.hotelnews.tw/FileUploads/hotel-1205/ckupload/%E5%9C%B0%E5%9C%96_%E5%85%A8ok_0-XXL.jpg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>點此開啟原圖</a></p>'" alt="紅點文旅周邊手繪地圖：柳川水岸、City milk、中華夜市、第二市場、台中州廳等" loading="lazy"></div>
+  <div class="pins"><span style="background:#C8372D">紅點文旅：住宿</span><span style="background:#3E8A8A">柳川水岸：早上散步</span><span style="background:#E88A4E">City milk：12:00 買木瓜牛奶</span></div>
+  <p class="credit">地圖插畫：紅點文旅周邊手繪地圖</p>
+</section>
+
+<!-- DAY 1 -->
+<section class="day day1">
+  <div class="dayhead"><span class="daynum">1</span><div><h2>10/17（六）婚宴日</h2><p>午餐後出發，傍晚在山裡見證，夜裡回城</p></div></div>
+  <ol class="tl">
+    <li><span class="t">11:30</span><span class="dot"></span><span class="w"><b>在家吃午餐</b><span>換好婚禮服裝，過夜小包放上車</span></span></li>
+    <li class="key"><span class="t">12:00</span><span class="dot"></span><span class="w"><b>台北出發</b><span>最晚 12:15；小魚乾在車上午睡，中途休息站停一次</span></span></li>
+    <li><span class="t">14:30</span><span class="dot"></span><span class="w"><b>紅點文旅：辦手續、寄放行李</b><span>門口臨停，一人進去辦、一人留車上；房卡視房況</span></span></li>
+    <li class="key"><span class="t">14:45</span><span class="dot"></span><span class="w"><b>出發往克里夫莊園</b><span>約 55–60 分鐘，最後一段是東崎路山路</span></span></li>
+    <li><span class="t">15:45</span><span class="dot"></span><span class="w"><b>抵達克里夫莊園</b><span>東勢區東崎路三段 87 號，105 巷入園</span></span></li>
+    <li class="sub"><span class="t">16:00</span><span class="dot"></span><span class="w"><b>證婚儀式入場・16:30 儀式開始</b></span></li>
+    <li class="sub"><span class="t">17:00</span><span class="dot"></span><span class="w"><b>迎賓雞尾酒・17:30 晚宴入場</b></span></li>
+    <li class="key"><span class="t">18:00</span><span class="dot"></span><span class="w"><b>晚宴開席</b></span></li>
+    <li><span class="t">20:00</span><span class="dot"></span><span class="w"><b>向新人致意後離席</b><span>20:00–20:30 走；待到散場約 21:00</span></span></li>
+    <li><span class="t">21:00</span><span class="dot"></span><span class="w"><b>回到紅點、直接進房</b><span>門口先下車，再去停車；今晚不洗澡，留到明早泡</span></span></li>
+  </ol>
+
+  <div class="illo">
+    <!-- wedding garden at dusk -->
+    <svg viewBox="0 0 800 200" role="img" aria-label="山間莊園婚禮花園與串燈插圖">
+      <rect width="800" height="200" fill="#2C5A4E"/>
+      <path d="M0 120 L120 60 L240 110 L380 40 L520 100 L650 50 L800 100 L800 200 L0 200Z" fill="#244B41"/>
+      <rect y="150" width="800" height="50" fill="#1E3F37"/>
+      <path d="M40 40 Q200 90 400 40 T760 40" stroke="#F2D38A" stroke-width="1.2" fill="none"/>
+      <g fill="#FFE4A0"><circle cx="80" cy="54" r="3.2"/><circle cx="140" cy="68" r="3.2"/><circle cx="200" cy="74" r="3.2"/><circle cx="260" cy="70" r="3.2"/><circle cx="320" cy="58" r="3.2"/><circle cx="460" cy="54" r="3.2"/><circle cx="520" cy="68" r="3.2"/><circle cx="580" cy="74" r="3.2"/><circle cx="640" cy="70" r="3.2"/><circle cx="700" cy="58" r="3.2"/></g>
+      <!-- arch -->
+      <path d="M340 160 L340 100 Q400 50 460 100 L460 160" stroke="#F3F1EC" stroke-width="6" fill="none"/>
+      <g fill="#E8A3A0"><circle cx="350" cy="88" r="7"/><circle cx="372" cy="72" r="6"/><circle cx="400" cy="66" r="7"/><circle cx="428" cy="72" r="6"/><circle cx="450" cy="88" r="7"/></g>
+      <g fill="#9CC3B6"><circle cx="360" cy="80" r="4"/><circle cx="440" cy="80" r="4"/></g>
+      <!-- tables -->
+      <g><ellipse cx="170" cy="168" rx="46" ry="8" fill="#F3F1EC"/><rect x="166" y="168" width="8" height="18" fill="#C9B79A"/><circle cx="160" cy="160" r="3" fill="#D9A441"/><circle cx="180" cy="160" r="3" fill="#D9A441"/></g>
+      <g><ellipse cx="630" cy="168" rx="46" ry="8" fill="#F3F1EC"/><rect x="626" y="168" width="8" height="18" fill="#C9B79A"/><circle cx="620" cy="160" r="3" fill="#D9A441"/><circle cx="640" cy="160" r="3" fill="#D9A441"/></g>
+    </svg>
+  </div>
+  <p class="cap">16:00 入場前抵達就好；十月中山區夜裡涼，外套放手邊</p>
+
+  <div class="tip">14:30 若到不了紅點，就直接開去莊園，晚上回來再一次辦入住。櫃台 24 小時有人，嬰兒床等用品也已放在房間。</div>
+</section>
+
+<!-- DAY 2 -->
+<section class="day day2">
+  <div class="dayhead"><span class="daynum">2</span><div><h2>10/18（日）柳川的早晨</h2><p>趁太陽還不大散步，買一杯木瓜牛奶回台北</p></div></div>
+  <ol class="tl">
+    <li class="key"><span class="t">07:45</span><span class="dot"></span><span class="w"><b>柳川水岸景觀步道散步</b><span>出飯店就接上步道，走 40 分鐘左右；最晚 08:30 出門</span></span></li>
+    <li><span class="t">08:30</span><span class="dot"></span><span class="w"><b>B1 早餐</b><span>套餐兩客，供應到 10:00</span></span></li>
+    <li><span class="t">09:15</span><span class="dot"></span><span class="w"><b>房間浴缸泡澡</b><span>用自己帶的沐浴用品</span></span></li>
+    <li class="key"><span class="t">10:00</span><span class="dot"></span><span class="w"><b>大廳銀色溜滑梯</b><span>10:00 開放；更早可去 2F 親子空間（08:00 起）</span></span></li>
+    <li><span class="t">10:50</span><span class="dot"></span><span class="w"><b>退房</b><span>11:00 前</span></span></li>
+    <li><span class="t">11:00</span><span class="dot"></span><span class="w"><b>附近吃早午餐</b></span></li>
+    <li class="key"><span class="t">12:00</span><span class="dot"></span><span class="w"><b>CITY MILK 中華店・木瓜牛奶</b><span>中華路一段 64 號，週日 12:00 開門；一人臨停、一人去買</span></span></li>
+    <li><span class="t">12:15</span><span class="dot"></span><span class="w"><b>回台北</b><span>小魚乾在車上午睡，約 14:45 到家</span></span></li>
+  </ol>
+
+  <div class="pair">
+    <div>
+      <div class="illo">
+        <!-- river walk morning -->
+        <svg viewBox="0 0 400 220" role="img" aria-label="早晨柳川水岸步道插圖">
+          <rect width="400" height="220" fill="#EAF2F1"/>
+          <circle cx="330" cy="46" r="20" fill="#F7D99B"/>
+          <path d="M0 150 C80 140 160 160 240 150 S360 140 400 148 L400 220 L0 220Z" fill="#7FB7B3"/>
+          <path d="M20 172 C80 166 140 176 200 170 M220 184 C280 178 330 188 380 182" stroke="#EAF2F1" stroke-width="2" fill="none" opacity=".8"/>
+          <rect y="128" width="400" height="12" fill="#D9CDB8"/>
+          <!-- willow -->
+          <rect x="70" y="60" width="6" height="70" fill="#7A6A55"/>
+          <g stroke="#5E9E7E" stroke-width="2" fill="none"><path d="M73 62 Q50 80 46 120"/><path d="M73 62 Q60 86 60 126"/><path d="M73 62 Q86 86 88 124"/><path d="M73 62 Q100 80 104 118"/><path d="M73 62 Q74 90 74 128"/></g>
+          <rect x="300" y="72" width="6" height="58" fill="#7A6A55"/>
+          <g stroke="#5E9E7E" stroke-width="2" fill="none"><path d="M303 74 Q284 90 280 124"/><path d="M303 74 Q296 96 296 128"/><path d="M303 74 Q318 96 320 126"/><path d="M303 74 Q330 90 334 120"/></g>
+          <!-- family walking -->
+          <g transform="translate(170 86)">
+            <circle cx="10" cy="6" r="6" fill="#4A5650"/><rect x="5" y="13" width="10" height="22" rx="4" fill="#3E8A8A"/><rect x="6" y="34" width="3" height="10" fill="#4A5650"/><rect x="11" y="34" width="3" height="10" fill="#4A5650"/>
+            <circle cx="36" cy="6" r="6" fill="#4A5650"/><path d="M30 13 L42 13 L45 36 L27 36Z" fill="#E88A4E"/><rect x="32" y="36" width="3" height="8" fill="#4A5650"/><rect x="37" y="36" width="3" height="8" fill="#4A5650"/>
+            <circle cx="24" cy="24" r="4" fill="#4A5650"/><rect x="21" y="28" width="7" height="10" rx="3" fill="#F7D99B"/>
+            <path d="M15 20 L21 28 M28 28 L31 20" stroke="#4A5650" stroke-width="2"/>
+          </g>
+          <!-- egret -->
+          <g transform="translate(240 150)"><path d="M0 0 Q8 -14 4 -22 Q10 -24 12 -20 L8 -14 Q14 -2 0 0Z" fill="#FFFFFF" stroke="#B7C1BC"/><path d="M4 0 L3 10 M6 0 L7 10" stroke="#4A5650"/></g>
+        </svg>
+      </div>
+      <p class="cap">柳川水岸：早上 9 點前陽光柔和，記得防蚊液</p>
+    </div>
+    <div>
+      <div class="illo">
+        <!-- papaya milk -->
+        <svg viewBox="0 0 400 220" role="img" aria-label="一杯木瓜牛奶與木瓜插圖">
+          <rect width="400" height="220" fill="#FBEFE4"/>
+          <g fill="#F5D9C0" opacity=".7"><circle cx="40" cy="40" r="6"/><circle cx="90" cy="180" r="5"/><circle cx="350" cy="190" r="6"/><circle cx="370" cy="40" r="5"/></g>
+          <!-- cup -->
+          <path d="M150 50 L250 50 L238 196 Q237 204 228 204 L172 204 Q163 204 162 196Z" fill="#FFFFFF" stroke="#E2CDBA" stroke-width="2"/>
+          <path d="M156 92 L244 92 L238 196 Q237 204 228 204 L172 204 Q163 204 162 196Z" fill="#F4A66B"/>
+          <path d="M156 92 Q200 84 244 92" stroke="#F8C49A" stroke-width="5" fill="none"/>
+          <rect x="146" y="40" width="108" height="14" rx="5" fill="#3E8A8A"/>
+          <rect x="208" y="6" width="9" height="46" rx="3" fill="#E88A4E" transform="rotate(12 212 30)"/>
+          <rect x="166" y="128" width="68" height="34" rx="6" fill="#FFFFFF" opacity=".9"/>
+          <text x="200" y="151" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="15" font-weight="900" fill="#E88A4E">木瓜牛奶</text>
+          <!-- papaya -->
+          <g transform="translate(272 128)">
+            <ellipse cx="40" cy="38" rx="40" ry="30" fill="#F6B45A"/>
+            <ellipse cx="40" cy="38" rx="30" ry="21" fill="#F08A3C"/>
+            <ellipse cx="40" cy="38" rx="14" ry="9" fill="#F6B45A"/>
+            <g fill="#2B2420"><circle cx="34" cy="36" r="2.4"/><circle cx="40" cy="34" r="2.4"/><circle cx="46" cy="37" r="2.4"/><circle cx="38" cy="41" r="2.4"/><circle cx="44" cy="42" r="2.4"/></g>
+          </g>
+          <g transform="translate(40 150)"><path d="M0 30 Q10 -10 50 0 Q70 20 50 46 Q20 56 0 30Z" fill="#9BC48A"/><path d="M8 30 Q30 18 50 10" stroke="#6E9E5E" stroke-width="2" fill="none"/></g>
+        </svg>
+      </div>
+      <p class="cap">CITY MILK 中華店：週五至週日 12:00–24:00</p>
+    </div>
+  </div>
+
+  <div class="tip">前一晚比較晚睡，07:45 叫不起來就順延，最晚 08:30 前出門散步，早餐一樣來得及。</div>
+</section>
+
+<section class="bring">
+  <h2>別忘了帶</h2>
+  <div class="items">
+    <div><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="10" width="20" height="30" rx="6" fill="#B9D6D3"/><rect x="18" y="4" width="12" height="8" rx="2" fill="#3E8A8A"/><circle cx="24" cy="26" r="5" fill="#FFFFFF"/></svg>小魚乾沐浴用品<br><span style="color:var(--muted);font-size:12.5px">飯店建議自備</span></div>
+    <div><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8 L24 12 L32 8 L42 16 L36 22 L34 20 L34 42 L14 42 L14 20 L12 22 L6 16Z" fill="#E88A4E"/><path d="M24 12 L24 42" stroke="#C26A35" stroke-width="2"/></svg>保暖外套<br><span style="color:var(--muted);font-size:12.5px">山區夜晚</span></div>
+    <div><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="16" width="32" height="24" rx="4" fill="#D9A441"/><path d="M18 16 L18 10 Q18 6 22 6 L26 6 Q30 6 30 10 L30 16" stroke="#8A6A2A" stroke-width="3" fill="none"/><rect x="8" y="24" width="32" height="4" fill="#B9822A"/></svg>過夜小包<br><span style="color:var(--muted);font-size:12.5px">晚上只拿這包進房</span></div>
+    <div><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="22" r="10" fill="#C8372D"/><circle cx="18" cy="22" r="4" fill="#F3F1EC"/><rect x="28" y="20" width="14" height="18" rx="3" fill="#9CC3B6"/><circle cx="35" cy="14" r="5" fill="#F7D99B"/></svg>零食・玩具<br><span style="color:var(--muted);font-size:12.5px">晚宴坐得住</span></div>
+    <div><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="14" width="16" height="28" rx="4" fill="#7FB7B3"/><rect x="19" y="6" width="10" height="9" rx="2" fill="#3E8A8A"/><path d="M8 8 L12 12 M6 16 L11 16 M8 24 L12 20" stroke="#4A5650" stroke-width="2" stroke-linecap="round"/></svg>防蚊液<br><span style="color:var(--muted);font-size:12.5px">柳川早晨</span></div>
+  </div>
+</section>
+
+<footer>台中婚宴小旅行 v1.0 ・ 建立 2026/10/01<br>訂單編號、付款資料見私人記錄</footer>
+</div>
+</body>
+</html>
