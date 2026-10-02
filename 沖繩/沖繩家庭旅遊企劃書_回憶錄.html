@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>沖繩四日｜沖繩家庭旅遊 ⑤ 回憶錄</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 一本相簿式的旅行札記——全幅封面、登機證式資料條、每天一章（時間軸＋照片牆），最後是帳本 */
+:root{
+  --ground:#F7F3F1; --paper:#FFFDFC; --ink:#1A2740; --ink-2:#4B5568; --muted:#7D8494;
+  --line:#E2DAD6; --tint:#E8F1F1; --indigo:#22406B; --coral:#C9573F; --coral-soft:#F7E3DD;
+  --sea:#0E7C7B; --sun:#D89A2B; --night:#0D1A2B; --night-ink:#EEF3F6;
+  --display:"LXGW WenKai TC","Kaiti TC","STKaiti","DFKai-SB",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101722; --paper:#172130; --ink:#E9EDF3; --ink-2:#B9C1CE; --muted:#8C95A5;
+    --line:#2A3546; --tint:#18303A; --indigo:#8FB0E0; --coral:#F08B70; --coral-soft:#3A2622;
+    --sea:#4FC0BC; --sun:#EDB64F; --night:#0A111C; --night-ink:#EEF3F6; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101722; --paper:#172130; --ink:#E9EDF3; --ink-2:#B9C1CE; --muted:#8C95A5;
+  --line:#2A3546; --tint:#18303A; --indigo:#8FB0E0; --coral:#F08B70; --coral-soft:#3A2622;
+  --sea:#4FC0BC; --sun:#EDB64F; --night:#0A111C; --night-ink:#EEF3F6; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;font-weight:700}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
+
+/* hero */
+.hero{position:relative;background:var(--night);color:var(--night-ink);overflow:hidden}
+.hero img{width:100%;height:min(76vh,620px);object-fit:cover;object-position:center 50%}
+.hero .over{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,14,24,0) 35%,rgba(8,14,24,.8) 100%)}
+.hero .text{position:absolute;left:0;right:0;bottom:0;padding:0 20px 44px}
+.hero .text>div{max-width:1040px;margin:0 auto}
+.hero .eyebrow{color:#9FD8D5}
+.hero h1{font-size:clamp(54px,9.5vw,112px);line-height:1;letter-spacing:.06em;margin-top:10px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero .sub{margin-top:14px;font-family:var(--display);font-size:clamp(17px,2.1vw,21px);color:#DCE6EC;max-width:34em;line-height:1.7}
+.hero .dates{font-family:var(--mono);font-size:13px;color:#A8B8C4;margin-top:10px;letter-spacing:.06em}
+
+/* boarding strip */
+.strip{margin:-28px auto 0;position:relative;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));overflow:hidden;box-shadow:0 14px 40px -24px rgba(0,0,0,.4)}
+.strip>div{padding:16px 18px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);min-width:0}
+.strip .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.strip .v{font-family:var(--display);font-size:18px;font-weight:700;margin-top:4px;line-height:1.4}
+.strip .n{font-size:13px;color:var(--ink-2);line-height:1.6;margin-top:2px}
+.strip .mono{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:17px}
+
+.lede{max-width:34em;margin:56px auto 0;font-family:var(--display);font-size:20px;line-height:1.95}
+.lede em{font-style:normal;color:var(--coral)}
+
+/* chapters */
+.day{margin-top:88px}
+.day-head{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:baseline;padding-top:28px;border-top:1px solid var(--line);margin-bottom:22px}
+.day-num{font-family:var(--display);font-size:66px;font-weight:700;line-height:1;color:var(--coral)}
+.day-head h2{font-size:clamp(25px,3.4vw,33px);line-height:1.35}
+.day-head .meta{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em;margin-top:8px}
+.day.indigo .day-num,.day.indigo .tl .t{color:var(--indigo)}
+.day.indigo .tl li::before{background:var(--indigo)}
+
+figure{margin:0;min-width:0}
+figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.03em;margin-top:8px;line-height:1.6}
+figcaption b{color:var(--ink-2);font-weight:500;font-family:var(--sans);font-size:12.5px;letter-spacing:0}
+.ph{width:100%;height:auto;object-fit:cover;border-radius:3px;background:var(--tint)}
+.lead{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;margin-bottom:34px}
+.lead figure:first-child .ph{aspect-ratio:3/2}
+.lead figure:last-child .ph{aspect-ratio:4/5}
+.lead.flip{grid-template-columns:1fr 1.25fr}
+.lead.flip figure:first-child .ph{aspect-ratio:4/5}
+.lead.flip figure:last-child .ph{aspect-ratio:3/2}
+.row{display:grid;gap:18px;margin:22px 0 30px}
+.row.c2{grid-template-columns:1fr 1fr}
+.row.c3{grid-template-columns:1fr 1fr 1fr}
+.row.c4{grid-template-columns:repeat(4,1fr)}
+.row.c2 .ph{aspect-ratio:4/5}
+.row.c3 .ph{aspect-ratio:1/1}
+.row.c4 .ph{aspect-ratio:3/4}
+.row.land .ph{aspect-ratio:3/2}
+.row.mix{grid-template-columns:1fr 1fr 1fr}
+.row.mix figure:nth-child(1){grid-column:span 2}
+.row.mix figure:nth-child(1) .ph{aspect-ratio:2/1.02}
+.row.mix figure:nth-child(2) .ph{aspect-ratio:1/1.02}
+.wide{margin:22px 0 30px}
+.wide .ph{aspect-ratio:21/8}
+.body{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;align-items:start}
+.body>*{min-width:0}
+@media (max-width:820px){.body{grid-template-columns:1fr}.row.c4{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.lead,.lead.flip,.row.c2,.row.c3,.row.mix{grid-template-columns:1fr}.row.mix figure:nth-child(1){grid-column:auto}.lead .ph,.lead.flip .ph{aspect-ratio:3/2!important}.row.c3 .ph{aspect-ratio:3/2}.wide .ph{aspect-ratio:16/9}}
+
+.tl{list-style:none;margin:0 0 0 60px;padding:0;border-left:1px solid var(--line)}
+.tl li{position:relative;padding:0 0 20px 24px}
+.tl li::before{content:"";position:absolute;left:-4.5px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.tl .t{position:absolute;left:-62px;top:2px;width:50px;text-align:right;font-family:var(--mono);font-size:12px;color:var(--coral);font-variant-numeric:tabular-nums}
+.tl h3{font-size:19px;line-height:1.5}
+.tl p{color:var(--ink-2);font-size:15px;line-height:1.8}
+.tl .jp{color:var(--muted);font-size:13px;margin-left:6px;font-weight:400;font-family:var(--sans)}
+@media (max-width:640px){.tl{margin-left:0;border-left:0}.tl li{padding-left:0}.tl li::before{display:none}.tl .t{position:static;display:block;text-align:left;width:auto;margin-bottom:-2px}}
+.note{margin:6px 0 0;padding:14px 18px;background:var(--coral-soft);border-radius:4px;font-size:14px;color:var(--ink-2);line-height:1.75}
+.note b{color:var(--ink)}
+
+.pull{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:36px 0 10px;padding:28px;background:var(--paper);border:1px solid var(--line);border-radius:6px}
+.pull .ph{aspect-ratio:1/1}
+.pull blockquote{margin:0;font-family:var(--display);font-size:24px;line-height:1.75}
+.pull blockquote small{display:block;margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em;line-height:1.7}
+@media (max-width:640px){.pull{grid-template-columns:1fr;padding:20px}}
+
+.close{position:relative;margin-top:88px;background:var(--night);color:var(--night-ink)}
+.close img{width:100%;height:min(70vh,560px);object-fit:cover;object-position:center 55%}
+.close .text{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:linear-gradient(180deg,rgba(8,14,24,.15),rgba(8,14,24,.55))}
+.close h2{font-size:clamp(30px,5vw,50px);letter-spacing:.06em;text-shadow:0 2px 20px rgba(0,0,0,.45)}
+.close p{font-family:var(--display);color:#DCE6EC;margin-top:12px;max-width:30em;font-size:18px}
+.close .eyebrow{color:#9FD8D5}
+
+.ledger{padding-top:56px}
+.ledger h2{font-size:28px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.grid>div{background:var(--paper);padding:16px 18px;min-width:0}
+.grid .big{font-family:var(--display);font-size:32px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.grid .big span{font-size:15px;font-weight:400}
+.grid .lab{font-size:13px;color:var(--muted);margin-top:4px}
+.grid .hot{color:var(--coral)}
+.lessons{margin-top:48px}
+.lessons h2{font-size:24px;margin-bottom:12px}
+.lessons ol{margin:0;padding-left:1.4em;max-width:62ch;color:var(--ink-2)}
+.lessons li{margin-bottom:8px}
+.lessons li b{color:var(--ink)}
+.foot{margin:40px 0 0;font-family:var(--display);font-size:16px;color:var(--ink-2);max-width:60ch;line-height:1.9}
+.sources{margin:36px 0 80px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.8;max-width:80ch}
+.sources b{color:var(--ink-2);font-weight:500}
+.topnav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.topnav .in{max-width:1040px;margin:0 auto;padding:8px 20px;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px}
+.topnav a{color:var(--ink-2);text-decoration:none}
+.topnav a:hover,.topnav a:focus-visible{color:var(--coral);text-decoration:underline}
+.topnav a[aria-current]{color:var(--coral);font-weight:700}
+.pagefoot{max-width:1040px;margin:0 auto;padding:0 20px 48px;font-size:13px;color:var(--muted)}
+.pagefoot a{color:var(--ink-2)}
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="沖繩企劃書"><div class="in">
+  <a href="index.html">🏠 首頁</a>
+  <a href="沖繩家庭旅遊企劃書_行程規劃.html">① 行程</a>
+  <a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦</a>
+  <a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a>
+  <a href="沖繩家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>
+  <a href="沖繩家庭旅遊企劃書_回憶錄.html" aria-current="page">⑤ 回憶錄</a>
+</div></nav>
+
+<header class="hero">
+  <img src="photos/IMG_9225.jpg" alt="清晨的房間裡，小魚乾的剪影對著窗外的海">
+  <div class="over"></div>
+  <div class="text"><div>
+    <div class="eyebrow">Family travel memoir · Okinawa, Japan · 2026</div>
+    <h1>沖繩四日</h1>
+    <p class="sub">龜山下智久、桃園星野結衣、瑄瑄阿姨和小魚乾的四天三夜——讀谷的海、美麗海的那面藍，和每天早上都要先去一趟的沙灘。</p>
+    <p class="dates">2026.09.25 FRI — 09.28 MON · TPE ⇄ OKA · VZ568 / VZ569</p>
+  </div></div>
+</header>
+
+<div class="wrap">
+  <section class="strip" aria-label="行程基本資料">
+    <div><div class="k">去程</div><div class="v mono">VZ568</div><div class="n">泰越捷 · 9/25 14:55 桃園 → 那霸</div></div>
+    <div><div class="k">回程</div><div class="v mono">VZ569</div><div class="n">泰越捷 · 9/28 18:20 那霸 → 桃園，準時</div></div>
+    <div><div class="k">三晚 · 讀谷村</div><div class="v">虹夕諾雅 沖繩</div><div class="n">星野集團 · 殘波岬旁，房間窗外就是海</div></div>
+    <div><div class="k">租車</div><div class="v">ORIX 那霸機場站</div><div class="n">豐崎營業所取還 · 四天開了整個中北部</div></div>
+    <div><div class="k">回台接送</div><div class="v">和運</div><div class="n">落地 52 分鐘上車 · 21:04 到家</div></div>
+    <div><div class="k">天氣</div><div class="v">颱風舒力基</div><div class="n">出發前一路盯路徑，最後沒有影響回程</div></div>
+  </section>
+
+  <p class="lede">這是小魚乾的第一次沖繩。行程是照著「住宿本身就是目的地」排的：三晚都住讀谷的虹夕諾雅，每天只排一個主景點。出發前一週，颱風舒力基一直在附近打轉，我們還做了一張<em>回程應變清單</em>。結果四天裡最常出現在照片裡的，是飯店前那片沙灘，和一個怎麼玩都不膩沙子的小孩。</p>
+
+  <!-- DAY 1 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="day-num">1</div>
+      <div><h2>從急診會診，一路趕到讀谷</h2><div class="meta">2026.09.25 FRI · 台北 → 桃園 → 那霸 → 豐崎 → 宜野灣 → 讀谷</div></div>
+    </div>
+    <div class="lead">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7605.jpg" alt="飛機上的全家自拍"><figcaption><b>14:36 · VZ568</b> · 坐定了，四個人擠進一張自拍（台灣時間）</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7618.jpg" alt="小魚乾趴在機窗邊"><figcaption><b>15:01</b> · 第一次這麼近看機翼和雲</figcaption></figure>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">早上</span><h3>先去一趟醫院</h3><p>出發當天早上，龜山下智久臨時被叫去看急診會診。處理完 9:55 才從家裡出發，10:35 還是準時到了桃園機場。</p></li>
+        <li><span class="t">13:28</span><h3>在機場吃午餐</h3><p>小魚乾坐在大人腿上，一口一口吃完自己的那碗。之後在登機口那面寫著「有些路，在旅行」的紫色光牆前拍了照。</p></li>
+        <li><span class="t">14:55</span><h3>VZ568 起飛</h3><p>一小時二十五分鐘的短程。小魚乾大半時間都貼在窗邊，看雲看到降落。</p></li>
+        <li><span class="t">17:20</span><h3>落地那霸</h3><p>18:09 才走進航廈，18:40 搭上 ORIX 的接駁車，19:05 到豐崎營業所，趕在末班前。</p></li>
+        <li><span class="t">19:56</span><h3>推車還在機場</h3><p>取完車才發現嬰兒推車沒領，只好開回機場拿，到 20:16 才拿回來，多繞了快一個小時。</p></li>
+        <li><span class="t">20:56</span><h3>サンエー宜野湾コンベンションシティ（San-A 宜野灣會議中心店）</h3><p>趁還沒到飯店，先把四天要用的東西買齊。</p></li>
+        <li><span class="t">22:10</span><h3>抵達虹夕諾雅 沖繩</h3><p>比預估晚了一個半小時。房間裡一面紅型花紋的牆、一個下沉式的客廳，窗外是黑的，要到明天早上才看得到海。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7584.jpg" alt="桃園機場的自拍"><figcaption><b>10:47 · 桃園</b> · 出發前的自拍</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7598.jpg" alt="小魚乾在機場吃午餐"><figcaption><b>13:28</b> · 機場的午餐</figcaption></figure>
+        </div>
+        <div class="row c2">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7600.jpg" alt="登機口的紫色光牆"><figcaption><b>14:16</b> · 「有些路，在旅行」</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7635.jpg" alt="租車後座的安全座椅"><figcaption><b>20:39 · 那霸</b> · 推車拿回來了，往北開</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="row c2 land">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7640.jpg" alt="紅型花紋牆與床"><figcaption><b>22:50 · 虹夕諾雅</b> · 紅型花紋的牆</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7642.jpg" alt="下沉式客廳"><figcaption><b>22:51</b> · 下沉式客廳，之後成了小魚乾的遊戲場</figcaption></figure>
+    </div>
+    <div class="note"><b>抵達日不排景點，這次真的救了場。</b>臨時會診、晚進航廈、回頭拿推車，三件事加起來晚了一個半小時，全被 Day 1 的空白吸收掉了。</div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day indigo">
+    <div class="day-head">
+      <div class="day-num">2</div>
+      <div><h2>早上的馬，下午的鯨鯊</h2><div class="meta">2026.09.26 SAT · 讀谷 → 許田休息站 → 海洋博公園・美麗海水族館 → 讀谷</div></div>
+    </div>
+    <div class="lead flip">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9228.jpg" alt="小魚乾扶著窗看海"><figcaption><b>08:43</b> · 第一個早上，扶著窗看海 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7747.jpg" alt="黑潮之海前的合照"><figcaption><b>15:18 · 黑潮之海</b> · 整面藍色的水槽前</figcaption></figure>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">07:48</span><h3>房裡的早餐</h3><p>兩個紅色漆盒裝的早餐送進房間，配一杯柳橙汁。</p></li>
+        <li><span class="t">08:20</span><h3>陽台下面有人在騎馬</h3><p>往下看，沙灘上一排馬沿著浪走過去。窗外的海，昨晚看不到，今天一次補齊。</p></li>
+        <li><span class="t">09:57</span><h3>換上館內服去散步</h3><p>全家換上飯店的藍色館內服，走花園小徑到海邊的草地，拍了這趟第一張全家合照，再坐到礁石上看海。</p></li>
+        <li><span class="t">11:06</span><h3>晚了一點出門</h3><p>小魚乾前一晚睡得晚，出門已經 11 點多，原本排的名護鳳梨園就先拿掉。上車前他先坐上駕駛座握了一下方向盤。</p></li>
+        <li><span class="t">12:21</span><h3>道の駅許田（許田休息站）</h3><p>午餐在這裡解決，天ぷら（天婦羅）一份 ¥850。小魚乾戴上墨鏡和漁夫帽，在天橋上跟大人一起把手指放到鼻子上。</p></li>
+        <li><span class="t">14:26</span><h3>沖縄美ら海水族館（美麗海水族館）</h3><p>從珊瑚礁水槽一路往下走：他對著魚指指點點，蹲在魟魚旁邊不肯走，最後到「黑潮之海」，鯨鯊從整面玻璃前游過去，前面站滿了人。</p></li>
+        <li><span class="t">15:51</span><h3>海洋博公園的大道</h3><p>出了水族館，他沿著公園的大馬路一路往前跑，大人在後面追。16:16 在鯨鯊雕像前再自拍一張。</p></li>
+        <li><span class="t">18:43</span><h3>回到飯店</h3><p>回程 53 公里開了 1 小時 45 分。晚餐叫進房間，吃完還有一碗湯麵；小魚乾在下沉式客廳爬上爬下。睡前桌上是 Orion、Asahi 和一包洋芋片。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_9216.jpg" alt="陽台下的沙灘上有人騎馬"><figcaption><b>08:20</b> · 陽台下的馬</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7643.jpg" alt="漆盒早餐" style="object-position:center"><figcaption><b>07:48</b> · 漆盒早餐</figcaption></figure>
+        </div>
+        <div class="row c2">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7701.jpg" alt="戴墨鏡的小魚乾在天橋上" style="aspect-ratio:3/4"><figcaption><b>12:24 · 許田</b> · 墨鏡、漁夫帽</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7704.jpg" alt="牽著小魚乾走下樓梯" style="aspect-ratio:3/4"><figcaption><b>12:26</b> · 一階一階走下來</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9231.jpg" alt="花園小徑上的小魚乾"><figcaption><b>09:57</b> · 花園小徑 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9241.jpg" alt="玻璃上的倒影"><figcaption><b>10:02</b> · 玻璃上的倒影 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7700.jpg" alt="小魚乾坐在駕駛座"><figcaption><b>11:17</b> · 出發前先握方向盤</figcaption></figure>
+    </div>
+    <div class="row mix">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7692.jpg" alt="坐在礁石上看海"><figcaption><b>10:08</b> · 礁石上，對著海比手勢</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7672.jpg" alt="草地上的全家自拍"><figcaption><b>10:03</b> · 第一張全家合照</figcaption></figure>
+    </div>
+    <div class="row c4">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7715.jpg" alt="指著珊瑚礁水槽"><figcaption><b>14:36</b> · 這個！</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7722.jpg" alt="蹲在魟魚旁"><figcaption><b>14:40</b> · 蹲著看魟魚</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9258.jpg" alt="在公園大道上跑"><figcaption><b>15:51</b> · 往前跑 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9290.jpg" alt="下沉式客廳裡的小魚乾"><figcaption><b>19:51</b> · 晚上的遊戲場</figcaption></figure>
+    </div>
+    <figure class="wide"><img class="ph" loading="lazy" src="photos/IMG_7728.jpg" alt="黑潮之海前的人群與鯨鯊" style="object-position:center 45%"><figcaption><b>14:48 · 黑潮之海</b> · 鯨鯊從整面玻璃前游過去</figcaption></figure>
+    <div class="row c3">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7708.jpg" alt="水族館招牌前合照"><figcaption><b>14:28</b> · 門口的招牌照</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9283.jpg" alt="鯨鯊雕像前自拍"><figcaption><b>16:16</b> · 鯨鯊雕像前 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7766.jpg" alt="房內晚餐"><figcaption><b>18:56</b> · 晚餐送進房間</figcaption></figure>
+    </div>
+    <div class="note"><b>鳳梨園取消了，沒有人覺得可惜。</b>一個主景點加一頓午餐，就是帶著小魚乾一天剛好的量。</div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="day-num">3</div>
+      <div><h2>日出後的海灘，和沒去成的南部</h2><div class="meta">2026.09.27 SUN · 飯店前的海灘 → BANTA CAFE → 永旺夢樂城沖繩來客夢 → サンエー大湾シティ（San-A 大灣城） → 讀谷</div></div>
+    </div>
+    <div class="lead">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7833.jpg" alt="陪小魚乾挖沙"><figcaption><b>07:40</b> · 一大一小，一起挖沙</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7793.jpg" alt="小魚乾拿著貝殼"><figcaption><b>07:19</b> · 撿到一片貝殼</figcaption></figure>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">07:07</span><h3>趁太陽還不曬，先下海</h3><p>怕中午太曬，日出後就直接走到飯店前的沙灘。這天的第一張照片，他在沙灘上哭著被抱起來；十分鐘後，他已經自己往海裡走了。</p></li>
+        <li><span class="t">07:39</span><h3>玩具挖土機</h3><p>帶來的黃色挖土機派上用場。浪一打上來就把坑填平，他就再挖一次。龜山下智久蹲在旁邊陪他挖。</p></li>
+        <li><span class="t">09:01</span><h3>BANTA CAFE</h3><p>取消房裡的早餐，改到星野集團的海景咖啡吃。面海的木桌上是一片披薩吐司和一杯彩色的刨冰，前面就是礁岩。大人們穿著館內服，坐在涼棚下的蓆子上，小魚乾躺在大人腿上。</p></li>
+        <li><span class="t">10:12</span><h3>椰子樹步道和水池</h3><p>沿著椰子樹之間的木棧道走，再到水池邊坐下，把腳泡進水裡。</p></li>
+        <li><span class="t">11:45</span><h3>回房午睡</h3><p>抱著棕色的布偶，睡得很沉。</p></li>
+        <li><span class="t">12:45</span><h3>往南，然後塞車</h3><p>15 公里開了 1 小時 14 分。波上宮、DFS 都放棄，改去永旺夢樂城沖繩來客夢吃午餐、逛街，13:59 待到 18:44。週日人很多，光找車位就繞了很久。</p></li>
+        <li><span class="t">19:51</span><h3>經 サンエー大湾シティ（San-A 大灣城）回飯店</h3><p>原本想吃的シロクマ（白熊冰）沒吃到，留給下一次。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7786.jpg" alt="在沙灘上哭的小魚乾"><figcaption><b>07:07</b> · 哭著被抱起來</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7791.jpg" alt="小魚乾自己走進海裡"><figcaption><b>07:17</b> · 十分鐘後</figcaption></figure>
+        </div>
+        <div class="row c2">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7828.jpg" alt="玩具挖土機" style="aspect-ratio:3/2"><figcaption><b>07:39</b> · 黃色挖土機</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_9302.jpg" alt="披薩吐司和刨冰" style="aspect-ratio:3/2"><figcaption><b>09:22 · BANTA CAFE</b> · 披薩吐司、刨冰、礁岩</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="pull">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7845.jpg" alt="小魚乾背對鏡頭看海"></figure>
+      <blockquote>一天，只走得完<br>一個主景點，加一頓好好吃的飯。<small>2026.9.27 · 讀谷的海邊 · 這是第三天學到的事，也是要帶去仙台的第一條規則</small></blockquote>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9295.jpg" alt="咖啡廳沙發上的小魚乾"><figcaption><b>09:08</b> · 沙發上 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9314.jpg" alt="涼棚下的大人與小魚乾"><figcaption><b>09:43</b> · 涼棚下 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9319.jpg" alt="椰子樹木棧道"><figcaption><b>10:12</b> · 椰子樹步道 ♥</figcaption></figure>
+    </div>
+    <div class="row mix">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7868.jpg" alt="水池中央的涼亭"><figcaption><b>10:14</b> · 水池中央的涼亭</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9330.jpg" alt="步道上的小魚乾背影"><figcaption><b>10:13</b> · 自己走 ♥</figcaption></figure>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7874.jpg" alt="兩人坐在池邊"><figcaption><b>10:20</b> · 坐在池邊</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7895.jpg" alt="抱著小熊午睡"><figcaption><b>11:45</b> · 午睡</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7908.jpg" alt="夜晚的飯店大廳"><figcaption><b>19:47</b> · 回到飯店</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- DAY 4 -->
+  <section class="day indigo">
+    <div class="day-head">
+      <div class="day-num">4</div>
+      <div><h2>最後一個早上，還是先下海</h2><div class="meta">2026.09.28 MON · 讀谷 → 普天滿宮 → 星乃珈琲店 → ORIX 豐崎 → 那霸機場 → 桃園 → 台北</div></div>
+    </div>
+    <div class="lead">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9385.jpg" alt="牽著手走進淺灘"><figcaption><b>09:52</b> · 一人牽一邊，往海裡走 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9409.jpg" alt="臉上沾滿沙的自拍"><figcaption><b>10:03</b> · 臉上都是沙 ♥</figcaption></figure>
+    </div>
+    <div class="body">
+      <ul class="tl">
+        <li><span class="t">08:13</span><h3>窗邊的早餐</h3><p>兩杯飲料、一盤點心和切片麵包，窗外就是飯店前的海灘。</p></li>
+        <li><span class="t">09:32</span><h3>最後一次下海</h3><p>颱風走遠了，天空整片都是雲和藍。他已經不怕浪，蹲在淺灘裡玩沙、撿東西，大人一人牽一邊帶他往深一點的地方走。</p></li>
+        <li><span class="t">10:03</span><h3>沙子黏在臉上</h3><p>上岸時臉頰和下巴都是沙，自拍裡一臉嚴肅。</p></li>
+        <li><span class="t">11:15</span><h3>退房出發</h3><p>沿著草地上的踏石小徑走出去，天上一大朵積雨雲。</p></li>
+        <li><span class="t">12:39</span><h3>普天満宮（普天滿宮）</h3><p>原本排的是波上宮，改到順路的普天滿宮參拜。</p></li>
+        <li><span class="t">13:26</span><h3>星乃珈琲店（星乃咖啡店）</h3><p>坐在兒童椅上啃餅乾、吃義大利麵，笑到把手遮在嘴巴前面。吃完在停車場，他又爬上駕駛座。</p></li>
+        <li><span class="t">15:08</span><h3>還車，到機場</h3><p>15:41 到那霸機場。時間太寬，等了將近三個小時：窗邊的長桌、電梯裡的鏡子自拍，最後在兒童遊戲區跟其他小朋友玩到登機前。</p></li>
+        <li><span class="t">18:20</span><h3>VZ569 準時起飛</h3><p>19:35 落地桃園，20:27 上了和運的車，在免費等候的 60 分鐘之內。21:04 到家。</p></li>
+      </ul>
+      <div>
+        <div class="row c2" style="margin-top:0">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7912.jpg" alt="窗邊的早餐"><figcaption><b>08:13</b> · 窗邊的早餐</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_9337.jpg" alt="窗前的小魚乾剪影"><figcaption><b>08:48</b> · 最後一個早上</figcaption></figure>
+        </div>
+        <div class="row c2">
+          <figure><img class="ph" loading="lazy" src="photos/IMG_7921.jpg" alt="一起挖沙" style="aspect-ratio:3/4"><figcaption><b>09:37</b> · 再挖一次</figcaption></figure>
+          <figure><img class="ph" loading="lazy" src="photos/IMG_9348.jpg" alt="大人伸手拉他" style="aspect-ratio:3/4"><figcaption><b>09:41</b> · 拉一把 ♥</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="row c4">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9372.jpg" alt="淺灘裡的兩個小身影"><figcaption><b>09:50</b> · 走遠了 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9395.jpg" alt="坐在浪裡"><figcaption><b>09:57</b> · 坐在浪裡 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9399.jpg" alt="蹲在淺灘"><figcaption><b>09:58</b> · 撿東西 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9411.jpg" alt="手指放在嘴邊"><figcaption><b>10:03</b> · 想事情 ♥</figcaption></figure>
+    </div>
+    <div class="row mix">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9416.jpg" alt="飯店上空的積雨雲"><figcaption><b>11:15</b> · 出發前的積雨雲 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9412.jpg" alt="草地上的踏石小徑"><figcaption><b>11:11</b> · 踏石小徑 ♥</figcaption></figure>
+    </div>
+    <div class="row c3">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7933.jpg" alt="窗前的四人合照"><figcaption><b>12:10</b> · 窗外還是海</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9418.jpg" alt="星乃珈琲店的兒童椅"><figcaption><b>13:39 · 星乃珈琲店（星乃咖啡店）</b> ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_7948.jpg" alt="笑著遮住嘴巴"><figcaption><b>13:42</b> · 笑到停不下來</figcaption></figure>
+    </div>
+    <div class="row c4">
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9431.jpg" alt="坐上駕駛座"><figcaption><b>14:22</b> · 換我開 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9436.jpg" alt="機場窗邊的長桌"><figcaption><b>17:12 · 那霸機場</b> ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9444.jpg" alt="電梯鏡子自拍"><figcaption><b>17:38</b> · 電梯裡 ♥</figcaption></figure>
+      <figure><img class="ph" loading="lazy" src="photos/IMG_9445.jpg" alt="兒童遊戲區"><figcaption><b>18:01</b> · KIDS SPACE</figcaption></figure>
+    </div>
+    <div class="note"><b>回程日排得太寬。</b>15:08 就還了車，到機場後等了快三小時。沒有免稅店要提貨、也不久坐貴賓室的話，還車可以再晚 30 到 60 分鐘。</div>
+  </section>
+</div>
+
+<section class="close">
+  <img src="photos/IMG_7931.jpg" alt="兩個人站在海中的石板上">
+  <div class="text"><div>
+    <div class="eyebrow">2026.09.28 · 10:03 · 讀谷</div>
+    <h2>海水退到腳邊</h2>
+    <p>最後一個早上，站在海裡的石板上，再過一個小時就要退房了。</p>
+  </div></div>
+</section>
+
+<div class="wrap">
+  <section class="ledger">
+    <h2>帳本</h2>
+    <div class="grid">
+      <div><div class="big">4<span> 天</span></div><div class="lab">3 晚，都住虹夕諾雅</div></div>
+      <div><div class="big">3</div><div class="lab">個早上都先去了海邊</div></div>
+      <div><div class="big">1</div><div class="lab">座水族館，1 尾鯨鯊</div></div>
+      <div><div class="big">1</div><div class="lab">趟回機場拿推車</div></div>
+      <div><div class="big">1<span> 時 45 分</span></div><div class="lab">從美麗海開回讀谷的 53 公里</div></div>
+      <div><div class="big hot">¥235,041</div><div class="lab">收據加總（不含機票、住宿、租車基本費）</div></div>
+      <div><div class="big">408</div><div class="lab">個照片與影片，47 張標成喜好項目</div></div>
+      <div><div class="big">63</div><div class="lab">張照片收在這本回憶錄裡</div></div>
+    </div>
+  </section>
+
+  <section class="lessons">
+    <h2>帶去仙台的五件事</h2>
+    <ol>
+      <li><b>抵達日不排景點。</b>這次被會診、晚到和推車吃掉的一個半小時，全靠這條規則吸收。</li>
+      <li><b>出關前確認推車到手。</b>在領行李區就先拿到，再出去。</li>
+      <li><b>一天只排一個主景點加一頓飯。</b>第二個點當作有力氣才去。</li>
+      <li><b>週末避開大型商場的尖峰。</b>仙台的 11/1 是星期日。</li>
+      <li><b>回程日可以排緊一點。</b>不進免稅店、不久坐貴賓室，還車可以晚 30 到 60 分鐘。</li>
+    </ol>
+  </section>
+
+  <p class="foot">這本回憶錄是把三種紀錄疊在一起拼出來的：Google 地圖時間軸給了每個地點進出的分鐘，企劃書和收據給了骨架，iCloud 照片給了畫面。照片上的時間，抵達沖繩前用台灣時間，之後用日本時間。</p>
+
+  <div class="sources">
+    <b>資料來源</b><br>
+    Google 地圖時間軸截圖（9/25–9/28）· 沖繩家庭旅遊企劃書 v2.8（① 行程規劃、④ 紀錄）· 沖繩行收據整理（2026/09/28）· iCloud 照片：2026/9/25–9/28 圖庫，共 408 個項目（其中 55 部影片）。網頁上的照片已縮小，並移除拍攝位置等中繼資料。
+  </div>
+</div>
+
+<footer class="pagefoot">
+  <p><a href="index.html">沖繩首頁</a>｜<a href="沖繩家庭旅遊企劃書_行程規劃.html">① 行程規劃</a>｜<a href="沖繩家庭旅遊企劃書_待決定事項.html">② 待辦清單</a>｜<a href="沖繩家庭旅遊企劃書_訂購成果.html">③ 訂單</a>｜<a href="沖繩家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>｜⑤ 回憶錄</p>
+  <p>成員以代號稱呼；訂單編號等識別資料見私人記錄。建立 2026/10/02</p>
+</footer>
+</body>
+</html>
