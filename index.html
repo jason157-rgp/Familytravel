@@ -33,6 +33,9 @@ header p.sub{margin:12px 0 0;color:var(--sub);font-size:15px;text-shadow:0 1px 1
 .c-s .go{color:var(--red)}
 .c-b .go{color:var(--rose)}
 .c-t .go{color:#e0a95a}
+.grp+.grp{margin-top:40px}
+.grp-h{margin:0 0 16px;font-size:15px;font-weight:600;letter-spacing:.2em;color:var(--gold);text-shadow:0 1px 10px rgba(0,0,0,.5);display:flex;align-items:baseline;gap:12px}
+.grp-h span{font-size:12px;font-weight:400;letter-spacing:.1em;color:var(--sub)}
 .note{margin:34px 0 0;padding:16px 18px;background:var(--glass);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;font-size:13.5px;color:var(--sub);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
 footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 56px}
 #bgbtn{position:fixed;right:14px;bottom:14px;z-index:5;-webkit-appearance:none;appearance:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:.08em;color:var(--sub);background:rgba(6,18,28,.58);border:1px solid var(--line);border-radius:999px;padding:7px 14px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
@@ -48,16 +51,18 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 56px}
 <header>
 <p class="kick">FAMILY TRAVEL</p>
 <h1>家庭旅遊企劃書</h1>
-<p class="sub">兩趟旅程企劃與一份兩天小旅行計劃·點進去看逐日行程、費用與待辦事項；另有一本走過的旅程回憶錄</p>
+<p class="sub">分成「即將出發」與「走過的旅程」兩區，各自由近到遠排列·即將出發的看逐日行程、費用與待辦，走過的有回憶錄</p>
 </header>
 <div class="wrap">
+<section class="grp" aria-labelledby="g-next">
+<h2 class="grp-h" id="g-next">即將出發<span>由近到遠</span></h2>
 <div class="cards">
-<a class="card c-o" href="沖繩/index.html">
-<span class="tag t-o">2026 秋 ・ 沖繩</span>
-<h2>沖繩</h2>
-<p class="when">2026/09/25（五）－09/28（一）　4 天 3 夜</p>
-<p class="who">讀谷村 3 晚・虹夕諾雅 沖繩・自駕<br>機票・住宿・租車・台灣端機場接送已訂妥付清</p>
-<p class="go">看沖繩企劃書與回憶錄 →</p>
+<a class="card c-t" href="台中/index.html">
+<span class="tag t-t">2026 秋 ・ 台中</span>
+<h2>台中婚宴小旅行</h2>
+<p class="when">2026/10/17（六）－10/18（日）　2 天 1 夜</p>
+<p class="who">東勢克里夫莊園婚宴 ＋ 紅點文旅 1 晚<br>住宿已訂妥付清</p>
+<p class="go">看台中計劃書 →</p>
 </a>
 <a class="card c-s" href="仙台/index.html">
 <span class="tag t-s">2026 秋 ・ 宮城</span>
@@ -66,12 +71,17 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 56px}
 <p class="who">市區 4 晚 ＋ 秋保 2 晚<br>全案已定案</p>
 <p class="go">看仙台企劃書 →</p>
 </a>
-<a class="card c-t" href="台中/index.html">
-<span class="tag t-t">2026 秋 ・ 台中</span>
-<h2>台中婚宴小旅行</h2>
-<p class="when">2026/10/17（六）－10/18（日）　2 天 1 夜</p>
-<p class="who">東勢克里夫莊園婚宴 ＋ 紅點文旅 1 晚<br>住宿已訂妥付清</p>
-<p class="go">看台中計劃書 →</p>
+</div>
+</section>
+<section class="grp" aria-labelledby="g-past">
+<h2 class="grp-h" id="g-past">走過的旅程<span>由近到遠</span></h2>
+<div class="cards">
+<a class="card c-o" href="沖繩/index.html">
+<span class="tag t-o">2026 秋 ・ 沖繩　回憶錄</span>
+<h2>沖繩</h2>
+<p class="when">2026/09/25（五）－09/28（一）　4 天 3 夜</p>
+<p class="who">讀谷村 3 晚・虹夕諾雅 沖繩・自駕<br>旅程已走完・63 張照片的回憶錄與實際走法</p>
+<p class="go">看沖繩企劃書與回憶錄 →</p>
 </a>
 <a class="card c-b" href="釜山/index.html">
 <span class="tag t-b">2025 春 ・ 釜山　回憶錄</span>
@@ -81,9 +91,10 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 56px}
 <p class="go">看釜山回憶錄 →</p>
 </a>
 </div>
+</section>
 <div class="note">訂位代號、票號、哩程帳號、護照與信用卡等識別資料一律不列於本網頁，均以「見私人記錄」標示。</div>
 </div>
-<footer>更新 2026/10/01（新增台中婚宴小旅行 v1.0）</footer>
+<footer>更新 2026/10/02（首頁分成即將出發／走過的旅程兩區）</footer>
 <button id="bgbtn" type="button">暫停背景</button>
 <script>
 (function(){
