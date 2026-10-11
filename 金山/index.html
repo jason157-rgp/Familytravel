@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>金山慶生小旅行｜12/23–12/24</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F2F0EB; --paper:#FFFFFF; --ink:#1A2130; --ink2:#46505F; --muted:#77808C; --line:#DCD8CF;
+  --night:#1D2A44; --night2:#2B3D60; --gold:#D9A441; --gold-soft:#F7EBD0;
+  --pine:#2F6B55; --pine-soft:#DCEDE5; --berry:#B8402F; --berry-soft:#F6E0DA;
+  --serif:"Noto Serif TC","Songti TC",serif; --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11141B; --paper:#191E28; --ink:#E6EAF0; --ink2:#B6BECA; --muted:#8A93A0; --line:#2C3340;
+  --gold-soft:#3A2F1A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
+}}
+:root[data-theme="dark"]{
+  --bg:#11141B; --paper:#191E28; --ink:#E6EAF0; --ink2:#B6BECA; --muted:#8A93A0; --line:#2C3340;
+  --gold-soft:#3A2F1A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.3}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+svg{display:block;max-width:100%;height:auto}
+
+.cover{background:var(--night);color:#F2F0EB;border-radius:0 0 22px 22px;overflow:hidden}
+.cover .wrap{padding-top:34px}
+.kicker{font-size:13px;letter-spacing:.18em;color:var(--gold)}
+.cover h1{font-size:clamp(30px,7vw,48px);font-weight:900;margin-top:6px;letter-spacing:.02em}
+.cover .who{margin-top:10px;font-size:14.5px;color:rgba(242,240,235,.82)}
+.cover .who b{color:#fff;font-weight:500}
+.cover svg{margin-top:18px}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px}
+.stay{margin-top:-6px;position:relative;z-index:2}
+.stay .card{box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.stay h2{font-size:21px}
+.stay .room{color:var(--ink2);font-size:14.5px;margin-top:2px}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.facts span{font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--ink2)}
+.facts span.ok{background:var(--pine-soft);border-color:transparent;color:var(--pine)}
+.facts span.no{background:var(--berry-soft);border-color:transparent;color:var(--berry)}
+.meta{margin-top:10px;font-size:13.5px;color:var(--muted)}
+
+.sec{margin-top:40px}
+.sec>h2{font-size:22px}
+.lead{font-size:14px;color:var(--muted);margin-top:4px}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:12px;background:var(--night2)}.photos figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:3px}
+.cap{font-size:12.5px;color:var(--muted);margin-top:6px;text-align:center}
+@media (max-width:560px){.photos{grid-template-columns:1fr 1fr}}
+
+.spots{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:12px}
+.spot{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.spot b{display:block;font-size:15px}
+.spot span{display:block;font-size:13.5px;color:var(--ink2);line-height:1.65}
+.spot.no{border-color:var(--berry-soft);background:var(--berry-soft)}
+.spot.no b{color:var(--berry)}
+
+.day{margin-top:44px}
+.dayhead{display:flex;align-items:flex-end;gap:14px;margin-bottom:16px}
+.daynum{font-family:var(--serif);font-weight:900;font-size:56px;line-height:.85}
+.day1 .daynum{color:var(--gold)}
+.day2 .daynum{color:var(--berry)}
+.dayhead h2{font-size:23px}
+.dayhead p{font-size:14px;color:var(--muted)}
+.tl{position:relative;margin:0;padding:0;list-style:none}
+.tl::before{content:"";position:absolute;left:62px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:52px 22px 1fr;gap:0 10px;padding:9px 0;align-items:start}
+.tl .t{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;text-align:right;padding-top:1px}
+.tl .dot{width:14px;height:14px;border-radius:50%;margin:5px 0 0 3px;background:var(--paper);border:3px solid var(--line);position:relative;z-index:1}
+.day1 .dot{border-color:var(--gold)}
+.day2 .dot{border-color:var(--berry)}
+.day1 li.key .dot{background:var(--gold)}
+.day2 li.key .dot{background:var(--berry)}
+.tl .w b{display:block;font-size:16px}
+.tl .w span{display:block;font-size:14px;color:var(--ink2)}
+.flag{display:inline-block;font-size:12px;border-radius:6px;padding:0 6px;margin-left:4px;background:var(--gold-soft);color:#8A6418;font-weight:500}
+.tip{margin-top:14px;background:var(--gold-soft);border-radius:12px;padding:12px 16px;font-size:14.5px}
+.day2 .tip{background:var(--berry-soft)}
+
+.coupon{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.coupon div{border:1.5px dashed var(--gold);border-radius:12px;padding:12px 14px;background:var(--paper);font-size:14px}
+.coupon b{display:block;font-size:15px;color:var(--ink)}
+
+/* restaurant chooser */
+.pick{margin-top:14px;display:grid;gap:14px}
+.rest{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.rest .top{display:flex;gap:12px;align-items:center;padding:14px 18px;background:var(--night);color:#F2F0EB}
+.rest .no{font-family:var(--serif);font-weight:900;font-size:28px;color:var(--gold);line-height:1}
+.rest h3{font-size:19px}
+.rest .area{font-size:12.5px;color:rgba(242,240,235,.75)}
+.rest .star{margin-left:auto;text-align:right;font-size:13px;color:var(--gold);white-space:nowrap}
+.rest .star small{display:block;color:rgba(242,240,235,.65);font-size:11.5px}
+.rest .body{padding:14px 18px 16px}
+.rest .intro{font-size:15px}
+.rest dl{display:grid;grid-template-columns:72px 1fr;gap:4px 10px;margin:12px 0 0;font-size:14px}
+.rest dt{color:var(--muted)}
+.rest dd{margin:0;color:var(--ink2)}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.fit div{border-radius:10px;padding:8px 12px;font-size:13.5px;background:var(--pine-soft)}
+.fit div b{display:block;font-size:12.5px;color:var(--pine)}
+.fit div.warn{background:var(--gold-soft)}
+.fit div.warn b{color:#8A6418}
+@media (max-width:520px){.fit{grid-template-columns:1fr}}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.links a{font-size:13.5px;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--bg)}
+.links a:hover{border-color:var(--gold)}
+.rest.rec{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-soft)}
+.badge{display:inline-block;font-size:11.5px;background:var(--gold);color:#1A2130;border-radius:999px;padding:0 8px;margin-left:6px;font-family:var(--sans);font-weight:700;vertical-align:middle}
+
+.map{width:100%;height:180px;border:0;border-radius:12px;display:block;background:var(--bg)}
+.photobtn{display:block;text-align:center;margin:10px 0 12px;padding:10px;border-radius:12px;background:var(--gold);color:#1A2130;text-decoration:none;font-weight:700;font-size:14.5px}
+table.cmp{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px;background:var(--paper);border-radius:12px;overflow:hidden}
+.cmp th,.cmp td{border-bottom:1px solid var(--line);padding:8px 8px;text-align:left;vertical-align:top}
+.cmp th{background:var(--bg);font-weight:500;color:var(--muted);font-size:12.5px}
+.tablewrap{overflow-x:auto}
+
+.ask{margin:12px 0 0;padding-left:1.4em;font-size:14.5px}
+.ask li{margin:6px 0}
+.items{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.items div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:14px;text-align:center}
+.items small{display:block;color:var(--muted);font-size:12.5px}
+footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
+</style>
+<style id="ft-corner-css">.ft-corner{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 18px;padding:7px 16px;background:#0f1c27;color:#c9d4dc;font:13px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:.04em}.ft-corner .ft-l{margin-right:auto;color:#93a3af}.ft-corner a{color:#e9f0f4;text-decoration:none}.ft-corner a:hover,.ft-corner a:focus-visible{text-decoration:underline}</style>
+</head>
+<body>
+<div class="ft-corner"><span class="ft-l">金山慶生小旅行</span><a href="../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1I2Q7e80lcO6dDkeL2M9m06AJFgMAz7Yy" target="_blank" rel="noopener">📁 私人文件</a></div>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="kicker">JINSHAN ・ 2026.12.23 – 12.24</div>
+    <h1>小魚乾兩歲生日・金山小旅行</h1>
+    <p class="who"><b>龜山下智久</b>（開車）・<b>桃園星野結衣</b>・<b>煞氣E小魚乾E</b>（12/24 滿 2 歲）</p>
+    <svg viewBox="0 0 800 200" role="img" aria-label="冬夜的北海岸：山、海、溫泉飯店與一顆生日蛋糕">
+      <rect width="800" height="200" fill="#1D2A44"/>
+      <g fill="#F2F0EB" opacity=".75"><circle cx="90" cy="34" r="1.6"/><circle cx="210" cy="22" r="1.2"/><circle cx="330" cy="46" r="1.4"/><circle cx="470" cy="20" r="1.3"/><circle cx="600" cy="40" r="1.5"/><circle cx="730" cy="26" r="1.2"/></g>
+      <circle cx="680" cy="56" r="22" fill="#F2D38A" opacity=".9"/>
+      <path d="M0 130 L110 70 L210 110 L330 52 L460 118 L460 200 L0 200Z" fill="#2B3D60"/>
+      <path d="M0 160 L140 110 L260 150 L380 100 L460 140 L460 200 L0 200Z" fill="#22334F"/>
+      <rect x="460" y="150" width="340" height="50" fill="#2B4A6F"/>
+      <g stroke="#6F93BD" stroke-width="2" opacity=".6"><path d="M480 165 h40 M560 172 h60 M660 162 h50 M720 182 h50"/></g>
+      <g transform="translate(250 92)">
+        <rect x="0" y="20" width="120" height="58" fill="#F2F0EB"/>
+        <rect x="-4" y="14" width="128" height="8" fill="#C9B79A"/>
+        <g fill="#F2D38A"><rect x="10" y="32" width="14" height="10"/><rect x="34" y="32" width="14" height="10"/><rect x="58" y="32" width="14" height="10"/><rect x="82" y="32" width="14" height="10"/><rect x="10" y="52" width="14" height="10"/><rect x="34" y="52" width="14" height="10"/><rect x="82" y="52" width="14" height="10"/></g>
+        <path d="M100 8 q4 -8 0 -14 M108 10 q4 -8 0 -14" stroke="#F2F0EB" stroke-width="2" fill="none" opacity=".6"/>
+      </g>
+      <g transform="translate(580 104)">
+        <rect x="0" y="30" width="70" height="26" rx="4" fill="#F6E0DA"/>
+        <rect x="0" y="30" width="70" height="7" rx="3" fill="#B8402F"/>
+        <rect x="18" y="12" width="5" height="18" fill="#F2F0EB"/><rect x="46" y="12" width="5" height="18" fill="#F2F0EB"/>
+        <path d="M20.5 4 q4 5 0 8 q-4 -3 0 -8Z M48.5 4 q4 5 0 8 q-4 -3 0 -8Z" fill="#F2D38A"/>
+      </g>
+      <g transform="translate(110 150)" fill="#2F6B55"><path d="M0 40 L14 0 L28 40Z"/><path d="M22 40 L34 10 L46 40Z"/></g>
+      <g fill="#F2D38A"><circle cx="124" cy="166" r="2"/><circle cx="118" cy="178" r="2"/><circle cx="132" cy="182" r="2"/><circle cx="156" cy="176" r="2"/></g>
+    </svg>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="stay">
+  <div class="card">
+    <h2>新北北海溫泉洲際酒店</h2>
+    <p class="room">豪華房一大床・高樓層・51 ㎡・房內私人溫泉湯池</p>
+    <div class="facts">
+      <span class="ok">積分住宿，房費已用點數</span>
+      <span class="ok">6 歲以下同住不加價</span>
+      <span>不含早餐</span>
+      <span>12/20（日）18:00 前可免費取消</span>
+      <span class="no">不提供一次性備品</span>
+    </div>
+    <p class="meta">金山區環金路 210 號・02-2498-3399・入住 16:00／退房 11:00・停車：住客專用、不接受預約・訂單資料見私人記錄</p>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>洲際：小魚乾能用的地方</h2>
+  <p class="lead">查證 2026/10/11；開放時間與年齡限制已寫信詢問，回覆後更新</p>
+  <div class="photos">
+    <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10756713577-4x3?wid=733" alt="頂樓無邊際泳池" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>頂樓無邊際泳池</figcaption></figure>
+    <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10756757256-4x3?wid=733" alt="泳池與山景" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>泳池與山景</figcaption></figure>
+    <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10709065584-4x3?wid=733" alt="豪華客房" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>豪華客房</figcaption></figure>
+    <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10709065600-4x3?wid=733" alt="房內私人溫泉湯池" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>房內私人溫泉湯池</figcaption></figure>
+    <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10499379223-4x3?wid=733" alt="嶼 Shima 全日餐廳" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>嶼 Shima 全日餐廳</figcaption></figure>
+    <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10756692594-4x3?wid=733" alt="飯店大廳" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>飯店大廳</figcaption></figure>
+  </div>
+  <p class="cap">照片：IHG 洲際官網</p>
+  <div class="spots">
+    <div class="spot"><b>北海小行家（別館兒童遊戲室）</b><span>免費。攀岩、手作、兒童電動車、賽車道、圖書室、溜滑梯，另有頂樓兒童滑水道。兩歲能玩哪些、開放時間、要不要預約：待飯店回覆。</span></div>
+    <div class="spot"><b>頂樓泳池＋兒童戲水區</b><span>09:00–22:00，有救生員，水溫 27°C 以上。戶外、12 月風大，上岸立刻包浴巾。游泳尿布規定待回覆。</span></div>
+    <div class="spot"><b>房內私人湯池</b><span>設計成全家坐得下。溫泉對兩歲偏燙，先放水降溫或兌冷水讓他玩水，不要久泡，大人全程陪。</span></div>
+    <div class="spot"><b>嶼 Shima 全日餐廳</b><span>5 歲（含）以下吃自助餐檯免費，可以挑白飯、蒸蛋、魚、湯、水果給他。兒童椅訂位時已備註。</span></div>
+    <div class="spot no"><b>不能進：大眾湯、健身房、行政酒廊</b><span>都限 16 歲以上。</span></div>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day day1">
+  <div class="dayhead"><span class="daynum">1</span><div><h2>12/23（三）生日前夜</h2><p>下午入住，晚餐在飯店慶生，房間切蛋糕</p></div></div>
+  <ol class="tl">
+    <li class="key"><span class="t">16:00</span><span class="dot"></span><span class="w"><b>入住洲際</b><span>櫃台要問：①嶼早午餐能否同一天分早上、中午兩次入場（手機已設提醒）②嬰兒床／床邊護欄 ③遊戲室與泳池的幼兒規定</span></span></li>
+    <li><span class="t">16:30</span><span class="dot"></span><span class="w"><b>北海小行家放電，或房內泡湯</b><span>依遊戲室開放時間決定；17:30 回房換衣服</span></span></li>
+    <li class="key"><span class="t">18:00</span><span class="dot"></span><span class="w"><b>嶼 Shima 半自助晚餐</b><span>大人各點一份主餐（2,580／2,980／3,280 元＋10%），自助餐檯幫小魚乾挑；兩位大人各用一張抵用券</span></span></li>
+    <li><span class="t">19:30</span><span class="dot"></span><span class="w"><b>回房切蛋糕、唱生日快樂歌</b><span>自備蛋糕；房內能不能點蠟燭<span class="flag">待飯店回覆</span></span></span></li>
+    <li><span class="t">20:15</span><span class="dot"></span><span class="w"><b>就寢</b><span>大人之後輪流泡湯</span></span></li>
+  </ol>
+  <div class="tip">嶼晚餐最後入場 19:30；訂 18:00 是為了讓小魚乾 20:00 前吃完回房。</div>
+</section>
+
+<!-- DAY 2 -->
+<section class="day day2">
+  <div class="dayhead"><span class="daynum">2</span><div><h2>12/24（四）兩歲生日・平安夜</h2><p>早午餐一起解決，車上午睡，傍晚和阿公阿嬤過平安夜</p></div></div>
+  <ol class="tl">
+    <li><span class="t">08:00</span><span class="dot"></span><span class="w"><b>起床、房內泡湯或泳池</b><span>如果早午餐可以重複入場，早上先下去吃第一輪</span></span></li>
+    <li class="key"><span class="t">11:00</span><span class="dot"></span><span class="w"><b>退房、行李先上車</b></span></li>
+    <li class="key"><span class="t">11:15</span><span class="dot"></span><span class="w"><b>嶼 Shima 早午餐（兼午餐）</b><span>全自助，成人 1,100 元＋10%，小魚乾免費；兩位大人共用一張抵用券<span class="flag">平安夜能否用券待回覆</span></span></span></li>
+    <li><span class="t">12:30</span><span class="dot"></span><span class="w"><b>遊戲室再放電 30 分鐘</b><span>退房後能否使用<span class="flag">待確認</span></span></span></li>
+    <li class="key"><span class="t">13:00</span><span class="dot"></span><span class="w"><b>開車往桃園楊梅</b><span>約 1 小時 20 分–1 小時 40 分，小魚乾在車上午睡</span></span></li>
+    <li><span class="t">15:00</span><span class="dot"></span><span class="w"><b>到阿公阿嬤家休息</b></span></li>
+    <li class="key"><span class="t">17:30</span><span class="dot"></span><span class="w"><b>平安夜生日晚餐</b><span>和阿公阿嬤一起；餐廳<a href="#dinner">從下方五間挑一間</a><span class="flag">待決定</span></span></span></li>
+    <li><span class="t">20:00</span><span class="dot"></span><span class="w"><b>就寢</b><span>當晚住哪裡<span class="flag">待決定</span></span></span></li>
+  </ol>
+  <div class="tip">早午餐 08:00–14:00，最後入場 13:00。目前訂 11:15 一次吃完；如果飯店說可以重複入場，再改成早上、中午各一輪。</div>
+</section>
+
+<section class="sec">
+  <h2>嶼 Shima 抵用券（3 張）</h2>
+  <p class="lead">玉山 e point 兌換，每張折 399 元，效期 2026/12/30</p>
+  <div class="coupon">
+    <div><b>12/23 晚餐 × 2</b>週日至週四 18:00–21:00 可用；每位成人點一份主餐，每人限用一張</div>
+    <div><b>12/24 早午餐 × 1</b>平日 08:00–14:00 可用；每 2 位成人限用一張</div>
+    <div><b>結帳前必看</b>訂位時告知有券；全額刷<b style="display:inline">玉山信用卡</b>，不能用 LINE Pay 等電子支付；「標示為已使用」讓店員按，自己先按就作廢</div>
+  </div>
+</section>
+
+<section class="sec" id="dinner">
+  <h2>12/24 平安夜晚餐：給媽媽選</h2>
+  <p class="lead">從阿公阿嬤家出發，五間週四晚上都有營業。評分與營業時間為 2026/10/11 Google 地圖資料，12 月訂位時再確認；平安夜可能有特別菜單。每間附位置地圖，點金色按鈕可以看店內環境與菜色照片。</p>
+
+  <div class="tablewrap">
+  <table class="cmp">
+    <tr><th>餐廳</th><th>車程</th><th>類型</th><th>週四晚餐</th><th>適合誰</th></tr>
+    <tr><td>① 三千里</td><td>約 5 分</td><td>日式定食</td><td>17:30–20:00</td><td>長輩最省力</td></tr>
+    <tr><td>② 杰仕堡農莊</td><td>約 5 分</td><td>客家套餐</td><td>–20:00</td><td>樸實家庭聚餐</td></tr>
+    <tr><td>③ 八方園</td><td>約 15–20 分</td><td>三合院客家桌菜</td><td>16:30–19:30</td><td>最有儀式感</td></tr>
+    <tr><td>④ 老莊園</td><td>約 20 分</td><td>庭園台菜・客家</td><td>17:00–20:00</td><td>環境好、無障礙</td></tr>
+    <tr><td>⑤ 守屋</td><td>約 15 分</td><td>客家海鮮</td><td>17:00–21:00</td><td>要包廂</td></tr>
+  </table>
+  </div>
+
+  <div class="pick">
+
+    <article class="rest">
+      <div class="top"><span class="no">①</span><div><h3>三千里日式料理</h3><p class="area">楊梅富岡・離阿公阿嬤家最近</p></div><p class="star">★ 4.6<small>170 則評論</small></p></div>
+      <div class="body">
+        <iframe class="map" src="https://maps.google.com/maps?q=%E4%B8%89%E5%8D%83%E9%87%8C%E6%97%A5%E5%BC%8F%E6%96%99%E7%90%86%20%E6%A5%8A%E6%A2%85&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="三千里日式料理 楊梅 位置地圖"></iframe>
+        <a class="photobtn" href="https://maps.google.com/maps?cid=17925624630816625046" target="_blank" rel="noopener">📷 看店內環境與菜色照片（Google 地圖）</a>
+        <p class="intro">富岡街上的小型日本料理店，以定食和無菜單套餐為主，環境安靜，評論多說用餐不必等。</p>
+        <dl>
+          <dt>招牌</dt><dd>生魚片定食、松露茶碗蒸、洋蔥沙拉、味噌湯，甜點評價也好</dd>
+          <dt>營業</dt><dd>週二公休；午 11:00–14:00、晚 17:30–20:00，建議訂位</dd>
+          <dt>付款停車</dt><dd>只收現金・免費停車場，車位多</dd>
+        </dl>
+        <div class="fit">
+          <div><b>阿公阿嬤</b>開車幾分鐘就到，安靜好聊天</div>
+          <div><b>小魚乾</b>有兒童椅；茶碗蒸、味噌湯、白飯可以吃</div>
+          <div class="warn"><b>要考慮</b>生食為主，長輩或小孩不吃生的要先問熟食選擇</div>
+          <div class="warn"><b>要考慮</b>店小，平安夜要提早訂</div>
+        </div>
+        
+      </div>
+    </article>
+
+    <article class="rest">
+      <div class="top"><span class="no">②</span><div><h3>杰仕堡農莊</h3><p class="area">楊梅富岡</p></div><p class="star">★ 4.2<small>70 則評論</small></p></div>
+      <div class="body">
+        <iframe class="map" src="https://maps.google.com/maps?q=%E6%9D%B0%E4%BB%95%E5%A0%A1%E8%BE%B2%E8%8E%8A%20%E6%A5%8A%E6%A2%85&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="杰仕堡農莊 楊梅 位置地圖"></iframe>
+        <a class="photobtn" href="https://maps.google.com/maps?cid=5146348354244056685" target="_blank" rel="noopener">📷 看店內環境與菜色照片（Google 地圖）</a>
+        <p class="intro">安靜的客家料理農莊，以套餐（無菜單）形式出菜，適合家庭聚餐和團體用餐，評論說適合帶小孩。</p>
+        <dl>
+          <dt>招牌</dt><dd>傳統客家小菜與合菜，菜色依當天出</dd>
+          <dt>營業</dt><dd>每天 11:00–20:00，強烈建議先訂位</dd>
+          <dt>付款停車</dt><dd>只收現金・免費停車場，車位多</dd>
+        </dl>
+        <div class="fit">
+          <div><b>阿公阿嬤</b>近、客家口味長輩熟悉</div>
+          <div><b>小魚乾</b>有兒童椅，評論說對小孩友善</div>
+          <div class="warn"><b>要考慮</b>評論提到裝潢較舊，不走精緻路線</div>
+          <div class="warn"><b>要考慮</b>網路資料少，菜色以 Google 評論照片為準</div>
+        </div>
+        
+      </div>
+    </article>
+
+    <article class="rest rec">
+      <div class="top"><span class="no">③</span><div><h3>八方園百年三合院<span class="badge">儀式感首選</span></h3><p class="area">楊梅永寧・車程約 15–20 分</p></div><p class="star">★ 4.8<small>1 萬多則評論</small></p></div>
+      <div class="body">
+        <iframe class="map" src="https://maps.google.com/maps?q=%E5%85%AB%E6%96%B9%E5%9C%92%E7%99%BE%E5%B9%B4%E4%B8%89%E5%90%88%E9%99%A2%E6%99%AF%E8%A7%80%E5%AE%A2%E5%AE%B6%E9%A4%90%E5%BB%B3&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="八方園百年三合院景觀客家餐廳 位置地圖"></iframe>
+        <a class="photobtn" href="https://maps.google.com/maps?cid=16590811089471643445" target="_blank" rel="noopener">📷 看店內環境與菜色照片（Google 地圖）</a>
+        <p class="intro">百年三合院改建的客家餐廳，二代經營，把熱炒客家菜改成講究火候的合菜宴席，口味比傳統清爽。2025 年桃園客家星級美食推薦中唯一的「六星」店家。三合院庭院拍全家福很好看。</p>
+        <dl>
+          <dt>招牌</dt><dd>黑金菜脯全雞（三種年份老菜脯煨土雞）、八方燜鴨、客家小炒、竹筒蝦盅、客家封菜、八方牛鍋、梅干扣肉</dd>
+          <dt>價位</dt><dd>全合菜、不單點；6 人以下桌菜約 3,000 元，7 人以上 7,000–12,000 元／桌，另收一成服務費（鏡週刊 2025/12 報導）</dd>
+          <dt>營業</dt><dd>週一公休；晚餐 16:30–19:30（最後時段早，剛好配合小魚乾作息）；非常熱門，要提早訂</dd>
+          <dt>付款停車</dt><dd>只收現金・免費停車，車位多</dd>
+        </dl>
+        <div class="fit">
+          <div><b>阿公阿嬤</b>有無障礙廁所；客家老菜、燉得軟爛的雞鴨好入口</div>
+          <div><b>小魚乾</b>有兒童椅；雞湯、封菜冬瓜、燜鴨肉都適合</div>
+          <div class="warn"><b>要考慮</b>合菜制，四個大人點桌菜份量要先問</div>
+          <div class="warn"><b>要考慮</b>三合院有戶外庭院，12 月傍晚冷，帶外套</div>
+        </div>
+        <div class="links"><a href="https://www.mirrormedia.mg/story/20251228food003" target="_blank" rel="noopener">📰 鏡週刊報導</a><a href="https://udn.com/news/story/7270/9207233" target="_blank" rel="noopener">📰 聯合新聞網報導</a></div>
+      </div>
+    </article>
+
+    <article class="rest">
+      <div class="top"><span class="no">④</span><div><h3>老莊園</h3><p class="area">楊梅永寧・車程約 20 分</p></div><p class="star">★ 4.4<small>2,492 則評論</small></p></div>
+      <div class="body">
+        <iframe class="map" src="https://maps.google.com/maps?q=%E8%80%81%E8%8E%8A%E5%9C%92%20%E6%A5%8A%E6%A2%85&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="老莊園 楊梅 位置地圖"></iframe>
+        <a class="photobtn" href="https://maps.google.com/maps?cid=3487086498611610673" target="_blank" rel="noopener">📷 看店內環境與菜色照片（Google 地圖）</a>
+        <p class="intro">庭園景觀餐廳，台菜與客家菜，環境安靜、有戶外座位，評論說店員親切、有圖片菜單好點菜。</p>
+        <dl>
+          <dt>招牌</dt><dd>蒜香地瓜葉、老饕煎豆腐、蒜苗鹹豬肉、紹興藥膳陶板蝦，甜點也受好評</dd>
+          <dt>營業</dt><dd>週一公休；午 11:00–14:00、晚 17:00–20:00</dd>
+          <dt>付款停車</dt><dd>只收現金・免費停車</dd>
+        </dl>
+        <div class="fit">
+          <div><b>阿公阿嬤</b>入口與廁所都有無障礙設計</div>
+          <div><b>小魚乾</b>有兒童增高椅；煎豆腐、地瓜葉、白飯可吃</div>
+          <div class="warn"><b>要考慮</b>可帶狗入內，對狗過敏或怕狗要留意</div>
+          <div class="warn"><b>要考慮</b>五間裡車程最遠</div>
+        </div>
+        
+      </div>
+    </article>
+
+    <article class="rest">
+      <div class="top"><span class="no">⑤</span><div><h3>守屋客家海鮮餐廳</h3><p class="area">楊梅市區・車程約 15 分</p></div><p class="star">★ 4.2<small>1,912 則評論</small></p></div>
+      <div class="body">
+        <iframe class="map" src="https://maps.google.com/maps?q=%E5%AE%88%E5%B1%8B%E5%AE%A2%E5%AE%B6%E6%B5%B7%E9%AE%AE%E9%A4%90%E5%BB%B3%20%E6%A5%8A%E6%A2%85&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="守屋客家海鮮餐廳 楊梅 位置地圖"></iframe>
+        <a class="photobtn" href="https://maps.google.com/maps?cid=822024088314159260" target="_blank" rel="noopener">📷 看店內環境與菜色照片（Google 地圖）</a>
+        <p class="intro">楊梅市區的傳統客家海鮮餐廳，有包廂，適合一家人關起門來慶生，不怕小孩吵到別桌。</p>
+        <dl>
+          <dt>招牌</dt><dd>酥炸豬腳、首烏雞湯、客家小炒、薑絲大腸、麵疙瘩、鵝肉</dd>
+          <dt>營業</dt><dd>週二公休；午 11:00–14:00、晚 17:00–21:00，建議訂位</dd>
+          <dt>付款停車</dt><dd>只收現金・附近付費停車場</dd>
+        </dl>
+        <div class="fit">
+          <div><b>阿公阿嬤</b>包廂安靜，菜色是長輩熟悉的客家味</div>
+          <div><b>小魚乾</b>有兒童椅；雞湯、麵疙瘩適合他</div>
+          <div class="warn"><b>要考慮</b>沒有無障礙入口與座位</div>
+          <div class="warn"><b>要考慮</b>沒有自家停車場</div>
+        </div>
+        
+      </div>
+    </article>
+
+  </div>
+  <div class="tip" style="margin-top:14px">五間都只收現金。決定後 11 月就訂位，訂 17:30，並問：①平安夜是否有特別菜單 ②能否自備生日蛋糕、收不收切蛋糕費 ③兒童椅。</div>
+</section>
+
+<section class="sec">
+  <h2>已寫信問飯店、等回覆</h2>
+  <ol class="ask">
+    <li>訂房加註一位幼兒同行；嬰兒床或床邊護欄、兒童備品</li>
+    <li>北海小行家的開放時間、年齡限制、要不要預約</li>
+    <li>泳池兒童戲水區要不要游泳尿布、有沒有年齡身高限制</li>
+    <li>房內能不能點生日蠟燭</li>
+    <li>嶼：12/23 晚餐是不是聖誕特別專案、能不能用券；12/24 早午餐能不能用券；券和 IHG 會員優惠能否擇優</li>
+  </ol>
+</section>
+
+<section class="sec">
+  <h2>別忘了帶</h2>
+  <div class="items">
+    <div>牙刷・浴帽・棉花棒<small>飯店不提供一次性備品</small></div>
+    <div>小魚乾泳衣＋游泳尿布<small>頂樓戲水區</small></div>
+    <div>保暖外套・帽子<small>泳池在戶外、三合院半戶外</small></div>
+    <div>生日蛋糕・蠟燭・打火機<small>12/23 晚上在房間吃</small></div>
+    <div>現金<small>平安夜餐廳都只收現金</small></div>
+    <div>玉山信用卡<small>抵用券規定全額刷卡</small></div>
+  </div>
+</section>
+
+<footer>金山慶生小旅行 v1.0.0 ・ 更新 2026/10/11<br>訂單編號、付款資料見私人記錄</footer>
+</div>
+</body>
+</html>
