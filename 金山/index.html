@@ -38,7 +38,7 @@ svg{display:block;max-width:100%;height:auto}
 .cover svg{margin-top:18px}
 
 .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px}
-.stay{margin-top:-6px;position:relative;z-index:2}
+.stay{position:relative;z-index:2}
 .stay .card{box-shadow:0 8px 24px rgba(0,0,0,.06)}
 .stay h2{font-size:21px}
 .stay .room{color:var(--ink2);font-size:14.5px;margin-top:2px}
@@ -117,6 +117,18 @@ svg{display:block;max-width:100%;height:auto}
 
 .map{width:100%;height:180px;border:0;border-radius:12px;display:block;background:var(--bg)}
 .photobtn{display:block;text-align:center;margin:10px 0 12px;padding:10px;border-radius:12px;background:var(--gold);color:#1A2130;text-decoration:none;font-weight:700;font-size:14.5px}
+.jump{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 0;margin:0 -16px;padding-left:16px;padding-right:16px;background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:0 0 auto;font-size:13.5px;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px 12px;white-space:nowrap}
+.jump a:hover{border-color:var(--gold)}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+.stay{margin-top:4px}
+.lunch{margin-top:14px;display:grid;gap:10px}
+.lunch div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--ink2)}
+.lunch b{display:block;color:var(--ink);font-size:15px}
+.bath{margin:12px 0 0;padding-left:1.4em;font-size:14.5px}
+.bath li{margin:7px 0}
+.bath b{color:var(--ink)}
 table.cmp{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px;background:var(--paper);border-radius:12px;overflow:hidden}
 .cmp th,.cmp td{border-bottom:1px solid var(--line);padding:8px 8px;text-align:left;vertical-align:top}
 .cmp th{background:var(--bg);font-weight:500;color:var(--muted);font-size:12.5px}
@@ -167,7 +179,11 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
 
 <div class="wrap">
 
-<section class="stay">
+<nav class="jump" aria-label="跳到段落">
+  <a href="#kids">♨️ 飯店設施</a><a href="#bath">🛁 幼兒泡湯</a><a href="#day1">① 12/23</a><a href="#day2">② 12/24</a><a href="#coupon">🎟️ 抵用券</a><a href="#dinner">🍽️ 平安夜晚餐</a><a href="#ask">✉️ 等回覆</a><a href="#bring">🎒 攜帶</a>
+</nav>
+
+<section class="stay" id="stay">
   <div class="card">
     <h2>新北北海溫泉洲際酒店</h2>
     <p class="room">豪華房一大床・高樓層・51 ㎡・房內私人溫泉湯池</p>
@@ -182,7 +198,7 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   </div>
 </section>
 
-<section class="sec">
+<section class="sec" id="kids">
   <h2>洲際：小魚乾能用的地方</h2>
   <p class="lead">查證 2026/10/11；開放時間與年齡限制已寫信詢問，回覆後更新</p>
   <div class="photos">
@@ -203,21 +219,45 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   </div>
 </section>
 
+<section class="sec" id="bath">
+  <h2>幼兒泡湯注意事項</h2>
+  <p class="lead">房內湯池是溫泉（氯化物硫酸鹽泉），兩歲小孩泡要比大人保守</p>
+  <ol class="bath">
+    <li><b>水溫放低：</b>先放水再兌冷水，降到接近體溫、手肘探下去不燙（約 37–38°C）；大人習慣的 40°C 對他太熱。</li>
+    <li><b>時間短：</b>一次 5–10 分鐘就起來，看到臉紅、出汗、煩躁就停；可以起來休息再下去，不要連續久泡。</li>
+    <li><b>水位不過胸：</b>坐在大人腿上或池邊，水淹到肚子即可；大人全程手扶著，一秒都不離開。</li>
+    <li><b>避開飯前飯後：</b>空腹和剛吃飽（飯後 1 小時內）都不泡；晚餐後回房切蛋糕，那段時間先不泡。</li>
+    <li><b>補水：</b>泡前泡後都喝水或奶。</li>
+    <li><b>不泡頭臉：</b>溫泉水別潑進眼睛和嘴巴；泡完用清水沖淨全身、擦乳液，看皮膚有沒有紅疹。</li>
+    <li><b>防滑防燙：</b>湯池在房間正中央，地板濕滑；出水口附近水溫高，不讓他靠近；大人泡湯時他不能自己在池邊玩。</li>
+    <li><b>不舒服就不泡：</b>發燒、腹瀉、皮膚有傷口或濕疹發作時跳過，改用淋浴。</li>
+  </ol>
+  <div class="tip">大眾湯限 16 歲以上，小魚乾只能泡房內湯池。龜山下智久為醫師，以上是一般原則，實際依孩子狀況判斷。</div>
+</section>
+
 <!-- DAY 1 -->
-<section class="day day1">
+<section class="day day1" id="day1">
   <div class="dayhead"><span class="daynum">1</span><div><h2>12/23（三）生日前夜</h2><p>下午入住，晚餐在飯店慶生，房間切蛋糕</p></div></div>
   <ol class="tl">
-    <li class="key"><span class="t">16:00</span><span class="dot"></span><span class="w"><b>入住洲際</b><span>櫃台要問：①嶼早午餐能否同一天分早上、中午兩次入場（手機已設提醒）②嬰兒床／床邊護欄 ③遊戲室與泳池的幼兒規定</span></span></li>
-    <li><span class="t">16:30</span><span class="dot"></span><span class="w"><b>北海小行家放電，或房內泡湯</b><span>依遊戲室開放時間決定；17:30 回房換衣服</span></span></li>
+    <li><span class="t">12:00</span><span class="dot"></span><span class="w"><b>在家吃午餐</b><span>行李、蛋糕先放上車</span></span></li>
+    <li class="key"><span class="t">13:45</span><span class="dot"></span><span class="w"><b>台北出發</b><span>約 50–70 分鐘（國道 1 號轉基金公路，或走陽金公路），小魚乾在車上午睡；從桃園出發要再早 40 分鐘</span></span></li>
+    <li class="key"><span class="t">15:00</span><span class="dot"></span><span class="w"><b>抵達洲際、辦入住</b><span>正式入住 16:00，提早入住要看房況<span class="flag">要另外問飯店</span>；房間還沒好就先寄放行李。還在睡就一人留車上陪睡，一人去辦手續。櫃台要問：①嶼早午餐能否同一天分早上、中午兩次入場（手機已設提醒）②嬰兒床／床邊護欄 ③遊戲室與泳池的幼兒規定</span></span></li>
+    <li><span class="t">15:30</span><span class="dot"></span><span class="w"><b>北海小行家放電，或房內泡湯</b><span>依遊戲室開放時間決定；泡湯看下方「幼兒泡湯注意事項」；17:30 回房換衣服</span></span></li>
     <li class="key"><span class="t">18:00</span><span class="dot"></span><span class="w"><b>嶼 Shima 半自助晚餐</b><span>大人各點一份主餐（2,580／2,980／3,280 元＋10%），自助餐檯幫小魚乾挑；兩位大人各用一張抵用券</span></span></li>
     <li><span class="t">19:30</span><span class="dot"></span><span class="w"><b>回房切蛋糕、唱生日快樂歌</b><span>自備蛋糕；房內能不能點蠟燭<span class="flag">待飯店回覆</span></span></span></li>
     <li><span class="t">20:15</span><span class="dot"></span><span class="w"><b>就寢</b><span>大人之後輪流泡湯</span></span></li>
   </ol>
+  <div class="lunch">
+    <div><b>想在金山吃午餐的話（備案）</b>11:00 台北出發，12:00 到金山吃午餐，13:00 去樹屋看動物，15:00 入住後在房間午睡到 16:30。代價是午睡往後挪約兩小時，晚上可能比較晚睡。以下三家週三都有營業（2026/10/11 Google 地圖資料）：</div>
+    <div><b>金山獅子林當歸鴨</b>民生路，離飯店開車 3 分鐘。當歸鴨湯、鴨肉冬粉，湯清淡溫熱，適合冬天和小孩；店內寬敞有廁所，步行 3 分鐘有立體停車場。週二公休，11:00–21:00。<a href="https://maps.google.com/?q=金山獅子林當歸鴨" target="_blank" rel="noopener">地圖</a></div>
+    <div><b>金包里鴨肉（廟口鴨肉）</b>金山老街廣安宮旁，自己到攤位挑菜端回座位的老字號。很熱鬧、人多擁擠，推車不好走，當成體驗即可。每天 10:00–18:00（週末 9:00 起）。<a href="https://maps.google.com/?q=金包里鴨肉" target="_blank" rel="noopener">地圖</a></div>
+    <div><b>Time 奶奶・樹屋咖啡樂園</b>萬里加投路，離飯店約 10 分鐘。小型動物農場，老闆會帶小孩餵動物，飲料每人低消 100 元。週二公休，週三 09:30–17:30。適合午餐後、入住前放電。<a href="https://maps.google.com/?q=Time奶奶樹屋咖啡樂園" target="_blank" rel="noopener">地圖</a></div>
+  </div>
   <div class="tip">嶼晚餐最後入場 19:30；訂 18:00 是為了讓小魚乾 20:00 前吃完回房。</div>
 </section>
 
 <!-- DAY 2 -->
-<section class="day day2">
+<section class="day day2" id="day2">
   <div class="dayhead"><span class="daynum">2</span><div><h2>12/24（四）兩歲生日・平安夜</h2><p>早午餐一起解決，車上午睡，傍晚和阿公阿嬤過平安夜</p></div></div>
   <ol class="tl">
     <li><span class="t">08:00</span><span class="dot"></span><span class="w"><b>起床、房內泡湯或泳池</b><span>如果早午餐可以重複入場，早上先下去吃第一輪</span></span></li>
@@ -232,7 +272,7 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   <div class="tip">早午餐 08:00–14:00，最後入場 13:00。目前訂 11:15 一次吃完；如果飯店說可以重複入場，再改成早上、中午各一輪。</div>
 </section>
 
-<section class="sec">
+<section class="sec" id="coupon">
   <h2>嶼 Shima 抵用券（3 張）</h2>
   <p class="lead">玉山 e point 兌換，每張折 399 元，效期 2026/12/30</p>
   <div class="coupon">
@@ -369,18 +409,19 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   <div class="tip" style="margin-top:14px">五間都只收現金。決定後 11 月就訂位，訂 17:30，並問：①平安夜是否有特別菜單 ②能否自備生日蛋糕、收不收切蛋糕費 ③兒童椅。</div>
 </section>
 
-<section class="sec">
+<section class="sec" id="ask">
   <h2>已寫信問飯店、等回覆</h2>
   <ol class="ask">
     <li>訂房加註一位幼兒同行；嬰兒床或床邊護欄、兒童備品</li>
     <li>北海小行家的開放時間、年齡限制、要不要預約</li>
     <li>泳池兒童戲水區要不要游泳尿布、有沒有年齡身高限制</li>
     <li>房內能不能點生日蠟燭</li>
+    <li>能否提早到 15:00 入住（信裡沒有問到，要另外補問）</li>
     <li>嶼：12/23 晚餐是不是聖誕特別專案、能不能用券；12/24 早午餐能不能用券；券和 IHG 會員優惠能否擇優</li>
   </ol>
 </section>
 
-<section class="sec">
+<section class="sec" id="bring">
   <h2>別忘了帶</h2>
   <div class="items">
     <div>牙刷・浴帽・棉花棒<small>飯店不提供一次性備品</small></div>
@@ -392,7 +433,7 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   </div>
 </section>
 
-<footer>金山慶生小旅行 v1.0.0 ・ 更新 2026/10/11<br>訂單編號、付款資料見私人記錄</footer>
+<footer>金山慶生小旅行 v1.1.0 ・ 更新 2026/10/11<br>訂單編號、付款資料見私人記錄</footer>
 </div>
 </body>
 </html>
