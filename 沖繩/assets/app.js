@@ -1,5 +1,5 @@
 /* 沖繩家庭旅遊企劃書 — 共用行為腳本 v2.0
-   1) 表格自動加 data-label，手機上轉成卡片
+   1) 表格自動加 data-label，手機上轉成卡片；標 class="swipe" 者改為左右滑動
    2) 標題自動編 id，供錨點連結使用
    3) 自動生成本頁目錄
    4) 導覽列標示目前頁
@@ -18,6 +18,12 @@
       w.appendChild(t);
     }
     var head = t.querySelector('thead tr');
+    /* 標了 class="swipe" 的表格不轉卡片，改成手機上左右滑動的真表格 */
+    if (t.classList.contains('swipe')) {
+      t.parentNode.classList.add('scrollx');
+      if (head) t.setAttribute('data-cols', head.children.length);
+      return;
+    }
     if (head) {
       var labels = Array.prototype.map.call(head.children, function (th) {
         return th.textContent.replace(/\s+/g, ' ').trim();
@@ -34,6 +40,29 @@
       t.parentNode.classList.add('scrollx');
     }
   });
+
+  /* ---- 1b. 可滑動表格：真的滑得動時才顯示提示，並在滑到底時收起 ---- */
+  function syncSwipeHints() {
+    Array.prototype.forEach.call(document.querySelectorAll('.tw.scrollx'), function (w) {
+      if (!w.querySelector('table.swipe')) return;
+      var over = w.scrollWidth - w.clientWidth > 4;
+      var hint = w.previousElementSibling;
+      if (over && (!hint || !hint.classList.contains('swipehint'))) {
+        hint = document.createElement('div');
+        hint.className = 'swipehint';
+        hint.textContent = '← 左右滑動看完整表格 →';
+        w.parentNode.insertBefore(hint, w);
+      }
+      if (hint && hint.classList.contains('swipehint')) {
+        hint.hidden = !over;
+        w.onscroll = function () {
+          hint.classList.toggle('done', w.scrollLeft + w.clientWidth >= w.scrollWidth - 4);
+        };
+      }
+    });
+  }
+  syncSwipeHints();
+  window.addEventListener('resize', syncSwipeHints);
 
   /* ---- 2. 標題 id ---- */
   var n = 0;

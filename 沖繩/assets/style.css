@@ -75,7 +75,7 @@ li{margin:0 0 6px}
 .toc li{margin:0 0 4px; font-size:.94rem}
 @media(min-width:700px){.toc ol{columns:2; column-gap:26px}}
 
-/* ---------- 表格：手機轉卡片、桌機正常 ---------- */
+/* ---------- 表格：手機轉卡片（標 .swipe 者改為左右滑動）、桌機正常 ---------- */
 .tw{margin:0 0 14px}
 table{width:100%; border-collapse:collapse; font-size:.93rem; background:var(--card)}
 th,td{padding:9px 10px; border:1px solid var(--line); text-align:left; vertical-align:top}
@@ -93,8 +93,19 @@ td b,th b{font-weight:700}
     letter-spacing:.06em; color:var(--ac2); font-weight:700; margin-bottom:2px}
   table.cardify td:empty{display:none}
   .tw.scrollx{overflow-x:auto; -webkit-overflow-scrolling:touch}
+
+  /* 標了 class="swipe" 的表格：手機上維持真表格，靠左右滑動看完 */
+  .tw.scrollx table.swipe{min-width:600px}
+  /* 2 欄表格在手機上本來就塞得下，不強制加寬；容器仍可滑動，只是用不到 */
+  .tw.scrollx table.swipe[data-cols="2"]{min-width:0}
+  .tw.scrollx table.swipe[data-cols="4"]{min-width:720px}
+  .tw.scrollx table.swipe[data-cols="5"]{min-width:820px}
+  .tw.scrollx table.swipe thead th{position:sticky; top:0; z-index:1}
+  .swipehint{font-size:.72rem; letter-spacing:.06em; color:var(--ac2); font-weight:700;
+    margin:0 0 4px; transition:opacity .25s}
+  .swipehint.done{opacity:0}
 }
-@media(min-width:700px){.tw{overflow-x:auto}}
+@media(min-width:700px){.tw{overflow-x:auto} .swipehint{display:none}}
 
 /* ---------- 警示分級 ---------- */
 .must,.field,.info,.ok{border-radius:12px; padding:12px 14px; margin:0 0 14px; font-size:.94rem; line-height:1.8}
