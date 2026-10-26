@@ -32,8 +32,10 @@
   <section id="v-plan" class="view" aria-label="行程" hidden></section>
   <section id="v-map" class="view" aria-label="地圖" hidden>
     <div class="chips" id="mapChips"></div>
-    <div id="map" role="region" aria-label="地圖"></div>
-    <p class="mapnote">地圖需要網路；看過的區域會暫存。在國外沒網路時，點地點的「導航」用 Google 地圖（建議出發前在 Google 地圖下載仙台與秋保的離線地圖）。</p>
+    <div class="seg" role="tablist" aria-label="地圖模式"><button type="button" data-mode="g" class="on">Google 地圖</button><button type="button" data-mode="r">路線圖</button></div>
+    <div id="gmap" class="gmap"><iframe id="gframe" title="Google 地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    <div id="map" role="region" aria-label="路線圖" hidden></div>
+    <p class="mapnote" id="mapNote"></p>
     <ol class="maplist" id="mapList"></ol>
   </section>
   <section id="v-info" class="view" aria-label="速查" hidden></section>

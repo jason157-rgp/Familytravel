@@ -33,6 +33,7 @@
   function telUrl(t) { return 'tel:' + t.replace(/[^\d+#]/g, '').replace('#', '%23'); }
 
   /* ---------- 時間軸 ---------- */
+  var OPEN = {}; // 使用者點開／收起的項目，每分鐘重畫時保留
   function timeline(di, live) {
     var day = T.days[di], cur = -1, next = -1;
     if (live) {
@@ -42,7 +43,7 @@
         if (m <= now) cur = i; else if (next < 0) next = i;
       });
     }
-    var h = '<ol class="tl">';
+    var h = '<ol class="tl">', seenP = {};
     day.items.forEach(function (it, i) {
       var cls = ['it'];
       if (it.tag === 'key') cls.push('key');
@@ -51,15 +52,19 @@
       if (live && (i === next || (next < 0 && i === cur))) cls.push('next');
       var tag = it.tag === 'key' ? '<span class="tg key">重點</span>' : it.tag === 'opt' ? '<span class="tg opt">有餘力</span>' : it.tag === 'warn' ? '<span class="tg warn">待確認</span>' : '';
       var acts = '';
-      if (it.p) {
+      if (it.p && !seenP[it.p]) {
+        seenP[it.p] = 1;
         acts += '<a class="act" href="' + navUrl(it.p) + '" target="_blank" rel="noopener">📍 導航</a>';
-        if (T.places[it.p].ll) acts += '<button type="button" class="act alt" data-map="' + di + ':' + it.p + '">🗺 地圖</button>';
+        acts += '<button type="button" class="act alt" data-map="' + di + ':' + it.p + '">🗺 地圖</button>';
       }
       (it.tel || []).forEach(function (t) { acts += '<a class="act alt" href="' + telUrl(t) + '">📞 ' + esc(t) + '</a>'; });
       var lbl = live && i === next ? '<span class="nextlbl">接下來</span><br>' : live && next < 0 && i === cur ? '<span class="nextlbl">現在</span><br>' : '';
-      h += '<li class="' + cls.join(' ') + '"><div class="tm">' + esc(it.t) + (it.tz === 'TW' ? '<small>台灣時間</small>' : '') + '</div><div class="bx">' + lbl +
-        '<div class="tt">' + tag + esc(it.title) + '</div>' + (it.note ? '<p class="nt">' + esc(it.note) + '</p>' : '') +
-        (acts ? '<div class="acts">' + acts + '</div>' : '') + '</div></li>';
+      var det = (it.note ? '<p class="nt">' + esc(it.note) + '</p>' : '') + (acts ? '<div class="acts">' + acts + '</div>' : '');
+      var isNext = live && (i === next || (next < 0 && i === cur));
+      var opened = OPEN[di + ':' + i] != null ? OPEN[di + ':' + i] : isNext;
+      var bxc = det ? 'bx tap' + (opened ? ' open' : '') : 'bx';
+      h += '<li class="' + cls.join(' ') + '"><div class="tm">' + esc(it.t) + (it.tz === 'TW' ? '<small>台灣時間</small>' : '') + '</div><div class="' + bxc + '"' + (det ? ' role="button" tabindex="0" data-k="' + di + ':' + i + '" aria-expanded="' + (opened ? 'true' : 'false') + '"' : '') + '>' + lbl +
+        '<div class="tt">' + tag + esc(it.title) + '</div>' + (det ? '<div class="det">' + det + '</div>' : '') + '</div></li>';
     });
     h += '</ol>';
     var f = '<div class="foot">';
@@ -85,8 +90,8 @@
     '護照效期 6 個月以上（三人）',
     '台灣駕照正本＋日文譯本（缺一不得租車）',
     '長榮線上報到 10/28 起開放',
-    'eSIM 先安裝好；手機錢包加 Suica',
-    '信用卡開通海外交易，另備一張不同組織的卡',
+    '打長榮客服申請小魚乾機上嬰兒餐（起飛 24 小時前）',
+    '另帶一張不同組織的信用卡（JCB／Master）',
     '¥100 硬幣至少 8 枚（動物園餵食），現金約 ¥60,000',
     '可攜式椅帶（兩間飯店與多數餐廳的兒童椅都沒有安全帶）',
     '微波爐用奶瓶消毒盒或消毒袋、尿布防臭袋（兩間飯店都沒有消毒器）',
@@ -120,7 +125,13 @@
   }
 
   /* ---------- 地圖 ---------- */
-  var map = null, layer = null, markers = {}, mapDay = 0;
+  var map = null, layer = null, markers = {}, mapDay = 0, mapMode = store.get('sendai-mapmode') || 'g', gKey = null;
+  function gUrl(key) { var p = T.places[key]; return 'https://www.google.com/maps?q=' + encodeURIComponent(p.q || p.n) + '&hl=zh-TW&z=16&output=embed'; }
+  function setG(key) {
+    if (!key) return; gKey = key;
+    var fr = $('#gframe'), u = gUrl(key); if (fr.getAttribute('src') !== u) fr.setAttribute('src', u);
+    Array.prototype.forEach.call(document.querySelectorAll('#mapList li'), function (li) { li.classList.toggle('cur', li.getAttribute('data-pick') === key); });
+  }
   function dayStops(di) {
     var seen = {}, out = [];
     T.days[di].items.forEach(function (it) {
@@ -134,10 +145,18 @@
     $('#mapChips').innerHTML = chips(mapDay, 'mday');
     var stops = dayStops(mapDay), list = '', n = 0;
     stops.forEach(function (s) {
-      var p = T.places[s.key]; if (p.ll) n++;
-      list += '<li><span class="n' + (s.opt ? ' o' : '') + '">' + (p.ll ? n : '–') + '</span><div class="x"><b>' + esc(p.n) + '</b><span>' + esc(s.t) + '　' + esc(s.title) + (p.ll ? '' : '（無地圖座標，請用導航）') + '</span></div><a class="act" href="' + navUrl(s.key) + '" target="_blank" rel="noopener">導航</a></li>';
+      var p = T.places[s.key]; if (p.ll || mapMode === 'g') n++;
+      list += '<li data-pick="' + s.key + '"><span class="n' + (s.opt ? ' o' : '') + '">' + (mapMode === 'g' || p.ll ? n || '·' : '–') + '</span><div class="x"><b>' + esc(p.n) + '</b><span>' + esc(s.t) + '　' + esc(s.title) + (mapMode === 'r' && !p.ll ? '（路線圖沒有座標，請用導航）' : '') + '</span></div><a class="act" href="' + navUrl(s.key) + '" target="_blank" rel="noopener">導航</a></li>';
     });
     $('#mapList').innerHTML = list;
+    Array.prototype.forEach.call(document.querySelectorAll('.seg button'), function (b) { b.classList.toggle('on', b.getAttribute('data-mode') === mapMode); });
+    $('#gmap').hidden = mapMode !== 'g'; $('#map').hidden = mapMode !== 'r';
+    $('#mapNote').textContent = mapMode === 'g' ? '點下面的地點，上方就換成那個地點的 Google 地圖；要走路線請按「導航」。需要網路。' : '當天所有停留點的順序與路線。需要網路，看過的區域會暫存。';
+    if (mapMode === 'g') {
+      var keys = stops.map(function (x) { return x.key; });
+      setG(focusKey && keys.indexOf(focusKey) >= 0 ? focusKey : (gKey && keys.indexOf(gKey) >= 0 ? gKey : keys[0]));
+      return;
+    }
     if (!window.L) { $('#map').innerHTML = '<p style="padding:16px">地圖元件載入失敗，請用下方的導航按鈕。</p>'; return; }
     if (!map) {
       map = L.map('map', { zoomControl: true, attributionControl: true });
@@ -201,8 +220,16 @@
     if (!opt || !opt.keepScroll) window.scrollTo(0, 0);
   }
   document.addEventListener('click', function (e) {
+    var sg = e.target.closest('.seg button');
+    if (sg) { mapMode = sg.getAttribute('data-mode'); store.set('sendai-mapmode', mapMode); renderMap(gKey); return; }
+    var pk = e.target.closest('#mapList li[data-pick]');
+    if (pk && !e.target.closest('a')) { if (mapMode === 'g') { setG(pk.getAttribute('data-pick')); window.scrollTo({ top: 0, behavior: 'smooth' }); } else if (markers[pk.getAttribute('data-pick')]) { var mk = markers[pk.getAttribute('data-pick')]; map.setView(mk.getLatLng(), 15); mk.openPopup(); window.scrollTo({ top: 0, behavior: 'smooth' }); } return; }
     var b = e.target.closest('[data-v],[data-pday],[data-mday],[data-map],[data-show],.sheet-x,.sheet');
-    if (!b) return;
+    if (!b) {
+      var t = e.target.closest('.bx.tap');
+      if (t && !e.target.closest('a,button')) { var o = t.classList.toggle('open'); t.setAttribute('aria-expanded', o ? 'true' : 'false'); OPEN[t.getAttribute('data-k')] = o; }
+      return;
+    }
     if (b.hasAttribute('data-v')) show(b.getAttribute('data-v'));
     else if (b.hasAttribute('data-pday')) { planDay = +b.getAttribute('data-pday'); show('plan'); }
     else if (b.hasAttribute('data-mday')) { mapDay = +b.getAttribute('data-mday'); show('map', { keepScroll: true }); }
@@ -214,7 +241,10 @@
     $('.sheet-c').innerHTML = '<p class="show-sub">' + esc(sub) + '</p><div class="show-ja">' + esc(ja).replace(/\n/g, '<br>') + '</div>';
     $('#sheet').hidden = false;
   }
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') $('#sheet').hidden = true; });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') $('#sheet').hidden = true;
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('tap')) { e.preventDefault(); e.target.click(); }
+  });
 
   /* ---------- 啟動 ---------- */
   (function init() {
@@ -241,8 +271,9 @@
   }
   if (ios) hint('在 Safari 點下方「分享」→「加入主畫面」，之後像 App 一樣一點就開，沒網路也能看。');
   window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; hint('加到主畫面，之後像 App 一樣一點就開，沒網路也能看。', true); });
-  $('#installBtn').addEventListener('click', function () { if (deferred) { deferred.prompt(); deferred = null; } $('#install').hidden = true; });
-  $('#installX').addEventListener('click', function () { $('#install').hidden = true; store.set('sendai-install-x', '1'); });
+  function closeHint() { $('#install').hidden = true; store.set('sendai-install-x', '1'); }
+  $('#installBtn').addEventListener('click', function () { if (deferred) { deferred.prompt(); deferred = null; } closeHint(); });
+  $('#installX').addEventListener('click', closeHint);
 
   /* ---------- 離線快取 ---------- */
   if ('serviceWorker' in navigator && location.protocol === 'https:' || location.hostname === 'localhost') {
