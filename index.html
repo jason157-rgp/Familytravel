@@ -1,3 +1,6 @@
+---
+# 讓 GitHub Pages 處理本頁，頁尾日期才會自動填入；不要刪
+---
 <!doctype html>
 <!-- 編輯前請先讀根目錄的 CLAUDE.md -->
 <html lang="zh-Hant">
@@ -50,7 +53,7 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 56px}
 </style>
 </head>
 <body>
-<video id="bgv" src="space%20fish.MP4" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" tabindex="-1"></video>
+<video id="bgv" data-src="space%20fish.MP4" poster="bg-poster.jpg" muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true" tabindex="-1"></video>
 <div id="scrim"></div>
 <header>
 <p class="kick">FAMILY TRAVEL</p>
@@ -112,7 +115,7 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;padding:0 20px 56px}
 </section>
 <div class="note">訂位代號、票號、哩程帳號、護照與信用卡等識別資料一律不列於本網頁，均以「見私人記錄」標示。</div>
 </div>
-<footer>更新 2026/10/15（新增新加坡＋民丹島）</footer>
+<footer>最後更新 {{ site.time | date: "%Y/%m/%d" }}</footer>
 <button id="bgbtn" type="button">暫停背景</button>
 <script>
 (function(){
@@ -122,9 +125,13 @@ function sync(){b.textContent=v.paused?'播放背景':'暫停背景'}
 v.addEventListener('play',sync);
 v.addEventListener('pause',sync);
 v.addEventListener('error',function(){v.style.display='none';b.style.display='none'});
-b.addEventListener('click',function(){if(v.paused){var p=v.play();if(p&&p.catch){p.catch(function(){})}}else{v.pause()}});
-var pl=v.play();if(pl&&pl.catch){pl.catch(function(){})}
-if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.pause()}
+function start(){if(!v.getAttribute('src')){v.preload='auto';v.src=v.getAttribute('data-src')}var p=v.play();if(p&&p.catch){p.catch(function(){})}}
+b.addEventListener('click',function(){if(v.paused){start()}else{v.pause()}});
+var mq=function(q){return !!(window.matchMedia&&window.matchMedia(q).matches)};
+// 手機（觸控螢幕、短邊小於 600px）、省流量模式、減少動態：不自動播放也不下載影片，只顯示靜態封面，按右下角按鈕才播放
+var phone=mq('(pointer: coarse)')&&Math.min(screen.width,screen.height)<600;
+var saveData=!!(navigator.connection&&navigator.connection.saveData);
+if(!phone&&!saveData&&!mq('(prefers-reduced-motion: reduce)')){start()}
 sync();
 })();
 </script>

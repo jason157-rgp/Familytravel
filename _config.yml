@@ -1,0 +1,7 @@
+# GitHub Pages 整站設定（說明見 CLAUDE.md「〇之二」）
+# 頁尾「最後更新」日期用台灣時間
+timezone: Asia/Taipei
+
+# 留在 repo、但不發布到網站上的檔案
+exclude:
+  - CLAUDE.md
