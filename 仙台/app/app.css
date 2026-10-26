@@ -1,0 +1,115 @@
+:root{
+  --red:#9c3f2b;--red2:#c4583f;--redbg:#f7ebe6;
+  --ink:#22201e;--sub:#6c645e;--line:#e7dfd8;--bg:#faf7f4;--card:#fff;
+  --gold:#b0742a;--goldbg:#fbf1e2;--green:#2f6f55;--greenbg:#e8f3ee;--warn:#a5521a;--warnbg:#fff1e3;
+  --tabh:64px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15.5px/1.65 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;-webkit-text-size-adjust:100%;padding-bottom:calc(var(--tabh) + env(safe-area-inset-bottom))}
+button{font:inherit;color:inherit}
+a{color:var(--red)}
+main{max-width:620px;margin:0 auto}
+.view{padding:14px 14px 26px}
+
+/* 安裝提示與離線 */
+.install{display:flex;align-items:center;gap:10px;max-width:620px;margin:10px auto 0;padding:10px 12px;background:var(--goldbg);border:1px solid #efd9b8;border-radius:12px;font-size:14px}
+.install-t{flex:1}
+.install button{border:0;border-radius:999px;padding:6px 12px;background:var(--red);color:#fff;cursor:pointer}
+.install .x{background:transparent;color:var(--sub);padding:4px 6px}
+.offline{max-width:620px;margin:10px auto 0;padding:7px 12px;border-radius:10px;background:#eceff2;color:#44515c;font-size:13.5px;text-align:center}
+
+/* 頁首卡 */
+.hero{background:linear-gradient(135deg,var(--red),#6e2a1c);color:#fff;border-radius:18px;padding:18px 18px 16px;box-shadow:0 8px 24px rgba(110,42,28,.22)}
+.hero .k{font-size:12.5px;letter-spacing:.18em;opacity:.85;margin:0}
+.hero h1{margin:4px 0 2px;font-size:24px;letter-spacing:.03em;line-height:1.35}
+.hero p{margin:6px 0 0;font-size:14.5px;opacity:.95}
+.hero .big{font-size:40px;font-weight:700;line-height:1.1;margin:8px 0 2px}
+.badge{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;background:rgba(255,255,255,.18);margin-top:10px}
+
+.lead{margin:14px 2px 0;color:var(--sub);font-size:14.5px}
+.alert{margin:12px 0 0;padding:10px 12px;border-radius:12px;background:var(--warnbg);color:var(--warn);font-size:14px;border:1px solid #f3d6bb}
+.h2{margin:22px 2px 10px;font-size:13px;letter-spacing:.16em;color:var(--sub);font-weight:600}
+
+/* 日期籤 */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:6px 12px;text-align:center;cursor:pointer;min-width:62px}
+.chip b{display:block;font-size:12px;color:var(--sub);font-weight:500;letter-spacing:.06em}
+.chip span{font-size:15px;font-weight:600}
+.chip.on{background:var(--red);border-color:var(--red);color:#fff}
+.chip.on b{color:#f6dcd4}
+.chip.today:not(.on){border-color:var(--red2);box-shadow:inset 0 0 0 1px var(--red2)}
+
+/* 時間軸 */
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl:before{content:"";position:absolute;left:62px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.it{position:relative;display:grid;grid-template-columns:54px 1fr;gap:0 18px;padding:9px 0}
+.it .tm{font-size:13.5px;font-weight:600;color:var(--sub);text-align:right;padding-top:9px;line-height:1.3;font-variant-numeric:tabular-nums}
+.it .tm small{display:block;font-size:10.5px;font-weight:500;color:#9a918a}
+.it:before{content:"";position:absolute;left:57px;top:21px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #c9bdb3}
+.it .bx{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:9px 12px}
+.it .tt{font-weight:600;line-height:1.45}
+.it .nt{margin:4px 0 0;font-size:13.8px;color:#4f4842}
+.it .tg{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;margin-right:6px;vertical-align:2px;font-weight:600}
+.it.key:before{border-color:var(--red);background:var(--red)}
+.tg.key{background:var(--redbg);color:var(--red)}
+.tg.opt{background:#eef0f2;color:#5b6670}
+.tg.warn{background:var(--warnbg);color:var(--warn)}
+.it.opt .bx{background:#fcfcfb;border-style:dashed}
+.it.past{opacity:.48}
+.it.next .bx{border-color:var(--red);box-shadow:0 0 0 2px rgba(156,63,43,.16)}
+.it.next:before{border-color:var(--red);background:#fff;box-shadow:0 0 0 4px rgba(156,63,43,.18)}
+.nextlbl{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--red);border-radius:999px;padding:1px 8px;margin-bottom:4px}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.act{display:inline-flex;align-items:center;gap:4px;font-size:13px;text-decoration:none;color:var(--red);border:1px solid #e9cfc6;background:#fff;border-radius:999px;padding:4px 11px;cursor:pointer;line-height:1.4}
+.act.alt{color:#3d5566;border-color:#d3dde4}
+
+/* 卡片 */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:13px 14px;margin:0 0 10px}
+.card h3{margin:0 0 4px;font-size:16px}
+.card .m{margin:2px 0 0;font-size:14px;color:#4f4842}
+.card .s{font-size:12.5px;color:var(--sub)}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.foot{margin:16px 2px 0;font-size:13.5px;color:var(--sub)}
+.foot p{margin:6px 0}
+.more{display:block;text-align:center;margin:18px 0 0;padding:11px;border-radius:12px;background:var(--card);border:1px solid var(--line);text-decoration:none;font-weight:600}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{display:flex;gap:10px;padding:9px 2px;border-bottom:1px solid var(--line);font-size:14.5px}
+.checks li:last-child{border-bottom:0}
+.checks li:before{content:"☐";color:var(--red);font-size:16px;line-height:1.5}
+.ph{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;margin:0 0 8px;cursor:pointer}
+.ph b{display:block;font-size:16px;font-weight:600}
+.ph span{font-size:13px;color:var(--sub)}
+
+/* 地圖 */
+#map{height:56vh;min-height:300px;border-radius:16px;border:1px solid var(--line);background:#e9e4de;z-index:0}
+.mapnote{font-size:12.5px;color:var(--sub);margin:8px 2px 4px}
+.maplist{margin:8px 0 0;padding:0;list-style:none}
+.maplist li{display:flex;gap:10px;align-items:center;padding:9px 4px;border-bottom:1px solid var(--line)}
+.maplist .n{flex:0 0 26px;height:26px;border-radius:50%;background:var(--red);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.maplist .n.o{background:#8d969d}
+.maplist .x{flex:1;min-width:0}
+.maplist .x b{display:block;font-weight:600;font-size:14.5px}
+.maplist .x span{font-size:12.5px;color:var(--sub)}
+.pin{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--red);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+.pin span{transform:rotate(45deg);color:#fff;font:700 12px/1 sans-serif}
+.pin.o{background:#8d969d}
+
+/* 分頁列 */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:1000;display:flex;justify-content:center;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.tabbar button{flex:1;max-width:155px;height:var(--tabh);border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:12px;color:#8a817a;cursor:pointer}
+.tabbar svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tabbar button.on{color:var(--red);font-weight:600}
+
+/* 全螢幕卡（給司機看、日文小抄） */
+.sheet{position:fixed;inset:0;z-index:2000;background:rgba(20,14,10,.55);display:flex;align-items:flex-end;justify-content:center}
+.sheet[hidden]{display:none}
+.sheet-in{position:relative;width:100%;max-width:620px;max-height:92vh;overflow:auto;background:#fff;border-radius:20px 20px 0 0;padding:26px 20px calc(26px + env(safe-area-inset-bottom))}
+.sheet-x{position:absolute;right:12px;top:10px;border:0;background:#f1ece8;border-radius:50%;width:34px;height:34px;cursor:pointer}
+.show-ja{font-size:30px;line-height:1.45;font-weight:700;margin:6px 0 10px;word-break:break-all}
+.show-sub{font-size:16px;color:var(--sub);margin:0 0 6px}
+
+button:focus-visible,a:focus-visible,.chip:focus-visible{outline:2px solid var(--red2);outline-offset:2px}
+@media (min-width:700px){.view{padding-top:20px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}

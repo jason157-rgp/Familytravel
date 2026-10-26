@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- 編輯前請先讀根目錄的 CLAUDE.md；行程資料在 trip.js，要和 ① 行程規劃同步 -->
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>仙台旅途 App</title>
+<meta name="theme-color" content="#9c3f2b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="仙台">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="app.css">
+<style id="ft-corner-css">.ft-corner{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 18px;padding:7px 16px;background:#0f1c27;color:#c9d4dc;font:13px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:.04em}.ft-corner .ft-l{margin-right:auto;color:#93a3af}.ft-corner a{color:#e9f0f4;text-decoration:none}.ft-corner a:hover,.ft-corner a:focus-visible{text-decoration:underline}</style>
+</head>
+<body>
+<div class="ft-corner"><span class="ft-l">🍁 仙台旅途 App</span><a href="../../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1aw_lGIVmFoNOhbOmFJjNZ__TklW5adl0" target="_blank" rel="noopener">📁 私人文件</a></div>
+
+<div id="install" class="install" hidden>
+  <div class="install-t"></div>
+  <button type="button" id="installBtn" hidden>加到主畫面</button>
+  <button type="button" class="x" id="installX" aria-label="關閉">✕</button>
+</div>
+<div id="offline" class="offline" hidden>離線中・顯示手機裡存好的資料</div>
+
+<main>
+  <section id="v-today" class="view" aria-label="今天"></section>
+  <section id="v-plan" class="view" aria-label="行程" hidden></section>
+  <section id="v-map" class="view" aria-label="地圖" hidden>
+    <div class="chips" id="mapChips"></div>
+    <div id="map" role="region" aria-label="地圖"></div>
+    <p class="mapnote">地圖需要網路；看過的區域會暫存。在國外沒網路時，點地點的「導航」用 Google 地圖（建議出發前在 Google 地圖下載仙台與秋保的離線地圖）。</p>
+    <ol class="maplist" id="mapList"></ol>
+  </section>
+  <section id="v-info" class="view" aria-label="速查" hidden></section>
+</main>
+
+<nav class="tabbar" aria-label="分頁">
+  <button type="button" data-v="today" class="on"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>今天</button>
+  <button type="button" data-v="plan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 2.8v3.4M16 2.8v3.4M7.5 13.5h4M7.5 17h7"/></svg>行程</button>
+  <button type="button" data-v="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>地圖</button>
+  <button type="button" data-v="info"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5h10l4 4v13H5z"/><path d="M14.5 3.5v4.5H19M8.5 12h7M8.5 15.5h7M8.5 19h4"/></svg>速查</button>
+</nav>
+
+<div id="sheet" class="sheet" hidden role="dialog" aria-modal="true">
+  <div class="sheet-in">
+    <button type="button" class="sheet-x" aria-label="關閉">✕</button>
+    <div class="sheet-c"></div>
+  </div>
+</div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="trip.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

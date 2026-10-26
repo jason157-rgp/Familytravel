@@ -1,0 +1,15 @@
+{
+  "name": "仙台旅途 App",
+  "short_name": "仙台",
+  "description": "仙台家庭旅遊 2026/10/30–11/05：今天的行程、地圖、速查",
+  "lang": "zh-Hant",
+  "start_url": "./#today",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#faf7f4",
+  "theme_color": "#9c3f2b",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
