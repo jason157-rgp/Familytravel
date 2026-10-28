@@ -147,3 +147,6 @@ button:focus-visible,a:focus-visible,.chip:focus-visible{outline:2px solid var(-
 .pk small{font-size:12.5px;color:var(--sub)}
 .pk.on b{color:var(--sub);text-decoration:line-through}
 .lnk{border:0;background:none;color:var(--red);text-decoration:underline;font:inherit;cursor:pointer;padding:0 0 0 6px}
+/* iPhone 加到主畫面後狀態列是透明的：內容往下讓出狀態列高度，並在狀態列後面墊一條深色底，捲動時文字不會疊到時間與電量 */
+body{padding-top:env(safe-area-inset-top)}
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top);background:#0f1c27;z-index:1500;pointer-events:none}
