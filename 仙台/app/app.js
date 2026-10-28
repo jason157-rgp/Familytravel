@@ -94,9 +94,38 @@
     '¥100 硬幣至少 8 枚（動物園餵食），現金約 ¥60,000',
     '可攜式椅帶（兩間飯店與多數餐廳的兒童椅都沒有安全帶）',
     '尿布防臭袋（消毒盒 10/30 在阿卡將本舖買）',
-    '現場速查卡印好（訂單編號從 Drive 私人文件抄）',
+    '列印現場速查卡（Drive「仙台」資料夾的 PDF）',
     'Google 地圖先下載仙台市區與秋保的離線地圖'
   ];
+  /* ---------- 打包清單 ---------- */
+  function packState() { try { return JSON.parse(store.get('sendai-pack') || '{}') || {}; } catch (e) { return {}; } }
+  function packHtml() {
+    if (!T.pack) return '';
+    var st = packState(), all = 0, done = 0, h = '';
+    T.pack.forEach(function (g) {
+      var gd = 0, li = '';
+      g.items.forEach(function (it) {
+        var id = g.k + ':' + it[0], on = !!st[id]; all++; if (on) { done++; gd++; }
+        li += '<li><label class="pk' + (on ? ' on' : '') + '"><input type="checkbox" data-pk="' + esc(id) + '"' + (on ? ' checked' : '') + '><span><b>' + esc(it[0]) + '</b>' + (it[1] ? '<small>' + esc(it[1]) + '</small>' : '') + '</span></label></li>';
+      });
+      var full = gd === g.items.length;
+      h += '<details class="pkg"' + (st['_open:' + g.k] ? ' open' : '') + ' data-g="' + g.k + '"><summary><span><b>' + esc(g.t) + '</b><small>' + esc(g.s) + '</small></span><em class="' + (full ? 'ok' : '') + '">' + gd + '／' + g.items.length + '</em></summary><ul>' + li + '</ul></details>';
+    });
+    return '<div class="h2">打包清單　' + done + '／' + all + '</div><div class="pbar"><i style="width:' + (all ? Math.round(done / all * 100) : 0) + '%"></i></div>' + h +
+      '<p class="foot">勾選只存在這支手機上。<button type="button" class="lnk" data-pkreset>全部清除</button></p>';
+  }
+  function rerender() { if (current === 'today') renderToday(); else if (current === 'info') renderInfo(); }
+  document.addEventListener('change', function (e) {
+    var id = e.target.getAttribute && e.target.getAttribute('data-pk'); if (!id) return;
+    var st = packState(); if (e.target.checked) st[id] = 1; else delete st[id];
+    store.set('sendai-pack', JSON.stringify(st)); var y = window.scrollY; rerender(); window.scrollTo(0, y);
+  });
+  document.addEventListener('toggle', function (e) {
+    var g = e.target.getAttribute && e.target.getAttribute('data-g'); if (!g) return;
+    var st = packState(); if (e.target.open) st['_open:' + g] = 1; else delete st['_open:' + g];
+    store.set('sendai-pack', JSON.stringify(st));
+  }, true);
+
   function renderToday() {
     var now = clock(T.tz), di = dayIndexOf(now.date), first = T.days[0].d, last = T.days[T.days.length - 1].d, h = '';
     if (di >= 0) {
@@ -107,6 +136,7 @@
       var days = Math.round((Date.parse(first) - Date.parse(now.date)) / 864e5);
       h += '<div class="hero"><p class="k">仙台 2026 秋</p><div class="big">還有 ' + days + ' 天</div><p>' + esc(T.sub) + '<br>BR118 桃園 10:15 → 仙台 14:25</p></div>';
       h += '<div class="h2">出發前確認</div><div class="card"><ul class="checks">' + PREP.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>';
+      h += packHtml();
       h += '<div class="h2">第一天預覽</div>' + dayHead(0) + timeline(0, false);
     } else {
       h += '<div class="hero"><p class="k">仙台 2026 秋</p><h1>旅程結束，歡迎回家</h1><p>' + esc(T.sub) + '</p></div><a class="more" href="../index.html">回仙台企劃書 →</a>';
@@ -200,6 +230,7 @@
       h += '<div class="card"><div class="row"><h3>' + esc(s.n) + '</h3></div><p class="s">' + esc(s.note) + '</p><div class="acts"><a class="act" href="' + telUrl(s.tel) + '">📞 ' + esc(s.tel) + '</a>' + (s.p ? '<a class="act alt" href="' + navUrl(s.p) + '" target="_blank" rel="noopener">📍 導航</a>' : '') + '</div></div>';
     });
     h += '<p class="foot">' + esc(T.sosNote) + '</p>';
+    h += packHtml();
     h += '<div class="h2">完整資料</div><div class="card"><p class="m"><a href="../index.html">仙台企劃書首頁</a>｜<a href="' + T.plan + '">① 行程規劃</a>｜<a href="../仙台家庭旅遊企劃書_待決定事項.html">② 待辦清單</a>｜<a href="../仙台家庭旅遊企劃書_訂購成果.html">③ 訂單</a></p><p class="m"><a href="' + T.drive + '" target="_blank" rel="noopener">📁 私人文件（訂位代號、保單號）</a></p><p class="s">資料版本 ' + esc(T.version) + '（' + esc(T.updated) + '），和企劃書同步。</p></div>';
     $('#v-info').innerHTML = h;
   }
@@ -223,6 +254,8 @@
     if (sg) { mapMode = sg.getAttribute('data-mode'); store.set('sendai-mapmode', mapMode); renderMap(gKey); return; }
     var pk = e.target.closest('#mapList li[data-pick]');
     if (pk && !e.target.closest('a')) { if (mapMode === 'g') { setG(pk.getAttribute('data-pick')); window.scrollTo({ top: 0, behavior: 'smooth' }); } else if (markers[pk.getAttribute('data-pick')]) { var mk = markers[pk.getAttribute('data-pick')]; map.setView(mk.getLatLng(), 15); mk.openPopup(); window.scrollTo({ top: 0, behavior: 'smooth' }); } return; }
+    var rs = e.target.closest('[data-pkreset]');
+    if (rs) { if (rs.getAttribute('data-arm')) { store.set('sendai-pack', '{}'); rerender(); } else { rs.setAttribute('data-arm', '1'); rs.textContent = '再按一次確定清除'; } return; }
     var b = e.target.closest('[data-v],[data-pday],[data-mday],[data-map],[data-show],.sheet-x,.sheet');
     if (!b) {
       var t = e.target.closest('.bx.tap');
