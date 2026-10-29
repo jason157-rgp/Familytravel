@@ -158,11 +158,21 @@
 
   /* ---------- 行程 ---------- */
   var planDay = 0;
+  // 日期列重畫後，保留原本左右捲動的位置，並確保選到的那天在畫面內（不會跳回 Day 1）
+  function keepChips(box, prevLeft) {
+    if (!box) return;
+    box.scrollLeft = prevLeft || 0;
+    var on = box.querySelector('.chip.on'); if (!on) return;
+    var l = on.offsetLeft - box.offsetLeft, r = l + on.offsetWidth;
+    if (l < box.scrollLeft || r > box.scrollLeft + box.clientWidth) box.scrollLeft = Math.max(0, l - (box.clientWidth - on.offsetWidth) / 2);
+  }
   function renderPlan() {
+    var oldBox = $('#v-plan .chips'), prevLeft = oldBox ? oldBox.scrollLeft : null;
     var d = T.days[planDay], live = d.d === tripDate();
     $('#v-plan').innerHTML = '<div class="chips">' + chips(planDay, 'pday') + '</div>' +
       '<div class="hero"><p class="k">DAY ' + (planDay + 1) + '　' + md(d.d) + '（' + d.w + '）</p><h1>' + esc(d.title) + '</h1></div>' +
       dayHead(planDay) + '<div class="h2">逐時行程</div>' + timeline(planDay, live);
+    keepChips($('#v-plan .chips'), prevLeft);
   }
 
   /* ---------- 地圖 ---------- */
@@ -183,7 +193,9 @@
     return out;
   }
   function renderMap(focusKey) {
+    var mPrev = $('#mapChips').scrollLeft;
     $('#mapChips').innerHTML = chips(mapDay, 'mday');
+    keepChips($('#mapChips'), mPrev);
     var stops = dayStops(mapDay), list = '', n = 0;
     stops.forEach(function (s) {
       var p = T.places[s.key]; if (p.ll || mapMode === 'g') n++;
