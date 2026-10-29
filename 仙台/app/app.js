@@ -76,7 +76,7 @@
   }
   function dayHead(di) {
     var d = T.days[di];
-    return '<p class="lead">' + esc(d.lead) + '</p>' + (d.warn ? '<div class="alert">⚠️ ' + esc(d.warn) + '</div>' : '');
+    return (d.wx ? '<div class="wx">🌤 <b>天氣預報</b>　' + esc(d.wx) + (T.wxNote ? '<small>' + esc(T.wxNote) + '</small>' : '') + '</div>' : '') + '<p class="lead">' + esc(d.lead) + '</p>' + (d.warn ? '<div class="alert">⚠️ ' + esc(d.warn) + '</div>' : '');
   }
   function chips(sel, onId) {
     var today = dayIndexOf(clock(T.tz).date);

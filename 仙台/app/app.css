@@ -150,3 +150,6 @@ button:focus-visible,a:focus-visible,.chip:focus-visible{outline:2px solid var(-
 /* iPhone 加到主畫面後狀態列是透明的：內容往下讓出狀態列高度，並在狀態列後面墊一條深色底，捲動時文字不會疊到時間與電量 */
 body{padding-top:env(safe-area-inset-top)}
 body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top);background:#0f1c27;z-index:1500;pointer-events:none}
+/* 每日天氣預報 */
+.wx{margin:14px 0 0;padding:10px 12px;border-radius:12px;background:#eef4fa;color:#1f3b57;font-size:14px;border:1px solid #d3e2f0}
+.wx small{display:block;color:#5a6f84;font-size:12px;margin-top:2px}
