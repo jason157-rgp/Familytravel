@@ -144,6 +144,7 @@
       var d = T.days[di];
       h += '<div class="hero"><p class="k">DAY ' + (di + 1) + '　' + md(d.d) + '（' + d.w + '）</p><h1>' + esc(d.title) + '</h1><span class="badge">今天・日本時間 ' + String(Math.floor(now.min / 60)).padStart(2, '0') + ':' + String(now.min % 60).padStart(2, '0') + '</span></div>';
       h += dayHead(di) + '<div class="h2">今天的行程</div>' + timeline(di, true);
+      h += packHtml();
     } else if (td < first) {
       var days = Math.round((Date.parse(first) - Date.parse(td)) / 864e5);
       h += '<div class="hero"><p class="k">仙台 2026 秋</p><div class="big">還有 ' + days + ' 天</div><p>' + esc(T.sub) + '<br>BR118 桃園 10:15 → 仙台 14:25</p></div>';
