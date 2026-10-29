@@ -25,6 +25,18 @@
     return { date: parts.year + '-' + parts.month + '-' + parts.day, min: (+parts.hour % 24) * 60 + (+parts.minute) };
   }
   function itemMin(it) { var m = /(\d{1,2}):(\d{2})/.exec(it.t); return m ? (+m[1]) * 60 + (+m[2]) : null; }
+  // 「今天」是哪一天：還沒從台灣出發前（台灣日期早於第一天）一律算出發前，避免台灣晚上 11 點、日本已過午夜就提早跳到 Day 1
+  function tripDate() {
+    var jp = clock(T.tz), tw = clock('Asia/Taipei'), first = T.days[0].d;
+    return tw.date < first ? tw.date : jp.date;
+  }
+  // 項目的「現在」：日期還沒到這一天就算還沒開始，已過這一天就算都過了
+  function nowFor(it, day) {
+    var c = clock(it.tz === 'TW' ? 'Asia/Taipei' : T.tz);
+    if (c.date < day.d) return -1;
+    if (c.date > day.d) return 1e9;
+    return c.min;
+  }
   function dayIndexOf(date) { for (var i = 0; i < T.days.length; i++) if (T.days[i].d === date) return i; return -1; }
   function md(d) { var p = d.split('-'); return (+p[1]) + '/' + (+p[2]); }
 
@@ -39,7 +51,7 @@
     if (live) {
       day.items.forEach(function (it, i) {
         var m = itemMin(it); if (m == null) return;
-        var now = clock(it.tz === 'TW' ? 'Asia/Taipei' : T.tz).min;
+        var now = nowFor(it, day);
         if (m <= now) cur = i; else if (next < 0) next = i;
       });
     }
@@ -79,7 +91,7 @@
     return (d.wx ? '<div class="wx">🌤 <b>天氣預報</b>　' + esc(d.wx) + (T.wxNote ? '<small>' + esc(T.wxNote) + '</small>' : '') + '</div>' : '') + '<p class="lead">' + esc(d.lead) + '</p>' + (d.warn ? '<div class="alert">⚠️ ' + esc(d.warn) + '</div>' : '');
   }
   function chips(sel, onId) {
-    var today = dayIndexOf(clock(T.tz).date);
+    var today = dayIndexOf(tripDate());
     return T.days.map(function (d, i) {
       return '<button type="button" class="chip' + (i === sel ? ' on' : '') + (i === today ? ' today' : '') + '" data-' + onId + '="' + i + '"><b>Day ' + (i + 1) + '（' + d.w + '）</b><span>' + md(d.d) + '</span></button>';
     }).join('');
@@ -127,13 +139,13 @@
   }, true);
 
   function renderToday() {
-    var now = clock(T.tz), di = dayIndexOf(now.date), first = T.days[0].d, last = T.days[T.days.length - 1].d, h = '';
+    var now = clock(T.tz), td = tripDate(), di = dayIndexOf(td), first = T.days[0].d, last = T.days[T.days.length - 1].d, h = '';
     if (di >= 0) {
       var d = T.days[di];
       h += '<div class="hero"><p class="k">DAY ' + (di + 1) + '　' + md(d.d) + '（' + d.w + '）</p><h1>' + esc(d.title) + '</h1><span class="badge">今天・日本時間 ' + String(Math.floor(now.min / 60)).padStart(2, '0') + ':' + String(now.min % 60).padStart(2, '0') + '</span></div>';
       h += dayHead(di) + '<div class="h2">今天的行程</div>' + timeline(di, true);
-    } else if (now.date < first) {
-      var days = Math.round((Date.parse(first) - Date.parse(now.date)) / 864e5);
+    } else if (td < first) {
+      var days = Math.round((Date.parse(first) - Date.parse(td)) / 864e5);
       h += '<div class="hero"><p class="k">仙台 2026 秋</p><div class="big">還有 ' + days + ' 天</div><p>' + esc(T.sub) + '<br>BR118 桃園 10:15 → 仙台 14:25</p></div>';
       h += '<div class="h2">出發前確認</div><div class="card"><ul class="checks">' + PREP.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>';
       h += packHtml();
@@ -147,7 +159,7 @@
   /* ---------- 行程 ---------- */
   var planDay = 0;
   function renderPlan() {
-    var d = T.days[planDay], live = d.d === clock(T.tz).date;
+    var d = T.days[planDay], live = d.d === tripDate();
     $('#v-plan').innerHTML = '<div class="chips">' + chips(planDay, 'pday') + '</div>' +
       '<div class="hero"><p class="k">DAY ' + (planDay + 1) + '　' + md(d.d) + '（' + d.w + '）</p><h1>' + esc(d.title) + '</h1></div>' +
       dayHead(planDay) + '<div class="h2">逐時行程</div>' + timeline(planDay, live);
@@ -280,13 +292,13 @@
 
   /* ---------- 啟動 ---------- */
   (function init() {
-    var today = dayIndexOf(clock(T.tz).date);
+    var today = dayIndexOf(tripDate());
     planDay = mapDay = today >= 0 ? today : 0;
     var m = /^#(today|plan|map|info)(?:\/(\d))?/.exec(location.hash);
     if (m && m[2] && +m[2] >= 1 && +m[2] <= T.days.length) { if (m[1] === 'plan') planDay = +m[2] - 1; if (m[1] === 'map') mapDay = +m[2] - 1; }
     show(m ? m[1] : 'today');
     // 每分鐘更新「接下來」
-    setInterval(function () { if (current === 'today') renderToday(); else if (current === 'plan' && T.days[planDay].d === clock(T.tz).date) renderPlan(); }, 60000);
+    setInterval(function () { if (current === 'today') renderToday(); else if (current === 'plan' && T.days[planDay].d === tripDate()) renderPlan(); }, 60000);
   })();
 
   /* ---------- 離線提示 ---------- */
