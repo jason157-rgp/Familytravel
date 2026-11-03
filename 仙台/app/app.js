@@ -71,7 +71,7 @@
       }
       (it.tel || []).forEach(function (t) { acts += '<a class="act alt" href="' + telUrl(t) + '">📞 ' + esc(t) + '</a>'; });
       var lbl = live && i === next ? '<span class="nextlbl">接下來</span><br>' : live && next < 0 && i === cur ? '<span class="nextlbl">現在</span><br>' : '';
-      var det = (it.note ? '<p class="nt">' + esc(it.note) + '</p>' : '') + (it.img ? '<img class="nimg" src="' + esc(it.img) + '" alt="' + esc(it.imgAlt || '') + '" loading="lazy">' : '') + (acts ? '<div class="acts">' + acts + '</div>' : '');
+      var det = (it.note ? '<p class="nt">' + esc(it.note) + '</p>' : '') + (it.tbl ? '<div class="ntw"><table class="ntb"><thead><tr>' + it.tbl.head.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' + it.tbl.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>' : '') + (it.tbl && it.tblNote ? '<p class="nt">' + esc(it.tblNote) + '</p>' : '') + (it.img ? '<img class="nimg" src="' + esc(it.img) + '" alt="' + esc(it.imgAlt || '') + '" loading="lazy">' : '') + (acts ? '<div class="acts">' + acts + '</div>' : '');
       var isNext = live && (i === next || (next < 0 && i === cur));
       var opened = OPEN[di + ':' + i] != null ? OPEN[di + ':' + i] : isNext;
       var bxc = det ? 'bx tap' + (opened ? ' open' : '') : 'bx';
