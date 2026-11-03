@@ -71,7 +71,7 @@
       }
       (it.tel || []).forEach(function (t) { acts += '<a class="act alt" href="' + telUrl(t) + '">📞 ' + esc(t) + '</a>'; });
       var lbl = live && i === next ? '<span class="nextlbl">接下來</span><br>' : live && next < 0 && i === cur ? '<span class="nextlbl">現在</span><br>' : '';
-      var det = (it.note ? '<p class="nt">' + esc(it.note) + '</p>' : '') + (acts ? '<div class="acts">' + acts + '</div>' : '');
+      var det = (it.note ? '<p class="nt">' + esc(it.note) + '</p>' : '') + (it.img ? '<img class="nimg" src="' + esc(it.img) + '" alt="' + esc(it.imgAlt || '') + '" loading="lazy">' : '') + (acts ? '<div class="acts">' + acts + '</div>' : '');
       var isNext = live && (i === next || (next < 0 && i === cur));
       var opened = OPEN[di + ':' + i] != null ? OPEN[di + ':' + i] : isNext;
       var bxc = det ? 'bx tap' + (opened ? ' open' : '') : 'bx';
