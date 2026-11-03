@@ -3,7 +3,7 @@
  * 地圖元件與圖示：先用存好的。地圖底圖：看過的區域會暫存。
  * 改了 app 的檔案清單時，把 VERSION 加 1。
  */
-var VERSION = 'sendai-app-v2';
+var VERSION = 'sendai-app-v3';
 var TILE_CACHE = 'sendai-tiles-v1';
 var PRECACHE = [
   './',
@@ -20,6 +20,7 @@ var PRECACHE = [
   './app/icon-192.png',
   './app/icon-512.png',
   './app/apple-touch-icon.png',
+  './app/yodobashi_taxfree_3f.svg',
   './app/vendor/leaflet/leaflet.js',
   './app/vendor/leaflet/leaflet.css'
 ];
