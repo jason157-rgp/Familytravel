@@ -1,27 +1,29 @@
 <!doctype html>
+<!-- 編輯前請先讀根目錄的 CLAUDE.md。行程時間軸的內容在 trip.js（企劃書與 App 共用），這裡只放版面與手寫的參考區。 -->
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>金山慶生小旅行｜12/23–12/24</title>
+<title>金山小旅行｜12/23–12/24</title>
+<meta name="theme-color" content="#1D2A44">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
 <style>
 :root{
-  --bg:#F2F0EB; --paper:#FFFFFF; --ink:#1A2130; --ink2:#46505F; --muted:#77808C; --line:#DCD8CF;
-  --night:#1D2A44; --night2:#2B3D60; --gold:#D9A441; --gold-soft:#F7EBD0;
+  --bg:#F2F0EB; --paper:#FFFFFF; --ink:#1A2130; --ink2:#46505F; --muted:#6F7884; --line:#DCD8CF;
+  --night:#1D2A44; --night2:#2B3D60; --gold:#D9A441; --gold-ink:#8A6418; --gold-soft:#F7EBD0;
   --pine:#2F6B55; --pine-soft:#DCEDE5; --berry:#B8402F; --berry-soft:#F6E0DA;
   --serif:"Noto Serif TC","Songti TC",serif; --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#11141B; --paper:#191E28; --ink:#E6EAF0; --ink2:#B6BECA; --muted:#8A93A0; --line:#2C3340;
-  --gold-soft:#3A2F1A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
+  --gold-soft:#3A2F1A; --gold-ink:#E8C27A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
 }}
 :root[data-theme="dark"]{
   --bg:#11141B; --paper:#191E28; --ink:#E6EAF0; --ink2:#B6BECA; --muted:#8A93A0; --line:#2C3340;
-  --gold-soft:#3A2F1A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
+  --gold-soft:#3A2F1A; --gold-ink:#E8C27A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
 }
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-*,*::before,*::after{box-sizing:inherit}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.3}
 p{margin:0}
@@ -30,127 +32,110 @@ a{color:inherit}
 svg{display:block;max-width:100%;height:auto}
 
 .cover{background:var(--night);color:#F2F0EB;border-radius:0 0 22px 22px;overflow:hidden}
-.cover .wrap{padding-top:34px}
+.cover .wrap{padding-top:30px}
 .kicker{font-size:13px;letter-spacing:.18em;color:var(--gold)}
-.cover h1{font-size:clamp(30px,7vw,48px);font-weight:900;margin-top:6px;letter-spacing:.02em}
-.cover .who{margin-top:10px;font-size:14.5px;color:rgba(242,240,235,.82)}
+.cover h1{font-size:clamp(28px,7vw,44px);font-weight:900;margin-top:6px}
+.cover .who{margin-top:8px;font-size:14.5px;color:rgba(242,240,235,.82)}
 .cover .who b{color:#fff;font-weight:500}
-.cover svg{margin-top:18px}
+.cover svg{margin-top:16px}
 
-.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px}
-.stay{position:relative;z-index:2}
-.stay .card{box-shadow:0 8px 24px rgba(0,0,0,.06)}
-.stay h2{font-size:21px}
-.stay .room{color:var(--ink2);font-size:14.5px;margin-top:2px}
-.facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.facts span{font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--ink2)}
-.facts span.ok{background:var(--pine-soft);border-color:transparent;color:var(--pine)}
-.facts span.no{background:var(--berry-soft);border-color:transparent;color:var(--berry)}
-.meta{margin-top:10px;font-size:13.5px;color:var(--muted)}
+.jump{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;margin:0 -16px;background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:0 0 auto;font-size:13.5px;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px 12px;white-space:nowrap}
+.jump a.app{background:var(--night);color:#fff;border-color:var(--night)}
+
+.appcta{display:flex;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border-radius:16px;background:var(--night);color:#F2F0EB;text-decoration:none}
+.appcta b{font-size:16px}.appcta span{font-size:13px;color:rgba(242,240,235,.75);display:block}
+.appcta i{margin-left:auto;font-style:normal;color:var(--gold);font-weight:700}
 
 .sec{margin-top:40px}
 .sec>h2{font-size:22px}
 .lead{font-size:14px;color:var(--muted);margin-top:4px}
-.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
-.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:12px;background:var(--night2)}.photos figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:3px}
-.cap{font-size:12.5px;color:var(--muted);margin-top:6px;text-align:center}
-@media (max-width:560px){.photos{grid-template-columns:1fr 1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
 
+/* 每天一張卡片 */
+.day{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.day>summary,.day .dhead{list-style:none;cursor:pointer;display:flex;align-items:flex-end;gap:12px;padding:16px 18px 10px}
+.day>summary::-webkit-details-marker{display:none}
+.dn{font-family:var(--serif);font-weight:900;font-size:44px;line-height:.85;color:var(--gold)}
+.day:nth-of-type(2) .dn{color:var(--berry)}
+.dt3{font-size:20px}
+.past-tag{margin-left:auto;font-size:12px;color:var(--muted)}
+.dbody{padding:0 18px 16px}
+.lines{margin:0;padding:0;list-style:none;font-size:14.5px}
+.lines li{display:grid;grid-template-columns:64px 1fr;gap:8px;padding:6px 0;border-top:1px dashed var(--line)}
+.lines li:first-child{border-top:0}
+.lines .k{color:var(--muted);font-size:13px;padding-top:1px}
+.lines small{display:block;color:var(--muted);font-size:11.5px}
+.keys{display:flex;flex-wrap:wrap;gap:4px 10px}
+.keys a{text-decoration:none;white-space:nowrap}.keys a b{font-variant-numeric:tabular-nums;margin-right:3px}
+details.full{margin-top:10px;border-top:1px solid var(--line)}
+details.full>summary{cursor:pointer;padding:10px 0 4px;font-size:14px;font-weight:700;color:var(--gold-ink)}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:50px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.tl li:target{background:var(--gold-soft);border-radius:10px;margin:0 -8px;padding:10px 8px}
+.tl .t{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.tl h4{margin:0;font-size:16px}
+.tl .g{font-size:14px;color:var(--ink2)}
+.tg{display:inline-block;font-size:11px;border-radius:6px;padding:0 6px;margin-right:6px;vertical-align:2px;font-weight:700}
+.tg.key{background:var(--gold-soft);color:var(--gold-ink)}.tg.opt{background:var(--pine-soft);color:var(--pine)}
+.fl{margin:6px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--ink2)}
+.fl li{display:grid;grid-template-columns:52px 1fr;gap:6px}
+.fl b{color:var(--muted);font-weight:500}
+.dt{margin-top:6px;font-size:14px}
+.say{margin-top:8px;background:var(--bg);border-left:3px solid var(--gold);border-radius:6px;padding:8px 10px;font-size:14px}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.acts a{font-size:13px;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.eve{margin-top:10px;font-size:13.5px;color:var(--ink2);background:var(--pine-soft);border-radius:10px;padding:8px 12px}
+
+/* 參考區 */
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:12px;background:var(--night2)}
+.photos figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:3px}
+@media (max-width:560px){.photos{grid-template-columns:1fr 1fr}}
+.cap{font-size:12px;color:var(--muted);margin-top:4px;text-align:center}
 .spots{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:12px}
 .spot{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.spot b{display:block;font-size:15px}
-.spot span{display:block;font-size:13.5px;color:var(--ink2);line-height:1.65}
-.spot.no{border-color:var(--berry-soft);background:var(--berry-soft)}
-.spot.no b{color:var(--berry)}
-
-.day{margin-top:44px}
-.dayhead{display:flex;align-items:flex-end;gap:14px;margin-bottom:16px}
-.daynum{font-family:var(--serif);font-weight:900;font-size:56px;line-height:.85}
-.day1 .daynum{color:var(--gold)}
-.day2 .daynum{color:var(--berry)}
-.dayhead h2{font-size:23px}
-.dayhead p{font-size:14px;color:var(--muted)}
-.tl{position:relative;margin:0;padding:0;list-style:none}
-.tl::before{content:"";position:absolute;left:62px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.tl li{display:grid;grid-template-columns:52px 22px 1fr;gap:0 10px;padding:9px 0;align-items:start}
-.tl .t{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;text-align:right;padding-top:1px}
-.tl .dot{width:14px;height:14px;border-radius:50%;margin:5px 0 0 3px;background:var(--paper);border:3px solid var(--line);position:relative;z-index:1}
-.day1 .dot{border-color:var(--gold)}
-.day2 .dot{border-color:var(--berry)}
-.day1 li.key .dot{background:var(--gold)}
-.day2 li.key .dot{background:var(--berry)}
-.tl .w b{display:block;font-size:16px}
-.tl .w span{display:block;font-size:14px;color:var(--ink2)}
-.flag{display:inline-block;font-size:12px;border-radius:6px;padding:0 6px;margin-left:4px;background:var(--gold-soft);color:#8A6418;font-weight:500}
-.tip{margin-top:14px;background:var(--gold-soft);border-radius:12px;padding:12px 16px;font-size:14.5px}
-.day2 .tip{background:var(--berry-soft)}
-
+.spot b{display:block;font-size:15px}.spot span{display:block;font-size:13.5px;color:var(--ink2);line-height:1.65}
+.spot.no{border-color:transparent;background:var(--berry-soft)}.spot.no b{color:var(--berry)}
+.olist{margin:10px 0 0;padding-left:1.4em;font-size:14.5px}.olist li{margin:6px 0}
+.tip{margin-top:12px;background:var(--gold-soft);border-radius:12px;padding:10px 14px;font-size:14px}
 .coupon{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
 .coupon div{border:1.5px dashed var(--gold);border-radius:12px;padding:12px 14px;background:var(--paper);font-size:14px}
-.coupon b{display:block;font-size:15px;color:var(--ink)}
-
-/* restaurant chooser */
-.pick{margin-top:14px;display:grid;gap:14px}
-.rest{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.rest .top{display:flex;gap:12px;align-items:center;padding:14px 18px;background:var(--night);color:#F2F0EB}
-.rest .no{font-family:var(--serif);font-weight:900;font-size:28px;color:var(--gold);line-height:1}
-.rest h3{font-size:19px}
-.rest .area{font-size:12.5px;color:rgba(242,240,235,.75)}
-.rest .star{margin-left:auto;text-align:right;font-size:13px;color:var(--gold);white-space:nowrap}
-.rest .star small{display:block;color:rgba(242,240,235,.65);font-size:11.5px}
-.rest .body{padding:14px 18px 16px}
-.rest .intro{font-size:15px}
-.rest dl{display:grid;grid-template-columns:72px 1fr;gap:4px 10px;margin:12px 0 0;font-size:14px}
-.rest dt{color:var(--muted)}
-.rest dd{margin:0;color:var(--ink2)}
-.fit{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-.fit div{border-radius:10px;padding:8px 12px;font-size:13.5px;background:var(--pine-soft)}
-.fit div b{display:block;font-size:12.5px;color:var(--pine)}
-.fit div.warn{background:var(--gold-soft)}
-.fit div.warn b{color:#8A6418}
-@media (max-width:520px){.fit{grid-template-columns:1fr}}
-.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.links a{font-size:13.5px;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--bg)}
-.links a:hover{border-color:var(--gold)}
-.rest.rec{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-soft)}
-.badge{display:inline-block;font-size:11.5px;background:var(--gold);color:#1A2130;border-radius:999px;padding:0 8px;margin-left:6px;font-family:var(--sans);font-weight:700;vertical-align:middle}
-
-.map{width:100%;height:180px;border:0;border-radius:12px;display:block;background:var(--bg)}
-.photobtn{display:block;text-align:center;margin:10px 0 12px;padding:10px;border-radius:12px;background:var(--gold);color:#1A2130;text-decoration:none;font-weight:700;font-size:14.5px}
-.jump{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 0;margin:0 -16px;padding-left:16px;padding-right:16px;background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);scrollbar-width:none}
-.jump::-webkit-scrollbar{display:none}
-.jump a{flex:0 0 auto;font-size:13.5px;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px 12px;white-space:nowrap}
-.jump a:hover{border-color:var(--gold)}
-html{scroll-behavior:smooth;scroll-padding-top:60px}
-.stay{margin-top:4px}
-.lunch{margin-top:14px;display:grid;gap:10px}
-.lunch div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--ink2)}
-.lunch b{display:block;color:var(--ink);font-size:15px}
-.bath{margin:12px 0 0;padding-left:1.4em;font-size:14.5px}
-.bath li{margin:7px 0}
-.bath b{color:var(--ink)}
-table.cmp{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px;background:var(--paper);border-radius:12px;overflow:hidden}
-.cmp th,.cmp td{border-bottom:1px solid var(--line);padding:8px 8px;text-align:left;vertical-align:top}
-.cmp th{background:var(--bg);font-weight:500;color:var(--muted);font-size:12.5px}
-.tablewrap{overflow-x:auto}
-
-.ask{margin:12px 0 0;padding-left:1.4em;font-size:14.5px}
-.ask li{margin:6px 0}
-.items{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
-.items div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:14px;text-align:center}
-.items small{display:block;color:var(--muted);font-size:12.5px}
-footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
+.coupon b{display:block;font-size:15px}
+.rlist{display:grid;gap:10px;margin-top:12px}
+.rlist .card b{font-size:15px}.rlist .card p{font-size:14px;color:var(--ink2)}
+.rate{font-size:12.5px;color:var(--gold-ink);font-weight:700}
+.map{width:100%;height:200px;border:0;border-radius:12px;display:block;margin-top:10px;background:var(--bg)}
+dl.kv{display:grid;grid-template-columns:84px 1fr;gap:4px 10px;margin:8px 0 0;font-size:14px}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;color:var(--ink2)}
+table.cost{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+.cost td,.cost th{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.cost th{font-weight:500;color:var(--muted);font-size:12.5px}
+.cost td:last-child{text-align:right;white-space:nowrap}
+.todo{list-style:none;margin:10px 0 0;padding:0}
+.todo li{display:grid;grid-template-columns:70px 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+.todo .due{font-size:12.5px;color:var(--berry);font-weight:700}
+details.done-list summary{cursor:pointer;font-size:13.5px;color:var(--muted);margin-top:8px}
+details.done-list li{color:var(--muted);text-decoration:line-through}
+.packg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.packg div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.packg b{display:block;margin-bottom:2px}
+.packg ul{margin:0;padding-left:1.2em;color:var(--ink2)}
+.log{font-size:13.5px;color:var(--ink2)}
+.log li{margin:4px 0}
+footer{margin:44px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
 </style>
 <style id="ft-corner-css">.ft-corner{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 18px;padding:7px 16px;background:#0f1c27;color:#c9d4dc;font:13px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:.04em}.ft-corner .ft-l{margin-right:auto;color:#93a3af}.ft-corner a{color:#e9f0f4;text-decoration:none}.ft-corner a:hover,.ft-corner a:focus-visible{text-decoration:underline}</style>
 </head>
 <body>
-<div class="ft-corner"><span class="ft-l">金山慶生小旅行</span><a href="../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1I2Q7e80lcO6dDkeL2M9m06AJFgMAz7Yy" target="_blank" rel="noopener">📁 私人文件</a></div>
+<div class="ft-corner"><span class="ft-l">金山小旅行</span><a href="../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1I2Q7e80lcO6dDkeL2M9m06AJFgMAz7Yy" target="_blank" rel="noopener">📁 私人文件</a></div>
 
 <header class="cover">
   <div class="wrap">
     <div class="kicker">JINSHAN ・ 2026.12.23 – 12.24</div>
-    <h1>小魚乾生日小旅行</h1>
-    <p class="who"><b>龜山下智久</b>（開車）・<b>桃園星野結衣</b>・<b>煞氣E小魚乾E</b></p>
+    <h1 id="title">小魚乾生日小旅行</h1>
+    <p class="who" id="who"></p>
     <svg viewBox="0 0 800 200" role="img" aria-label="冬夜的北海岸：山、海、溫泉飯店與一顆生日蛋糕">
       <rect width="800" height="200" fill="#1D2A44"/>
       <g fill="#F2F0EB" opacity=".75"><circle cx="90" cy="34" r="1.6"/><circle cx="210" cy="22" r="1.2"/><circle cx="330" cy="46" r="1.4"/><circle cx="470" cy="20" r="1.3"/><circle cx="600" cy="40" r="1.5"/><circle cx="730" cy="26" r="1.2"/></g>
@@ -178,29 +163,27 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
 </header>
 
 <div class="wrap">
-
 <nav class="jump" aria-label="跳到段落">
-  <a href="#kids">♨️ 飯店設施</a><a href="#bath">🛁 幼兒泡湯</a><a href="#day1">① 12/23</a><a href="#day2">② 12/24</a><a href="#dinner">🍗 平安夜晚餐</a><a href="#checkin">🛎️ 待辦</a><a href="#bring">🎒 攜帶</a>
+  <a class="app" href="app.html">📱 旅途 App</a><a href="#day-2026-12-23">① 12/23</a><a href="#day-2026-12-24">② 12/24</a><a href="#todo">✅ 待辦</a><a href="#facility">♨️ 飯店設施</a><a href="#bath">🛁 幼兒泡湯</a><a href="#yipin">🍗 一品雞</a><a href="#stay">🏨 住宿與聯絡</a><a href="#cost">💳 費用與刷卡</a><a href="#pack">🎒 打包</a>
 </nav>
 
-<section class="stay" id="stay">
-  <div class="card">
-    <h2>新北北海溫泉洲際酒店</h2>
-    <p class="room">豪華房一大床・高樓層・51 ㎡・房內私人溫泉湯池</p>
-    <div class="facts">
-      <span class="ok">積分住宿，房費已用點數</span>
-      <span class="ok">6 歲以下同住不加價</span>
-      <span>不含早餐</span>
-      <span>12/20（日）18:00 前可免費取消</span>
-      <span class="no">不提供一次性備品</span>
-    </div>
-    <p class="meta">金山區環金路 210 號・02-2498-3399・入住 16:00／退房 11:00・停車：住客專用、不接受預約・訂單資料見私人記錄</p>
-  </div>
+<a class="appcta" href="app.html"><span style="font-size:26px">📱</span><span><b>旅途中開 App</b><span>下一步、順延、天氣、給櫃台看的話都在 App；這裡是詳細資料</span></span><i>開啟 →</i></a>
+
+<section class="sec" aria-label="行程">
+  <h2>行程</h2>
+  <p class="lead">每天一張卡片；點「完整時間軸」看每個時間點的細節</p>
+  <div id="days"></div>
 </section>
 
-<section class="sec" id="kids">
+<section class="sec" id="todo">
+  <h2>待辦</h2>
+  <ul class="todo" id="todoList"></ul>
+  <details class="done-list"><summary id="doneSum">已完成</summary><ul class="todo" id="doneList"></ul></details>
+</section>
+
+<section class="sec" id="facility">
   <h2>洲際：小魚乾能用的地方</h2>
-  <p class="lead">查證 2026/10/11；飯店 2026/10/11 回信確認</p>
+  <p class="lead">飯店 2026/10/11 回信確認</p>
   <div class="photos">
     <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10756713577-4x3?wid=733" alt="頂樓無邊際泳池" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>頂樓無邊際泳池</figcaption></figure>
     <figure><img src="https://digital.ihg.com/is/image/ihg/intercontinental-new-taipei-10756757256-4x3?wid=733" alt="泳池與山景" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"><figcaption>泳池與山景</figcaption></figure>
@@ -211,11 +194,11 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   </div>
   <p class="cap">照片：IHG 洲際官網</p>
   <div class="spots">
-    <div class="spot"><b>北海小行家（別館兒童遊戲室）</b><span>免費。攀岩、手作、兒童電動車、賽車道、圖書室、溜滑梯，另有頂樓兒童滑水道。<b style="display:inline">09:00–12:00、13:00–22:00</b>（中午 12–13 點休息）；不限年齡，兒童須由大人全程陪同，兩歲玩適齡設施；可線上或電話預約；退房當天可玩到 16:00。</span></div>
-    <div class="spot"><b>頂樓泳池＋兒童戲水區</b><span>09:00–22:00，有救生員，水溫 27°C 以上。兒童戲水區不限年齡、水深約 50 公分；幼兒<b style="display:inline">一定要穿游泳尿布</b>，大人要一起下水。戶外、12 月風大，上岸立刻包浴巾。</span></div>
-    <div class="spot"><b>房內私人湯池</b><span>設計成全家坐得下，有冷熱水開關可以自己調溫。溫泉對兩歲偏燙，泡之前先看下方「幼兒泡湯注意事項」。</span></div>
-    <div class="spot"><b>房內兒童備品</b><span>嬰兒床、嬰兒澡盆、兒童拖鞋飯店會備好；<b style="display:inline">沒有兒童浴袍</b>，自己帶。</span></div>
-    <div class="spot"><b>嶼 Shima 全日餐廳</b><span>5 歲（含）以下吃自助餐檯免費，可以挑白飯、蒸蛋、魚、湯、水果給他。兒童椅訂位時已備註。</span></div>
+    <div class="spot"><b>北海小行家（別館兒童遊戲室）</b><span>免費。攀岩、手作、兒童電動車、賽車道、圖書室、溜滑梯，另有頂樓兒童滑水道。09:00–12:00、13:00–22:00（中午休息）；不限年齡，兒童要由大人全程陪同，兩歲玩適齡設施；可線上或電話預約（分機 6733）；退房當天可玩到 16:00。</span></div>
+    <div class="spot"><b>頂樓泳池＋兒童戲水區</b><span>09:00–22:00，有救生員，水溫 27°C 以上。兒童戲水區不限年齡、水深約 50 公分；幼兒一定要穿游泳尿布，大人要一起下水。戶外風大，上岸立刻包浴巾。</span></div>
+    <div class="spot"><b>房內私人湯池</b><span>全家坐得下，有冷熱水開關可以自己調溫。泡之前先看下方「幼兒泡湯注意事項」。</span></div>
+    <div class="spot"><b>房內兒童備品</b><span>嬰兒床、嬰兒澡盆、兒童拖鞋飯店會備好；沒有兒童浴袍。有蓋尿布桶、加濕器、熱水壺、奶瓶消毒器、房內兒童椅待補問。</span></div>
+    <div class="spot"><b>嶼 Shima 全日餐廳</b><span>5 歲（含）以下免費，自助餐檯可以挑白飯、蒸蛋、魚、湯、水果給他。早午餐分時段入場（08:00／10:00／12:00），每次只能進一次。</span></div>
     <div class="spot no"><b>不能進：大眾湯、健身房、行政酒廊</b><span>都限 16 歲以上。</span></div>
   </div>
 </section>
@@ -223,11 +206,11 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
 <section class="sec" id="bath">
   <h2>幼兒泡湯注意事項</h2>
   <p class="lead">房內湯池是溫泉（氯化物硫酸鹽泉），兩歲小孩泡要比大人保守</p>
-  <ol class="bath">
+  <ol class="olist">
     <li><b>水溫放低：</b>先放水再兌冷水，降到接近體溫、手肘探下去不燙（約 37–38°C）；大人習慣的 40°C 對他太熱。</li>
     <li><b>時間短：</b>一次 5–10 分鐘就起來，看到臉紅、出汗、煩躁就停；可以起來休息再下去，不要連續久泡。</li>
     <li><b>水位不過胸：</b>坐在大人腿上或池邊，水淹到肚子即可；大人全程手扶著，一秒都不離開。</li>
-    <li><b>避開飯前飯後：</b>空腹和剛吃飽（飯後 1 小時內）都不泡；晚餐後回房切蛋糕，那段時間先不泡。</li>
+    <li><b>避開飯前飯後：</b>空腹和剛吃飽（飯後 1 小時內）都不泡。</li>
     <li><b>補水：</b>泡前泡後都喝水或奶。</li>
     <li><b>不泡頭臉：</b>溫泉水別潑進眼睛和嘴巴；泡完用清水沖淨全身、擦乳液，看皮膚有沒有紅疹。</li>
     <li><b>防滑防燙：</b>湯池在房間正中央，地板濕滑；出水口附近水溫高，不讓他靠近；大人泡湯時他不能自己在池邊玩。</li>
@@ -236,111 +219,151 @@ footer{margin:48px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   <div class="tip">大眾湯限 16 歲以上，小魚乾只能泡房內湯池。龜山下智久為醫師，以上是一般原則，實際依孩子狀況判斷。</div>
 </section>
 
-<!-- DAY 1 -->
-<section class="day day1" id="day1">
-  <div class="dayhead"><span class="daynum">1</span><div><h2>12/23（三）入住・飯店慶生</h2><p>下午入住，晚餐在飯店慶生，房間切蛋糕</p></div></div>
-  <ol class="tl">
-    <li><span class="t">12:00</span><span class="dot"></span><span class="w"><b>在家吃午餐</b><span>行李、蛋糕先放上車</span></span></li>
-    <li class="key"><span class="t">13:45</span><span class="dot"></span><span class="w"><b>從家出發</b><span>約 1 小時（國道 1 號轉基金公路，或走陽金公路），小魚乾在車上午睡</span></span></li>
-    <li class="key"><span class="t">15:00</span><span class="dot"></span><span class="w"><b>抵達洲際、辦入住</b><span>飯店已確認 15:00 可以先辦手續、寄放行李、使用公共設施，房間整理好就通知（正式進房 16:00）。停車場入口見飯店回信附圖。還在睡就一人留車上陪睡，一人去辦手續。櫃台要做的事見<a href="#checkin">「Check-in 當天要做的事」</a></span></span></li>
-    <li><span class="t">15:30</span><span class="dot"></span><span class="w"><b>北海小行家放電</b><span>下午 13:00 起開放，等房間的時候剛好去玩；進房後可以泡湯（看下方「幼兒泡湯注意事項」）；17:30 回房換衣服</span></span></li>
-    <li class="key"><span class="t">18:00</span><span class="dot"></span><span class="w"><b>嶼 Shima 晚餐</b><span>已訂位（兒童椅、推車空間已註記）。一般是半自助（大人各點一份主餐 2,580／2,980／3,280 元＋10%），但當天可能改成聖誕專案<span class="flag">方案未公布</span></span></span></li>
-    <li><span class="t">19:30</span><span class="dot"></span><span class="w"><b>回房切蛋糕、唱生日快樂歌</b><span>自備蛋糕；客房<b style="display:inline">禁止明火</b>，帶電子蠟燭</span></span></li>
-    <li><span class="t">20:15</span><span class="dot"></span><span class="w"><b>就寢</b><span>大人之後輪流泡湯</span></span></li>
-  </ol>
-  <div class="lunch">
-    <div><b>想在金山吃午餐的話（備案）</b>11:00 從家出發，12:00 到金山吃午餐，13:00 去樹屋看動物，15:00 入住後在房間午睡到 16:30。代價是午睡往後挪約兩小時，晚上可能比較晚睡。以下三家週三都有營業（2026/10/11 Google 地圖資料）：</div>
-    <div><b>金山獅子林當歸鴨</b>民生路，離飯店開車 3 分鐘。當歸鴨湯、鴨肉冬粉，湯清淡溫熱，適合冬天和小孩；店內寬敞有廁所，步行 3 分鐘有立體停車場。週二公休，11:00–21:00。<a href="https://maps.google.com/?q=金山獅子林當歸鴨" target="_blank" rel="noopener">地圖</a></div>
-    <div><b>金包里鴨肉（廟口鴨肉）</b>金山老街廣安宮旁，自己到攤位挑菜端回座位的老字號。很熱鬧、人多擁擠，推車不好走，當成體驗即可。每天 10:00–18:00（週末 9:00 起）。<a href="https://maps.google.com/?q=金包里鴨肉" target="_blank" rel="noopener">地圖</a></div>
-    <div><b>Time 奶奶・樹屋咖啡樂園</b>萬里加投路，離飯店約 10 分鐘。戶外小型動物農場，有樹屋、溜滑梯、沙坑，老闆會帶小孩餵動物。免門票，每人低消 100 元，靠入口餐車的飲料和羊奶霜淇淋，<b style="display:inline">沒有像樣的正餐，不適合當午餐</b>；全區戶外、沒有暖氣，12 月要穿暖。週二公休，週三 09:30–17:30。適合吃完午餐、入住前放電 1 小時。<a href="https://maps.google.com/?q=Time奶奶樹屋咖啡樂園" target="_blank" rel="noopener">地圖</a></div>
-  </div>
-  <div class="tip">嶼晚餐最後入場 19:30；訂 18:00 是為了讓小魚乾 20:00 前吃完回房。</div>
-</section>
-
-<!-- DAY 2 -->
-<section class="day day2" id="day2">
-  <div class="dayhead"><span class="daynum">2</span><div><h2>12/24（四）平安夜</h2><p>早上房內簡單吃，中午吃早午餐、玩遊戲室，車上午睡，傍晚和阿公阿嬤過平安夜</p></div></div>
-  <ol class="tl">
-    <li><span class="t">08:00</span><span class="dot"></span><span class="w"><b>起床、房內簡單早餐</b><span>自己帶麵包、牛奶、水果；房內有冷熱飲水機和冰箱</span></span></li>
-    <li><span class="t">09:00</span><span class="dot"></span><span class="w"><b>北海小行家，或房內泡湯</b><span>遊戲室 09:00 開，12:00 休息；11:30 回房收行李</span></span></li>
-    <li class="key"><span class="t">12:00</span><span class="dot"></span><span class="w"><b>嶼 Shima 早午餐（當午餐）</b><span>12:00–14:00 時段，check-in 時登記；全自助，成人 1,100 元＋10%，小魚乾免費；只能入場一次</span></span></li>
-    <li><span class="t">13:15</span><span class="dot"></span><span class="w"><b>北海小行家再玩一下</b><span>13:00 重新開放；退房當天可玩到 16:00</span></span></li>
-    <li class="key"><span class="t">14:00</span><span class="dot"></span><span class="w"><b>退房</b><span>延後退房到 14:00 飯店已註記，當天櫃台確認<span class="flag">視房況</span>；沒有延後就 11:00 先退房、行李寄放或放上車，中午照常吃飯玩耍</span></span></li>
-    <li class="key"><span class="t">14:15</span><span class="dot"></span><span class="w"><b>開車往桃園楊梅</b><span>約 1 小時 40 分–2 小時（國道 1 號接國道 3 號），小魚乾在車上一路睡</span></span></li>
-    <li><span class="t">16:00</span><span class="dot"></span><span class="w"><b>到阿公阿嬤家休息</b><span>17:15 出發去餐廳，車程約 15 分鐘</span></span></li>
-    <li class="key"><span class="t">17:30</span><span class="dot"></span><span class="w"><b>平安夜晚餐：台灣一品雞</b><span>阿嬤指定，和阿公阿嬤一起；<a href="#dinner">餐廳資訊見下方</a><span class="flag">待訂位</span></span></span></li>
-    <li><span class="t">20:00</span><span class="dot"></span><span class="w"><b>就寢</b><span>住阿公阿嬤家</span></span></li>
-  </ol>
-  <div class="tip">早午餐選 12:00 那一場，剛好避開遊戲室 12:00–13:00 的休息時間，吃完回去玩、再上車睡。午睡會比平常晚一點開始，但在車上能一次睡滿。</div>
-</section>
-
 <section class="sec" id="coupon">
   <h2>嶼 Shima 抵用券（3 張）</h2>
   <p class="lead">玉山 e point 兌換，每張折 399 元，效期 2026/12/30</p>
   <div class="coupon">
-    <div><b>12/23 晚餐 × 2</b>每位成人點一份主餐，每人限用一張。聖誕方案還沒公布：一般餐期可用；若改成節慶專案就不能用（IHG 優惠也不能用）</div>
-    <div><b>12/24 早午餐 × 1</b>每 2 位成人限用一張。飯店確認排除日只限晚餐，早午餐可用，除非當天另有節慶專案</div>
-    <div><b>結帳前必看</b>訂位時告知有券；全額刷<b style="display:inline">玉山信用卡</b>，不能用 LINE Pay 等電子支付；「標示為已使用」讓店員按，自己先按就作廢；不能和 IHG 會員餐飲優惠併用，只能擇一</div>
+    <div><b>12/23 晚餐 × 2</b>每位大人點一份主餐，每人限用一張。聖誕方案還沒公布：一般餐期可用；若改成節慶專案就不能用（IHG 優惠也不能用）。</div>
+    <div><b>12/24 早午餐 × 1</b>每 2 位大人限用一張。排除日只限晚餐，早午餐可用，除非當天另有節慶專案。</div>
+    <div><b>結帳前必看</b>訂位時告知有券；全額刷玉山信用卡，不能用 LINE Pay 等電子支付；「標示為已使用」讓店員按，自己先按就作廢；不能和 IHG 會員餐飲優惠併用。</div>
   </div>
 </section>
 
-<section class="sec" id="dinner">
-  <h2>12/24 平安夜晚餐：台灣一品雞</h2>
-  <p class="lead">阿嬤指定的餐廳。評分與營業時間為 2026/10/11 Google 地圖資料，12 月訂位時再確認。</p>
-  <div class="pick">
-    <article class="rest rec">
-      <div class="top"><span class="no">★</span><div><h3>台灣一品雞</h3><p class="area">楊梅區環東路・離阿公阿嬤家約 15 分鐘</p></div><p class="star">★ 4.1<small>1,747 則評論</small></p></div>
-      <div class="body">
-        <iframe class="map" src="https://maps.google.com/maps?q=%E5%8F%B0%E7%81%A3%E4%B8%80%E5%93%81%E9%9B%9E%20%E6%A5%8A%E6%A2%85%E5%8D%80%E7%92%B0%E6%9D%B1%E8%B7%AF31-1%E8%99%9F&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="台灣一品雞 位置地圖"></iframe>
-        <a class="photobtn" href="https://maps.google.com/?q=%E5%8F%B0%E7%81%A3%E4%B8%80%E5%93%81%E9%9B%9E%20%E6%A5%8A%E6%A2%85%E5%8D%80%E7%92%B0%E6%9D%B1%E8%B7%AF31-1%E8%99%9F" target="_blank" rel="noopener">📷 看店內環境與菜色照片（Google 地圖）</a>
-        <p class="intro">在地人氣的台式雞料理餐廳，招牌是整隻上桌的烤全雞，搭配台菜合菜，評論多說適合家庭聚餐、價位實在，店家會送小菜，餐後有免費冰淇淋。</p>
-        <dl>
-          <dt>地址</dt><dd>桃園市楊梅區環東路 31-1 號</dd>
-          <dt>電話</dt><dd>03-475-6132</dd>
-          <dt>週四營業</dt><dd>午 11:00–14:00、晚 16:00–21:00</dd>
-          <dt>訂位時問</dt><dd>平安夜是否需要預訂烤全雞、有沒有兒童椅、能否自備蛋糕、停車與付款方式</dd>
-        </dl>
-        <div class="fit">
-          <div><b>阿公阿嬤</b>阿嬤指定，離家近</div>
-          <div><b>小魚乾</b>雞肉去皮去骨剝小塊、雞湯都適合；餐後冰淇淋一小口就好</div>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="tip" style="margin-top:14px">訂 17:30，20:00 前回家讓小魚乾睡覺。平安夜人多，11 月就先打電話訂位。</div>
-</section>
-
-<section class="sec" id="checkin">
-  <h2>Check-in 當天要做的事</h2>
-  <p class="lead">寫信問的事飯店 2026/10/11–12 都回了，答案已寫進上面各段；當天櫃台只剩這幾件</p>
-  <ol class="ask">
-    <li><b>登記 12/24 早午餐時段：</b>櫃台會請你掃 QR Code，選 <b>12:00–14:00</b></li>
-    <li><b>確認延後退房：</b>14:00 已註記，視當天房況</li>
-    <li><b>確認房內備品：</b>嬰兒床、嬰兒澡盆、兒童拖鞋已放好</li>
-    <li><b>確認 12/23 晚餐：</b>18:00、兒童椅、推車空間</li>
-  </ol>
-  <h2 style="font-size:19px;margin-top:22px">出發前要先做的事</h2>
-  <ol class="ask">
-    <li><b>12 月初問嶼：</b>聖誕方案公布了沒、12/23 晚餐和 12/24 早午餐是一般餐期還是節慶專案</li>
-    <li><b>預約北海小行家（可選）：</b><a href="https://www.tablecheck.com/zh-TW/intercontinental-newtaipei-hotspring-recreation/reserve/experiences" target="_blank" rel="noopener">線上預約</a>或 02-2498-3399 分機 6733</li>
-    <li><b>11 月打電話給台灣一品雞訂位：</b>03-475-6132，12/24 17:30</li>
-  </ol>
-</section>
-
-<section class="sec" id="bring">
-  <h2>別忘了帶</h2>
-  <div class="items">
-    <div>牙刷・浴帽・棉花棒<small>飯店不提供一次性備品</small></div>
-    <div>12/24 早餐<small>麵包、牛奶、水果，房內吃</small></div>
-    <div>小魚乾泳衣＋游泳尿布<small>戲水區規定一定要穿</small></div>
-    <div>小魚乾浴巾或浴袍<small>飯店沒有兒童浴袍</small></div>
-    <div>保暖外套・帽子<small>泳池在戶外、12 月風大</small></div>
-    <div>生日蛋糕・電子蠟燭<small>客房禁止明火</small></div>
-    <div>現金<small>晚餐餐廳付款方式待確認</small></div>
+<section class="sec" id="lunch">
+  <h2>金山午餐備案（12/23）</h2>
+  <p class="lead">想在金山吃午餐：11:00 從家出發、12:00 到，吃完再去入住；午睡會往後挪。評分為 Google 地圖 2026/10/11 資料，週三都有營業。</p>
+  <div class="rlist">
+    <div class="card"><b>金山獅子林當歸鴨</b> <span class="rate">Google 4.1（178 則）</span><p>民生路，離飯店開車 3 分鐘。當歸鴨湯、鴨肉冬粉，湯清淡溫熱。幼兒友善：店內寬敞、有廁所（評論）；兒童椅、尿布台未查到。週二公休，11:00–21:00。 <a href="https://www.google.com/maps/search/?api=1&query=%E9%87%91%E5%B1%B1%E7%8D%85%E5%AD%90%E6%9E%97%E7%95%B6%E6%AD%B8%E9%B4%A8" target="_blank" rel="noopener">地圖</a></p></div>
+    <div class="card"><b>金包里鴨肉（廟口鴨肉）</b> <span class="rate">Google 3.7（5,231 則）</span><p>金山老街廣安宮旁，自己到攤位挑菜端回座位的老字號。幼兒友善：人多擁擠、推車不好走；兒童椅未查到。每天 10:00–18:00。 <a href="https://www.google.com/maps/search/?api=1&query=%E9%87%91%E5%8C%85%E9%87%8C%E9%B4%A8%E8%82%89" target="_blank" rel="noopener">地圖</a></p></div>
+    <div class="card"><b>Time 奶奶・樹屋咖啡樂園</b> <span class="rate">Google 4.7（349 則）</span><p>萬里，離飯店約 10 分鐘的戶外小型動物農場，老闆會帶小孩餵動物。每人低消 100 元，只有飲料和霜淇淋，不適合當午餐；全區戶外、沒有暖氣。週二公休，週三 09:30–17:30。 <a href="https://www.google.com/maps/search/?api=1&query=Time%E5%A5%B6%E5%A5%B6%E6%A8%B9%E5%B1%8B%E5%92%96%E5%95%A1%E6%A8%82%E5%9C%92" target="_blank" rel="noopener">地圖</a></p></div>
   </div>
 </section>
 
-<footer>金山慶生小旅行 v1.5.2 ・ 更新 2026/11/08<br>訂單編號、付款資料見私人記錄</footer>
+<section class="sec" id="yipin">
+  <h2>台灣一品雞（12/24 平安夜晚餐）</h2>
+  <div class="card">
+    <p><b>阿嬤指定</b>　<span class="rate">Google 4.1（1,747 則，2026/10/11）</span></p>
+    <iframe class="map" src="https://maps.google.com/maps?q=%E5%8F%B0%E7%81%A3%E4%B8%80%E5%93%81%E9%9B%9E%20%E6%A5%8A%E6%A2%85%E5%8D%80%E7%92%B0%E6%9D%B1%E8%B7%AF31-1%E8%99%9F&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="台灣一品雞 位置地圖"></iframe>
+    <dl class="kv">
+      <dt>地址</dt><dd>桃園市楊梅區環東路 31-1 號</dd>
+      <dt>電話</dt><dd><a href="tel:034756132">03-475-6132</a>（只能電話訂位）</dd>
+      <dt>週四營業</dt><dd>午 11:00–14:00、晚 16:00–21:00</dd>
+      <dt>餐點</dt><dd>招牌烤全雞，中式合菜；店家會送小菜，餐後有免費冰淇淋（評論、2021 部落格）</dd>
+      <dt>幼兒友善</dt><dd>大圓桌與幾間包廂（2021 部落格）；兒童椅、尿布台未查到，訂位時問</dd>
+      <dt>訂位時問</dt><dd>平安夜要不要預訂烤全雞、兒童椅、能否自備蛋糕、停車與付款方式</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="stay">
+  <h2>住宿與聯絡</h2>
+  <div class="card">
+    <p><b>新北北海溫泉洲際酒店</b>　豪華房一大床・高樓層・51 ㎡・房內私人溫泉湯池</p>
+    <dl class="kv">
+      <dt>地址電話</dt><dd>金山區環金路 210 號・<a href="tel:0224983399">02-2498-3399</a>（遊戲室分機 6733）</dd>
+      <dt>入住退房</dt><dd>入住 16:00（15:00 可先辦手續、寄放行李、使用設施）；退房 11:00（延後到 14:00 已註記，視當天房況）</dd>
+      <dt>房費</dt><dd>IHG 積分住宿，房費已用點數；6 歲以下同住不加價；不含早餐</dd>
+      <dt>取消</dt><dd>12/20（日）18:00 前免費取消，之後收一晚房費</dd>
+      <dt>停車</dt><dd>住客專用；入口指引見飯店回信附圖</dd>
+      <dt>訂單資料</dt><dd>見私人記錄（角落列「📁 私人文件」）</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="cost">
+  <h2>費用與刷卡</h2>
+  <p class="lead">價格為官方公告（查詢 2026/10/11），非鎖定價</p>
+  <table class="cost">
+    <tr><th>項目</th><th>刷哪張</th><th>金額</th></tr>
+    <tr><td>洲際一晚</td><td>—</td><td>IHG 點數</td></tr>
+    <tr><td>12/23 嶼晚餐（兩位大人，最低價位）</td><td>玉山信用卡</td><td>約 5,676 − 抵用券 798</td></tr>
+    <tr><td>12/24 嶼早午餐（兩位大人）</td><td>玉山信用卡</td><td>約 2,420 − 抵用券 399</td></tr>
+    <tr><td>12/24 台灣一品雞</td><td>付款方式待確認</td><td>訂位後補</td></tr>
+    <tr><td>採購預留（臨時嬰兒用品、伴手禮）</td><td>—</td><td>約 2,000（估算）</td></tr>
+  </table>
+  <div class="tip">嶼的兩餐一定要刷玉山信用卡（抵用券規定）。收據每天晚上拍照，記進《家庭旅費分帳簿》「2026-12 金山」。</div>
+</section>
+
+<section class="sec" id="pack">
+  <h2>打包清單</h2>
+  <p class="lead">App 裡可以打勾</p>
+  <div class="packg" id="packList"></div>
+</section>
+
+<section class="sec" id="log">
+  <h2>紀錄</h2>
+  <ul class="log">
+    <li>v2.0.0（2026/11/08）改成新版型：行程資料集中在 trip.js，企劃書與旅途 App 共用；Day 2 早上第一個活動改 10:30、早午餐前先把行李放上車、早餐改前一天在超商買。</li>
+    <li>v1.5.2（2026/11/08）12/24 晚上住阿公阿嬤家；台灣一品雞招牌更正為烤全雞。</li>
+    <li>v1.5.1（2026/10/23）隱私勘誤：移除生日日期與可推算生日的寫法。</li>
+    <li>v1.0.0–v1.5.0（2026/10/11–10/12）初版、飯店回信更新、平安夜晚餐定為台灣一品雞。</li>
+  </ul>
+</section>
+
+<footer id="foot"></footer>
 </div>
+
+<script src="trip.js"></script>
+<script src="common.js"></script>
+<script>
+(function () {
+  'use strict';
+  var T = window.TRIP, K = window.KIT, esc = K.esc;
+  document.getElementById('who').innerHTML = T.who.map(function (w) { return '<b>' + esc(w[0]) + '</b>' + (w[1] ? '（' + esc(w[1]) + '）' : ''); }).join('・');
+  document.getElementById('foot').innerHTML = esc(T.title) + ' ' + esc(T.version) + ' ・ 更新 ' + esc(T.updated) + '<br>訂單編號、付款資料見私人記錄';
+
+  function fields(it) {
+    var h = '';
+    K.FIELDS.forEach(function (f) { if (it[f[0]]) h += '<li><b>' + f[1] + '</b><span>' + esc(it[f[0]]) + '</span></li>'; });
+    return h ? '<ul class="fl">' + h + '</ul>' : '';
+  }
+  function item(it) {
+    var tag = it.tag === 'key' ? '<span class="tg key">重點</span>' : it.tag === 'opt' ? '<span class="tg opt">有餘力</span>' : '';
+    var acts = '';
+    if (it.p) acts += '<a href="' + K.navUrl(it.p) + '" target="_blank" rel="noopener">📍 導航</a>';
+    (it.tel || []).forEach(function (t) { acts += '<a href="' + K.telUrl(t) + '">📞 ' + esc(t) + '</a>'; });
+    if (it.ref) acts += '<a href="#' + it.ref + '">📖 參考資料</a>';
+    return '<li id="' + it.id + '"><div class="t">' + esc(it.t) + '</div><div><h4>' + tag + esc(it.title) + '</h4>' +
+      (it.gist ? '<p class="g">' + esc(it.gist) + '</p>' : '') + fields(it) +
+      (it.detail ? '<p class="dt">' + esc(it.detail) + '</p>' : '') +
+      (it.say ? '<div class="say">💬 ' + esc(it.say) + '</div>' : '') +
+      (acts ? '<div class="acts">' + acts + '</div>' : '') + '</div></li>';
+  }
+  var today = K.now().date, box = document.getElementById('days');
+  T.days.forEach(function (d, i) {
+    var past = d.d < today;
+    var keys = d.items.filter(function (it) { return it.tag === 'key'; }).map(function (it) { return '<a href="#' + it.id + '"><b>' + esc(it.t) + '</b>' + esc(it.title) + '</a>'; }).join('');
+    var body = '<div class="dbody"><ul class="lines">' +
+      '<li><span class="k">天氣</span><span id="wx-' + i + '">…</span></li>' +
+      '<li><span class="k">今天重點</span><span>' + esc(d.focus) + '</span></li>' +
+      '<li><span class="k">關鍵時間</span><span class="keys">' + keys + '</span></li>' +
+      '<li><span class="k">備案</span><span>' + esc(d.backup) + '</span></li></ul>' +
+      '<details class="full"' + (location.hash && location.hash.indexOf('#d' + (i + 1) + '-') === 0 ? ' open' : '') + '><summary>完整時間軸（' + d.items.length + ' 個時間點）</summary><ol class="tl">' + d.items.map(item).join('') + '</ol>' +
+      (d.evening ? '<div class="eve">🌙 睡前：' + d.evening.map(esc).join('；') + '</div>' : '') + '</details></div>';
+    var head = '<span class="dn">' + (i + 1) + '</span><h3 class="dt3">' + esc(d.label) + esc(d.title) + '</h3>';
+    var el = document.createElement(past ? 'details' : 'section');
+    el.className = 'day'; el.id = 'day-' + d.d;
+    el.innerHTML = past ? '<summary>' + head + '<span class="past-tag">已過・點開</span></summary>' + body : '<div class="dhead">' + head + '</div>' + body;
+    box.appendChild(el);
+    K.weather(d, function (o) { var w = document.getElementById('wx-' + i); w.innerHTML = o ? K.wxText(o) : '已過'; });
+  });
+  // 從 App 的「詳細 →」跳過來：打開那一天的時間軸並捲到該點
+  function openHash() {
+    var id = location.hash.slice(1); if (!id) return;
+    var t = document.getElementById(id); if (!t) return;
+    var p = t.closest('details.full'); if (p) p.open = true;
+    var dd = t.closest('details.day'); if (dd) dd.open = true;
+    setTimeout(function () { t.scrollIntoView({ block: 'start' }); }, 50);
+  }
+  window.addEventListener('hashchange', openHash); openHash();
+
+  var open = [], done = [];
+  T.todos.forEach(function (x) { (x.done ? done : open).push(x); });
+  document.getElementById('todoList').innerHTML = open.map(function (x) { return '<li><span class="due">' + esc(x.due) + '</span><span>' + esc(x.t) + '</span></li>'; }).join('') || '<li><span></span><span>都完成了 🎉</span></li>';
+  document.getElementById('doneList').innerHTML = done.map(function (x) { return '<li><span>' + esc(x.done) + '</span><span>' + esc(x.t) + '</span></li>'; }).join('');
+  document.getElementById('doneSum').textContent = '已完成 ' + done.length + ' 項';
+  document.getElementById('packList').innerHTML = T.pack.map(function (g) { return '<div><b>' + esc(g.g) + '</b><ul>' + g.items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>'; }).join('');
+})();
+</script>
 </body>
 </html>
