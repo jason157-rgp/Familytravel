@@ -24,10 +24,16 @@
       .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
     return { date: p.year + '-' + p.month + '-' + p.day, min: (+p.hour % 24) * 60 + (+p.minute) };
   };
+  /* 真實的今天（預覽模式也用真實日期判斷天氣預報抓不抓得到） */
+  K.realNow = function () {
+    var p = {};
+    new Intl.DateTimeFormat('en-CA', { timeZone: T.tz, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+    return { date: p.year + '-' + p.month + '-' + p.day, min: 0 };
+  };
   K.min = function (t) { var m = /(\d{1,2}):(\d{2})/.exec(t); return m ? (+m[1]) * 60 + (+m[2]) : null; };
   K.hm = function (m) { m = ((m % 1440) + 1440) % 1440; return (m / 60 | 0) + ':' + ('0' + m % 60).slice(-2); };
-  K.daysTo = function (date) {
-    var n = K.now(), a = Date.UTC.apply(null, n.date.split('-').map(function (x, i) { return i === 1 ? x - 1 : +x; })),
+  K.daysTo = function (date, real) {
+    var n = real ? K.realNow() : K.now(), a = Date.UTC.apply(null, n.date.split('-').map(function (x, i) { return i === 1 ? x - 1 : +x; })),
       b = Date.UTC.apply(null, date.split('-').map(function (x, i) { return i === 1 ? x - 1 : +x; }));
     return Math.round((b - a) / 864e5);
   };
@@ -39,7 +45,7 @@
   /* 天氣：Open-Meteo，結果暫存在手機 3 小時；預報只到 16 天內 */
   var WMO = { 0: '☀️ 晴', 1: '🌤 晴時多雲', 2: '⛅ 多雲', 3: '☁️ 陰', 45: '🌫 霧', 48: '🌫 霧', 51: '🌦 毛毛雨', 53: '🌦 毛毛雨', 55: '🌦 毛毛雨', 61: '🌧 小雨', 63: '🌧 雨', 65: '🌧 大雨', 80: '🌦 陣雨', 81: '🌧 陣雨', 82: '⛈ 大陣雨', 95: '⛈ 雷雨', 96: '⛈ 雷雨', 99: '⛈ 雷雨' };
   K.weather = function (day, cb) {
-    var loc = T.wx[day.wx], ahead = K.daysTo(day.d);
+    var loc = T.wx[day.wx], ahead = K.daysTo(day.d, true);
     if (ahead > 15) { cb({ note: '出發前兩週才有預報（' + loc.n + '）' }); return; }
     if (ahead < 0) { cb(null); return; }
     var key = 'jinshan-wx-' + day.d + '-' + day.wx, hit = K.store.json(key, null);
