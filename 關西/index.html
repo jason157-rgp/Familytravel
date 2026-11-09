@@ -1,0 +1,414 @@
+<!doctype html>
+<!-- 編輯前請先讀根目錄的 CLAUDE.md。所有日文後面接中文翻譯。行程時間軸的內容在 trip.js（企劃書與 App 共用），這裡只放版面與手寫的參考區。 -->
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>關西家庭旅遊｜2027/1/3–1/9</title>
+<meta name="theme-color" content="#3A1E1A">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F2F0EB; --paper:#FFFFFF; --ink:#1A2130; --ink2:#46505F; --muted:#6F7884; --line:#DCD8CF;
+  --night:#3A1E1A; --night2:#2B3D60; --gold:#D9A441; --gold-ink:#8A6418; --gold-soft:#F7EBD0;
+  --pine:#2F6B55; --pine-soft:#DCEDE5; --berry:#B8402F; --berry-soft:#F6E0DA;
+  --serif:"Noto Serif TC","Songti TC",serif; --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11141B; --paper:#191E28; --ink:#E6EAF0; --ink2:#B6BECA; --muted:#8A93A0; --line:#2C3340;
+  --gold-soft:#3A2F1A; --gold-ink:#E8C27A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
+}}
+:root[data-theme="dark"]{
+  --bg:#11141B; --paper:#191E28; --ink:#E6EAF0; --ink2:#B6BECA; --muted:#8A93A0; --line:#2C3340;
+  --gold-soft:#3A2F1A; --gold-ink:#E8C27A; --pine:#7CC3A6; --pine-soft:#1C2C26; --berry:#E58B79; --berry-soft:#3A2420;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.3}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+svg{display:block;max-width:100%;height:auto}
+
+.cover{background:var(--night);color:#F2F0EB;border-radius:0 0 22px 22px;overflow:hidden}
+.cover .wrap{padding-top:30px}
+.kicker{font-size:13px;letter-spacing:.18em;color:var(--gold)}
+.cover h1{font-size:clamp(28px,7vw,44px);font-weight:900;margin-top:6px}
+.cover .who{margin-top:8px;font-size:14.5px;color:rgba(242,240,235,.82)}
+.cover .who b{color:#fff;font-weight:500}
+.cover svg{margin-top:16px}
+
+.jump{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;margin:0 -16px;background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:0 0 auto;font-size:13.5px;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px 12px;white-space:nowrap}
+.jump a.app{background:var(--night);color:#fff;border-color:var(--night)}
+
+.appcta{display:flex;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border-radius:16px;background:var(--night);color:#F2F0EB;text-decoration:none}
+.appcta b{font-size:16px}.appcta span{font-size:13px;color:rgba(242,240,235,.75);display:block}
+.appcta i{margin-left:auto;font-style:normal;color:var(--gold);font-weight:700}
+
+.sec{margin-top:40px}
+.sec>h2{font-size:22px}
+.lead{font-size:14px;color:var(--muted);margin-top:4px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+
+/* 每天一張卡片 */
+.day{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.day>summary,.day .dhead{list-style:none;cursor:pointer;display:flex;align-items:flex-end;gap:12px;padding:16px 18px 10px}
+.day>summary::-webkit-details-marker{display:none}
+.dn{font-family:var(--serif);font-weight:900;font-size:44px;line-height:.85;color:var(--gold)}
+.day:nth-of-type(even) .dn{color:var(--berry)}
+.dt3{font-size:20px}
+.past-tag{margin-left:auto;font-size:12px;color:var(--muted)}
+.dbody{padding:0 18px 16px}
+.lines{margin:0;padding:0;list-style:none;font-size:14.5px}
+.tw{font-size:11px;color:var(--berry);display:block;font-weight:400}
+.lines li{display:grid;grid-template-columns:64px 1fr;gap:8px;padding:6px 0;border-top:1px dashed var(--line)}
+.lines li:first-child{border-top:0}
+.lines .k{color:var(--muted);font-size:13px;padding-top:1px}
+.lines small{display:block;color:var(--muted);font-size:11.5px}
+.keys{display:flex;flex-wrap:wrap;gap:4px 10px}
+.keys a{text-decoration:none;white-space:nowrap}.keys a b{font-variant-numeric:tabular-nums;margin-right:3px}
+details.full{margin-top:10px;border-top:1px solid var(--line)}
+details.full>summary{cursor:pointer;padding:10px 0 4px;font-size:14px;font-weight:700;color:var(--gold-ink)}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:50px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.tl li:target{background:var(--gold-soft);border-radius:10px;margin:0 -8px;padding:10px 8px}
+.tl .t{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.tl h4{margin:0;font-size:16px}
+.tl .g{font-size:14px;color:var(--ink2)}
+.tg{display:inline-block;font-size:11px;border-radius:6px;padding:0 6px;margin-right:6px;vertical-align:2px;font-weight:700}
+.tg.key{background:var(--gold-soft);color:var(--gold-ink)}.tg.opt{background:var(--pine-soft);color:var(--pine)}
+.fl{margin:6px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--ink2)}
+.fl li{display:grid;grid-template-columns:52px 1fr;gap:6px}
+.fl b{color:var(--muted);font-weight:500}
+.dt{margin-top:6px;font-size:14px}
+.say{margin-top:8px;background:var(--bg);border-left:3px solid var(--gold);border-radius:6px;padding:8px 10px;font-size:14px}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.acts a{font-size:13px;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.eve{margin-top:10px;font-size:13.5px;color:var(--ink2);background:var(--pine-soft);border-radius:10px;padding:8px 12px}
+
+/* 參考區 */
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:12px;background:var(--night2)}
+.photos figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:3px}
+@media (max-width:560px){.photos{grid-template-columns:1fr 1fr}}
+.cap{font-size:12px;color:var(--muted);margin-top:4px;text-align:center}
+.spots{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:12px}
+.spot{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.spot b{display:block;font-size:15px}.spot span{display:block;font-size:13.5px;color:var(--ink2);line-height:1.65}
+.spot.no{border-color:transparent;background:var(--berry-soft)}.spot.no b{color:var(--berry)}
+.olist{margin:10px 0 0;padding-left:1.4em;font-size:14.5px}.olist li{margin:6px 0}
+.tip{margin-top:12px;background:var(--gold-soft);border-radius:12px;padding:10px 14px;font-size:14px}
+.coupon{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.coupon div{border:1.5px dashed var(--gold);border-radius:12px;padding:12px 14px;background:var(--paper);font-size:14px}
+.coupon b{display:block;font-size:15px}
+.rlist{display:grid;gap:10px;margin-top:12px}
+.rlist .card b{font-size:15px}.rlist .card p{font-size:14px;color:var(--ink2)}
+.rate{font-size:12.5px;color:var(--gold-ink);font-weight:700}
+.map{width:100%;height:200px;border:0;border-radius:12px;display:block;margin-top:10px;background:var(--bg)}
+dl.kv{display:grid;grid-template-columns:84px 1fr;gap:4px 10px;margin:8px 0 0;font-size:14px}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;color:var(--ink2)}
+table.cost{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+.cost td,.cost th{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.cost th{font-weight:500;color:var(--muted);font-size:12.5px}
+.cost td:last-child{text-align:right;white-space:nowrap}
+.todo{list-style:none;margin:10px 0 0;padding:0}
+.todo li{display:grid;grid-template-columns:70px 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+.todo .due{font-size:12.5px;color:var(--berry);font-weight:700}
+details.done-list summary{cursor:pointer;font-size:13.5px;color:var(--muted);margin-top:8px}
+details.done-list li{color:var(--muted);text-decoration:line-through}
+.packg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.packg div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.packg b{display:block;margin-bottom:2px}
+.packg ul{margin:0;padding-left:1.2em;color:var(--ink2)}
+.log{font-size:13.5px;color:var(--ink2)}
+.log li{margin:4px 0}
+footer{margin:44px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
+</style>
+<style id="ft-corner-css">.ft-corner{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 18px;padding:7px 16px;background:#0f1c27;color:#c9d4dc;font:13px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:.04em}.ft-corner .ft-l{margin-right:auto;color:#93a3af}.ft-corner a{color:#e9f0f4;text-decoration:none}.ft-corner a:hover,.ft-corner a:focus-visible{text-decoration:underline}</style>
+</head>
+<body>
+<div class="ft-corner"><span class="ft-l">關西家庭旅遊</span><a href="../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1SZfkPTSse6wNYUUGWpyBdd4bRbclRMDh" target="_blank" rel="noopener">📁 私人文件</a></div>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="kicker">KANSAI ・ 2027.01.03 – 01.09</div>
+    <h1 id="title">關西家庭旅遊</h1>
+    <p class="who" id="who"></p>
+    <svg viewBox="0 0 800 200" role="img" aria-label="冬天的關西：京都的五重塔與鳥居、大阪城、往神戶的電車">
+      <rect width="800" height="200" fill="#3A1E1A"/>
+      <g fill="#F2F0EB" opacity=".7"><circle cx="70" cy="30" r="1.5"/><circle cx="190" cy="20" r="1.2"/><circle cx="420" cy="34" r="1.4"/><circle cx="560" cy="18" r="1.3"/><circle cx="700" cy="40" r="1.5"/></g>
+      <circle cx="640" cy="52" r="20" fill="#F2D38A" opacity=".85"/>
+      <path d="M0 150 L90 110 L200 140 L320 96 L440 136 L560 104 L680 132 L800 112 L800 200 L0 200Z" fill="#4E2A22"/>
+      <g transform="translate(70 52)" fill="#2A1512">
+        <rect x="18" y="0" width="4" height="12"/>
+        <path d="M0 22 h40 l-6 -8 h-28z"/><rect x="10" y="22" width="20" height="10"/>
+        <path d="M-2 42 h44 l-6 -8 h-32z"/><rect x="9" y="42" width="22" height="10"/>
+        <path d="M-4 62 h48 l-6 -8 h-36z"/><rect x="8" y="62" width="24" height="10"/>
+        <path d="M-6 82 h52 l-6 -8 h-40z"/><rect x="7" y="82" width="26" height="10"/>
+        <path d="M-8 102 h56 l-6 -8 h-44z"/><rect x="6" y="102" width="28" height="12"/>
+      </g>
+      <g transform="translate(220 92)" fill="#D9472B">
+        <rect x="-14" y="0" width="108" height="9" rx="2"/><rect x="-4" y="14" width="88" height="6"/>
+        <rect x="8" y="9" width="9" height="77"/><rect x="63" y="9" width="9" height="77"/>
+      </g>
+      <g transform="translate(470 86)">
+        <rect x="0" y="66" width="120" height="30" fill="#6B4A3A"/>
+        <rect x="18" y="40" width="84" height="26" fill="#F2F0EB"/><path d="M8 42 h104 l-14 -12 h-76z" fill="#2F6B55"/>
+        <rect x="32" y="16" width="56" height="16" fill="#F2F0EB"/><path d="M24 18 h72 l-12 -12 h-48z" fill="#2F6B55"/>
+        <rect x="44" y="-4" width="32" height="12" fill="#F2F0EB"/><path d="M38 -2 h44 l-8 -10 h-28z" fill="#2F6B55"/>
+        <g fill="#E0A33B"><rect x="56" y="-18" width="8" height="6"/></g>
+      </g>
+      <g transform="translate(600 160)">
+        <rect x="0" y="0" width="180" height="20" rx="8" fill="#F2F0EB"/>
+        <rect x="0" y="12" width="180" height="4" fill="#D9472B"/>
+        <g fill="#5A2E25"><rect x="16" y="4" width="18" height="6" rx="1"/><rect x="44" y="4" width="18" height="6" rx="1"/><rect x="72" y="4" width="18" height="6" rx="1"/><rect x="100" y="4" width="18" height="6" rx="1"/><rect x="128" y="4" width="18" height="6" rx="1"/></g>
+      </g>
+      <rect x="0" y="182" width="800" height="3" fill="#2A1512"/>
+    </svg>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="jump" aria-label="跳到段落">
+  <a class="app" href="app.html">📱 旅途 App</a><a href="#day-2027-01-03">① 1/3</a><a href="#day-2027-01-04">② 1/4</a><a href="#day-2027-01-05">③ 1/5</a><a href="#day-2027-01-06">④ 1/6</a><a href="#day-2027-01-07">⑤ 1/7</a><a href="#day-2027-01-08">⑥ 1/8</a><a href="#day-2027-01-09">⑦ 1/9</a><a href="#todo">✅ 待辦</a><a href="#flight">✈️ 機票</a><a href="#stay">🏨 住宿</a><a href="#kids">🧸 幼兒備品</a><a href="#luggage">🧳 行李配送</a><a href="#transport">🚃 交通</a><a href="#spots">📍 景點</a><a href="#food">🍱 餐廳</a><a href="#cost">💴 費用</a><a href="#pack">🎒 打包</a>
+</nav>
+
+<a class="appcta" href="app.html"><span style="font-size:26px">📱</span><span><b>旅途中開 App</b><span>下一步、順延、天氣、給店員看的日文都在 App；這裡是詳細資料</span></span><i>開啟 →</i></a>
+
+<section class="sec" aria-label="行程">
+  <h2>行程</h2>
+  <p class="lead">時間都是日本時間（標「台灣時間」的除外）；每天一張卡片，點「完整時間軸」看細節</p>
+  <div id="days"></div>
+</section>
+
+<section class="sec" id="todo">
+  <h2>待辦</h2>
+  <ul class="todo" id="todoList"></ul>
+  <details class="done-list"><summary id="doneSum">已完成</summary><ul class="todo" id="doneList"></ul></details>
+</section>
+
+<section class="sec" id="flight">
+  <h2>機票（還沒訂）</h2>
+  <p class="lead">11/16 以後訂；Google 航班 2026/11/07 查詢，非鎖定價</p>
+  <div class="card">
+    <dl class="kv">
+      <dt>去程</dt><dd>1/3（日）華航 桃園 09:45 → 關西 13:20</dd>
+      <dt>回程</dt><dd>1/9（六）華航 關西 → 桃園，12:45／14:30／19:00 三班同價，擇一；行程先用 14:30 排</dd>
+      <dt>票種</dt><dd>2 位大人＋1 位兒童票（佔位）</dd>
+      <dt>票價</dt><dd>3 人含稅約 TWD 43,813（查詢當下）</dd>
+      <dt>會員</dt><dd>華航卓越卡：金卡櫃台、多 1 件託運、優先登機（限龜山下智久本人）</dd>
+      <dt>刷卡與訂位</dt><dd>見私人記錄</dd>
+    </dl>
+  </div>
+  <div class="tip">嬰兒車在櫃台託運，抵達時到行李轉盤領（艙門領要在登機口等很久）。</div>
+</section>
+
+<section class="sec" id="stay">
+  <h2>住宿</h2>
+  <div class="rlist">
+    <div class="card">
+      <b>ザ・ホテル東山 京都 東急（京都東山東急飯店，A Pan Pacific Hotel）</b>
+      <p>1/3–1/6 三晚・豪華大床房 24–30 ㎡、浴缸與淋浴分開・GHA 官網 DISCOVERY Flexible Rate</p>
+      <iframe class="map" src="https://maps.google.com/maps?q=THE%20HOTEL%20HIGASHIYAMA%20KYOTO%20TOKYU&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="京都東山東急飯店 位置地圖"></iframe>
+      <dl class="kv">
+        <dt>地址電話</dt><dd>京都市東山區三條通白川橋東入三丁目夷町 175-2・<a href="tel:0755336112">075-533-6112</a></dd>
+        <dt>交通</dt><dd>地下鐵東西線東山站走 4–5 分；京都站計程車約 20 分</dd>
+        <dt>接駁車</dt><dd>飯店 ⇄ 京都站八條口，京都站發車 8:25–20:25（每小時 :25）、飯店發車 7:55–19:55（每小時 :55），單程約 30 分（近畿日本旅行社網站，2026/11/09 查）</dd>
+        <dt>房費</dt><dd>¥62,623（房價 ¥48,450＋服務費 13%＋消費稅 10%＋京都住宿稅每人每晚 ¥400）；只用信用卡擔保，1/6 退房時付款</dd>
+        <dt>早餐</dt><dd>鈦金會員早餐（會員＋1 位）；3 歲以下免費，已寫信請飯店確認。餐廳ナナノイチ（飯店全日餐廳）早餐 7:00–10:30</dd>
+        <dt>小孩</dt><dd>6 歲以下 1 位同床免費；訂單只有 2 位大人，已寫信請飯店加上小魚乾</dd>
+        <dt>取消</dt><dd>入住前 3 天前免費，之後罰一晚房價加稅（約 ¥21,000）→ 12/30 前決定</dd>
+        <dt>訂單資料</dt><dd>見私人記錄</dd>
+      </dl>
+    </div>
+    <div class="card">
+      <b>OMO7大阪 by 星野リゾート（OMO7 大阪 by 星野集團）</b>
+      <p>1/6–1/9 三晚・大床房 29 ㎡、200 cm 寬大床、床兩側靠牆、浴缸、浴廁洗分開・官網「【3連泊】のんびりたび。（連住三晚・悠閒之旅）」不含餐</p>
+      <iframe class="map" src="https://maps.google.com/maps?q=OMO7%E5%A4%A7%E9%98%AA%20by%20%E6%98%9F%E9%87%8E%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="OMO7 大阪 位置地圖"></iframe>
+      <dl class="kv">
+        <dt>地址電話</dt><dd>大阪市浪速區惠美須西 3-16-30・<a href="tel:05031348095">050-3134-8095</a></dd>
+        <dt>交通</dt><dd>JR 與南海「新今宮」站出口旁；地下鐵御堂筋線「動物園前」站走 3–5 分</dd>
+        <dt>入住退房</dt><dd>入住 15:00 起、退房 11:00</dd>
+        <dt>房費</dt><dd>¥60,700 已預付（含大阪住宿稅 ¥1,200）</dd>
+        <dt>早餐</dt><dd>不含。OMOダイニング（OMO 餐廳）自助早餐大人 ¥4,000、4–6 歲 ¥2,000、0–3 歲免費，7:00–10:00；或 OMOカフェ＆バル（OMO 咖啡酒吧）套餐早餐 ¥1,800；預設前一晚買超商早餐</dd>
+        <dt>小孩</dt><dd>6 歲以下同床免費；訂單只有 2 位大人，已寫信請飯店登記</dd>
+        <dt>USJ</dt><dd>住客限定免費接駁巴士（要預約）；櫃台可買 USJ 門票（星野集團官網）</dd>
+        <dt>取消</dt><dd>入住前 40–8 天 10%、7–0 天 30%、未到 100%，另收 ¥1,000</dd>
+        <dt>訂單資料</dt><dd>見私人記錄</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kids">
+  <h2>幼兒備品書面登記</h2>
+  <p class="lead">兩封詢問信 2026/11/08 已寄出，等回信；回信存 PDF 到私人文件「住宿」</p>
+  <table class="cost">
+    <tr><th>住宿</th><th>已提出</th><th>書面回覆</th></tr>
+    <tr><td>京都東山東急</td><td>加小魚乾與早餐、床邊護欄、嬰兒澡盆或洗澡椅、有蓋尿布桶、加濕器、熱水壺、奶瓶消毒器；1/3 與 1/6 接駁車、1/5 宅急便、1/6 寄放行李</td><td>等回信</td></tr>
+    <tr><td>OMO7 大阪</td><td>加同床幼兒、床台高度與床邊護欄、嬰兒澡盆或洗澡椅、有蓋尿布桶、奶瓶消毒組、兩間餐廳的安全帶兒童椅、Crosta 京都配送是否可、19:00 後代收行李</td><td>等回信</td></tr>
+  </table>
+  <div class="tip">OMO7 現場另有：草皮、看電車的平台、哺乳室免費尿布；兒童便座、尿布桶、奶瓶消毒組可借但數量有限、不能預約。自備微波爐奶瓶消毒盒最保險。</div>
+</section>
+
+<section class="sec" id="luggage">
+  <h2>1/6 京都 → 大阪 行李配送</h2>
+  <p class="lead">兩間飯店回信後決定</p>
+  <div class="spots">
+    <div class="spot"><b>エアポーター（Airporter，建議）</b><span>京都東山東急櫃台 → OMO7 大阪。當天 9:00 前交件、20:00 起領；160 cm 以下每件 ¥2,200（兩件 ¥4,400）。前一天 23:00 前在官網預約，預約人姓名要和兩間訂房一致，兩間確認書都要上傳；9:00 前沒交件收 100% 取消費。28 吋箱先量三邊和。</span></div>
+    <div class="spot"><b>Crosta 京都（京都站，Handsfree Japan）</b><span>13:00 前交件、19:00 後送到大阪市區飯店，每件 ¥2,500；OMO7 在不在配送名單已寫信問。要自己把行李帶到京都站。</span></div>
+    <div class="spot"><b>宅急便（備案）</b><span>1/5 請京都東山東急櫃台寄，關西 → 關西 160 尺寸約 ¥3,020／件，隔天送到。</span></div>
+  </div>
+  <div class="tip">選 Airporter 的話：1/5 晚上把大行李整理好（能不能前一晚先交櫃台保管，要問飯店）；1/6 隨身包放一晚的換洗衣物和尿布。</div>
+</section>
+
+<section class="sec" id="transport">
+  <h2>交通</h2>
+  <div class="rlist">
+    <div class="card"><b>關西機場 → 京都：はるか（HARUKA，關空特急）</b><p>JR 關西空港站直達京都站，約 80 分，日間約 30 分一班。訪日旅客可買 HARUKA 優惠票（大人約 ¥2,200，購買時確認），也可事先線上買 QR 票；未滿 6 歲免費。入境排隊時先看下一班時刻。</p></div>
+    <div class="card"><b>京都市內：計程車＋地下鐵</b><p>飯店 → 梅小路約 20 分（單程約 ¥2,500，估算）；岡崎、八坂、祇園都在走路或短程計程車範圍。東西線東山站 → 烏丸御池直達。推嬰兒車搭地下鐵找電梯。</p></div>
+    <div class="card"><b>京都 → 大阪新今宮</b><p>烏丸線烏丸御池 → 京都，JR 京都 → 大阪（新快速）→ 大阪環状線（大阪環狀線）新今宮，約 1 小時。行李已先送走，只帶嬰兒車與隨身包。</p></div>
+    <div class="card"><b>大阪市內與 USJ</b><p>OMO7 住客免費接駁巴士直達 USJ（要預約，時刻問櫃台）；或 JR 新今宮 → 西九条（西九條）轉ゆめ咲線（夢咲線）到ユニバーサルシティ（環球城）站。心齋橋、道頓堀搭御堂筋線從動物園前出發。</p></div>
+    <div class="card"><b>大阪 → 神戶</b><p>JR 新今宮 → 大阪，轉 JR 神戸線（神戶線）新快速到神戸（神戶）站，約 50 分；麵包超人博物館在神戶站南口走 8 分。三ノ宮（三宮）、元町都在同一條線上。</p></div>
+    <div class="card"><b>新今宮 → 關西機場</b><p>南海電鐵在新今宮站直達：ラピート（Rapi:t 特急，全車指定）或空港急行（機場急行），約 40–45 分。HARUKA 不停新今宮，要到天王寺搭。</p></div>
+  </div>
+  <div class="tip">大眾運輸都要有備案：每個點都記下最近的計程車招呼站，或用叫車 App（GO、Uber）。</div>
+</section>
+
+<section class="sec" id="spots">
+  <h2>景點</h2>
+  <p class="lead">營業時間與票價以官方為準，出發前 1 個月再查一次</p>
+  <div class="spots">
+    <div class="spot"><b>京都鉄道博物館（京都鐵道博物館）・1/4</b><span>10:00–17:00，週三與 12/30–1/1 休。大人 ¥1,500，3 歲以下免費。蒸汽火車、新幹線實車，館內可推嬰兒車。</span></div>
+    <div class="spot"><b>京都水族館・1/4（有餘力）</b><span>全年無休。大人 ¥2,600（2026/2 起），0–2 歲免費。在梅小路公園內，和鐵道博物館走路可到。</span></div>
+    <div class="spot"><b>京都市動物園・1/5</b><span>9:00–16:30，週一與 12/28–1/1 休。大人 ¥750，國中以下免費。在岡崎，飯店走路約 10–15 分。</span></div>
+    <div class="spot"><b>平安神宮・1/5（有餘力）</b><span>境內免費，11–2 月 17:00 關門（神苑另收費）。動物園旁，白砂碎石路推車較費力。</span></div>
+    <div class="spot"><b>八坂神社・1/5</b><span>境內全天開放。推嬰兒車走南樓門，西樓門（四條通那側）有石階。旁邊就是祇園。</span></div>
+    <div class="spot"><b>御金神社・1/6</b><span>京都市中京區押西洞院町 614，地下鐵烏丸御池站走 7 分。境內全天開放，授與所（求御守的地方）10:00–16:00。1/4 是新年開工日人多，所以排 1/6。</span></div>
+    <div class="spot"><b>CHANEL 大丸心斎橋（香奈兒 大丸心齋橋店）・1/6</b><span>大丸心斎橋（大丸心齋橋）本館 1 樓，11:30–19:30；建議在香奈兒官網預約來店時段。</span></div>
+    <div class="spot"><b>ユニバーサル・スタジオ・ジャパン（日本環球影城）・1/7</b><span>大人票依日期浮動（¥8,400 起，估 ¥9,000），3 歲以下免費。2 歲適合任天堂世界與セサミストリート（芝麻街）區的兒童設施，看身高限制。</span></div>
+    <div class="spot"><b>神戸アンパンマンこどもミュージアム＆モール（神戶麵包超人兒童博物館）・1/8</b><span>神戶市中央區東川崎町 1-6-2・<a href="tel:0783418855">078-341-8855</a>。1 歲以上每人 ¥2,000–2,500（依日期），日期指定票網路優先。冬季（11–2 月）一般 10:00–17:00、最終入館 16:00，元旦休（Walkerplus，2026/11/09 查）；1 樓購物區免費。館內不能推嬰兒車；表演座位要先拿 QR 碼，很快坐滿。</span></div>
+    <div class="spot"><b>生田神社・1/8（有餘力）</b><span>三ノ宮（三宮）站走 5 分，境內免費。</span></div>
+    <div class="spot"><b>南京町（神戶中華街）・1/8</b><span>JR 元町站旁，晚餐與小吃。人多時推車不好走，背帶備著。</span></div>
+  </div>
+</section>
+
+<section class="sec" id="food">
+  <h2>餐廳（待選）</h2>
+  <p class="lead">每一餐都要列 Tabelog（食べログ）分數＋評論數，以及幼兒友善（兒童椅有無安全帶、嬰兒車能否進店、兒童餐、能否帶副食品、尿布台、座敷〔榻榻米座位〕），查不到的寫「未查到」</p>
+  <table class="cost">
+    <tr><th>哪一餐</th><th>範圍</th><th>狀態</th></tr>
+    <tr><td>1/3 晚餐</td><td>京都東山東急附近（三條、東山站）</td><td>待選</td></tr>
+    <tr><td>1/4 午餐</td><td>梅小路（鐵道博物館、水族館周邊）</td><td>待選</td></tr>
+    <tr><td>1/4 晚餐</td><td>飯店附近</td><td>待選</td></tr>
+    <tr><td>1/5 午餐</td><td>岡崎（動物園、平安神宮周邊）</td><td>待選</td></tr>
+    <tr><td>1/5 晚餐</td><td>祇園</td><td>待選</td></tr>
+    <tr><td>1/6 午餐</td><td>烏丸御池（御金神社附近）</td><td>待選</td></tr>
+    <tr><td>1/6 晚餐</td><td>道頓堀（團體）</td><td>團體安排</td></tr>
+    <tr><td>1/7 晚餐</td><td>新今宮、新世界</td><td>待選</td></tr>
+    <tr><td>1/8 午餐</td><td>ハーバーランド（神戶港灣樂園）</td><td>待選</td></tr>
+    <tr><td>1/8 晚餐</td><td>南京町</td><td>待選</td></tr>
+  </table>
+</section>
+
+<section class="sec" id="cost">
+  <h2>費用</h2>
+  <p class="lead">已成交寫實際金額；其餘為估算（2026/11/09，日圓 × 0.206），非鎖定價</p>
+  <table class="cost">
+    <tr><th>項目</th><th>狀態</th><th>金額</th></tr>
+    <tr><td>機票 3 人</td><td>未訂</td><td>約 TWD 43,813</td></tr>
+    <tr><td>京都東山東急 3 晚</td><td>退房時付</td><td>¥62,623</td></tr>
+    <tr><td>OMO7 大阪 3 晚</td><td>已預付</td><td>¥60,700</td></tr>
+    <tr><td>HARUKA、計程車、電車、南海（大人 2 位）</td><td>估算</td><td>約 ¥25,000</td></tr>
+    <tr><td>行李配送（Airporter 兩件）</td><td>估算</td><td>¥4,400</td></tr>
+    <tr><td>門票：鐵博、水族館、動物園、USJ、麵包超人</td><td>估算</td><td>約 ¥34,000</td></tr>
+    <tr><td>餐費（每天約 ¥8,000，含超商早餐）</td><td>估算</td><td>約 ¥56,000</td></tr>
+    <tr><td>採購預算（嬰兒用品、藥妝、伴手禮、御朱印）</td><td>估算</td><td>約 ¥40,000</td></tr>
+    <tr><td>網路、桃園機場交通、旅平險</td><td>估算</td><td>另計</td></tr>
+  </table>
+  <div class="tip">刷卡：出發前用「刷哪張卡」做一張這趟各類消費速查（查 2027/1 各卡日本活動），放進 App。收據每天晚上拍照，記進《家庭旅費分帳簿》「2027-01 關西」。</div>
+</section>
+
+<section class="sec" id="pack">
+  <h2>打包清單</h2>
+  <p class="lead">App 裡可以打勾</p>
+  <div class="packg" id="packList"></div>
+</section>
+
+<section class="sec" id="log">
+  <h2>紀錄</h2>
+  <ul class="log">
+    <li>v1.0.0（2026/11/09）初版：沿用金山新版型（trip.js 單一資料、企劃書＋旅途 App）；京都東山東急 3 晚、OMO7 大阪 3 晚已訂；機票未訂。依仙台行教訓：抵達日只吃飯、返程日只排移動和一頓飯、第二個點標「有餘力」、午睡排在移動中、OMO7 早餐改前一晚買超商。</li>
+  </ul>
+</section>
+
+<footer id="foot"></footer>
+</div>
+
+<script src="trip.js"></script>
+<script src="common.js"></script>
+<script>
+(function () {
+  'use strict';
+  var T = window.TRIP, K = window.KIT, esc = K.esc;
+  document.getElementById('who').innerHTML = T.who.map(function (w) { return '<b>' + esc(w[0]) + '</b>' + (w[1] ? '（' + esc(w[1]) + '）' : ''); }).join('・');
+  document.getElementById('foot').innerHTML = esc(T.title) + ' ' + esc(T.version) + ' ・ 更新 ' + esc(T.updated) + '<br>訂房編號、機票訂位與付款資料見私人記錄';
+
+  function fields(it) {
+    var h = '';
+    K.FIELDS.forEach(function (f) { if (it[f[0]]) h += '<li><b>' + f[1] + '</b><span>' + esc(it[f[0]]) + '</span></li>'; });
+    return h ? '<ul class="fl">' + h + '</ul>' : '';
+  }
+  function item(it) {
+    var tag = it.tag === 'key' ? '<span class="tg key">重點</span>' : it.tag === 'opt' ? '<span class="tg opt">有餘力</span>' : '';
+    var acts = '';
+    if (it.p) acts += '<a href="' + K.navUrl(it.p) + '" target="_blank" rel="noopener">📍 導航</a>';
+    (it.tel || []).forEach(function (t) { acts += '<a href="' + K.telUrl(t) + '">📞 ' + esc(t) + '</a>'; });
+    if (it.ref) acts += '<a href="#' + it.ref + '">📖 參考資料</a>';
+    return '<li id="' + it.id + '"><div class="t">' + esc(it.t) + (it.tz === 'TW' ? '<span class="tw">台灣時間</span>' : '') + '</div><div><h4>' + tag + esc(it.title) + '</h4>' +
+      (it.gist ? '<p class="g">' + esc(it.gist) + '</p>' : '') + fields(it) +
+      (it.detail ? '<p class="dt">' + esc(it.detail) + '</p>' : '') +
+      (it.say ? '<div class="say">💬 ' + esc(it.say) + (it.sayZh ? '<br><small>（' + esc(it.sayZh) + '）</small>' : '') + '</div>' : '') +
+      (acts ? '<div class="acts">' + acts + '</div>' : '') + '</div></li>';
+  }
+  var today = K.now().date, box = document.getElementById('days');
+  T.days.forEach(function (d, i) {
+    var past = d.d < today;
+    var keys = d.items.filter(function (it) { return it.tag === 'key'; }).map(function (it) { return '<a href="#' + it.id + '"><b>' + esc(it.t) + '</b>' + esc(it.title) + '</a>'; }).join('');
+    var body = '<div class="dbody"><ul class="lines">' +
+      '<li><span class="k">天氣</span><span id="wx-' + i + '">…</span></li>' +
+      '<li><span class="k">今天重點</span><span>' + esc(d.focus) + '</span></li>' +
+      '<li><span class="k">關鍵時間</span><span class="keys">' + keys + '</span></li>' +
+      '<li><span class="k">備案</span><span>' + esc(d.backup) + '</span></li></ul>' +
+      '<details class="full"' + (location.hash && location.hash.indexOf('#d' + (i + 1) + '-') === 0 ? ' open' : '') + '><summary>完整時間軸（' + d.items.length + ' 個時間點）</summary><ol class="tl">' + d.items.map(item).join('') + '</ol>' +
+      (d.evening ? '<div class="eve">🌙 睡前：' + d.evening.map(esc).join('；') + '</div>' : '') + '</details></div>';
+    var head = '<span class="dn">' + (i + 1) + '</span><h3 class="dt3">' + esc(d.label) + esc(d.title) + '</h3>';
+    var el = document.createElement(past ? 'details' : 'section');
+    el.className = 'day'; el.id = 'day-' + d.d;
+    el.innerHTML = past ? '<summary>' + head + '<span class="past-tag">已過・點開</span></summary>' + body : '<div class="dhead">' + head + '</div>' + body;
+    box.appendChild(el);
+    K.weather(d, function (o) { var w = document.getElementById('wx-' + i); w.innerHTML = o ? K.wxText(o) : '已過'; });
+  });
+  // 從 App 的「詳細 →」跳過來：打開那一天的時間軸並捲到該點
+  function openHash() {
+    var id = location.hash.slice(1); if (!id) return;
+    var t = document.getElementById(id); if (!t) return;
+    var p = t.closest('details.full'); if (p) p.open = true;
+    var dd = t.closest('details.day'); if (dd) dd.open = true;
+    setTimeout(function () { t.scrollIntoView({ block: 'start' }); }, 50);
+  }
+  window.addEventListener('hashchange', openHash); openHash();
+
+  var open = [], done = [];
+  T.todos.forEach(function (x) { (x.done ? done : open).push(x); });
+  document.getElementById('todoList').innerHTML = open.map(function (x) { return '<li><span class="due">' + esc(x.due) + '</span><span>' + esc(x.t) + '</span></li>'; }).join('') || '<li><span></span><span>都完成了 🎉</span></li>';
+  document.getElementById('doneList').innerHTML = done.map(function (x) { return '<li><span>' + esc(x.done) + '</span><span>' + esc(x.t) + '</span></li>'; }).join('');
+  document.getElementById('doneSum').textContent = '已完成 ' + done.length + ' 項';
+  document.getElementById('packList').innerHTML = T.pack.map(function (g) { return '<div><b>' + esc(g.g) + '</b><ul>' + g.items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>'; }).join('');
+})();
+</script>
+</body>
+</html>

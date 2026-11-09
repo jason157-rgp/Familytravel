@@ -1,0 +1,240 @@
+<!doctype html>
+<!-- 編輯前請先讀根目錄的 CLAUDE.md。行程資料在 trip.js（與企劃書 index.html 共用），這裡只放畫面與邏輯。 -->
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>關西旅途 App</title>
+<meta name="theme-color" content="#3A1E1A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="關西">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{--bg:#F2F0EB;--paper:#fff;--ink:#1A2130;--ink2:#46505F;--muted:#6F7884;--line:#DCD8CF;--night:#3A1E1A;--gold:#D9A441;--gold-ink:#8A6418;--gold-soft:#F7EBD0;--pine:#2F6B55;--pine-soft:#DCEDE5;--berry:#B8402F;--berry-soft:#F6E0DA;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#11141B;--paper:#191E28;--ink:#E6EAF0;--ink2:#B6BECA;--muted:#8A93A0;--line:#2C3340;--gold-soft:#3A2F1A;--gold-ink:#E8C27A;--pine:#7CC3A6;--pine-soft:#1C2C26;--berry:#E58B79;--berry-soft:#3A2420}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+a{color:inherit}
+main{max-width:560px;margin:0 auto;padding:0 14px}
+.hd{display:flex;align-items:baseline;gap:8px;margin:14px 2px 0}
+.hd h1{font-size:19px;margin:0}.hd span{font-size:12px;color:var(--muted)}
+.offline{background:var(--berry-soft);color:var(--berry);text-align:center;font-size:13px;padding:4px}
+.preview{background:var(--gold-soft);color:var(--gold-ink);text-align:center;font-size:12.5px;padding:4px}
+
+/* 下一步 */
+.next{margin-top:12px;background:var(--night);color:#F2F0EB;border-radius:18px;padding:16px 16px 14px}
+.next .lbl{font-size:12.5px;color:var(--gold);letter-spacing:.08em}
+.next h2{margin:2px 0 0;font-size:22px;line-height:1.3}
+.next .when{font-size:14px;color:rgba(242,240,235,.8)}
+.next .gist{margin-top:6px;font-size:15px}
+.next .fl{margin-top:8px;font-size:13.5px;color:rgba(242,240,235,.85)}
+.next .fl div{display:grid;grid-template-columns:48px 1fr;gap:6px}
+.next .fl b{color:var(--gold);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.btn{appearance:none;border:0;font:inherit;font-size:14px;text-decoration:none;border-radius:999px;padding:7px 13px;background:var(--gold);color:#1A2130;font-weight:700;cursor:pointer}
+.btn.ghost{background:rgba(255,255,255,.12);color:#F2F0EB;font-weight:500}
+.btn.line{background:var(--paper);color:var(--ink);border:1px solid var(--line);font-weight:500}
+
+/* 順延 */
+.delay{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:10px;font-size:13.5px;color:var(--ink2)}
+.delay .btn{padding:5px 11px;font-size:13px}
+.delay .now{margin-left:auto;color:var(--berry);font-weight:700}
+
+/* 天別切換 */
+.tabs{display:flex;gap:6px;margin-top:16px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:1 0 76px;max-width:120px;line-height:1.35;appearance:none;border:1px solid var(--line);background:var(--paper);color:var(--ink);font:inherit;font-size:14px;border-radius:12px;padding:8px 4px;cursor:pointer}
+.tabs button small{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tabs button.on{background:var(--night);color:#fff;border-color:var(--night)}
+.dayhd{margin-top:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px}
+.dayhd b{font-size:16px}
+.dayhd .wx{color:var(--ink2);margin-top:2px}.dayhd small{display:block;color:var(--muted);font-size:11px}
+
+/* 時間軸 */
+.tl{list-style:none;margin:10px 0 0;padding:0}
+.it{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.it .t{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.it .t s{display:block;font-weight:400;font-size:11px;color:var(--muted)}
+.it h3{margin:0;font-size:16px}
+.it .g{font-size:14px;color:var(--ink2)}
+.it.past{opacity:.45}.it.skip{opacity:.4}.it.skip h3{text-decoration:line-through}
+.it.cur .t{color:var(--berry)}
+.tg{display:inline-block;font-size:11px;border-radius:6px;padding:0 6px;margin-right:6px;vertical-align:2px;font-weight:700}
+.tg.key{background:var(--gold-soft);color:var(--gold-ink)}.tg.opt{background:var(--pine-soft);color:var(--pine)}
+.it .fl{margin-top:4px;font-size:13px;color:var(--ink2)}
+.it .fl div{display:grid;grid-template-columns:44px 1fr;gap:4px}
+.it .fl b{color:var(--muted);font-weight:500}
+.it .btns{margin-top:6px}.it .btn{padding:4px 10px;font-size:12.5px}
+.eve{margin-top:12px;background:var(--pine-soft);border-radius:14px;padding:12px 14px;font-size:14px}
+.eve b{display:block}
+.eve ul{margin:4px 0 0;padding-left:1.2em}
+
+.h2{margin:22px 2px 6px;font-size:15px;font-weight:700}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.card ul{margin:0;padding-left:1.2em}
+.pk b{display:block;margin-top:6px;font-size:13.5px;color:var(--muted)}
+.pk label{display:flex;gap:8px;align-items:center;padding:4px 0;font-size:15px}
+.pk input{width:20px;height:20px;accent-color:var(--pine)}
+.pk label.ok span{color:var(--muted);text-decoration:line-through}
+.foot{margin:24px 0 8px;text-align:center;font-size:12px;color:var(--muted)}
+
+/* 給櫃台看 */
+.say{position:fixed;inset:0;z-index:50;background:#fff;color:#111;display:flex;flex-direction:column;justify-content:center;padding:28px 22px}
+.say p{font-size:clamp(24px,6.6vw,34px);line-height:1.6;margin:0;font-weight:700}
+.say p.zh{font-size:15px;font-weight:400;color:#555;margin-top:18px}
+.it .t s.tw{text-decoration:none;color:var(--berry)}
+.say[hidden]{display:none}
+.say button{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;font-size:16px;border:1px solid #ccc;background:#fff;border-radius:999px;padding:6px 14px}
+</style>
+<style id="ft-corner-css">.ft-corner{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 18px;padding:7px 16px;background:#0f1c27;color:#c9d4dc;font:13px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:.04em}.ft-corner .ft-l{margin-right:auto;color:#93a3af}.ft-corner a{color:#e9f0f4;text-decoration:none}.ft-corner a:hover,.ft-corner a:focus-visible{text-decoration:underline}</style>
+</head>
+<body>
+<div class="ft-corner"><span class="ft-l">📱 關西旅途 App</span><a href="index.html">📖 企劃書</a><a href="../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1SZfkPTSse6wNYUUGWpyBdd4bRbclRMDh" target="_blank" rel="noopener">📁 私人文件</a></div>
+<div id="offline" class="offline" hidden>離線中・顯示手機裡存好的資料</div>
+<div id="preview" class="preview" hidden></div>
+<main id="app"></main>
+<div id="say" class="say" hidden role="dialog" aria-modal="true"><button type="button" id="sayX">關閉</button><p id="sayT"></p><p id="sayZ" class="zh"></p></div>
+
+<script src="trip.js"></script>
+<script src="common.js"></script>
+<script>
+(function () {
+  'use strict';
+  var T = window.TRIP, K = window.KIT, esc = K.esc, $ = function (s) { return document.querySelector(s); };
+  var KEY = T.key + '-state';
+  var S = K.store.json(KEY, {}); S.delay = S.delay || {}; S.skip = S.skip || {}; S.pack = S.pack || {};
+  function save() { K.store.set(KEY, JSON.stringify(S)); }
+  var view = null; // 目前看哪一天（index）
+
+  function dayIdx(date) { for (var i = 0; i < T.days.length; i++) if (T.days[i].d === date) return i; return -1; }
+  /* 某個時間點順延後的分鐘數 */
+  function shifted(di, i) {
+    var it = T.days[di].items[i], m = K.itemMin(it), dl = S.delay[T.days[di].d];
+    return dl && i >= dl.from ? m + dl.add : m;
+  }
+  /* 找下一步：今天、沒跳過、時間還沒到；都過了就回傳 -1 */
+  function nextOf(di, now) {
+    var items = T.days[di].items, cur = -1;
+    for (var i = 0; i < items.length; i++) {
+      if (S.skip[items[i].id]) continue;
+      if (shifted(di, i) > now) return { next: i, cur: cur };
+      cur = i;
+    }
+    return { next: -1, cur: cur };
+  }
+  function fl(it) {
+    var h = '';
+    K.FIELDS.forEach(function (f) { if (it[f[0]]) h += '<div><b>' + f[1] + '</b><span>' + esc(it[f[0]]) + '</span></div>'; });
+    return h ? '<div class="fl">' + h + '</div>' : '';
+  }
+  function buttons(it, light) {
+    var c = light ? 'btn line' : 'btn', g = light ? 'btn line' : 'btn ghost', h = '';
+    if (it.p) h += '<a class="' + c + '" href="' + K.navUrl(it.p) + '" target="_blank" rel="noopener">📍 導航</a>';
+    if (it.say) h += '<button type="button" class="' + g + '" data-say="' + esc(it.id) + '">💬 給店員看</button>';
+    (it.tel || []).forEach(function (t) { h += '<a class="' + g + '" href="' + K.telUrl(t) + '">📞 ' + esc(t) + '</a>'; });
+    h += '<a class="' + g + '" href="index.html#' + it.id + '">詳細 →</a>';
+    return '<div class="btns">' + h + '</div>';
+  }
+  /* 顯示用時間：台灣時間的點換回台灣時間並標示 */
+  function disp(it, m) { return it.tz === 'TW' ? K.hm(m - 60) : K.hm(m); }
+  function twTag(it) { return it.tz === 'TW' ? '<s class="tw">台灣時間</s>' : ''; }
+  function findItem(id) { var r = null; T.days.forEach(function (d) { d.items.forEach(function (it) { if (it.id === id) r = it; }); }); return r; }
+
+  function render() {
+    var n = K.now(), ti = dayIdx(n.date), h = '';
+    $('#preview').hidden = !K.preview;
+    if (K.preview) $('#preview').textContent = '預覽模式：' + n.date + ' ' + K.hm(n.min);
+    h += '<div class="hd"><h1>' + esc(T.title) + '</h1><span>' + esc(T.version) + '・' + esc(T.updated) + '</span></div>';
+
+    if (n.date < T.days[0].d) {
+      // 出發前：倒數、待辦、打包
+      var left = K.daysTo(T.days[0].d), first = T.days[0].items[0];
+      h += '<section class="next"><div class="lbl">出發倒數</div><h2>還有 ' + left + ' 天</h2><p class="when">' + esc(T.days[0].label) + ' ' + esc(first.t) + (first.tz === 'TW' ? '（台灣時間）' : '') + ' ' + esc(first.title) + '</p>' + buttons(first, false).replace(/btn ghost/g, 'btn ghost') + '</section>';
+      var todo = T.todos.filter(function (x) { return !x.done; });
+      if (todo.length) h += '<div class="h2">出發前要做</div><div class="card"><ul>' + todo.map(function (x) { return '<li>' + esc(x.t) + (x.due ? '（' + esc(x.due) + '）' : '') + '</li>'; }).join('') + '</ul></div>';
+    } else if (ti >= 0) {
+      var r = nextOf(ti, n.min);
+      if (r.next >= 0) {
+        var it = T.days[ti].items[r.next], m = shifted(ti, r.next), diff = m - n.min;
+        var when = diff >= 60 ? '還有 ' + (diff / 60 | 0) + ' 小時 ' + (diff % 60) + ' 分' : '還有 ' + diff + ' 分';
+        h += '<section class="next"><div class="lbl">下一步</div><h2>' + esc(it.title) + '</h2><p class="when">' + disp(it, m) + (it.tz === 'TW' ? '（台灣時間）' : '') + '・' + when + '</p>' +
+          (it.gist ? '<p class="gist">' + esc(it.gist) + '</p>' : '') + fl(it) + buttons(it, false) + '</section>';
+      } else {
+        var ev = T.days[ti].evening || [], tm = T.days[ti + 1];
+        h += '<section class="next"><div class="lbl">今天結束</div><h2>辛苦了 🌙</h2>' +
+          '<p class="gist">' + ev.map(esc).join('<br>') + '</p>' +
+          (tm ? '<p class="gist" style="margin-top:8px"><b style="color:var(--gold)">明天出門前：</b>' + esc(tm.items[0].t) + ' ' + esc(tm.items[0].title) + '；' + esc(tm.backup) + '</p>' : '') + '</section>';
+      }
+      var dl = S.delay[T.days[ti].d];
+      h += '<div class="delay">後面全部順延 <button type="button" class="btn line" data-delay="30">+30 分</button><button type="button" class="btn line" data-delay="60">+60</button><button type="button" class="btn line" data-delay="90">+90</button>' +
+        (dl ? '<button type="button" class="btn line" data-delay="0">歸零</button><span class="now">已順延 ' + dl.add + ' 分</span>' : '') + '</div>';
+    } else {
+      h += '<section class="next"><div class="lbl">旅程結束</div><h2>平安回家 🏠</h2><p class="gist">旅途紀錄口述給 Claude；收據記進分帳簿「2027-01 關西」。</p></section>';
+    }
+
+    // 天別
+    if (view == null) view = ti >= 0 ? ti : 0;
+    h += '<div class="tabs">' + T.days.map(function (d, i) { return '<button type="button" data-day="' + i + '" class="' + (i === view ? 'on' : '') + '">' + esc(d.label) + '<small>' + esc(d.title) + '</small></button>'; }).join('') + '</div>';
+    var d = T.days[view];
+    h += '<div class="dayhd"><b>' + esc(d.focus) + '</b><div class="wx" id="wx">天氣讀取中…</div><small>備案：' + esc(d.backup) + '</small></div>';
+    var live = view === ti, rr = live ? nextOf(view, n.min) : null;
+    h += '<ol class="tl">' + d.items.map(function (it, i) {
+      var cls = ['it'], m = shifted(view, i), moved = m !== K.itemMin(it);
+      if (S.skip[it.id]) cls.push('skip');
+      else if (live && i <= rr.cur && rr.next !== i) cls.push('past');
+      if (live && i === rr.next) cls.push('cur');
+      if (!live && d.d < n.date) cls.push('past');
+      var tag = it.tag === 'key' ? '<span class="tg key">重點</span>' : it.tag === 'opt' ? '<span class="tg opt">有餘力</span>' : '';
+      return '<li class="' + cls.join(' ') + '"><div class="t">' + disp(it, m) + (moved ? '<s>' + esc(it.t) + '</s>' : '') + twTag(it) + '</div><div><h3>' + tag + esc(it.title) + '</h3>' +
+        (it.gist ? '<p class="g">' + esc(it.gist) + '</p>' : '') + fl(it) +
+        buttons(it, true).replace('</div>', '<button type="button" class="btn line" data-skip="' + it.id + '">' + (S.skip[it.id] ? '↩︎ 恢復' : '跳過') + '</button></div>') + '</div></li>';
+    }).join('') + '</ol>';
+    if (d.evening) h += '<div class="eve"><b>🌙 睡前</b><ul>' + d.evening.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
+
+    // 打包
+    h += '<div class="h2">打包清單</div><div class="card pk">' + T.pack.map(function (g, gi) {
+      return '<b>' + esc(g.g) + '</b>' + g.items.map(function (x, xi) { var k = gi + ':' + xi, ok = !!S.pack[k]; return '<label class="' + (ok ? 'ok' : '') + '"><input type="checkbox" data-pk="' + k + '"' + (ok ? ' checked' : '') + '><span>' + esc(x) + '</span></label>'; }).join('');
+    }).join('') + '</div>';
+    h += '<p class="foot">順延、跳過、打勾只存在這支手機。<br>時間都是日本時間（標「台灣時間」的除外）。</p>';
+    $('#app').innerHTML = h;
+    var tb = document.querySelector('.tabs'), on = tb && tb.querySelector('.on'); if (on) tb.scrollLeft = on.offsetLeft - tb.offsetLeft - (tb.clientWidth - on.clientWidth) / 2;
+    K.weather(d, function (o) { var w = $('#wx'); if (w) w.innerHTML = o ? K.wxText(o) : '已過'; });
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-day],[data-delay],[data-skip],[data-say]'); if (!b) return;
+    if (b.dataset.day != null) { view = +b.dataset.day; render(); return; }
+    if (b.dataset.say) { var si = findItem(b.dataset.say); $('#sayT').textContent = si.say; $('#sayZ').textContent = si.sayZh ? '（中文：' + si.sayZh + '）' : ''; $('#say').hidden = false; return; }
+    if (b.dataset.skip) { if (S.skip[b.dataset.skip]) delete S.skip[b.dataset.skip]; else S.skip[b.dataset.skip] = 1; save(); render(); return; }
+    if (b.dataset.delay != null) {
+      var n = K.now(), ti = dayIdx(n.date); if (ti < 0) return;
+      var key = T.days[ti].d, add = +b.dataset.delay;
+      if (!add) delete S.delay[key];
+      else {
+        var r = nextOf(ti, n.min), from = r.next >= 0 ? r.next : T.days[ti].items.length, old = S.delay[key];
+        S.delay[key] = { from: old ? Math.min(old.from, from) : from, add: (old ? old.add : 0) + add };
+      }
+      save(); render();
+    }
+  });
+  document.addEventListener('change', function (e) {
+    var k = e.target.dataset && e.target.dataset.pk; if (!k) return;
+    if (e.target.checked) S.pack[k] = 1; else delete S.pack[k];
+    save(); e.target.parentNode.classList.toggle('ok', e.target.checked);
+  });
+  $('#sayX').addEventListener('click', function () { $('#say').hidden = true; });
+
+  function net() { $('#offline').hidden = navigator.onLine !== false; }
+  window.addEventListener('online', net); window.addEventListener('offline', net); net();
+  render();
+  if (!K.preview) setInterval(render, 60000);
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});
+})();
+</script>
+</body>
+</html>
