@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>仙台七日｜仙台家庭旅遊 ⑤ 回憶錄</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+.pull .ph.tall{aspect-ratio:4/5}
+.lead figure .ph.whole{aspect-ratio:auto!important;object-fit:contain}
+
+/* Layout: 一本相簿式的旅行札記——全幅封面、登機證式資料條、每天一章（時間軸＋照片牆），最後是帳本 */
+:root{
+  --ground:#F7F3F1; --paper:#FFFDFC; --ink:#1A2740; --ink-2:#4B5568; --muted:#7D8494;
+  --line:#E2DAD6; --tint:#E8F1F1; --indigo:#22406B; --coral:#A8432C; --coral-soft:#F6E4DE;
+  --sea:#8A3A26; --sun:#D89A2B; --night:#0D1A2B; --night-ink:#EEF3F6;
+  --display:"LXGW WenKai TC","Kaiti TC","STKaiti","DFKai-SB",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101722; --paper:#172130; --ink:#E9EDF3; --ink-2:#B9C1CE; --muted:#8C95A5;
+    --line:#2A3546; --tint:#18303A; --indigo:#8FB0E0; --coral:#F08B70; --coral-soft:#3A2622;
+    --sea:#4FC0BC; --sun:#EDB64F; --night:#0A111C; --night-ink:#EEF3F6; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101722; --paper:#172130; --ink:#E9EDF3; --ink-2:#B9C1CE; --muted:#8C95A5;
+  --line:#2A3546; --tint:#18303A; --indigo:#8FB0E0; --coral:#F08B70; --coral-soft:#3A2622;
+  --sea:#4FC0BC; --sun:#EDB64F; --night:#0A111C; --night-ink:#EEF3F6; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;font-weight:700}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
+
+/* hero */
+.hero{position:relative;background:var(--night);color:var(--night-ink);overflow:hidden}
+.hero img{width:100%;height:min(76vh,620px);object-fit:cover;object-position:center 50%}
+.hero .over{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,14,24,0) 35%,rgba(8,14,24,.8) 100%)}
+.hero .text{position:absolute;left:0;right:0;bottom:0;padding:0 20px 44px}
+.hero .text>div{max-width:1040px;margin:0 auto}
+.hero .eyebrow{color:#F2C9B8}
+.hero h1{font-size:clamp(54px,9.5vw,112px);line-height:1;letter-spacing:.06em;margin-top:10px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero .sub{margin-top:14px;font-family:var(--display);font-size:clamp(17px,2.1vw,21px);color:#DCE6EC;max-width:34em;line-height:1.7}
+.hero .dates{font-family:var(--mono);font-size:13px;color:#A8B8C4;margin-top:10px;letter-spacing:.06em}
+
+/* boarding strip */
+.strip{margin:-28px auto 0;position:relative;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));overflow:hidden;box-shadow:0 14px 40px -24px rgba(0,0,0,.4)}
+.strip>div{padding:16px 18px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);min-width:0}
+.strip .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.strip .v{font-family:var(--display);font-size:18px;font-weight:700;margin-top:4px;line-height:1.4}
+.strip .n{font-size:13px;color:var(--ink-2);line-height:1.6;margin-top:2px}
+.strip .mono{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:17px}
+
+.lede{max-width:34em;margin:56px auto 0;font-family:var(--display);font-size:20px;line-height:1.95}
+.lede em{font-style:normal;color:var(--coral)}
+
+/* chapters */
+.day{margin-top:88px}
+.day-head{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:baseline;padding-top:28px;border-top:1px solid var(--line);margin-bottom:22px}
+.day-num{font-family:var(--display);font-size:66px;font-weight:700;line-height:1;color:var(--coral)}
+.day-head h2{font-size:clamp(25px,3.4vw,33px);line-height:1.35}
+.day-head .meta{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em;margin-top:8px}
+.day.indigo .day-num,.day.indigo .tl .t{color:var(--indigo)}
+.day.indigo .tl li::before{background:var(--indigo)}
+
+figure{margin:0;min-width:0}
+figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.03em;margin-top:8px;line-height:1.6}
+figcaption b{color:var(--ink-2);font-weight:500;font-family:var(--sans);font-size:12.5px;letter-spacing:0}
+.ph{width:100%;height:auto;object-fit:cover;border-radius:3px;background:var(--tint)}
+.lead{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;margin-bottom:34px}
+.lead figure:first-child .ph{aspect-ratio:3/2}
+.lead figure:last-child .ph{aspect-ratio:4/5}
+.lead.flip{grid-template-columns:1fr 1.25fr}
+.lead.flip figure:first-child .ph{aspect-ratio:4/5}
+.lead.flip figure:last-child .ph{aspect-ratio:3/2}
+.row{display:grid;gap:18px;margin:22px 0 30px}
+.row.c2{grid-template-columns:1fr 1fr}
+.row.c3{grid-template-columns:1fr 1fr 1fr}
+.row.c4{grid-template-columns:repeat(4,1fr)}
+.row.c2 .ph{aspect-ratio:4/5}
+.row.c3 .ph{aspect-ratio:1/1}
+.row.c4 .ph{aspect-ratio:3/4}
+.row.land .ph{aspect-ratio:3/2}
+.row.mix{grid-template-columns:1fr 1fr 1fr}
+.row.mix figure:nth-child(1){grid-column:span 2}
+.row.mix figure:nth-child(1) .ph{aspect-ratio:2/1.02}
+.row.mix figure:nth-child(2) .ph{aspect-ratio:1/1.02}
+.wide{margin:22px 0 30px}
+.wide .ph{aspect-ratio:21/8}
+.body{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;align-items:start}
+.body>*{min-width:0}
+@media (max-width:820px){.body{grid-template-columns:1fr}.row.c4{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.lead,.lead.flip,.row.c2,.row.c3,.row.mix{grid-template-columns:1fr}.row.mix figure:nth-child(1){grid-column:auto}.lead .ph,.lead.flip .ph{aspect-ratio:3/2!important}.row.c3 .ph{aspect-ratio:3/2}.wide .ph{aspect-ratio:16/9}}
+
+.tl{list-style:none;margin:0 0 0 60px;padding:0;border-left:1px solid var(--line)}
+.tl li{position:relative;padding:0 0 20px 24px}
+.tl li::before{content:"";position:absolute;left:-4.5px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.tl .t{position:absolute;left:-62px;top:2px;width:50px;text-align:right;font-family:var(--mono);font-size:12px;color:var(--coral);font-variant-numeric:tabular-nums}
+.tl h3{font-size:19px;line-height:1.5}
+.tl p{color:var(--ink-2);font-size:15px;line-height:1.8}
+.tl .jp{color:var(--muted);font-size:13px;margin-left:6px;font-weight:400;font-family:var(--sans)}
+@media (max-width:640px){.tl{margin-left:0;border-left:0}.tl li{padding-left:0}.tl li::before{display:none}.tl .t{position:static;display:block;text-align:left;width:auto;margin-bottom:-2px}}
+.note{margin:6px 0 0;padding:14px 18px;background:var(--coral-soft);border-radius:4px;font-size:14px;color:var(--ink-2);line-height:1.75}
+.note b{color:var(--ink)}
+
+.pull{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:36px 0 10px;padding:28px;background:var(--paper);border:1px solid var(--line);border-radius:6px}
+.pull .ph{aspect-ratio:1/1}
+.pull blockquote{margin:0;font-family:var(--display);font-size:24px;line-height:1.75}
+.pull blockquote small{display:block;margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em;line-height:1.7}
+@media (max-width:640px){.pull{grid-template-columns:1fr;padding:20px}}
+
+.close{position:relative;margin-top:88px;background:var(--night);color:var(--night-ink)}
+.close img{width:100%;height:min(70vh,560px);object-fit:cover;object-position:center 55%}
+.close .text{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:linear-gradient(180deg,rgba(8,14,24,.15),rgba(8,14,24,.55))}
+.close h2{font-size:clamp(30px,5vw,50px);letter-spacing:.06em;text-shadow:0 2px 20px rgba(0,0,0,.45)}
+.close p{font-family:var(--display);color:#DCE6EC;margin-top:12px;max-width:30em;font-size:18px}
+.close .eyebrow{color:#F2C9B8}
+
+.ledger{padding-top:56px}
+.ledger h2{font-size:28px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.grid>div{background:var(--paper);padding:16px 18px;min-width:0}
+.grid .big{font-family:var(--display);font-size:32px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.grid .big span{font-size:15px;font-weight:400}
+.grid .lab{font-size:13px;color:var(--muted);margin-top:4px}
+.grid .hot{color:var(--coral)}
+.lessons{margin-top:48px}
+.lessons h2{font-size:24px;margin-bottom:12px}
+.lessons ol{margin:0;padding-left:1.4em;max-width:62ch;color:var(--ink-2)}
+.lessons li{margin-bottom:8px}
+.lessons li b{color:var(--ink)}
+.foot{margin:40px 0 0;font-family:var(--display);font-size:16px;color:var(--ink-2);max-width:60ch;line-height:1.9}
+.sources{margin:36px 0 80px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.8;max-width:80ch}
+.sources b{color:var(--ink-2);font-weight:500}
+.topnav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.topnav .in{max-width:1040px;margin:0 auto;padding:8px 20px;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px}
+.topnav a{color:var(--ink-2);text-decoration:none}
+.topnav a:hover,.topnav a:focus-visible{color:var(--coral);text-decoration:underline}
+.topnav a[aria-current]{color:var(--coral);font-weight:700}
+.pagefoot{max-width:1040px;margin:0 auto;padding:0 20px 48px;font-size:13px;color:var(--muted)}
+.pagefoot a{color:var(--ink-2)}
+</style>
+<style id="ft-corner-css">.ft-corner{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 18px;padding:7px 16px;background:#0f1c27;color:#c9d4dc;font:13px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:.04em}.ft-corner .ft-l{margin-right:auto;color:#93a3af}.ft-corner a{color:#e9f0f4;text-decoration:none}.ft-corner a:hover,.ft-corner a:focus-visible{text-decoration:underline}</style>
+</head>
+<body>
+<div class="ft-corner"><a href="../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1aw_lGIVmFoNOhbOmFJjNZ__TklW5adl0" target="_blank" rel="noopener">📁 私人文件</a></div>
+<nav class="topnav" aria-label="仙台企劃書"><div class="in">
+  <a href="index.html">🏠 首頁</a>
+  <a href="仙台家庭旅遊企劃書_行程規劃.html">① 行程</a>
+  <a href="仙台家庭旅遊企劃書_待決定事項.html">② 待辦</a>
+  <a href="仙台家庭旅遊企劃書_訂購成果.html">③ 訂單</a>
+  <a href="仙台家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>
+  <a href="仙台家庭旅遊企劃書_回憶錄.html" aria-current="page">⑤ 回憶錄</a>
+</div></nav>
+
+<header class="hero">
+  <img src="photos/S434.jpg" alt="佐勘的窗前，全家穿著浴衣，背後是霧中的山谷" style="object-position:center 45%">
+  <div class="over"></div>
+  <div class="text"><div>
+    <div class="eyebrow">Family travel memoir · Sendai, Japan · 2026</div>
+    <h1>仙台七日</h1>
+    <p class="sub">龜山下智久、桃園星野結衣和小魚乾的七天六夜——青葉通的櫸木、秋保的紅葉，和第一天就買下的那頂飛行員帽。</p>
+    <p class="dates">2026.10.30 FRI — 11.05 THU · TPE ⇄ SDJ · BR118 / BR117</p>
+  </div></div>
+</header>
+
+<div class="wrap">
+  <section class="strip" aria-label="行程基本資料">
+    <div><div class="k">去程</div><div class="v mono">BR118</div><div class="n">長榮 · 10/30 桃園 → 仙台</div></div>
+    <div><div class="k">回程</div><div class="v mono">BR117</div><div class="n">長榮 · 11/05 仙台 → 桃園</div></div>
+    <div><div class="k">四晚 · 仙台站前</div><div class="v">仙台國際飯店</div><div class="n">交流團的集合點，走路就到仙台站</div></div>
+    <div><div class="k">兩晚 · 秋保溫泉</div><div class="v">佐勘</div><div class="n">傳承千年之宿 · 房裡吃晚餐</div></div>
+    <div><div class="k">交流</div><div class="v">仙台辯護士會</div><div class="n">友好協定十週年 · Day 3–4</div></div>
+    <div><div class="k">租車</div><div class="v">Times</div><div class="n">仙台站前取車 · 仙台機場還車</div></div>
+  </section>
+
+  <p class="lede">這是小魚乾第一次去東北。前四天住在仙台站前，跟著交流團去了南三陸、看了水族館；後三天租車上山，到秋保溫泉住兩晚。正好遇上楓紅，翻照片時才發現，這趟最多的顏色是<em>紅色</em>——八幡宮的楓葉、秋保大滝兩旁的山，和全家事先說好要穿的紅毛衣。</p>
+
+<section class="day" id="d1">
+<div class="day-head"><div class="day-num">1</div><div><h2>長町的第一晚</h2><div class="meta">2026.10.30 FRI · 桃園 → 仙台機場 → 仙台站 → 長町 → 仙台站前</div></div></div>
+<div class="lead">
+<figure><img class="ph" loading="lazy" src="photos/S612.jpg" alt="桃園機場窗外的長榮客機"><figcaption><b>09:51 · 桃園</b> · 登機前，長榮的飛機就停在窗外</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S614.jpg" alt="媽媽和小魚乾在機上自拍"><figcaption><b>10:03 · BR118</b> · 機上和媽媽自拍</figcaption></figure>
+</div>
+<div class="body">
+<ul class="tl">
+<li><span class="t">08:58</span><h3>桃園機場的貴賓室</h3><p>爸爸帶小魚乾進貴賓室，坐在大大的單人沙發上吃點心、到處摸摸看。</p></li>
+<li><span class="t">10:15</span><h3>BR118，從桃園出發</h3><p>長榮的報到與登機都走優先通道。機上的鄰座對他很友善。</p></li>
+<li><span class="t">14:25</span><h3>落地仙台</h3><p>機場裡一張「WELCOME TOHOKU JAPAN」的東北地圖迎接我們。日本入境有帶嬰兒旅客專用的櫃檯；行李掛著 Priority 標籤，出關時已經有人從轉盤上拿下來排好。</p></li>
+<li><span class="t">15:29</span><h3>仙台空港アクセス線（仙台機場線）</h3><p>他跪在藍色座椅上看窗外。照著事先查好的無樓梯路線，推著嬰兒車一路到仙台站，一階樓梯都沒有走。</p></li>
+<li><span class="t">16:13</span><h3>仙台國際飯店</h3><p>住進站前的飯店，他一進房間就拿起床頭的電話「講」個不停。</p></li>
+<li><span class="t">17:38</span><h3>LaLa Garden 長町</h3><p>搭地下鐵到長町。在アカチャンホンポ（阿卡將本舖）買到一個可愛的揹包，和一頂有護耳的飛行員帽——這頂帽子後來幾天一直跟著出門。</p></li>
+<li><span class="t">18:59</span><h3>第一杯麒麟</h3><p>晚餐就在商場裡：松露培根蛋麵、焗烤雞排，配這趟的第一杯麒麟生啤。逛著逛著，他在嬰兒車裡睡著了。</p></li>
+</ul>
+<div>
+<div class="row c2" style="margin-top:0">
+<figure><img class="ph" loading="lazy" src="photos/S603.jpg" alt="小魚乾坐在貴賓室沙發上吃點心"><figcaption><b>08:58 · 貴賓室</b> · 單人沙發</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S616.jpg" alt="仙台機場的東北地圖看板"><figcaption><b>15:15 · 仙台機場</b> · 東北地圖</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S618.jpg" alt="小魚乾在電車上"><figcaption><b>15:29 · 機場線</b> · 跪在座椅上</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S627.jpg" alt="小魚乾拿著飯店房間的電話"><figcaption><b>16:54 · 飯店</b> · 講電話</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S613.jpg" alt="阿卡將本舖架上的揹包和帽子"><figcaption><b>18:13 · 阿卡將本舖</b> · 揹包和帽子</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S000.jpg" alt="爸爸抱著小魚乾站在窗邊"><figcaption><b>17:25 · 仙台</b> · 爸爸抱著小魚乾，準備去長町</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S003.jpg" alt="小魚乾在嬰兒車裡睡著" style="object-position:center 40%"><figcaption><b>18:36 · 長町</b> · 在嬰兒車裡睡著了</figcaption></figure>
+</div><div class="row c2 land">
+<figure><img class="ph" loading="lazy" src="photos/S006.jpg" alt="松露培根蛋麵"><figcaption><b>19:07 · 晚餐</b> · 松露培根蛋麵</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S005.jpg" alt="麒麟生啤酒"><figcaption><b>18:59</b> · 這趟的第一杯 ♥</figcaption></figure>
+</div>
+
+</section>
+
+<section class="day indigo" id="d2">
+<div class="day-head"><div class="day-num">2</div><div><h2>八木山的動物們</h2><div class="meta">2026.10.31 SAT · 仙台朝市 → 八木山動物公園 → 仙台站 S-PAL</div></div></div>
+<div class="lead">
+<figure><img class="ph whole" loading="lazy" src="photos/S028.jpg" alt="圓形反射鏡裡映著全家，周圍是紅葉"><figcaption><b>12:36 · 八木山</b> · 路邊的反射鏡，把三個人和紅葉一起裝進去 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S046.jpg" alt="小魚乾坐在黃色獅子雕塑的洞裡"><figcaption><b>14:50</b> · 鑽進獅子的臉 ♥</figcaption></figure>
+</div>
+<div class="body">
+<ul class="tl">
+<li><span class="t">09:21</span><h3>爸爸的太陽眼鏡</h3><p>出門前，他在房間裡拿起爸爸的太陽眼鏡，戴不上去就舉在眼前。</p></li>
+<li><span class="t">10:03</span><h3>仙台朝市</h3><p>往動物園的路上經過仙台朝市，買了一袋橘子。</p></li>
+<li><span class="t">10:40</span><h3>八木山動物公園フジサキの杜（八木山動物公園）</h3><p>園裡看了犀牛、紅鶴，最後坐在爸爸肩上看猩猩。離開前，又在八木山的招牌前拍了一張。</p></li>
+<li><span class="t">11:45</span><h3>園內的午餐</h3><p>漢堡排盤上的白飯捏成小熊，另一盤是番茄義大利麵；他坐在露台的木桌前，等大人把飯切小。</p></li>
+<li><span class="t">12:36</span><h3>反射鏡裡的三個人</h3><p>轉角一面圓形反射鏡，背後是紅葉和藍天，剛好把全家裝進去。</p></li>
+<li><span class="t">12:55</span><h3>草地與樹樁</h3><p>在草地上跑來跑去，找到一個樹樁就坐下來休息，旁邊還有一座企鵝雕像要摸。</p></li>
+<li><span class="t">14:49</span><h3>門口的動物雕塑</h3><p>出口廣場上有幾座動物造型的大雕塑：長頸鹿、大象，還有一隻黃色的獅子。他在每個洞裡鑽進鑽出，全家輪流進去拍。</p></li>
+<li><span class="t">15:09</span><h3>回程的地下鐵</h3><p>一上車就在嬰兒車裡睡著了。</p></li>
+<li><span class="t">17:06</span><h3>伊達の牛たん本舗（伊達牛舌本舖）</h3><p>S-PAL 地下的牛舌定食，厚切牛舌配麥飯和牛尾湯；小魚乾有自己的兒童套餐。</p></li>
+</ul>
+<div>
+<div class="row c2" style="margin-top:0">
+<figure><img class="ph" loading="lazy" src="photos/S009.jpg" alt="小魚乾拿著爸爸的太陽眼鏡"><figcaption><b>09:21 · 房間</b> · 爸爸的太陽眼鏡</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S054.jpg" alt="小魚乾在動物園招牌前"><figcaption><b>14:57 · 出口</b> · 八木山的招牌前 ♥</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S030.jpg" alt="小魚乾坐在爸爸肩上"><figcaption><b>12:44</b> · 坐在爸爸肩上看猩猩 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S024.jpg" alt="漢堡排與小熊造型白飯"><figcaption><b>11:45 · 午餐</b> · 小熊白飯</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S034.jpg" alt="動物園裡的全家自拍"><figcaption><b>12:51</b> · 全家自拍</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S035.jpg" alt="小魚乾坐在樹樁上"><figcaption><b>12:55</b> · 樹樁上休息 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S041.jpg" alt="小魚乾摸企鵝雕像"><figcaption><b>13:40</b> · 企鵝雕像 ♥</figcaption></figure>
+</div><div class="row c4">
+<figure><img class="ph" loading="lazy" src="photos/S044.jpg" alt="爸爸和小魚乾坐在動物雕塑上"><figcaption><b>14:49</b> · 和爸爸一起坐上去</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S049.jpg" alt="媽媽和小魚乾在獅子雕塑洞裡"><figcaption><b>14:50</b> · 和媽媽一起</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S051.jpg" alt="小魚乾在長頸鹿雕塑的洞裡"><figcaption><b>14:51</b> · 長頸鹿的臉</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S052.jpg" alt="小魚乾在動物雕塑的洞裡"><figcaption><b>14:52</b> · 從洞裡探頭</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S056.jpg" alt="小魚乾在嬰兒車裡睡著"><figcaption><b>15:12 · 地下鐵</b> · 睡著了</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S061.jpg" alt="牛舌定食"><figcaption><b>17:08 · S-PAL</b> · 牛舌定食</figcaption></figure>
+</div>
+
+</section>
+
+<section class="day" id="d3">
+<div class="day-head"><div class="day-num">3</div><div><h2>葡萄、海風，和一條金色的魚</h2><div class="meta">2026.11.01 SUN · 青葉通 → JR 水果園仙台荒濱 → 荒濱小學 → 南三陸 → 仙台</div></div></div>
+<div class="lead flip">
+<figure><img class="ph" loading="lazy" src="photos/S103.jpg" alt="小魚乾站在頂樓鐵梯上"><figcaption><b>11:13 · 荒濱小學</b> · 爬上頂樓的鐵梯 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S090.jpg" alt="荒濱小學校舍前的全家自拍"><figcaption><b>10:41 · 荒濱小學</b> · 校舍前的全家自拍</figcaption></figure>
+</div>
+<div class="body">
+<ul class="tl">
+<li><span class="t">08:22</span><h3>青葉通的櫸木大道</h3><p>早上沿著櫸木行道樹散步，他牽著媽媽的手，自己走過一整條街。</p></li>
+<li><span class="t">09:56</span><h3>JR フルーツパーク仙台あらはま（JR 水果園仙台荒濱）</h3><p>仙台辯護士會交流團的第一站。葡萄棚下，大人把他抱高去摸一串串葡萄，媽媽也伸手摘了一串；草地上和草莓頭、葡萄身的吉祥物賽跑。</p></li>
+<li><span class="t">10:41</span><h3>震災遺構 仙台市立荒浜小学校（震災遺跡 仙台市立荒濱小學）</h3><p>311 海嘯後保留下來的校舍。他在紀念碑前站好，又對著展示櫃的鏡子做鬼臉。</p></li>
+<li><span class="t">11:13</span><h3>頂樓的風</h3><p>爬上通往頂樓的鐵梯，坐在鐵網邊看外面的田和海，門上貼著「強風注意」。</p></li>
+<li><span class="t">13:03</span><h3>南三陸ホテル観洋（南三陸觀洋飯店）</h3><p>面海的餐廳吃午餐，兒童餐盤上插著一面小國旗。</p></li>
+<li><span class="t">14:04</span><h3>一條比他還大的魚</h3><p>飯店大廳有一隻金色的鯛魚道具，寫著「目指鯛」，他抱起來就不放。</p></li>
+<li><span class="t">14:27</span><h3>南三陸的中橋</h3><p>走過木造的中橋，對岸是紅色鋼骨的防災對策廳舍。商店街旁有一隻巨大的兔子雕塑，他爬過去坐在兔子旁邊。</p></li>
+<li><span class="t">15:23</span><h3>南三陸さんさん商店街（南三陸燦燦商店街）</h3><p>媽媽買了一個點心，邊走邊吃。</p></li>
+<li><span class="t">16:03</span><h3>「台湾の皆さんありがとう」（台灣的大家，謝謝你們）</h3><p>回程前經過一塊石碑，刻著對台灣的感謝。</p></li>
+<li><span class="t">18:25</span><h3>Cross B Plus 歡迎會</h3><p>晚上的歡迎會，氣球師傅幫他做了一把藍色的氣球劍，他拿著揮了一整晚。</p></li>
+</ul>
+<div>
+<div class="row c2" style="margin-top:0">
+<figure><img class="ph" loading="lazy" src="photos/S070.jpg" alt="小魚乾牽著媽媽走過斑馬線"><figcaption><b>08:26 · 青葉通</b> · 牽著媽媽 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S084.jpg" alt="爸爸抱著小魚乾在葡萄棚下"><figcaption><b>10:06 · 水果園</b> · 葡萄棚下</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S085.jpg" alt="媽媽伸手摘葡萄"><figcaption><b>10:10</b> · 媽媽摘葡萄 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S086.jpg" alt="小魚乾和水果吉祥物"><figcaption><b>10:13</b> · 和吉祥物賽跑 ♥</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="row c4">
+<figure><img class="ph" loading="lazy" src="photos/S092.jpg" alt="小魚乾站在紀念碑前"><figcaption><b>10:42 · 荒濱小學</b> · 紀念碑前 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S098.jpg" alt="小魚乾對著鏡子做鬼臉"><figcaption><b>10:59</b> · 對著鏡子 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S106.jpg" alt="小魚乾坐在頂樓鐵網邊"><figcaption><b>11:17 · 頂樓</b> · 坐在鐵網邊</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S108.jpg" alt="小魚乾坐在頂樓"><figcaption><b>11:18</b> · 背後是田和海 ♥</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S112.jpg" alt="面海的餐廳"><figcaption><b>13:03 · 觀洋</b> · 面海的餐廳</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S113.jpg" alt="兒童餐盤"><figcaption><b>13:08</b> · 兒童餐</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S114.jpg" alt="大人的午餐"><figcaption><b>13:10</b> · 午餐</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S120.jpg" alt="小魚乾抱著金色鯛魚道具"><figcaption><b>14:04 · 觀洋大廳</b> · 「目指鯛」</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S123.jpg" alt="全家走過中橋"><figcaption><b>14:27</b> · 中橋</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S129.jpg" alt="小魚乾坐在大兔子雕塑旁"><figcaption><b>14:57</b> · 大兔子 ♥</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S133.jpg" alt="媽媽拿著點心"><figcaption><b>15:23 · 商店街</b> · 媽媽的點心</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S137.jpg" alt="巴士上的全家自拍"><figcaption><b>18:10</b> · 回程車上</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S149.jpg" alt="小魚乾揮著氣球劍"><figcaption><b>19:58 · Cross B Plus</b> · 藍色氣球劍 ♥</figcaption></figure>
+</div>
+
+</section>
+
+<section class="day indigo" id="d4">
+<div class="day-head"><div class="day-num">4</div><div><h2>父子兩人的水族館</h2><div class="meta">2026.11.02 MON · 仙石線 → 仙台海洋森林水族館 → 仙台大都會大飯店 → 友都八喜</div></div></div>
+<div class="lead flip">
+<figure><img class="ph" loading="lazy" src="photos/S195.jpg" alt="小魚乾坐在海龜水槽前"><figcaption><b>12:41 · 水族館</b> · 海龜從背後游過去</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S168.jpg" alt="爸爸和小魚乾在大水槽前自拍"><figcaption><b>11:30</b> · 大水槽前的父子自拍 ♥</figcaption></figure>
+</div>
+<div class="body">
+<ul class="tl">
+<li><span class="t">08:43</span><h3>媽媽去交流會</h3><p>這天媽媽參加交流會，爸爸帶小魚乾出門。</p></li>
+<li><span class="t">10:37</span><h3>JR 仙石線</h3><p>一上電車就在嬰兒車裡睡著了。到了中野榮，爸爸推著他慢慢走去水族館，讓他多睡一點。</p></li>
+<li><span class="t">11:18</span><h3>仙台うみの杜水族館（仙台海洋森林水族館）</h3><p>大水槽前父子兩人戴著口罩自拍，背後是鯊魚和整群沙丁魚。坐下來畫了一張著色紙，又鑽進展示區的圓洞裡探頭，還和大海獅一起拍了合照。</p></li>
+<li><span class="t">12:40</span><h3>海龜</h3><p>坐在海龜水槽前的台階上，海龜就從他背後游過去。</p></li>
+<li><span class="t">12:52</span><h3>頒獎台</h3><p>在企鵝區站上寫著「1」的台子。</p></li>
+<li><span class="t">13:12</span><h3>海豚造型的午餐</h3><p>咖哩飯的白飯做成海豚的樣子，另一碗是拉麵。</p></li>
+<li><span class="t">13:57</span><h3>海豚表演</h3><p>坐在看台上看海豚跳，爸爸抱著他一起看。</p></li>
+<li><span class="t">17:59</span><h3>十週年紀念晚宴</h3><p>晚上在仙台大都會大飯店的紀念晚宴，全家和吉祥物合照；他抱著一本紅色的「六法」抱枕走來走去。</p></li>
+<li><span class="t">20:57</span><h3>ヨドバシカメラ（友都八喜）</h3><p>晚宴後去友都八喜買東西。</p></li>
+</ul>
+<div>
+<div class="row c2" style="margin-top:0">
+<figure><img class="ph" loading="lazy" src="photos/S156.jpg" alt="小魚乾在房間裡"><figcaption><b>08:43 · 房間</b> · 出門前 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S160.jpg" alt="小魚乾在電車上的嬰兒車裡睡著"><figcaption><b>10:37 · 仙石線</b> · 睡著了</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S163.jpg" alt="父子在海底隧道自拍"><figcaption><b>11:28</b> · 海底隧道</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S176.jpg" alt="小魚乾在畫著色紙"><figcaption><b>11:46</b> · 著色紙 ♥</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="row c4">
+<figure><img class="ph" loading="lazy" src="photos/S630.jpg" alt="爸爸和小魚乾與海獅合照"><figcaption>和海獅合照</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S178.jpg" alt="小魚乾從圓洞探頭"><figcaption><b>11:53</b> · 從洞裡探頭 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S196.jpg" alt="小魚乾和海龜"><figcaption><b>12:41</b> · 海龜 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S202.jpg" alt="小魚乾站在頒獎台上"><figcaption><b>12:52</b> · 站上 1 號台 ♥</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S204.jpg" alt="海豚造型咖哩飯與拉麵"><figcaption><b>13:12</b> · 海豚造型的咖哩飯</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S206.jpg" alt="看台上看海豚表演"><figcaption><b>13:57</b> · 海豚表演</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S209.jpg" alt="爸爸抱著小魚乾看表演"><figcaption><b>14:09</b> · 爸爸抱著看 ♥</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S214.jpg" alt="全家和吉祥物合照"><figcaption><b>18:11 · 大都會大飯店</b> · 和吉祥物合照</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S222.jpg" alt="小魚乾抱著六法抱枕"><figcaption><b>23:07</b> · 紅色的「六法」 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S218.jpg" alt="竹籃裝的料理"><figcaption><b>18:45</b> · 晚宴的料理</figcaption></figure>
+</div>
+
+</section>
+
+<section class="day" id="d5">
+<div class="day-head"><div class="day-num">5</div><div><h2>戴上飛行員帽</h2><div class="meta">2026.11.03 TUE · 文化之日 · 仙台站前取車 → 大崎八幡宮 → 安曇野 → 秋保溫泉 佐勘</div></div></div>
+<div class="lead">
+<figure><img class="ph" loading="lazy" src="photos/S242.jpg" alt="全家在大崎八幡宮拜殿前合照"><figcaption><b>12:21 · 大崎八幡宮</b> · 說好的紅毛衣</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S259.jpg" alt="戴飛行員帽的小魚乾坐在駕駛座"><figcaption><b>13:41</b> · 戴著飛行員帽坐進駕駛座 ♥</figcaption></figure>
+</div>
+<div class="body">
+<ul class="tl">
+<li><span class="t">07:28</span><h3>借穿大人的鞋</h3><p>一早在房門口，先穿上媽媽的高跟鞋，再換爸爸的拖鞋。</p></li>
+<li><span class="t">11:45</span><h3>大崎八幡宮</h3><p>國寶社殿前的楓葉正紅。全家照計畫穿上紅毛衣，在拜殿前合照，也抽了籤。</p></li>
+<li><span class="t">13:24</span><h3>飛行員帽和三角錐</h3><p>到了午餐的店門口，他戴著第一天在阿卡將買的飛行員帽，一個人跟三角錐玩了起來。</p></li>
+<li><span class="t">13:38</span><h3>駕駛座</h3><p>爬進租來的車，握著方向盤不肯下來。</p></li>
+<li><span class="t">13:57</span><h3>SOBA to GALETTE あずみの（蕎麥與法式薄餅 安曇野）</h3><p>仙台的律師推薦的店：天婦羅蕎麥麵和蕎麥粉做的法式薄餅。</p></li>
+<li><span class="t">15:20</span><h3>伝承千年の宿 佐勘（傳承千年之宿 佐勘）</h3><p>大廳一整排金色屏風，房間是寬敞的榻榻米。</p></li>
+<li><span class="t">16:51</span><h3>換上浴衣</h3><p>全家換上浴衣，對著房門的鏡子自拍。</p></li>
+<li><span class="t">18:33</span><h3>房裡的會席</h3><p>一道一道送進房間：八寸、生魚片、鮭魚卵飯、竹筒裡烤的魚。</p></li>
+<li><span class="t">19:35</span><h3>先睡了</h3><p>吃到一半，他抱著布偶在嬰兒床裡睡著了。</p></li>
+</ul>
+<div>
+<div class="row c2" style="margin-top:0">
+<figure><img class="ph" loading="lazy" src="photos/S226.jpg" alt="小魚乾穿媽媽的高跟鞋"><figcaption><b>07:28 · 房門口</b> · 媽媽的高跟鞋</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S235.jpg" alt="大崎八幡宮的楓葉"><figcaption><b>11:53 · 大崎八幡宮</b> · 楓紅 ♥</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S254.jpg" alt="戴飛行員帽的小魚乾"><figcaption><b>13:29</b> · 飛行員帽</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S261.jpg" alt="小魚乾握著方向盤"><figcaption><b>13:42</b> · 握方向盤 ♥</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S263.jpg" alt="天婦羅蕎麥麵"><figcaption><b>14:04 · 安曇野</b> · 天婦羅蕎麥麵</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S266.jpg" alt="蕎麥法式薄餅"><figcaption><b>14:06</b> · 法式薄餅</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S272.jpg" alt="佐勘大廳的金色屏風"><figcaption><b>15:20 · 佐勘</b> · 金色屏風</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S285.jpg" alt="佐勘的和室"><figcaption><b>16:30</b> · 榻榻米房間 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S287.jpg" alt="全家穿浴衣對鏡自拍"><figcaption><b>16:51</b> · 換上浴衣 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S289.jpg" alt="小魚乾穿浴衣坐著"><figcaption><b>16:56</b> · 浴衣</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S302.jpg" alt="生魚片"><figcaption><b>18:44 · 晚餐</b> · 生魚片</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S309.jpg" alt="竹筒裡的烤魚"><figcaption><b>19:05</b> · 竹筒烤魚</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S313.jpg" alt="小魚乾在嬰兒床裡睡著"><figcaption><b>19:35</b> · 抱著布偶睡著</figcaption></figure>
+</div>
+
+</section>
+
+<section class="day indigo" id="d6">
+<div class="day-head"><div class="day-num">6</div><div><h2>秋保紅了</h2><div class="meta">2026.11.04 WED · 佐勘 → 秋保大滝 → 秋保神社 → 秋保・里中心 → 磊々峡</div></div></div>
+<div class="lead flip">
+<figure><img class="ph" loading="lazy" src="photos/S354.jpg" alt="全家在秋保大瀑布前合照"><figcaption><b>11:20 · 秋保大滝</b> · 瀑布前的三個人 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S356.jpg" alt="全家在鳥居下自拍"><figcaption><b>11:22</b> · 鳥居下的自拍 ♥</figcaption></figure>
+</div>
+<div class="body">
+<ul class="tl">
+<li><span class="t">07:30</span><h3>穿著半纏吃早餐</h3><p>換上小小的半纏（日式短外套），坐在兒童椅上吃早餐。</p></li>
+<li><span class="t">08:48</span><h3>大廳的全家福</h3><p>全家穿著浴衣，在挑高的大廳拍了一張。</p></li>
+<li><span class="t">11:05</span><h3>秋保大滝（秋保大瀑布）</h3><p>三個人照計畫穿著紅毛衣，在「秋保大滝」的牌子前自拍。往下走就看到瀑布，兩旁山壁一片紅黃。</p></li>
+<li><span class="t">11:27</span><h3>落葉的山路</h3><p>戴著熊耳帽，自己走在鋪滿落葉的山路上，偶爾回頭看大人有沒有跟上。</p></li>
+<li><span class="t">12:08</span><h3>秋保神社</h3><p>路上看到，媽媽很想去就臨時停了下來。她在收集御朱印，這趟收了好幾個。白色的旗幟一路排到拜殿。</p></li>
+<li><span class="t">13:08</span><h3>秋保・里センター（秋保・里中心）</h3><p>天花板掛滿彩色的和紙燈籠。</p></li>
+<li><span class="t">13:28</span><h3>Cafe HACHI</h3><p>紅白格子桌布上用蠟筆畫著色紙。午餐是兒童盤、漢堡排義大利麵和仙台牛炒麵。</p></li>
+<li><span class="t">17:32</span><h3>磊々峡（磊磊峽）的點燈</h3><p>傍晚沿著峽谷步道看點燈，楓葉在燈下變成整片橘紅。</p></li>
+<li><span class="t">18:42</span><h3>第二晚的晚餐</h3><p>房裡的晚餐有牛舌和壽喜燒。</p></li>
+</ul>
+<div>
+<div class="row c2" style="margin-top:0">
+<figure><img class="ph" loading="lazy" src="photos/S328.jpg" alt="小魚乾穿半纏坐在兒童椅上"><figcaption><b>07:30 · 佐勘</b> · 半纏 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S335.jpg" alt="全家穿浴衣在大廳合照"><figcaption><b>08:48</b> · 大廳的全家福 ♥</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S344.jpg" alt="全家在秋保大滝牌子前自拍"><figcaption><b>11:06 · 秋保大滝</b> · 紅毛衣自拍</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S353.jpg" alt="秋保大瀑布"><figcaption><b>11:19</b> · 瀑布</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="row c4">
+<figure><img class="ph" loading="lazy" src="photos/S362.jpg" alt="小魚乾走在落葉山路上"><figcaption><b>11:27 · 山路</b> · 熊耳帽</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S365.jpg" alt="小魚乾在山路上回頭"><figcaption><b>11:27</b> · 回頭看 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S370.jpg" alt="戴熊耳帽的小魚乾"><figcaption><b>11:41</b> · 停下來</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S371.jpg" alt="秋保神社參道的白色旗幟"><figcaption><b>12:08 · 秋保神社</b> · 白色旗幟</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S376.jpg" alt="天花板的和紙燈籠"><figcaption><b>13:08 · 里中心</b> · 和紙燈籠</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S380.jpg" alt="小魚乾用蠟筆著色"><figcaption><b>13:33 · HACHI</b> · 蠟筆著色</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S385.jpg" alt="兒童餐盤"><figcaption><b>13:47</b> · 兒童盤</figcaption></figure>
+</div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S397.jpg" alt="點燈的楓葉步道"><figcaption><b>17:37 · 磊々峡</b> · 點燈 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S401.jpg" alt="點燈的楓葉"><figcaption><b>17:43</b> · 燈下的楓葉</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S415.jpg" alt="壽喜燒"><figcaption><b>19:46 · 佐勘</b> · 壽喜燒</figcaption></figure>
+</div>
+
+</section>
+
+<section class="day" id="d7">
+<div class="day-head"><div class="day-num">7</div><div><h2>霧裡的早晨</h2><div class="meta">2026.11.05 THU · 佐勘 → 金蛇水神社 → 仙台機場 → 桃園</div></div></div>
+<div class="lead">
+<figure><img class="ph" loading="lazy" src="photos/S432.jpg" alt="霧中的秋保山谷"><figcaption><b>09:53 · 佐勘</b> · 窗外的山谷起霧了</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S442.jpg" alt="小魚乾在窗前揮手"><figcaption><b>10:01</b> · 窗前揮手 ♥</figcaption></figure>
+</div>
+<div class="body">
+<ul class="tl">
+<li><span class="t">08:34</span><h3>窗外起霧</h3><p>最後一個早上，窗外的山谷全是霧。</p></li>
+<li><span class="t">09:34</span><h3>一圈白鬍子</h3><p>天氣太乾，嘴邊破了皮，塗上一圈藥膏，看起來像長了白鬍子。</p></li>
+<li><span class="t">09:55</span><h3>窗前的全家福</h3><p>穿著浴衣在窗邊拍了一整串，背後是霧裡的山。他一下比 YA、一下揮手。</p></li>
+<li><span class="t">12:38</span><h3>金蛇水神社</h3><p>下著雨，撐著藍色的傘，牽著媽媽一階一階爬上石階；拜殿旁有一整面彩色和傘。</p></li>
+<li><span class="t">14:37</span><h3>仙台空港（仙台機場）</h3><p>坐在嬰兒車裡，等著上飛機。</p></li>
+<li><span class="t">15:03</span><h3>寿松庵（壽松庵）</h3><p>用航空公司給的餐券，吃了生魚片和最後一份牛舌。</p></li>
+<li><span class="t">15:56</span><h3>BR117，回家</h3><p>商務艙裡全家自拍。他和媽媽一起看螢幕、靠在媽媽身上睡了一下，醒來後自己翻繪本，窗外是雲海。</p></li>
+<li><span class="t">19:13</span><h3>回到桃園</h3><p>落地桃園。走出航廈，他堅持自己推行李箱。</p></li>
+</ul>
+<div>
+<div class="row c2" style="margin-top:0">
+<figure><img class="ph" loading="lazy" src="photos/S430.jpg" alt="嘴邊塗了藥膏的小魚乾"><figcaption><b>09:34</b> · 一圈白鬍子</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S438.jpg" alt="全家穿浴衣在窗前合照"><figcaption><b>09:57</b> · 窗前的全家福 ♥</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S458.jpg" alt="媽媽和小魚乾撐傘爬石階"><figcaption><b>12:52 · 金蛇水神社</b> · 雨中的石階</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S460.jpg" alt="彩色和傘"><figcaption><b>12:53</b> · 和傘 ♥</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="wide"><figure><img class="ph" loading="lazy" src="photos/S445.jpg" alt="全家在窗前合照，背後是霧中的山"><figcaption><b>10:04</b> · 霧裡的山 ♥</figcaption></figure></div><div class="row c3">
+<figure><img class="ph" loading="lazy" src="photos/S468.jpg" alt="生魚片"><figcaption><b>15:03 · 壽松庵</b> · 生魚片</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S470.jpg" alt="牛舌"><figcaption><b>15:03</b> · 最後一份牛舌</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S482.jpg" alt="商務艙的全家自拍"><figcaption><b>16:11 · BR117</b> · 商務艙自拍 ♥</figcaption></figure>
+</div><div class="row c2">
+<figure><img class="ph" loading="lazy" src="photos/S492.jpg" alt="小魚乾靠在媽媽身上"><figcaption><b>16:34</b> · 靠著媽媽 ♥</figcaption></figure>
+<figure><img class="ph" loading="lazy" src="photos/S500.jpg" alt="小魚乾在窗邊翻繪本"><figcaption><b>16:40</b> · 窗邊翻繪本 ♥</figcaption></figure>
+</div>
+
+</section>
+
+  <section class="pull" aria-label="結語">
+    <img class="ph tall" loading="lazy" src="photos/S518.jpg" alt="小魚乾在桃園機場自己推著行李箱">
+    <blockquote>最後一段路，他想自己推。<small>2026.11.05 · 20:43 · 桃園機場</small></blockquote>
+  </section>
+
+  <div class="sources">
+    <b>資料來源</b><br>
+    Google 地圖時間軸（10/30–11/05）· 仙台旅途紀錄 · iCloud 照片：2026/10/30–11/05 圖庫，共 520 個項目（其中約 100 部影片）。照片時間為日本時間（去程出發為台灣時間）；有調整過的照片使用調整後的版本。網頁上的照片已縮小，並移除拍攝位置等中繼資料。
+  </div>
+</div>
+
+<footer class="pagefoot">
+  <p><a href="index.html">仙台首頁</a>｜<a href="仙台家庭旅遊企劃書_行程規劃.html">① 行程規劃</a>｜<a href="仙台家庭旅遊企劃書_待決定事項.html">② 待辦清單</a>｜<a href="仙台家庭旅遊企劃書_訂購成果.html">③ 訂單</a>｜<a href="仙台家庭旅遊企劃書_歷程沿革.html">④ 紀錄</a>｜⑤ 回憶錄</p>
+  <p>成員以代號稱呼；訂單編號等識別資料見私人記錄。建立 2026/11/09</p>
+</footer>
+</body>
+</html>
