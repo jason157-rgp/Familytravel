@@ -114,6 +114,7 @@ table.cost{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 .cost td,.cost th{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
 .cost th{font-weight:500;color:var(--muted);font-size:12.5px}
 .cost td:last-child{text-align:right;white-space:nowrap}
+.cost.wrap td:last-child{text-align:left;white-space:normal;min-width:40%}
 .todo{list-style:none;margin:10px 0 0;padding:0}
 .todo li{display:grid;grid-template-columns:70px 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
 .todo .due{font-size:12.5px;color:var(--berry);font-weight:700}
@@ -245,11 +246,11 @@ footer{margin:44px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
 
 <section class="sec" id="kids">
   <h2>幼兒備品書面登記</h2>
-  <p class="lead">兩封詢問信 2026/11/08 已寄出，等回信；回信存 PDF 到私人文件「住宿」</p>
-  <table class="cost">
+  <p class="lead">兩封詢問信 2026/11/08 寄出；回信存到私人文件「住宿」</p>
+  <table class="cost wrap">
     <tr><th>住宿</th><th>已提出</th><th>書面回覆</th></tr>
     <tr><td>京都東山東急</td><td>加小魚乾與早餐、床邊護欄、嬰兒澡盆或洗澡椅、有蓋尿布桶、加濕器、熱水壺、奶瓶消毒器；1/3 與 1/6 接駁車、1/5 宅急便、1/6 寄放行李</td><td>等回信</td></tr>
-    <tr><td>OMO7 大阪</td><td>加同床幼兒、床台高度與床邊護欄、嬰兒澡盆或洗澡椅、有蓋尿布桶、奶瓶消毒組、兩間餐廳的安全帶兒童椅、Crosta 京都配送是否可、19:00 後代收行李</td><td>等回信</td></tr>
+    <tr><td>OMO7 大阪</td><td>加同床幼兒、床台高度與床邊護欄、嬰兒澡盆或洗澡椅、有蓋尿布桶、奶瓶消毒組、兩間餐廳的安全帶兒童椅、Crosta 京都配送是否可、19:00 後代收行李</td><td>已書面回覆（11/10）：同床幼兒已登記。床墊在墊高平台上，地板到床面約 40 cm，沒有床邊護欄（床三面靠牆，小魚乾睡靠牆側、開口側放沙發靠墊）。澡盆或洗澡椅、有蓋尿布桶、奶瓶消毒組、餐廳兒童椅可借但不能預約，入住時問櫃台；兒童椅沒有安全帶，可借補助安全帶。</td></tr>
   </table>
   <div class="tip">OMO7 現場另有：草皮、看電車的平台、哺乳室免費尿布；兒童便座、尿布桶、奶瓶消毒組可借但數量有限、不能預約。自備微波爐奶瓶消毒盒最保險。</div>
 </section>
@@ -259,7 +260,7 @@ footer{margin:44px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
   <p class="lead">兩間飯店回信後決定</p>
   <div class="spots">
     <div class="spot"><b>エアポーター（Airporter，建議）</b><span>京都東山東急櫃台 → OMO7 大阪。當天 9:00 前交件、20:00 起領；160 cm 以下每件 ¥2,200（兩件 ¥4,400）。前一天 23:00 前在官網預約，預約人姓名要和兩間訂房一致，兩間確認書都要上傳；9:00 前沒交件收 100% 取消費。28 吋箱先量三邊和。</span></div>
-    <div class="spot"><b>Crosta 京都（京都站，Handsfree Japan）</b><span>13:00 前交件、19:00 後送到大阪市區飯店，每件 ¥2,500；OMO7 在不在配送名單已寫信問。要自己把行李帶到京都站。</span></div>
+    <div class="spot"><b>Crosta 京都（京都站，Handsfree Japan）</b><span>13:00 前交件、19:00 後送到大阪市區飯店，每件 ¥2,500。OMO7 已書面確認在配送名單內（要自己預約），送到後放寄物處，到飯店時向櫃台領。要自己把行李帶到京都站。</span></div>
     <div class="spot"><b>宅急便（備案）</b><span>1/5 請京都東山東急櫃台寄，關西 → 關西 160 尺寸約 ¥3,020／件，隔天送到。</span></div>
   </div>
   <div class="tip">選 Airporter 的話：1/5 晚上把大行李整理好（能不能前一晚先交櫃台保管，要問飯店）；1/6 隨身包放一晚的換洗衣物和尿布。</div>
@@ -341,6 +342,7 @@ footer{margin:44px 0 36px;text-align:center;font-size:12.5px;color:var(--muted)}
 <section class="sec" id="log">
   <h2>紀錄</h2>
   <ul class="log">
+    <li>v1.1.0（2026/11/10）OMO7 書面回覆：同床幼兒已登記、床邊無護欄、幼兒備品入住時借、Crosta 京都可送；更新幼兒備品表、行李配送與 1/6 入住要說的日文。</li>
     <li>v1.0.0（2026/11/09）初版：沿用金山新版型（trip.js 單一資料、企劃書＋旅途 App）；京都東山東急 3 晚、OMO7 大阪 3 晚已訂；機票未訂。依仙台行教訓：抵達日只吃飯、返程日只排移動和一頓飯、第二個點標「有餘力」、午睡排在移動中、OMO7 早餐改前一晚買超商。</li>
   </ul>
 </section>
