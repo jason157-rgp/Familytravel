@@ -6,9 +6,9 @@
  * 敘述性內容（飯店、景點、交通、行李配送）寫在 index.html 的參考區，用 ref 連過去。
  */
 window.TRIP = {
-  version: 'v1.6.0',
+  version: 'v1.6.1',
   updated: '2026/11/18',
-  title: '關西家庭旅遊',
+  title: '桃園星野結衣員工旅遊・關西',
   sub: '2027/01/03（日）－ 01/09（六）　7 天 6 夜・京都 3 晚 → 大阪 3 晚',
   tz: 'Asia/Tokyo',
   key: 'kansai',
