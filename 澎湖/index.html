@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>澎湖元宵小旅行・企劃書</title>
+<meta name="description" content="2027/02/19 到 02/21 澎湖三天兩夜：元宵夜到西嶼外垵看溫王宮點燈與滿港漁火。">
+<meta property="og:title" content="澎湖元宵小旅行">
+<meta property="og:description" content="元宵夜，到外垵看漁火。2027/02/19 到 02/21，三天兩夜。">
+<meta property="og:image" content="https://jason157-rgp.github.io/Familytravel/%E6%BE%8E%E6%B9%96/photos/waian-day.jpg">
+<meta name="theme-color" content="#164E78">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500&family=Funnel+Sans:wght@400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="plan.css">
+<style id="ft-corner-css">.ft-corner{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 18px;padding:7px 16px;background:#0f1c27;color:#c9d4dc;font:13px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:.04em}.ft-corner .ft-l{margin-right:auto;color:#93a3af}.ft-corner a{color:#e9f0f4;text-decoration:none}.ft-corner a:hover,.ft-corner a:focus-visible{text-decoration:underline}</style>
+</head>
+<body>
+<div class="ft-corner"><span class="ft-l">澎湖元宵小旅行</span><a href="../index.html">🏠 回總覽</a><a href="https://drive.google.com/drive/folders/1m_6ZkYvtWMCcSHElSW7qW6bnaLJpCARJ" target="_blank" rel="noopener">📁 私人文件</a></div>
+
+<header class="mast container">
+  <a class="mark" href="#top">澎湖元宵小旅行</a>
+  <nav aria-label="本頁">
+    <a href="#days">三天行程</a>
+    <a href="#waian">外垵漁火</a>
+    <a href="#trip">機票住宿租車</a>
+    <a href="#food">餐廳</a>
+    <a href="#todo">待辦</a>
+    <a class="pill" href="app.html">旅途 App</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero container" aria-labelledby="hero-h">
+    <div class="hero__text">
+      <h1 id="hero-h">元宵夜，到外垵看漁火</h1>
+      <p class="lead">2027 年 2 月 19 到 21 日，三天兩夜，五位大人帶小魚乾去澎湖。</p>
+      <div class="counter" id="counter" aria-live="polite">
+        <span class="counter__n" id="counter-n">2/19</span>
+        <span class="counter__u" id="counter-u">出發</span>
+        <span class="counter__d" id="counter-d">元宵正日是 2/20（六），外垵漁火預計 2/20 到 2/22 連亮三晚</span>
+      </div>
+      <div class="hero__acts">
+        <a class="btn" href="app.html">打開旅途 App</a>
+        <a class="btn btn--clear" href="#days">看三天行程</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__light" aria-hidden="true"><canvas data-light width="320" height="240"></canvas></div>
+      <figure class="photo" data-slot="hero" data-alt="西嶼外垵漁港白天全景，藍色港灣與白色漁村">
+        <img src="photos/waian-day.jpg" width="960" height="720" alt="西嶼外垵漁港白天全景，藍色港灣與白色漁村" style="object-position: 50% 55%" fetchpriority="high">
+      </figure>
+      <p class="caption">外垵漁港。2/20 晚上，港裡一兩百艘漁船會停航點燈。</p>
+    </div>
+  </section>
+
+  <section class="sec container" id="days" aria-labelledby="days-h">
+    <div class="sec__head">
+      <h2 id="days-h">三天怎麼走</h2>
+      <p>每天一個主景點、一頓重點餐。點開任何時間點看怎麼去、付款、訂位與小魚乾要注意的事。</p>
+    </div>
+    <div class="who" id="who"></div>
+    <div id="day-list"></div>
+    <noscript><p>這一段由行程資料產生，請開啟 JavaScript，或改用<a href="app.html">旅途 App</a>。</p></noscript>
+  </section>
+
+  <section class="sec band" id="waian" aria-labelledby="waian-h">
+    <div class="container split">
+      <div>
+        <figure class="photo photo--night" data-slot="waian" data-alt="外垵漁港夜景，港邊燈火映在水面">
+          <img src="photos/waian-night.jpg" width="960" height="640" alt="外垵漁港夜景，港邊燈火映在水面" loading="lazy">
+        </figure>
+        <p class="caption">外垵漁港的夜晚。全景最好在三仙塔，近看在漁港邊。</p>
+      </div>
+      <div>
+        <div class="sec__head">
+          <h2 id="waian-h">外垵漁火讚元宵</h2>
+          <p>阿嬤最想參加的活動，也是這趟的核心。</p>
+        </div>
+        <ul class="rows">
+          <li><b>在哪裡</b><span>西嶼鄉外垵村，溫王宮與外垵漁港；從馬公開車約 45 分鐘，經跨海大橋</span></li>
+          <li><b>哪一晚</b><span>元宵正日（正月十五），2027 年是 <b>2/20（六）</b>；漁船點燈從元宵起連亮三晚，預計 2/20 到 2/22</span></li>
+          <li><b>有什麼</b><span>溫王宮點燈、擲吉祈福（拋麻糬、糖果、紅包）、過平安橋、王爺夜巡遶境、神獸武轎與舞龍舞獅、港邊市集</span></li>
+          <li><b>往年時段</b><span>傍晚起人潮湧入；煙火約 19:00、21:00、22:40（2019 年記錄）。2027 年時段、交通管制與接駁，以 1 月公告為準</span></li>
+          <li><b>安全</b><span>2024 年擲吉時有人被拋下的東西打傷眼睛；同晚三仙塔附近乾草起火。小魚乾遠離擲吉範圍，觀賞點避開乾草叢</span></li>
+          <li><b>延期</b><span>2025 年因天候延後兩天，是第一次延期；若 2027 年也延期，見下方問題「活動延期怎麼辦」</span></li>
+        </ul>
+        <p class="note">資料來源：自由時報 2024、2025、2026 年外垵元宵報導、中央社 2025/02/14、澎湖國家風景區管理處；2026/10/20、11/23 查證。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec container" id="trip" aria-labelledby="trip-h">
+    <div class="sec__head">
+      <h2 id="trip-h">機票、住宿、租車</h2>
+      <p>訂位代號、機票號碼與訂房編號都在私人文件，這裡只放時刻、金額與條件。</p>
+    </div>
+    <div class="book">
+      <div id="flight">
+        <h3>機票：去回都是華信</h3>
+        <div class="ticket"><span class="ticket__t">10:55</span><span class="ticket__what"><b>2/19（五）AE367 松山 → 馬公</b><span>11:55 抵達・ATR 72</span></span><span class="status">已開票</span></div>
+        <div class="ticket"><span class="ticket__t">15:20</span><span class="ticket__what"><b>2/21（日）AE372 馬公 → 松山</b><span>16:15 抵達・ATR 72</span></span><span class="status">已開票</span></div>
+        <div class="ticket"><span class="ticket__t">待定</span><span class="ticket__what"><b>瑄瑄阿姨：台中 ↔ 馬公</b><span>自己買，班次確定後補上</span></span><span class="status status--todo">待補</span></div>
+        <div class="cols more">
+          <ul class="rows">
+            <li><b>報到</b><span>起飛前 30 分鐘一定要完成；劃位要出示與機票同名的身分證件，以及購票用的那張信用卡</span></li>
+            <li><b>網路報到</b><span>起飛前 24 小時到 1 小時，華信官網或 App</span></li>
+          </ul>
+          <ul class="rows">
+            <li><b>行李</b><span>免費託運每人 10 公斤；手提 7 公斤一件</span></li>
+            <li><b>敬老票</b><span>報到出示本人身分證、健保卡或護照正本，不符要現場補全額差價</span></li>
+          </ul>
+        </div>
+        <details class="more">
+          <summary>兩家航空這兩天的全部班次</summary>
+          <div class="cols">
+            <div class="table-wrap"><table>
+              <caption class="visually-hidden">2/19 松山到馬公</caption>
+              <thead><tr><th>2/19 起飛</th><th>抵達</th><th>航空公司</th><th>班號</th></tr></thead>
+              <tbody>
+                <tr><td>07:00</td><td>08:00</td><td>華信</td><td>AE361</td></tr>
+                <tr><td>07:15</td><td>08:15</td><td>立榮</td><td>B7-8601</td></tr>
+                <tr><td>08:30</td><td>09:30</td><td>立榮</td><td>B7-8607</td></tr>
+                <tr><td>10:20</td><td>11:20</td><td>立榮</td><td>B7-8609</td></tr>
+                <tr><td><b>10:55</b></td><td><b>11:55</b></td><td><b>華信</b></td><td><b>AE367</b></td></tr>
+                <tr><td>11:45</td><td>12:45</td><td>立榮</td><td>B7-8615</td></tr>
+                <tr><td>13:45</td><td>14:45</td><td>華信</td><td>AE371</td></tr>
+                <tr><td>15:00</td><td>16:00</td><td>立榮</td><td>B7-8617</td></tr>
+                <tr><td>16:00</td><td>17:00</td><td>華信</td><td>AE375</td></tr>
+                <tr><td>18:00</td><td>19:00</td><td>立榮</td><td>B7-8619</td></tr>
+                <tr><td>18:40</td><td>19:40</td><td>華信</td><td>AE377</td></tr>
+                <tr><td>19:35</td><td>20:35</td><td>華信</td><td>AE385</td></tr>
+              </tbody>
+            </table></div>
+            <div class="table-wrap"><table>
+              <caption class="visually-hidden">2/21 馬公到松山</caption>
+              <thead><tr><th>2/21 起飛</th><th>抵達</th><th>航空公司</th><th>班號</th></tr></thead>
+              <tbody>
+                <tr><td>08:40</td><td>09:35</td><td>華信</td><td>AE362</td></tr>
+                <tr><td>08:50</td><td>09:45</td><td>立榮</td><td>B7-8602</td></tr>
+                <tr><td>10:05</td><td>11:00</td><td>立榮</td><td>B7-8608</td></tr>
+                <tr><td>12:05</td><td>13:00</td><td>立榮</td><td>B7-8610</td></tr>
+                <tr><td>12:50</td><td>13:45</td><td>華信</td><td>AE368</td></tr>
+                <tr><td>13:20</td><td>14:15</td><td>立榮</td><td>B7-8616</td></tr>
+                <tr><td><b>15:20</b></td><td><b>16:15</b></td><td><b>華信</b></td><td><b>AE372</b></td></tr>
+                <tr><td>17:40</td><td>18:35</td><td>華信</td><td>AE376</td></tr>
+                <tr><td>19:20</td><td>20:15</td><td>立榮</td><td>B7-8618</td></tr>
+                <tr><td>20:00</td><td>20:55</td><td>立榮</td><td>B7-8620</td></tr>
+                <tr><td>20:20</td><td>21:15</td><td>華信</td><td>AE378</td></tr>
+                <tr><td>21:10</td><td>22:05</td><td>華信</td><td>AE386</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <p class="note">兩家訂票頁依實際日期查證（2026/10/19 到 10/20）。</p>
+        </details>
+      </div>
+
+      <div class="cols">
+        <div class="clear" id="stay">
+          <h3>澎澄飯店，2 晚</h3>
+          <dl class="facts">
+            <dt>地址</dt><dd>馬公市同和路 168 號</dd>
+            <dt>電話</dt><dd><a href="tel:069235678">06-923-5678</a>・<a href="tel:0800238168">0800-238-168</a></dd>
+            <dt>房間</dt><dd>園景澎澄客房（爸爸媽媽與小魚乾，一張 200 公分大床、有浴缸）；園景探索客房（阿公阿嬤與瑄瑄阿姨，兩張 180 公分大床）</dd>
+            <dt>時間</dt><dd>16:00 後入住、11:00 前退房；不含早餐（2 樓全日餐廳 06:30 到 10:00 可現場加點）</dd>
+            <dt>金額</dt><dd>兩間兩晚 NT$14,800；已付訂金 NT$4,440，入住時付 NT$10,360</dd>
+            <dt>取消</dt><dd>2027/2/5 前免費取消；之後依觀光局定型化契約遞減</dd>
+            <dt>幼兒備品</dt><dd>訂房時備註借嬰兒澡盆、嬰兒沐浴備品、消毒鍋；書面確認還沒取得（見待辦）</dd>
+            <dt>設施</dt><dd>7 樓公共設施：11 到 3 月戶外 07:00 到 17:00、室內 07:00 到 21:00；B1 停車場房客優先</dd>
+          </dl>
+        </div>
+        <div class="clear" id="car">
+          <h3>租車：7 人座，爸爸開</h3>
+          <dl class="facts">
+            <dt>取車</dt><dd>2/19 約 12:30，馬公機場</dd>
+            <dt>還車</dt><dd>2/21 14:20，馬公機場</dd>
+            <dt>條件</dt><dd>7 人座（5 大 1 小）、兒童安全座椅一張、全險；澎湖沒有大型連鎖租車據點，向在地租車行比價</dd>
+            <dt>候選</dt><dd>飯店合作的租車窗口（0975-338-733，LINE @397wfzfc，09:00 到 18:00）與兩三家在地租車行</dd>
+            <dt>飯店接駁</dt><dd>訂房附來回機場接駁；改成租車後用不到，寫信給飯店時一併取消</dd>
+            <dt>狀態</dt><dd>還沒訂（見待辦）</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec container" id="food" aria-labelledby="food-h">
+    <div class="sec__head">
+      <h2 id="food-h">餐廳</h2>
+      <p>都要先訂位，訂位時問兒童椅，並告訴店家有一位不能吃海藻與昆布高湯。</p>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>哪一餐</th><th>餐廳</th><th>Google 評分</th><th>營業（當天）</th><th>幼兒友善</th></tr></thead>
+      <tbody>
+        <tr><td>2/19 午</td><td><b>華珍活海鮮</b><br>馬公三民路</td><td>4.4（1,326 則）</td><td>10:00 到 14:00、16:30 到 22:00</td><td>未查到，訂位時問</td></tr>
+        <tr><td>2/19 晚</td><td><b>澎漁宴</b><br>馬公海埔路</td><td>4.4（1,934 則）</td><td>11:30 到 13:30、17:00 到 21:00</td><td>未查到；評論提醒客滿常見</td></tr>
+        <tr><td>2/20 午</td><td><b>吳家小館</b><br>白沙講美村</td><td>4.8（563 則）</td><td>11:00 到 13:30</td><td>未查到</td></tr>
+        <tr><td>2/20 午備選</td><td><b>清峰海鮮</b><br>白沙講美村</td><td>4.5（1,510 則）</td><td>11:00 到 14:00、17:30 到 20:00</td><td>未查到</td></tr>
+        <tr><td>2/20 晚</td><td><b>漁村川菜活海鮮</b><br>西嶼外垵</td><td>4.4（522 則）</td><td>11:00 到 14:00、17:00 到 20:00</td><td>未查到；元宵當晚人多</td></tr>
+        <tr><td>2/20 晚備選</td><td><b>海村川味活海鮮</b><br>西嶼外垵</td><td>4.3（244 則）</td><td>11:00 到 14:00、17:00 到 20:30</td><td>未查到</td></tr>
+        <tr><td>2/21 午</td><td><b>668 海鮮</b><br>馬公信義路</td><td>4.6（1,100 則）</td><td>11:00 到 13:30、17:00 到 20:30</td><td>未查到</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">評分與營業時間是 Google 地圖 2026/11/23 的資料，春節前後可能變動，1 月訂位時再確認。外垵港邊另有外垵烤小管（4.5）、三山商號功夫刈包（4.7）這類小吃。</p>
+  </section>
+
+  <section class="sec band" id="faq" aria-labelledby="faq-h">
+    <div class="container split">
+      <div>
+        <div class="sec__head">
+          <h2 id="faq-h">先想好的幾件事</h2>
+        </div>
+        <div class="qa">
+          <details id="wind"><summary>風很大或下雨怎麼辦</summary><div>
+            <p>2 月澎湖東北季風很強，海邊體感比氣溫冷很多。2/20 白天如果風大或下雨，大菓葉玄武岩和漁翁島燈塔都跳過，改在馬公找室內的地方，晚上外垵照常。App 會在出發前兩週開始顯示預報與風速。</p>
+          </div></details>
+          <details><summary>外垵活動延期怎麼辦</summary><div>
+            <p>2025 年曾因天候延後兩天。如果 2027 年也延後，正日活動會落在 2/22（一）。漁船點燈連亮三晚，2/20 晚上應該還看得到部分漁火；想看正日活動，回程可以改搭 2/21 晚上的華信 20:20 或 21:10，或延後一天（全額票可退，手續費 10%；飯店加住要另訂）。1 月公告出來後再決定。</p>
+          </div></details>
+          <details><summary>阿嬤想看到最後一輪煙火</summary><div>
+            <p>預設 20:00 離開外垵，小魚乾在車上睡。阿嬤想待到最後：小魚乾在停好的車上睡、一位大人陪，其他人留下來看，大約 23:00 回馬公。夜路與人潮要慢慢開。</p>
+          </div></details>
+          <details><summary>2/19 晚上可以先去外垵嗎</summary><div>
+            <p>2026 年外垵的元宵市集在正月十四就提前開張，所以 2/19 晚上可能也有市集與漁火。抵達日照家規只吃飯、早點休息，所以沒有排；阿嬤想先去逛，可以晚餐後開車過去，約 45 分鐘。</p>
+          </div></details>
+          <details><summary>乞龜是什麼</summary><div>
+            <p>澎湖元宵的傳統：廟裡用米、麵線、金飾等做成大龜，信眾擲筊「乞」回家祈福，隔年再加倍還願。馬公天后宮、山水上帝廟、鎖港北極殿等廟宇都有，活動常延續到正月十七、十八。2/21 往機場前會順路經過山水上帝廟。</p>
+          </div></details>
+        </div>
+      </div>
+      <div>
+        <figure class="qa-photo" data-slot="qigui" data-alt="山水上帝廟的元宵乞龜，金龜放在軌道上">
+          <img src="photos/qigui.jpg" width="960" height="720" alt="山水上帝廟的元宵乞龜，金龜放在軌道上" loading="lazy">
+        </figure>
+        <p class="caption">山水上帝廟的元宵乞龜。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec container" id="todo" aria-labelledby="todo-h">
+    <div class="sec__head">
+      <h2 id="todo-h">出發前要做的事</h2>
+      <p>依時間排序；完成的收在最下面。打包清單在旅途 App，可以勾選。</p>
+    </div>
+    <ul class="todo" id="todo-list"></ul>
+    <details class="more" id="done-wrap" hidden><summary id="done-sum">已完成</summary><ul class="todo" id="done-list"></ul></details>
+  </section>
+
+  <section class="close" aria-labelledby="close-h">
+    <div class="close__light" aria-hidden="true"><canvas data-light width="320" height="160"></canvas></div>
+    <div class="container">
+      <h2 id="close-h">出發那天，打開 App 就好</h2>
+      <p class="lead">下一步、順延、天氣、打包都在裡面；這一頁是詳細資料。</p>
+      <a class="btn" href="app.html">打開旅途 App</a>
+    </div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="container">
+    <div>
+      <p><b>澎湖元宵小旅行</b></p>
+      <p id="ver">版本與更新日期見行程資料</p>
+      <p><a href="../index.html">回總覽</a>・<a href="https://drive.google.com/drive/folders/1m_6ZkYvtWMCcSHElSW7qW6bnaLJpCARJ" target="_blank" rel="noopener">私人文件</a>・<a href="app.html">旅途 App</a></p>
+    </div>
+    <div>
+      <p><b>照片</b>（Wikimedia Commons，開放授權）</p>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:0429_%E5%A4%96%E5%9E%B5%E6%BC%81%E6%B8%AF.jpg" target="_blank" rel="noopener">外垵漁港</a>，舟集 Toadboat，CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Night_Of_Waian_Harbor_(227416333).jpeg" target="_blank" rel="noopener">Night of Waian Harbor</a>，Cho Hsun Lu，CC BY 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E6%B0%B4%E4%B8%8A%E5%B8%9D%E5%BB%9F%EF%BC%9A%E6%BE%8E%E6%B9%96%E5%85%83%E5%AE%B5%E7%AF%80%E4%B9%9E%E9%BE%9C.jpg" target="_blank" rel="noopener">山水上帝廟：澎湖元宵節乞龜</a>，舟集 Boattoad，CC BY-SA 4.0</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="trip.js"></script>
+<script src="common.js"></script>
+<script>
+window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });
+</script>
+<script>
+(function () {
+  'use strict';
+  var T = window.TRIP, K = window.KIT, esc = K.esc;
+
+  /* counter */
+  var left = K.daysTo(T.days[0].d, true), toLantern = K.daysTo('2027-02-20', true);
+  var n = document.getElementById('counter-n'), u = document.getElementById('counter-u'), dline = document.getElementById('counter-d');
+  if (left > 0) { n.textContent = left; u.textContent = '天後出發'; dline.textContent = '2/19（五）出發；元宵正日 2/20（六）還有 ' + toLantern + ' 天'; }
+  else if (left === 0) { n.textContent = '今天'; u.textContent = '出發'; }
+  else if (toLantern === 0) { n.textContent = '今晚'; u.textContent = '外垵漁火'; }
+  else if (K.daysTo(T.days[T.days.length - 1].d, true) >= 0) { n.textContent = '旅途中'; u.textContent = ''; }
+  else { n.textContent = '已走完'; u.textContent = ''; }
+
+  document.getElementById('ver').textContent = T.version + '・' + T.updated + ' 更新';
+  document.getElementById('who').innerHTML = T.who.map(function (w) { return '<span><b>' + esc(w[0]) + '</b>' + (w[1] ? '　' + esc(w[1]) : '') + '</span>'; }).join('');
+
+  /* the days */
+  function facts(it) {
+    var rows = [['怎麼去', it.go], ['付款', it.pay], ['小魚乾', it.kid], ['訂位', it.book]].filter(function (r) { return r[1]; });
+    return rows.length ? '<dl class="facts">' + rows.map(function (r) { return '<dt>' + r[0] + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl>' : '';
+  }
+  function acts(it) {
+    var a = '';
+    if (it.p) a += '<a class="pill" href="' + K.navUrl(it.p) + '" target="_blank" rel="noopener">導航到' + esc(T.places[it.p].n) + '</a>';
+    (it.tel || []).forEach(function (t) { a += '<a class="pill" href="' + K.telUrl(t) + '">打電話 ' + esc(t) + '</a>'; });
+    if (it.ref) a += '<a class="pill" href="#' + it.ref + '">參考資料</a>';
+    return a ? '<div class="acts">' + a + '</div>' : '';
+  }
+  function lane(it) {
+    var tag = it.tag === 'key' ? '<span class="lane__tag lane__tag--key">重點</span>' : it.tag === 'opt' ? '<span class="lane__tag lane__tag--opt">有餘力再去</span>' : '<span></span>';
+    var head = '<span class="lane__t">' + esc(it.t) + '</span><span class="lane__what"><b>' + esc(it.title) + '</b>' + (it.gist ? '<span>' + esc(it.gist) + '</span>' : '') + '</span>' + tag;
+    var body = facts(it) + (it.say ? '<p class="say">給櫃台看：' + esc(it.say) + '</p>' : '') + (it.detail ? '<p>' + esc(it.detail) + '</p>' : '') + acts(it);
+    var cls = 'lane' + (it.tag === 'key' ? ' lane--key' : '');
+    if (!body) return '<li class="' + cls + '" id="' + it.id + '"><div class="row">' + head + '</div></li>';
+    return '<li class="' + cls + '" id="' + it.id + '"><details><summary>' + head + '</summary><div class="lane__body">' + body + '</div></details></li>';
+  }
+  var list = document.getElementById('day-list');
+  list.innerHTML = T.days.map(function (d, i) {
+    return '<article class="day' + (i === 1 ? ' day--lit' : '') + '" id="day-' + d.d + '" aria-labelledby="dh-' + i + '">' +
+      '<div class="day__side"><span class="day__date">' + esc(d.label) + '</span><h3 class="day__title" id="dh-' + i + '">' + esc(d.title) + '</h3>' +
+      '<p class="day__focus">' + esc(d.focus) + '</p><p class="day__wx" data-wx="' + i + '">天氣：出發前兩週才有預報</p>' +
+      '<p class="day__backup"><b>備案</b>　' + esc(d.backup) + '</p></div>' +
+      '<div><ol class="lanes">' + d.items.map(lane).join('') + '</ol>' +
+      (d.evening && d.evening.length ? '<ul class="evening">' + d.evening.map(function (e) { return '<li>睡前：' + esc(e) + '</li>'; }).join('') + '</ul>' : '') + '</div></article>';
+  }).join('');
+  T.days.forEach(function (d, i) {
+    K.weather(d, function (w) {
+      var el = document.querySelector('[data-wx="' + i + '"]'); if (!el || !w) return;
+      el.textContent = w.note ? '天氣：' + w.note : '天氣（' + w.loc + '）：' + w.w + '，' + w.lo + ' 到 ' + w.hi + '°C，降雨 ' + w.pop + '%，最大風速 ' + w.wind + ' km/h';
+    });
+  });
+
+  /* to-do */
+  var open = T.todos.filter(function (t) { return !t.done; }), done = T.todos.filter(function (t) { return t.done; });
+  document.getElementById('todo-list').innerHTML = open.map(function (t) { return '<li><span class="due">' + esc(t.due || '') + '</span><span>' + esc(t.t) + '</span></li>'; }).join('');
+  if (done.length) {
+    document.getElementById('done-wrap').hidden = false;
+    document.getElementById('done-sum').textContent = '已完成（' + done.length + '）';
+    document.getElementById('done-list').innerHTML = done.map(function (t) { return '<li><span class="due done">' + esc(t.done) + '</span><span class="done">' + esc(t.t) + '</span></li>'; }).join('');
+  }
+
+  /* arriving from the app: open the row and its parents */
+  function reveal() {
+    var id = decodeURIComponent(location.hash.slice(1)); if (!id) return;
+    var el = document.getElementById(id); if (!el) return;
+    var dt = el.matches('details') ? el : el.querySelector('details'); if (dt) dt.open = true;
+    for (var p = el.parentElement; p; p = p.parentElement) if (p.tagName === 'DETAILS') p.open = true;
+    el.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', reveal); reveal();
+})();
+</script>
+<script>
+/* Refract water light: caustics from a moving surface, drawn small and scaled up; pauses off screen; one still frame when motion is reduced */
+(function () {
+  'use strict';
+  var cans = [].slice.call(document.querySelectorAll('canvas[data-light]'));
+  if (!cans.length) return;
+  var probe = document.createElement('i'); document.body.appendChild(probe);
+  var px = document.createElement('canvas'); px.width = px.height = 1; var pc = px.getContext('2d', { willReadFrequently: true });
+  function rgb(v) { probe.style.color = 'var(' + v + ')'; pc.clearRect(0, 0, 1, 1); pc.fillStyle = getComputedStyle(probe).color; pc.fillRect(0, 0, 1, 1); var m = pc.getImageData(0, 0, 1, 1).data; return [m[0], m[1], m[2]]; }
+  var shade = rgb('--color-shade'), light = rgb('--color-light'), paper = rgb('--color-paper'), s3 = rgb('--spec-3');
+  probe.remove();
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  cans.forEach(function (c) {
+    var ctx = c.getContext('2d'), W = c.width, H = c.height, img = ctx.createImageData(W, H), d = img.data, on = true, t0 = performance.now();
+    function frame(now) {
+      var t = (now - t0) / 1000 * 0.52;
+      for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
+        var u = x / W * 9, v = y / H * 7;
+        var a = Math.sin(u * 1.3 + Math.sin(v * 0.9 + t) * 1.6 + t * 0.8) + Math.sin(v * 1.7 - Math.sin(u * 0.7 - t * 0.6) * 1.4 - t * 0.5) + Math.sin((u + v) * 0.9 + t * 0.4);
+        var k = 1 - Math.abs(Math.sin(a * 1.15)); k = Math.pow(k, 7);
+        var e = Math.pow(1 - Math.abs(Math.sin(a * 1.15 + 0.18)), 9) * 0.35;
+        var i = (y * W + x) * 4, base = 0.55 + 0.45 * Math.sin(u * 0.4 + v * 0.3);
+        for (var ch = 0; ch < 3; ch++) {
+          var g = paper[ch] + (shade[ch] - paper[ch]) * base;
+          d[i + ch] = g + (light[ch] - g) * Math.min(1, k * 1.4) + (s3[ch] - g) * e;
+        }
+        d[i + 3] = 255;
+      }
+      ctx.putImageData(img, 0, 0);
+      if (!still && on) requestAnimationFrame(frame);
+    }
+    if (still || !('IntersectionObserver' in window)) { frame(t0 + 4000); return; }
+    new IntersectionObserver(function (es) { es.forEach(function (e) { var was = on; on = e.isIntersecting; if (on && !was) requestAnimationFrame(frame); }); }).observe(c);
+    requestAnimationFrame(frame);
+  });
+})();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});</script>
+</body>
+</html>
