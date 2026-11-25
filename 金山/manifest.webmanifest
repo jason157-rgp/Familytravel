@@ -1,7 +1,7 @@
 {
   "name": "金山旅途 App",
   "short_name": "金山",
-  "description": "金山小旅行 2026/12/23–12/24：下一步、順延、天氣、打包",
+  "description": "金山小旅行 2026/12/23–12/27：下一步、順延、天氣、打包",
   "lang": "zh-Hant",
   "start_url": "./app.html",
   "scope": "./",
