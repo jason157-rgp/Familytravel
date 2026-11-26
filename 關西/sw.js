@@ -2,8 +2,8 @@
  * 頁面與資料：先連網拿最新版，沒網路才用手機裡存的版本。圖示：先用存好的。
  * 改了檔案清單時，把 VERSION 加 1。
  */
-var VERSION = 'kansai-app-v10';
-var PRECACHE = ['./', './index.html', './app.html', './trip.js', './common.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
+var VERSION = 'kansai-app-v12';
+var PRECACHE = ['./', './index.html', './app.html', './trip.js', './common.js', './plan.css', './tokens.css', './base.css', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) {
