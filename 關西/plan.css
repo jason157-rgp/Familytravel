@@ -145,6 +145,10 @@ details.full[open] > summary::after { content: "收合"; }
 .todo li:first-child { border-top: 0; }
 .todo .due { grid-column: 1 / 3; font: var(--serif-small) var(--text-md)/1.5 var(--font-display); color: var(--color-ink); }
 .todo li > span:last-child { grid-column: 3 / 13; }
+.lv { display: inline-block; margin-right: var(--space-sm); padding: 0 var(--space-xs); border: var(--rule-hair) solid currentColor; border-radius: var(--radius-pill); font-size: var(--text-xs); line-height: 1.7; vertical-align: 0.1em; white-space: nowrap; }
+.lv--high { color: var(--color-accent); }
+.lv--mid { color: var(--color-ink-2); }
+.lv--low { color: var(--color-muted); }
 details.done-list { margin-top: var(--space-lg); }
 details.done-list > summary { cursor: pointer; font-size: var(--text-sm); color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; padding-block: var(--space-xs); width: max-content; }
 details.done-list .todo { margin-top: var(--space-md); }
@@ -247,3 +251,8 @@ details.logbox > summary { cursor: pointer; width: max-content; padding-block: v
   dl.kv { grid-template-columns: minmax(0, 1fr); }
   dl.kv dd { border-top: 0; padding-top: 0; }
 }
+
+/* 照片（接駁車等） */
+.shot { margin: .6rem 0 0; }
+.shot img { display: block; width: 100%; max-width: 480px; height: auto; border-radius: 4px; }
+.shot figcaption { font-size: .78rem; opacity: .7; margin-top: .25rem; }

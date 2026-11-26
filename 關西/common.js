@@ -70,4 +70,13 @@
 
   /* 短欄位的名稱與順序（App 與企劃書共用） */
   K.FIELDS = [['go', '怎麼去'], ['pay', '付款'], ['kid', '小魚乾'], ['book', '預約']];
+  // 待辦：未完成依 at（日期）排，同一天重要的在前；已完成依完成日排
+  K.LV = { high: '重要', mid: '一般', low: '有空再做' };
+  K.todos = function (list) {
+    var rank = { high: 0, mid: 1, low: 2 }, open = [], done = [];
+    list.forEach(function (x) { (x.done ? done : open).push(x); });
+    open.sort(function (a, b) { return (a.at || '9999') < (b.at || '9999') ? -1 : (a.at || '9999') > (b.at || '9999') ? 1 : (a.lv in rank ? rank[a.lv] : 1) - (b.lv in rank ? rank[b.lv] : 1); });
+    done.sort(function (a, b) { return a.done < b.done ? -1 : a.done > b.done ? 1 : 0; });
+    return { open: open, done: done };
+  };
 })();
