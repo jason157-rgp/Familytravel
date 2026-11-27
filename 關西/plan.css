@@ -256,3 +256,12 @@ details.logbox > summary { cursor: pointer; width: max-content; padding-block: v
 .shot { margin: .6rem 0 0; }
 .shot img { display: block; width: 100%; max-width: 480px; height: auto; border-radius: 4px; }
 .shot figcaption { font-size: .78rem; opacity: .7; margin-top: .25rem; }
+
+/* 景點：照片＋簡介 */
+.spots li { padding-top: var(--space-lg); }
+.spot-ph { margin: 0 0 .6rem; }
+.spot-ph img { display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; border-radius: 4px; background: var(--color-rule); }
+.spot-ph figcaption { font-size: .72rem; color: var(--color-muted); margin-top: .25rem; }
+.spot-ph figcaption a { color: inherit; }
+.spots .intro { margin: .35rem 0 .3rem; color: var(--color-ink); }
+.spots .info { margin: 0; color: var(--color-muted); }
